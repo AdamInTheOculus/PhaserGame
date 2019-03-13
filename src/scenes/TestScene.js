@@ -12,6 +12,7 @@ class TestScene extends Phaser.Scene {
     }
 
     preload() {
+        this.load.image('background', 'assets/images/landscape.png');            // Load background image.
         this.load.image('game_tiles', 'assets/tilesets/platformer_1.png');       // Load Tiled tileset.
         this.load.tilemapTiledJSON('map_1', 'assets/maps/adam-test.json');       // Load Tiled map.
     }
@@ -24,16 +25,34 @@ class TestScene extends Phaser.Scene {
             'game_tiles'            // Key of image used for tileset in map data.
         );
 
-        console.log('Index of background: ' + this.map.getImageIndex('background'));
-        console.log(this.map);
-        console.log(this.map.images);   // Prints all data from Image Layer
-        console.log(this.map.layers);   // Prints all data from Tiled Layer
-        console.log(this.map.objects);  // Prints all data from Object Layer
+        // console.log('Index of background image from Image Layer: ' + this.map.getImageIndex('background')); // Prints '0'
+        // console.log(this.map.images);   // Prints all data from Image Layer
+        // console.log(this.map.layers);   // Prints all data from Tiled Layer
+        // console.log(this.map.objects);  // Prints all data from Object Layer
 
-        // How can I load first index of image layer as a background image?
-        // How can I load the objects into world?
+        // ===================================================================
+        // == Build world with background image, tilemaps, and game objects ==
+        // ===================================================================
+        this.add.image(400, 550, 'background');
+        this.collidable = this.map.createStaticLayer('Collidable', tileset, 0, 0);
 
-        this.collidable = this.map.createStaticLayer('Collidable', tileset, 0, -350);
+        // ===================================================
+        // == Attempting to draw rectangles on spawn points ==
+        // ===================================================
+        let spawnPoints = [];
+        spawnPoints.push(this.map.findObject("GameObjects", obj => obj.name === "SpawnPoint1"));
+        spawnPoints.push(this.map.findObject("GameObjects", obj => obj.name === "SpawnPoint2"));
+        const rect1 = new Phaser.Geom.Rectangle(spawnPoints[0].x, spawnPoints[0].y, 50, 50);
+        const rect2 = new Phaser.Geom.Rectangle(spawnPoints[1].x, spawnPoints[1].y, 50, 50);
+        const graphics = this.add.graphics({ fillStyle: { color: 0x0000ff }});
+        graphics.fillRectShape(rect1);
+        graphics.fillRectShape(rect2);
+
+        // ========================================
+        // == Bind camera within game boundaries ==
+        // ========================================
+        this.cameras.main.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels);
+        this.cameras.main.startFollow(spawnPoints[0]);  // Have camera follow player (currently only a spawn point)
     }
 
     update(time, delta) {
