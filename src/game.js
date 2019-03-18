@@ -8,6 +8,8 @@ import TestScene from './scenes/TestScene.js';
 
 const config = {
     type: Phaser.AUTO,    // Attempts to load WebGL. If it fails then load Canvas.
+    width: 1000,
+    height: 760,
     physics: {
         default: 'arcade',
         arcade: {
