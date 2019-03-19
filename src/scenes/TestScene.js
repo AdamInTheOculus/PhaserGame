@@ -40,6 +40,10 @@ class TestScene extends Phaser.Scene {
         this.player = this.physics.add.sprite(spawnPoints[0].x, spawnPoints[0].y, 'dude');
         this.player.setGravityY(300);
 
+        // Set up custom variables for jumping / double jumping.
+        this.canJump = true;
+        this.canDoubleJump = false;
+
         // ===================================
         // == Set up collisions and physics ==
         // ===================================
@@ -78,6 +82,7 @@ class TestScene extends Phaser.Scene {
         // == Set up player movement ==
         // ============================
         this.keyboard = this.input.keyboard.createCursorKeys();
+        this.input.keyboard.on('keydown-UP', this.handleJump, this);
 
         // ========================================
         // == Bind camera within game boundaries ==
@@ -100,10 +105,35 @@ class TestScene extends Phaser.Scene {
             this.player.anims.play('turn');
         }
 
-        // Handle player jump
-        // TODO: Support double jumping
-        if (this.keyboard.up.isDown && this.player.body.blocked.down) {
-            this.player.setVelocityY(-330);
+        // Reset jump availability when player touches ground.
+        if(this.player.body.blocked.down) {
+            this.canJump = true;
+            this.canDoubleJump = false;
+        }
+    }
+
+    /**
+     * @author   AdamInTheOculus
+     * @date     March 18th 2019
+     * @purpose  Handles single and double jump logic.
+    **/
+    handleJump() {
+
+        if(this.canJump && this.player.body.blocked.down) {
+
+            // Apply jumping force
+            this.player.body.setVelocityY(-300);
+            this.canJump = false;
+            this.canDoubleJump = true;
+
+        } else {
+ 
+            // Check if player can double jump
+            if(this.canDoubleJump){
+                this.canDoubleJump = false;
+                this.player.body.setVelocityY(-300);
+            }
+
         }
     }
 }
