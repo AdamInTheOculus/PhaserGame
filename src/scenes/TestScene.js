@@ -50,14 +50,9 @@ class TestScene extends Phaser.Scene {
         collidableLayer.setCollisionByProperty({ collidable: true });
         this.physics.add.collider(this.player, collidableLayer);
 
-        let debugGraphics = this.add.graphics();
-        collidableLayer.renderDebug(debugGraphics, {
-            tileColor:          new Phaser.Display.Color(255, 255, 255, 0),  // Color of non-colliding tiles
-            collidingTileColor: new Phaser.Display.Color(243, 134, 48, 150),    // Color of colliding tiles
-            faceColor:          new Phaser.Display.Color(40, 39, 37, 0)       // Color of colliding face edges
-        });
-
-
+        // =============================
+        // == Setup player animations ==
+        // =============================
         this.anims.create({
             key: 'left',
             frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
@@ -135,6 +130,21 @@ class TestScene extends Phaser.Scene {
             }
 
         }
+    }
+
+    /**
+     * @author   AdamInTheOculus
+     * @date     March 18th 2019
+     * @purpose  Displays debug colouring for tiles, colliding tiles, and faces.
+    **/
+    displayDebugGraphics(layer) {
+
+        const debugGraphics = this.add.graphics();
+        layer.renderDebug(debugGraphics, {
+            tileColor:          new Phaser.Display.Color(255, 255, 255, 0),  // Color of non-colliding tiles
+            collidingTileColor: new Phaser.Display.Color(243, 134, 48, 150),    // Color of colliding tiles
+            faceColor:          new Phaser.Display.Color(40, 39, 37, 0)       // Color of colliding face edges
+        });
     }
 }
 
