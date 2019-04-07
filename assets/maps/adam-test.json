@@ -17,26 +17,8 @@
         {
          "draworder":"topdown",
          "id":18,
-         "name":"GameObjects",
+         "name":"SpawnPoints",
          "objects":[
-                {
-                 "gid":4,
-                 "height":32,
-                 "id":1,
-                 "name":"FlightOrb",
-                 "properties":[
-                        {
-                         "name":"FlightTime",
-                         "type":"float",
-                         "value":2
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":766.378636561007,
-                 "y":606.894485453756
-                }, 
                 {
                  "height":0,
                  "id":4,
@@ -60,27 +42,85 @@
                  "width":0,
                  "x":249.675277817867,
                  "y":919.034348390821
-                }, 
-                {
-                 "gid":65,
-                 "height":32,
-                 "id":7,
-                 "name":"Tombstone",
-                 "rotation":0,
-                 "type":"Finish",
-                 "visible":true,
-                 "width":32,
-                 "x":992.803579160052,
-                 "y":127.859142733439
                 }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
          "x":0,
          "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":23,
+         "name":"EndPoints",
+         "objects":[
+                {
+                 "gid":65,
+                 "height":32,
+                 "id":13,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":992,
+                 "y":128
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":22,
+         "name":"FlightOrbs",
+         "objects":[
+                {
+                 "gid":4,
+                 "height":32,
+                 "id":10,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":768,
+                 "y":608
+                }, 
+                {
+                 "gid":4,
+                 "height":32,
+                 "id":11,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":608,
+                 "y":416
+                }, 
+                {
+                 "gid":4,
+                 "height":32,
+                 "id":12,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":1056,
+                 "y":640
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":false,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":22,
- "nextobjectid":8,
+ "nextlayerid":24,
+ "nextobjectid":14,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.2",
