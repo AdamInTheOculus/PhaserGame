@@ -1,0 +1,22 @@
+{
+  "name": "phaser-game",
+  "version": "1.0.0",
+  "description": "2D Multiplayer Vertical-Scroller",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamInTheOculus/PhaserGame.git"
+  },
+  "keywords": [],
+  "author": "AdamInTheOculus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamInTheOculus/PhaserGame/issues"
+  },
+  "homepage": "https://github.com/AdamInTheOculus/PhaserGame#readme"
+}
