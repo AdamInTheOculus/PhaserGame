@@ -23,6 +23,14 @@ class TestScene extends Phaser.Scene {
     }
 
     create() {
+
+        // =================================
+        // == Set up socket.io connection ==
+        // =================================
+        console.log(window.location);
+        this.socket = io(); // Defaults to window.location
+        console.log(this.socket);
+
         let map = this.make.tilemap({key: 'map_1'});
         let tileset = map.addTilesetImage('platformer_1', 'game_tiles');
 
