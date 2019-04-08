@@ -108,6 +108,22 @@ class TestScene extends Phaser.Scene {
         // ========================================
         this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
         this.cameras.main.startFollow(this.player);
+
+        // ========================
+        // == Initialize gamepad ==
+        // ========================
+
+        let gamepads = navigator.getGamepads();
+
+        window.addEventListener("gamepadconnected", (event) => {
+            console.log("A gamepad connected:");
+            console.log(event.gamepad);
+        });
+
+        window.addEventListener("gamepaddisconnected", (event) => {
+            console.log("A gamepad disconnected:");
+            console.log(event.gamepad);
+        });
     }
 
     update(time, delta) {
