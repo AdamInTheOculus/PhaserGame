@@ -124,14 +124,22 @@ class TestScene extends Phaser.Scene {
             this.player.anims.play('turn');
         }
 
-        //debugger;
-        //console.log(this.player.body);
 
-        // // Reset jump availability when player touches ground.
-        // if(this.player.body.blocked.down) {
-        //     this.canJump = true;
-        //     this.canDoubleJump = false;
-        // }
+        // Reset player position after falling.
+        if(this.player.y > 1250) {
+
+            // Shake camera when player reaches out-of-bounds.
+            // This is an attempt to make it obvious to players that they died.
+            this.cameras.main.shake(1000, 0.02, null, (camera, progress) => {
+                if(progress >= 1) {
+                    let spawnPoint = this.getRandomSpawnPoint();
+                    this.player.setVelocityY(0);
+                    this.player.setVelocityX(0);
+                    this.player.x = spawnPoint.x;
+                    this.player.y = spawnPoint.y;
+                }
+            });
+        }
     }
 
     /**
@@ -193,8 +201,6 @@ class TestScene extends Phaser.Scene {
 
         this.canJump = false;
         this.canDoubleJump = true;
-
-        console.log('Allowing double jump!');
     }
 
     /**

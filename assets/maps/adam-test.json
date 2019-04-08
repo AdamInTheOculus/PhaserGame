@@ -63,8 +63,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":993,
-                 "y":96
+                 "x":1056,
+                 "y":128
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -311,6 +311,15 @@
                 }, 
                 {
                  "id":51,
+                 "properties":[
+                        {
+                         "name":"collidable",
+                         "type":"bool",
+                         "value":true
+                        }]
+                }, 
+                {
+                 "id":70,
                  "properties":[
                         {
                          "name":"collidable",
