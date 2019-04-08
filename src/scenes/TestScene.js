@@ -101,10 +101,8 @@ class TestScene extends Phaser.Scene {
         // == Set up player movement ==
         // ============================
         this.keyboard = this.input.keyboard.createCursorKeys();
-        this.input.keyboard.on('keydown-UP', this.handleJumpKeyboard, this);
-
-        console.log(this.input.gamepad);
-        this.input.gamepad.on('down', this.handleJumpGamepad, this);
+        this.input.keyboard.on('keydown-UP', this.handleJump, this);
+        this.input.gamepad.on('down', this.handleGamepadInput, this);
 
         // ========================================
         // == Bind camera within game boundaries ==
@@ -117,14 +115,13 @@ class TestScene extends Phaser.Scene {
 
         /**
          * In order for Gamepad input to be properly registered, we must manually update input.
-         * This is because of a bug in the InputPlugin not having its update called automatically every frame.
+         * This is because of an InputPlugin bug -- not having its update called automatically every frame.
          *
          * @author  AdamInTheOculus
          * @date    April 7th 2019
          * @see     https://github.com/photonstorm/phaser/issues/4414#issuecomment-480515615 
         **/
         this.input.update();
-
 
         // ===================================================
         // == Handle input from gamepad if one is connected ==
@@ -160,7 +157,9 @@ class TestScene extends Phaser.Scene {
             this.player.anims.play('turn');
         }
 
-        // Reset player position after falling.
+        // ===================================================
+        // == Reset player position after falling off world ==
+        // ===================================================
         if(this.player.y > 1250) {
 
             // Shake camera when player reaches out-of-bounds.
@@ -180,9 +179,9 @@ class TestScene extends Phaser.Scene {
     /**
      * @author   AdamInTheOculus
      * @date     March 18th 2019
-     * @purpose  Handles single and double jump logic from keyboard.
+     * @purpose  Handles single and double jump logic.
     **/
-    handleJumpKeyboard(event) {
+    handleJump() {
 
         if(this.canJump && this.player.body.blocked.down) {
 
@@ -205,30 +204,13 @@ class TestScene extends Phaser.Scene {
     /**
      * @author   AdamInTheOculus
      * @date     April 8th 2019
-     * @purpose  Handles single and double jump logic from gamepad.
+     * @purpose  Handles all input logic for Gamepads.
     **/
-    handleJumpGamepad(gamepad, button) {
+    handleGamepadInput(gamepad, button) {
 
-        // Only allow jump if A/X is pressed.
-        if(button.index !== 11) {
-            return;
-        }
-
-        if(this.canJump && this.player.body.blocked.down) {
-
-            // Apply jumping force
-            this.player.body.setVelocityY(-300);
-            this.canJump = false;
-            this.canDoubleJump = true;
-
-        } else {
- 
-            // Check if player can double jump
-            if(this.canDoubleJump){
-                this.canDoubleJump = false;
-                this.player.body.setVelocityY(-300);
-            }
-
+        // Button A (X on PlayStation) was pressed.
+        if(button.index == 11) {
+            this.handleJump();
         }
     }
 
@@ -256,6 +238,18 @@ class TestScene extends Phaser.Scene {
     }
 
     /**
+     * @author     AdamInTheOculus
+     * @date       April 7th 2019
+     * @purpose    Returns random integer between [min, max - 1].
+     * @reference  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#Getting_a_random_integer_between_two_values
+    **/
+    getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min; // The maximum is exclusive and the minimum is inclusive
+    }
+
+    /**
      * @author   AdamInTheOculus
      * @date     April 7th 2019
      * @purpose  Logic when a player collides with a blue flight orb.
@@ -277,18 +271,6 @@ class TestScene extends Phaser.Scene {
         tombstone.destroy(tombstone.x, tombstone.y);
         alert('Game Over!');
         location.reload();
-    }
-
-    /**
-     * @author     AdamInTheOculus
-     * @date       April 7th 2019
-     * @purpose    Returns random integer between [min, max - 1].
-     * @reference  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#Getting_a_random_integer_between_two_values
-    **/
-    getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min)) + min; // The maximum is exclusive and the minimum is inclusive
     }
 }
 
