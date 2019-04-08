@@ -18,11 +18,10 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
 
-    console.log(`A user has connected ...`);
-    console.log(Object.keys(socket));
+    console.log(`User [${socket.id}] has connected ...`);
 
     socket.on('disconnect', () => {
-        console.log(`A user has disconnected.`);
+        console.log(`User [${socket.id}] has disconnected.`);
     });
 });
 
