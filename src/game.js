@@ -17,6 +17,7 @@ const config = {
             debug: true
         }
     },
+    input: { gamepad: true },
     scene: [ TestScene ]
 };
 

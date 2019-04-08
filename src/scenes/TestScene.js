@@ -101,45 +101,64 @@ class TestScene extends Phaser.Scene {
         // == Set up player movement ==
         // ============================
         this.keyboard = this.input.keyboard.createCursorKeys();
-        this.input.keyboard.on('keydown-UP', this.handleJump, this);
+        this.input.keyboard.on('keydown-UP', this.handleJumpKeyboard, this);
+
+        console.log(this.input.gamepad);
+        this.input.gamepad.on('down', this.handleJumpGamepad, this);
 
         // ========================================
         // == Bind camera within game boundaries ==
         // ========================================
         this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
         this.cameras.main.startFollow(this.player);
-
-        // ========================
-        // == Initialize gamepad ==
-        // ========================
-
-        let gamepads = navigator.getGamepads();
-
-        window.addEventListener("gamepadconnected", (event) => {
-            console.log("A gamepad connected:");
-            console.log(event.gamepad);
-        });
-
-        window.addEventListener("gamepaddisconnected", (event) => {
-            console.log("A gamepad disconnected:");
-            console.log(event.gamepad);
-        });
     }
 
     update(time, delta) {
 
-        // Handle player side movement
+        /**
+         * In order for Gamepad input to be properly registered, we must manually update input.
+         * This is because of a bug in the InputPlugin not having its update called automatically every frame.
+         *
+         * @author  AdamInTheOculus
+         * @date    April 7th 2019
+         * @see     https://github.com/photonstorm/phaser/issues/4414#issuecomment-480515615 
+        **/
+        this.input.update();
+
+
+        // ===================================================
+        // == Handle input from gamepad if one is connected ==
+        // ===================================================
+        if(this.input.gamepad.gamepads[0] !== undefined) {
+
+            let gamepad = this.input.gamepad.gamepads[0];
+
+            if(gamepad.leftStick.x > 0.2) {
+                this.player.setVelocityX(160);
+                this.player.anims.play('right', true);
+            } else if(gamepad.leftStick.x < -0.2) {
+                this.player.setVelocityX(-160);
+                this.player.anims.play('left', true);
+            } else {
+                this.player.setVelocityX(0);
+                this.player.anims.play('turn');
+            }
+
+        } 
+
+        // ===========================================
+        // == Otherwise, handle input from keyboard ==
+        // ===========================================
         if (this.keyboard.left.isDown) {
             this.player.setVelocityX(-160);
             this.player.anims.play('left', true);
         } else if (this.keyboard.right.isDown) {
             this.player.setVelocityX(160);
             this.player.anims.play('right', true);
-        } else {
+        } else if(this.input.gamepad.gamepads[0] === undefined) {
             this.player.setVelocityX(0);
             this.player.anims.play('turn');
         }
-
 
         // Reset player position after falling.
         if(this.player.y > 1250) {
@@ -161,9 +180,39 @@ class TestScene extends Phaser.Scene {
     /**
      * @author   AdamInTheOculus
      * @date     March 18th 2019
-     * @purpose  Handles single and double jump logic.
+     * @purpose  Handles single and double jump logic from keyboard.
     **/
-    handleJump() {
+    handleJumpKeyboard(event) {
+
+        if(this.canJump && this.player.body.blocked.down) {
+
+            // Apply jumping force
+            this.player.body.setVelocityY(-300);
+            this.canJump = false;
+            this.canDoubleJump = true;
+
+        } else {
+ 
+            // Check if player can double jump
+            if(this.canDoubleJump){
+                this.canDoubleJump = false;
+                this.player.body.setVelocityY(-300);
+            }
+
+        }
+    }
+
+    /**
+     * @author   AdamInTheOculus
+     * @date     April 8th 2019
+     * @purpose  Handles single and double jump logic from gamepad.
+    **/
+    handleJumpGamepad(gamepad, button) {
+
+        // Only allow jump if A/X is pressed.
+        if(button.index !== 11) {
+            return;
+        }
 
         if(this.canJump && this.player.body.blocked.down) {
 
