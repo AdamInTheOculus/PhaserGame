@@ -12,7 +12,7 @@ class TestScene extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('background', 'assets/images/landscape.png');            // Load background image.
+        this.load.image('background', 'assets/backgrounds/landscape.png');            // Load background image.
         this.load.image('game_tiles', 'assets/tilesets/platformer_1.png');       // Load Tiled tileset.
         this.load.image('blue_orb', 'assets/triggerables/blue_orb.png');         // Load first collectable.
         this.load.image('tombstone', 'assets/triggerables/tombstone.png');       // Load GameOver trigger.
@@ -34,7 +34,7 @@ class TestScene extends Phaser.Scene {
         this.groups = {};
 
         // Set up layers
-        this.layers.collidable = map.createStaticLayer(0, tileset, 0, 0);
+        this.layers.ground = map.createStaticLayer(0, tileset, 0, 0);
         this.layers.spawnPoints = map.getObjectLayer('SpawnPoints')['objects'];
         this.layers.endPoints = map.getObjectLayer('EndPoints')['objects'];
         this.layers.flightOrbs = map.getObjectLayer('FlightOrbs')['objects'];
@@ -43,7 +43,6 @@ class TestScene extends Phaser.Scene {
         this.groups.flightOrbs = this.physics.add.staticGroup();
         this.layers.flightOrbs.forEach(flightOrb => {
             let orb = this.groups.flightOrbs.create(flightOrb.x, flightOrb.y, 'blue_orb');
-            orb.setOrigin(0, 0);
             orb.body.width = flightOrb.width;
             orb.body.height = flightOrb.height;
         });
@@ -52,7 +51,6 @@ class TestScene extends Phaser.Scene {
         this.groups.endPoints = this.physics.add.staticGroup();
         this.layers.endPoints.forEach(endpoint => {
             let tombstone = this.groups.endPoints.create(endpoint.x, endpoint.y, 'tombstone');
-            tombstone.setOrigin(0, 0);
             tombstone.body.width = endpoint.width;
             tombstone.body.height = endpoint.height;
         });
@@ -71,8 +69,8 @@ class TestScene extends Phaser.Scene {
         // ===================================
         // == Set up collisions and physics ==
         // ===================================
-        this.layers.collidable.setCollisionByProperty({ collidable: true });
-        this.physics.add.collider(this.player, this.layers.collidable);
+        this.layers.ground.setCollisionByProperty({ collidable: true });
+        this.physics.add.collider(this.player, this.layers.ground, () => {  if(this.player.body.blocked.down){this.canJump = true; this.canDoubleJump = false;} });
         this.physics.add.overlap(this.player, this.groups.flightOrbs, this.collideWithFlightOrb, null, this);
         this.physics.add.overlap(this.player, this.groups.endPoints, this.collideWithTombstone, null, this);
 
@@ -126,11 +124,14 @@ class TestScene extends Phaser.Scene {
             this.player.anims.play('turn');
         }
 
-        // Reset jump availability when player touches ground.
-        if(this.player.body.blocked.down) {
-            this.canJump = true;
-            this.canDoubleJump = false;
-        }
+        //debugger;
+        //console.log(this.player.body);
+
+        // // Reset jump availability when player touches ground.
+        // if(this.player.body.blocked.down) {
+        //     this.canJump = true;
+        //     this.canDoubleJump = false;
+        // }
     }
 
     /**
@@ -148,14 +149,9 @@ class TestScene extends Phaser.Scene {
             this.canDoubleJump = true;
 
         } else {
-
-            console.log('Checking can can jump: ' + this.canJump);
-            console.log('Checking if can double jump: ' + this.canDoubleJump);
-
  
             // Check if player can double jump
             if(this.canDoubleJump){
-                console.log('Performing double jump!');
                 this.canDoubleJump = false;
                 this.player.body.setVelocityY(-300);
             }
@@ -192,10 +188,13 @@ class TestScene extends Phaser.Scene {
      * @purpose  Logic when a player collides with a blue flight orb.
     **/
     collideWithFlightOrb(player, orb) {
-        const FLIGHT_BOOST = -500;
         orb.destroy(orb.x, orb.y);
-        player.setVelocityY(FLIGHT_BOOST);
+        player.setVelocityY(-500); // Give player flight boost.
+
+        this.canJump = false;
         this.canDoubleJump = true;
+
+        console.log('Allowing double jump!');
     }
 
     /**
@@ -206,6 +205,7 @@ class TestScene extends Phaser.Scene {
     collideWithTombstone(player, tombstone) {
         tombstone.destroy(tombstone.x, tombstone.y);
         alert('Game Over!');
+        location.reload();
     }
 
     /**
