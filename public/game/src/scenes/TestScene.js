@@ -27,7 +27,6 @@ class TestScene extends Phaser.Scene {
         // =================================
         // == Set up socket.io connection ==
         // =================================
-        console.log(window.location);
         this.socket = io(); // Defaults to window.location
         console.log(this.socket);
 
