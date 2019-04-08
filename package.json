@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/AdamInTheOculus/PhaserGame/issues"
   },
-  "homepage": "https://github.com/AdamInTheOculus/PhaserGame#readme"
+  "homepage": "https://github.com/AdamInTheOculus/PhaserGame#readme",
+  "dependencies": {
+    "socket.io": "^2.2.0"
+  }
 }
