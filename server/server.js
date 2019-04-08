@@ -9,6 +9,7 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io').listen(server);
+const port = (process.env.PORT || 9001);
 
 app.use(express.static('public/'));
 
@@ -25,6 +26,6 @@ io.on('connection', (socket) => {
     });
 });
 
-server.listen(9001, () => {
+server.listen(port, () => {
     console.log(`Listening on port ${server.address().port} ...`);
 });
