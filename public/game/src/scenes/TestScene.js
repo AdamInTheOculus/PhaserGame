@@ -46,8 +46,11 @@ class TestScene extends Phaser.Scene {
         this.layers.endPoints = map.getObjectLayer('EndPoints')['objects'];
         this.layers.flightOrbs = map.getObjectLayer('FlightOrbs')['objects'];
 
-        // Set up flight orb triggerables
+        // Set up groups
+        this.groups.endPoints = this.physics.add.staticGroup();
         this.groups.flightOrbs = this.physics.add.staticGroup();
+
+        // Set up flight orb triggerables
         this.layers.flightOrbs.forEach(flightOrb => {
             let orb = this.groups.flightOrbs.create(flightOrb.x, flightOrb.y, 'blue_orb');
             orb.body.width = flightOrb.width;
@@ -55,7 +58,6 @@ class TestScene extends Phaser.Scene {
         });
 
         // Set up endpoint (tombstone) triggerables
-        this.groups.endPoints = this.physics.add.staticGroup();
         this.layers.endPoints.forEach(endpoint => {
             let tombstone = this.groups.endPoints.create(endpoint.x, endpoint.y, 'tombstone');
             tombstone.body.width = endpoint.width;
