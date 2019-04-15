@@ -12,12 +12,12 @@ class TestScene extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('background', 'game/assets/backgrounds/landscape.png');            // Load background image.
+        this.load.image('background', 'game/assets/backgrounds/landscape.png');       // Load background image.
         this.load.image('game_tiles', 'game/assets/tilesets/platformer_1.png');       // Load Tiled tileset.
-        this.load.image('blue_orb', 'game/assets/triggerables/blue_orb.png');         // Load first collectable.
-        this.load.image('tombstone', 'game/assets/triggerables/tombstone.png');       // Load GameOver trigger.
+        this.load.image('blue_orb', 'game/assets/triggerables/blue_orb.png');         // Load FlightOrb image.
+        this.load.image('tombstone', 'game/assets/triggerables/tombstone.png');       // Load Tombstone image.
         this.load.tilemapTiledJSON('map_1', 'game/assets/maps/adam-test.json');       // Load Tiled map.
-        this.load.spritesheet('dude', 'game/assets/spritesheets/dude.png', {          // Load spritesheet for player
+        this.load.spritesheet('dude', 'game/assets/spritesheets/dude.png', {          // Load spritesheet for player.
             frameWidth: 32, frameHeight: 48 
         });
     }
@@ -28,14 +28,16 @@ class TestScene extends Phaser.Scene {
         // == Set up socket.io connection ==
         // =================================
         this.socket = io(); // Defaults to window.location
-        console.log(this.socket);
 
-        let map = this.make.tilemap({key: 'map_1'});
-        let tileset = map.addTilesetImage('platformer_1', 'game_tiles');
+        this.socket.on('heartbeat', (data) => {
+            console.log(data);
+        });
 
         // ===================================================================
         // == Build world with background image, tilemaps, and game objects ==
         // ===================================================================
+        let map = this.make.tilemap({key: 'map_1'});
+        let tileset = map.addTilesetImage('platformer_1', 'game_tiles');
         this.add.image(0, 0, 'background').setOrigin(0, 0);
         this.layers = {};
         this.groups = {};
@@ -106,9 +108,9 @@ class TestScene extends Phaser.Scene {
             repeat: -1
         });
 
-        // ============================
-        // == Set up player movement ==
-        // ============================
+        // =============================
+        // == Set up input management ==
+        // =============================
         this.keyboard = this.input.keyboard.createCursorKeys();
         this.input.keyboard.on('keydown-UP', this.handleJump, this);
         this.input.gamepad.on('down', this.handleGamepadInput, this);
@@ -124,7 +126,7 @@ class TestScene extends Phaser.Scene {
 
         /**
          * In order for Gamepad input to be properly registered, we must manually update input.
-         * This is because of an InputPlugin bug -- not having its update called automatically every frame.
+         * This is because of an InputPlugin bug -- not having InputPlugin.update() called automatically every frame.
          *
          * @author  AdamInTheOculus
          * @date    April 7th 2019
@@ -149,7 +151,6 @@ class TestScene extends Phaser.Scene {
                 this.player.setVelocityX(0);
                 this.player.anims.play('turn');
             }
-
         } 
 
         // ===========================================
@@ -172,7 +173,6 @@ class TestScene extends Phaser.Scene {
         if(this.player.y > 1250) {
 
             // Shake camera when player reaches out-of-bounds.
-            // This is an attempt to make it obvious to players that they died.
             this.cameras.main.shake(1000, 0.02, null, (camera, progress) => {
                 if(progress >= 1) {
                     let spawnPoint = this.getRandomSpawnPoint();
@@ -203,6 +203,7 @@ class TestScene extends Phaser.Scene {
  
             // Check if player can double jump
             if(this.canDoubleJump){
+                this.socket.emit('event', {message: 'Double Jumping'});
                 this.canDoubleJump = false;
                 this.player.body.setVelocityY(-300);
             }
