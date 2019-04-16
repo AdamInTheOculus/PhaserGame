@@ -27,10 +27,17 @@ io.on('connection', (socket) => {
     // =============================================
     // == Handle when new player connects to game ==
     // =============================================
+    let newPlayer = {
+        id: socket.id,
+        position: {
+            x: 0,
+            y: 0
+        }
+    };
+
+    gameManager.addPlayer(newPlayer);
+    io.emit('player_new', newPlayer);
     console.log(`User [${socket.id}] has connected ...`);
-    gameManager.addPlayer({
-        id: socket.id
-    });
 
     // ============================================================
     // == Set up periodic server emits to newly connected player ==
@@ -52,7 +59,14 @@ io.on('connection', (socket) => {
     // ==========================================================
     socket.on('event', (data) => {
         console.log(`${new Date()} - ${data.message}`);
-        console.log(gameManager);
+    });
+
+    // =========================================================
+    // == Handle when client emits player information message ==
+    // =========================================================
+    socket.on('player_update', (data) => {
+        gameManager.updatePlayer(data.id, data.position);
+        io.emit('player_update', gameManager.getPlayers());
     });
 });
 

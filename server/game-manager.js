@@ -8,7 +8,7 @@ module.exports = class GameManager {
 
     constructor() {
         this.players = {};       // Represents list of current players, mapped by socket id.
-        this.heartbeat = 1000;   // Represents time (in ms) between each emit to all clients. (1000 / 33.3 === 30 emits per second)
+        this.heartbeat = 33.3;   // Represents time (in ms) between each emit to all clients. (1000 / 33.3 === 30 emits per second)
         this.intervalId = 0;     // Represents Id from setInterval function.
     }
 
@@ -45,17 +45,32 @@ module.exports = class GameManager {
      * @date     April 13th 2019
      * @purpose  Adds a new player to the players object.
     **/
-    addPlayer(obj) {
-        if(obj === undefined || obj === null || typeof obj !== 'object') {
+    addPlayer(newPlayer) {
+        if(newPlayer === undefined || typeof newPlayer !== 'object') {
             return;
         }
 
-        if(this.players[obj.id] !== undefined) {
-            console.log(`GameManager.addPlayer -- Warning -- Player id [${obj.id}] already exists. Nothing added.`);
+        if(this.players[newPlayer.id] !== undefined) {
+            throw new Error(`GameManager.addPlayer -- Warning -- Player id [${newPlayer.id}] already exists. Nothing added.`);
+        }
+
+        this.players[newPlayer.id] = newPlayer;
+    }
+
+    /**
+     * @author   AdamInTheOculus
+     * @date     April 15th 2019
+     * @purpose  Update player specified by `id` parameter. If server successfully validates new position, the player is updated.
+    **/
+    updatePlayer(id, position) {
+        if(position === undefined || typeof position !== 'object') {
+            return;
+        } else if(this.players[id] === undefined) {
             return;
         }
 
-        this.players[obj.id] = obj;
+        // TODO: Perform server verification of client player position.
+        this.players[id].position = position;
     }
 
     /**

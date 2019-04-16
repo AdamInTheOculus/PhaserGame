@@ -4,7 +4,7 @@
 
 
 ### Usage
-1. Run node server with either `npm run start` or `npm run dev`. The `dev` version uses `nodemon` to automatically detect changes.
+1. Run node server with `npm run start` or `npm run dev`. The developer version uses `nodemon` to automatically detect changes.
 2. Go to `localhost:9001` in any browser.
 
 

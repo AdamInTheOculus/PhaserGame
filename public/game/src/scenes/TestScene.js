@@ -4,7 +4,10 @@
  * @purpose  Entry point for Phaser 3 game.
  */
 
+import Player from '../player.js';
+
 class TestScene extends Phaser.Scene {
+
     constructor() {
         super({
             key: 'TestScene'
@@ -23,15 +26,6 @@ class TestScene extends Phaser.Scene {
     }
 
     create() {
-
-        // =================================
-        // == Set up socket.io connection ==
-        // =================================
-        this.socket = io(); // Defaults to window.location
-
-        this.socket.on('heartbeat', (data) => {
-            console.log(data);
-        });
 
         // ===================================================================
         // == Build world with background image, tilemaps, and game objects ==
@@ -52,6 +46,72 @@ class TestScene extends Phaser.Scene {
         this.groups.endPoints = this.physics.add.staticGroup();
         this.groups.flightOrbs = this.physics.add.staticGroup();
 
+        this.players = {};
+
+        // =================================
+        // == Set up socket.io connection ==
+        // =================================
+        this.socket = io(); // Defaults to window.location
+
+        this.socket.on('player_new', (player) => {
+            console.log(`New player has joined ...`);
+
+            if(this.socket.id !== player.id) {
+                console.log(player);
+                console.log(player.id);
+                this.createPlayer(player.id, false);
+            } else {
+                this.createPlayer(this.socket.id, true);
+                this.cameras.main.startFollow(this.players[this.socket.id].sprite);
+            }
+        });
+
+        // this.socket.on('heartbeat', (players) => {
+        //     Object.keys(this.players).forEach((id) => {
+
+        //         if(players[id] === undefined || players[id] !== this.players[id]) {
+        //             return;
+        //         }
+
+        //         this.players[id].sprite.x = players[id].position.x;
+        //         this.players[id].sprite.y = players[id].position.y;
+        //     });
+        // });
+
+        // ======================================
+        // == Emit player update every 33.3 ms ==
+        // ======================================
+        setInterval( () => {
+            
+            // Ignore interval function if client player does not exist.
+            if(this.players[this.socket.id] === undefined) {
+                console.log('Avoiding setInterval()');
+                return;
+            }
+
+            this.socket.emit('player_update', {
+                id: this.socket.id,
+                position: {
+                    x: this.players[this.socket.id].sprite.x,
+                    y: this.players[this.socket.id].sprite.y
+                }
+            });
+        },  33.3);
+
+        this.socket.on('player_update', (players) => {
+
+            console.log(players);
+
+            Object.keys(players).forEach(id => {
+                if(this.players[id] === undefined) {
+                    return;
+                }
+
+                this.players[id].sprite.x = players[id].position.x;
+                this.players[id].sprite.y = players[id].position.y;
+            });
+        });
+
         // Set up flight orb triggerables
         this.layers.flightOrbs.forEach(flightOrb => {
             let orb = this.groups.flightOrbs.create(flightOrb.x, flightOrb.y, 'blue_orb');
@@ -66,24 +126,9 @@ class TestScene extends Phaser.Scene {
             tombstone.body.height = endpoint.height;
         });
 
-        // ======================================
-        // == Initialize player and animations ==
-        // ======================================
-        let spawnPoint = this.getRandomSpawnPoint();
-        this.player = this.physics.add.sprite(spawnPoint.x, spawnPoint.y, 'dude');
-        this.player.setGravityY(300);
-
         // Set up custom variables for jumping / double jumping.
         this.canJump = true;
         this.canDoubleJump = false;
-
-        // ===================================
-        // == Set up collisions and physics ==
-        // ===================================
-        this.layers.ground.setCollisionByProperty({ collidable: true });
-        this.physics.add.collider(this.player, this.layers.ground, () => {  if(this.player.body.blocked.down){this.canJump = true; this.canDoubleJump = false;} });
-        this.physics.add.overlap(this.player, this.groups.flightOrbs, this.collideWithFlightOrb, null, this);
-        this.physics.add.overlap(this.player, this.groups.endPoints, this.collideWithTombstone, null, this);
 
         // =============================
         // == Setup player animations ==
@@ -108,6 +153,11 @@ class TestScene extends Phaser.Scene {
             repeat: -1
         });
 
+        // ===================================
+        // == Set up collisions and physics ==
+        // ===================================
+        this.layers.ground.setCollisionByProperty({ collidable: true });
+
         // =============================
         // == Set up input management ==
         // =============================
@@ -119,7 +169,6 @@ class TestScene extends Phaser.Scene {
         // == Bind camera within game boundaries ==
         // ========================================
         this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
-        this.cameras.main.startFollow(this.player);
     }
 
     update(time, delta) {
@@ -134,6 +183,10 @@ class TestScene extends Phaser.Scene {
         **/
         this.input.update();
 
+        if(this.socket.id === undefined || this.players[this.socket.id] === undefined) {
+            return;
+        }
+
         // ===================================================
         // == Handle input from gamepad if one is connected ==
         // ===================================================
@@ -142,14 +195,14 @@ class TestScene extends Phaser.Scene {
             let gamepad = this.input.gamepad.gamepads[0];
 
             if(gamepad.leftStick.x > 0.2) {
-                this.player.setVelocityX(160);
-                this.player.anims.play('right', true);
+                this.players[this.socket.id].sprite.setVelocityX(160);
+                this.players[this.socket.id].sprite.anims.play('right', true);
             } else if(gamepad.leftStick.x < -0.2) {
-                this.player.setVelocityX(-160);
-                this.player.anims.play('left', true);
+                this.players[this.socket.id].sprite.setVelocityX(-160);
+                this.players[this.socket.id].sprite.anims.play('left', true);
             } else {
-                this.player.setVelocityX(0);
-                this.player.anims.play('turn');
+                this.players[this.socket.id].sprite.setVelocityX(0);
+                this.players[this.socket.id].sprite.anims.play('turn');
             }
         } 
 
@@ -157,32 +210,48 @@ class TestScene extends Phaser.Scene {
         // == Otherwise, handle input from keyboard ==
         // ===========================================
         if (this.keyboard.left.isDown) {
-            this.player.setVelocityX(-160);
-            this.player.anims.play('left', true);
+            this.players[this.socket.id].sprite.setVelocityX(-160);
+            this.players[this.socket.id].sprite.anims.play('left', true);
         } else if (this.keyboard.right.isDown) {
-            this.player.setVelocityX(160);
-            this.player.anims.play('right', true);
+            this.players[this.socket.id].sprite.setVelocityX(160);
+            this.players[this.socket.id].sprite.anims.play('right', true);
         } else if(this.input.gamepad.gamepads[0] === undefined) {
-            this.player.setVelocityX(0);
-            this.player.anims.play('turn');
+            this.players[this.socket.id].sprite.setVelocityX(0);
+            this.players[this.socket.id].sprite.anims.play('turn');
         }
 
         // ===================================================
         // == Reset player position after falling off world ==
         // ===================================================
-        if(this.player.y > 1250) {
+        if(this.players[this.socket.id].sprite.y > 1250) {
 
             // Shake camera when player reaches out-of-bounds.
             this.cameras.main.shake(1000, 0.02, null, (camera, progress) => {
                 if(progress >= 1) {
                     let spawnPoint = this.getRandomSpawnPoint();
-                    this.player.setVelocityY(0);
-                    this.player.setVelocityX(0);
-                    this.player.x = spawnPoint.x;
-                    this.player.y = spawnPoint.y;
+                    this.players[this.socket.id].sprite.setVelocityY(0);
+                    this.players[this.socket.id].sprite.setVelocityX(0);
+                    this.players[this.socket.id].sprite.x = spawnPoint.x;
+                    this.players[this.socket.id].sprite.y = spawnPoint.y;
                 }
             });
         }
+    }
+
+    /**
+     * @author   AdamInTheOculus
+     * @date     April 16th 2019
+     * @purpose  
+    **/
+    createPlayer(playerId, isClient) {
+        let spawnPoint = this.getRandomSpawnPoint();
+        let sprite = this.physics.add.sprite(spawnPoint.x, spawnPoint.y, 'dude');
+        sprite.setGravityY(300);
+        this.players[playerId] = new Player(sprite, isClient);
+
+        this.physics.add.collider(this.players[playerId].sprite, this.layers.ground, () => { if(this.players[this.socket.id].sprite.body.blocked.down){this.canJump = true; this.canDoubleJump = false; }});
+        this.physics.add.overlap(this.players[playerId].sprite, this.groups.flightOrbs, this.collideWithFlightOrb, null, this);
+        this.physics.add.overlap(this.players[playerId].sprite, this.groups.endPoints, this.collideWithTombstone, null, this);
     }
 
     /**
@@ -192,10 +261,14 @@ class TestScene extends Phaser.Scene {
     **/
     handleJump() {
 
-        if(this.canJump && this.player.body.blocked.down) {
+        if(this.players[this.socket.id] === undefined) {
+            return;
+        }
+
+        if(this.canJump && this.players[this.socket.id].sprite.body.blocked.down) {
 
             // Apply jumping force
-            this.player.body.setVelocityY(-300);
+            this.players[this.socket.id].sprite.body.setVelocityY(-300);
             this.canJump = false;
             this.canDoubleJump = true;
 
@@ -205,7 +278,7 @@ class TestScene extends Phaser.Scene {
             if(this.canDoubleJump){
                 this.socket.emit('event', {message: 'Double Jumping'});
                 this.canDoubleJump = false;
-                this.player.body.setVelocityY(-300);
+                this.players[this.socket.id].sprite.body.setVelocityY(-300);
             }
 
         }

@@ -4,23 +4,12 @@
  * @purpose  Contains client-side data and logic for anything related to the player.
  **/
 
-import io from 'socket.io-client';
-
 class Player {
 
-    constructor(position, avatar) {
-        this.position = position;
-        this.avatar = avatar;
-        this.socket = io();
-        this.players = {};
+    constructor(sprite, isClient) {
+        this.sprite = sprite;
+        this.isClient = isClient;
     }
-
-    create() {
-
-    }
-
-    addPlayer(id, x, y) {
-        this.players[id] = this.scene.physics.add.sprite(x, y, 'dude');
-    }
-
 }
+
+export default Player;
