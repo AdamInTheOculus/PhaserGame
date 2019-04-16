@@ -1,27 +1,15 @@
 /**
- * @author   AdamInTheOculus
- * @date     Tues March 12th 2019
- * @purpose  Entry point for Phaser 3 game.
+ * @author   JonCatalano
+ * @date     Thurs April 11th 2019
+ * @purpose  Entry point for Phaser 3 multiplayer game.
  */
 
-class TestScene extends Phaser.Scene {
+class MultiplayerGameScene extends Phaser.Scene {
     constructor() {
         super({
-            key: 'TestScene'
+            key: 'MultiplayerGameScene'
         });
     }
-
-    preload() {
-        this.load.image('background', 'game/assets/backgrounds/landscape.png');            // Load background image.
-        this.load.image('game_tiles', 'game/assets/tilesets/platformer_1.png');       // Load Tiled tileset.
-        this.load.image('blue_orb', 'game/assets/triggerables/blue_orb.png');         // Load first collectable.
-        this.load.image('tombstone', 'game/assets/triggerables/tombstone.png');       // Load GameOver trigger.
-        this.load.tilemapTiledJSON('map_1', 'game/assets/maps/adam-test.json');       // Load Tiled map.
-        this.load.spritesheet('dude', 'game/assets/spritesheets/dude.png', {          // Load spritesheet for player
-            frameWidth: 32, frameHeight: 48 
-        });
-    }
-
     create() {
 
         // =================================
@@ -126,7 +114,7 @@ class TestScene extends Phaser.Scene {
          *
          * @author  AdamInTheOculus
          * @date    April 7th 2019
-         * @see     https://github.com/photonstorm/phaser/issues/4414#issuecomment-480515615 
+         * @see     https://github.com/photonstorm/phaser/issues/4414#issuecomment-480515615
         **/
         this.input.update();
 
@@ -148,7 +136,7 @@ class TestScene extends Phaser.Scene {
                 this.player.anims.play('turn');
             }
 
-        } 
+        }
 
         // ===========================================
         // == Otherwise, handle input from keyboard ==
@@ -198,7 +186,7 @@ class TestScene extends Phaser.Scene {
             this.canDoubleJump = true;
 
         } else {
- 
+
             // Check if player can double jump
             if(this.canDoubleJump){
                 this.canDoubleJump = false;
@@ -281,4 +269,4 @@ class TestScene extends Phaser.Scene {
     }
 }
 
-export default TestScene;
+export default MultiplayerGameScene;

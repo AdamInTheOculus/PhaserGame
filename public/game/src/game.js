@@ -4,7 +4,10 @@
  * @purpose  Entry point for Phaser 3 game.
  */
 
-import TestScene from './scenes/TestScene.js';
+import BootScene from './scenes/BootScene.js';
+import MenuScene from './scenes/MenuScene.js';
+import SingleplayerGameScene from './scenes/SingleplayerGameScene.js';
+import MultiplayerGameScene from './scenes/MultiplayerGameScene.js';
 
 const config = {
     type: Phaser.AUTO,    // Attempts to load WebGL. If it fails then load Canvas.
@@ -18,7 +21,12 @@ const config = {
         }
     },
     input: { gamepad: true },
-    scene: [ TestScene ]
+    scene: [
+        BootScene,
+        MenuScene,
+        SingleplayerGameScene,
+        MultiplayerGameScene
+    ]
 };
 
 const game = new Phaser.Game(config);
