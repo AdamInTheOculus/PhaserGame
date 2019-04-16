@@ -1,22 +1,29 @@
 /**
- * @author   AdamInTheOculus
- * @date     Thurs April 11th 2019
- * @purpose  Entry point for Phaser 3 single player game
+ * @author   JonCatalano | AdamInTheOculus
+ * @date     April 16th 2019
+ * @purpose  Entry point for Phaser 3 single player game.
  */
 
 class SingleplayerGameScene extends Phaser.Scene {
+
     constructor() {
         super({
             key: 'SingleplayerGameScene'
         });
     }
-    create() {
 
-        // =================================
-        // == Set up socket.io connection ==
-        // =================================
-        this.socket = io(); // Defaults to window.location
-        console.log(this.socket);
+    preload() {
+        this.load.image('background', 'game/assets/backgrounds/landscape.png');            // Load background image.
+        this.load.image('game_tiles', 'game/assets/tilesets/platformer_1.png');       // Load Tiled tileset.
+        this.load.image('blue_orb', 'game/assets/triggerables/blue_orb.png');         // Load first collectable.
+        this.load.image('tombstone', 'game/assets/triggerables/tombstone.png');       // Load GameOver trigger.
+        this.load.tilemapTiledJSON('map_1', 'game/assets/maps/adam-test.json');       // Load Tiled map.
+        this.load.spritesheet('dude', 'game/assets/spritesheets/dude.png', {          // Load spritesheet for player
+            frameWidth: 32, frameHeight: 48 
+        });
+    }
+
+    create() {
 
         let map = this.make.tilemap({key: 'map_1'});
         let tileset = map.addTilesetImage('platformer_1', 'game_tiles');
@@ -34,8 +41,11 @@ class SingleplayerGameScene extends Phaser.Scene {
         this.layers.endPoints = map.getObjectLayer('EndPoints')['objects'];
         this.layers.flightOrbs = map.getObjectLayer('FlightOrbs')['objects'];
 
-        // Set up flight orb triggerables
+        // Set up groups
+        this.groups.endPoints = this.physics.add.staticGroup();
         this.groups.flightOrbs = this.physics.add.staticGroup();
+
+        // Set up flight orb triggerables
         this.layers.flightOrbs.forEach(flightOrb => {
             let orb = this.groups.flightOrbs.create(flightOrb.x, flightOrb.y, 'blue_orb');
             orb.body.width = flightOrb.width;
@@ -43,7 +53,6 @@ class SingleplayerGameScene extends Phaser.Scene {
         });
 
         // Set up endpoint (tombstone) triggerables
-        this.groups.endPoints = this.physics.add.staticGroup();
         this.layers.endPoints.forEach(endpoint => {
             let tombstone = this.groups.endPoints.create(endpoint.x, endpoint.y, 'tombstone');
             tombstone.body.width = endpoint.width;
@@ -114,7 +123,7 @@ class SingleplayerGameScene extends Phaser.Scene {
          *
          * @author  AdamInTheOculus
          * @date    April 7th 2019
-         * @see     https://github.com/photonstorm/phaser/issues/4414#issuecomment-480515615
+         * @see     https://github.com/photonstorm/phaser/issues/4414#issuecomment-480515615 
         **/
         this.input.update();
 
@@ -136,7 +145,7 @@ class SingleplayerGameScene extends Phaser.Scene {
                 this.player.anims.play('turn');
             }
 
-        }
+        } 
 
         // ===========================================
         // == Otherwise, handle input from keyboard ==
@@ -186,7 +195,7 @@ class SingleplayerGameScene extends Phaser.Scene {
             this.canDoubleJump = true;
 
         } else {
-
+ 
             // Check if player can double jump
             if(this.canDoubleJump){
                 this.canDoubleJump = false;

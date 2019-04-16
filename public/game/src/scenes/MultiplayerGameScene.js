@@ -1,29 +1,37 @@
 /**
- * @author   JonCatalano
- * @date     Thurs April 11th 2019
+ * @author   JonCatalano | AdamInTheOculus
+ * @date     April 16th 2019
  * @purpose  Entry point for Phaser 3 multiplayer game.
  */
 
+import Player from '../player.js';
+
 class MultiplayerGameScene extends Phaser.Scene {
+
     constructor() {
         super({
             key: 'MultiplayerGameScene'
         });
     }
+
+    preload() {
+        this.load.image('background', 'game/assets/backgrounds/landscape.png');       // Load background image.
+        this.load.image('game_tiles', 'game/assets/tilesets/platformer_1.png');       // Load Tiled tileset.
+        this.load.image('blue_orb', 'game/assets/triggerables/blue_orb.png');         // Load FlightOrb image.
+        this.load.image('tombstone', 'game/assets/triggerables/tombstone.png');       // Load Tombstone image.
+        this.load.tilemapTiledJSON('map_1', 'game/assets/maps/adam-test.json');       // Load Tiled map.
+        this.load.spritesheet('dude', 'game/assets/spritesheets/dude.png', {          // Load spritesheet for player.
+            frameWidth: 32, frameHeight: 48 
+        });
+    }
+
     create() {
-
-        // =================================
-        // == Set up socket.io connection ==
-        // =================================
-        this.socket = io(); // Defaults to window.location
-        console.log(this.socket);
-
-        let map = this.make.tilemap({key: 'map_1'});
-        let tileset = map.addTilesetImage('platformer_1', 'game_tiles');
 
         // ===================================================================
         // == Build world with background image, tilemaps, and game objects ==
         // ===================================================================
+        let map = this.make.tilemap({key: 'map_1'});
+        let tileset = map.addTilesetImage('platformer_1', 'game_tiles');
         this.add.image(0, 0, 'background').setOrigin(0, 0);
         this.layers = {};
         this.groups = {};
@@ -34,8 +42,99 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.layers.endPoints = map.getObjectLayer('EndPoints')['objects'];
         this.layers.flightOrbs = map.getObjectLayer('FlightOrbs')['objects'];
 
-        // Set up flight orb triggerables
+        // Set up groups
+        this.groups.endPoints = this.physics.add.staticGroup();
         this.groups.flightOrbs = this.physics.add.staticGroup();
+
+        this.players = {};
+
+        // =================================
+        // == Set up socket.io connection ==
+        // =================================
+        this.socket = io(); // Defaults to window.location
+        const heartbeatInterval = 16.6; // Every 16.6ms an update is sent to server
+
+        this.socket.on('player_new', (data) => {
+            console.log(`New player has joined ...`);
+
+            if(this.socket.id === data.player.id) {
+                this.createPlayer(this.socket.id, true);
+                this.cameras.main.startFollow(this.players[this.socket.id].sprite);
+            }
+
+            let clientPlayerIdList = Object.keys(this.players);
+
+            // Create any other players currently in game.
+            Object.keys(data.playerList).forEach((id) => {
+
+                // Ignore current player.
+                if(id === this.socket.id) {
+                    return;
+                }
+
+                // Ignore players who have already been created on client.
+                if(clientPlayerIdList.includes(id)) {
+                    return;
+                }
+
+                this.createPlayer(id, false);
+            });
+        });
+
+        this.socket.on('player_disconnect', (id) => {
+            if(this.players[id] !== undefined) {
+                this.players[id].sprite.destroy();
+                delete this.players[id];
+            }
+        });
+
+        // this.socket.on('heartbeat', (players) => {
+        //     Object.keys(this.players).forEach((id) => {
+
+        //         if(players[id] === undefined || players[id] !== this.players[id]) {
+        //             return;
+        //         }
+
+        //         this.players[id].sprite.x = players[id].position.x;
+        //         this.players[id].sprite.y = players[id].position.y;
+        //     });
+        // });
+
+        // ======================================
+        // == Emit player update every 33.3 ms ==
+        // ======================================
+        setInterval( () => {
+            
+            // Ignore interval function if client player does not exist.
+            if(this.players[this.socket.id] === undefined) {
+                return;
+            }
+
+            this.socket.emit('player_update', {
+                id: this.socket.id,
+                position: {
+                    x: this.players[this.socket.id].sprite.x,
+                    y: this.players[this.socket.id].sprite.y
+                }
+            });
+        },  heartbeatInterval);
+
+        this.socket.on('player_update', (players) => {
+            Object.keys(players).forEach(id => {
+                if(this.players[id] === undefined) {
+                    return;
+                }
+
+                if(id === this.socket.id) {
+                    return;
+                }
+
+                this.players[id].sprite.x = players[id].position.x;
+                this.players[id].sprite.y = players[id].position.y;
+            });
+        });
+
+        // Set up flight orb triggerables
         this.layers.flightOrbs.forEach(flightOrb => {
             let orb = this.groups.flightOrbs.create(flightOrb.x, flightOrb.y, 'blue_orb');
             orb.body.width = flightOrb.width;
@@ -43,31 +142,15 @@ class MultiplayerGameScene extends Phaser.Scene {
         });
 
         // Set up endpoint (tombstone) triggerables
-        this.groups.endPoints = this.physics.add.staticGroup();
         this.layers.endPoints.forEach(endpoint => {
             let tombstone = this.groups.endPoints.create(endpoint.x, endpoint.y, 'tombstone');
             tombstone.body.width = endpoint.width;
             tombstone.body.height = endpoint.height;
         });
 
-        // ======================================
-        // == Initialize player and animations ==
-        // ======================================
-        let spawnPoint = this.getRandomSpawnPoint();
-        this.player = this.physics.add.sprite(spawnPoint.x, spawnPoint.y, 'dude');
-        this.player.setGravityY(300);
-
         // Set up custom variables for jumping / double jumping.
         this.canJump = true;
         this.canDoubleJump = false;
-
-        // ===================================
-        // == Set up collisions and physics ==
-        // ===================================
-        this.layers.ground.setCollisionByProperty({ collidable: true });
-        this.physics.add.collider(this.player, this.layers.ground, () => {  if(this.player.body.blocked.down){this.canJump = true; this.canDoubleJump = false;} });
-        this.physics.add.overlap(this.player, this.groups.flightOrbs, this.collideWithFlightOrb, null, this);
-        this.physics.add.overlap(this.player, this.groups.endPoints, this.collideWithTombstone, null, this);
 
         // =============================
         // == Setup player animations ==
@@ -92,9 +175,14 @@ class MultiplayerGameScene extends Phaser.Scene {
             repeat: -1
         });
 
-        // ============================
-        // == Set up player movement ==
-        // ============================
+        // ===================================
+        // == Set up collisions and physics ==
+        // ===================================
+        this.layers.ground.setCollisionByProperty({ collidable: true });
+
+        // =============================
+        // == Set up input management ==
+        // =============================
         this.keyboard = this.input.keyboard.createCursorKeys();
         this.input.keyboard.on('keydown-UP', this.handleJump, this);
         this.input.gamepad.on('down', this.handleGamepadInput, this);
@@ -103,20 +191,23 @@ class MultiplayerGameScene extends Phaser.Scene {
         // == Bind camera within game boundaries ==
         // ========================================
         this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
-        this.cameras.main.startFollow(this.player);
     }
 
     update(time, delta) {
 
         /**
          * In order for Gamepad input to be properly registered, we must manually update input.
-         * This is because of an InputPlugin bug -- not having its update called automatically every frame.
+         * This is because of an InputPlugin bug -- not having InputPlugin.update() called automatically every frame.
          *
          * @author  AdamInTheOculus
          * @date    April 7th 2019
-         * @see     https://github.com/photonstorm/phaser/issues/4414#issuecomment-480515615
+         * @see     https://github.com/photonstorm/phaser/issues/4414#issuecomment-480515615 
         **/
         this.input.update();
+
+        if(this.socket.id === undefined || this.players[this.socket.id] === undefined) {
+            return;
+        }
 
         // ===================================================
         // == Handle input from gamepad if one is connected ==
@@ -126,49 +217,63 @@ class MultiplayerGameScene extends Phaser.Scene {
             let gamepad = this.input.gamepad.gamepads[0];
 
             if(gamepad.leftStick.x > 0.2) {
-                this.player.setVelocityX(160);
-                this.player.anims.play('right', true);
+                this.players[this.socket.id].sprite.setVelocityX(160);
+                this.players[this.socket.id].sprite.anims.play('right', true);
             } else if(gamepad.leftStick.x < -0.2) {
-                this.player.setVelocityX(-160);
-                this.player.anims.play('left', true);
+                this.players[this.socket.id].sprite.setVelocityX(-160);
+                this.players[this.socket.id].sprite.anims.play('left', true);
             } else {
-                this.player.setVelocityX(0);
-                this.player.anims.play('turn');
+                this.players[this.socket.id].sprite.setVelocityX(0);
+                this.players[this.socket.id].sprite.anims.play('turn');
             }
-
-        }
+        } 
 
         // ===========================================
         // == Otherwise, handle input from keyboard ==
         // ===========================================
         if (this.keyboard.left.isDown) {
-            this.player.setVelocityX(-160);
-            this.player.anims.play('left', true);
+            this.players[this.socket.id].sprite.setVelocityX(-160);
+            this.players[this.socket.id].sprite.anims.play('left', true);
         } else if (this.keyboard.right.isDown) {
-            this.player.setVelocityX(160);
-            this.player.anims.play('right', true);
+            this.players[this.socket.id].sprite.setVelocityX(160);
+            this.players[this.socket.id].sprite.anims.play('right', true);
         } else if(this.input.gamepad.gamepads[0] === undefined) {
-            this.player.setVelocityX(0);
-            this.player.anims.play('turn');
+            this.players[this.socket.id].sprite.setVelocityX(0);
+            this.players[this.socket.id].sprite.anims.play('turn');
         }
 
         // ===================================================
         // == Reset player position after falling off world ==
         // ===================================================
-        if(this.player.y > 1250) {
+        if(this.players[this.socket.id].sprite.y > 1250) {
 
             // Shake camera when player reaches out-of-bounds.
-            // This is an attempt to make it obvious to players that they died.
             this.cameras.main.shake(1000, 0.02, null, (camera, progress) => {
                 if(progress >= 1) {
                     let spawnPoint = this.getRandomSpawnPoint();
-                    this.player.setVelocityY(0);
-                    this.player.setVelocityX(0);
-                    this.player.x = spawnPoint.x;
-                    this.player.y = spawnPoint.y;
+                    this.players[this.socket.id].sprite.setVelocityY(0);
+                    this.players[this.socket.id].sprite.setVelocityX(0);
+                    this.players[this.socket.id].sprite.x = spawnPoint.x;
+                    this.players[this.socket.id].sprite.y = spawnPoint.y;
                 }
             });
         }
+    }
+
+    /**
+     * @author   AdamInTheOculus
+     * @date     April 16th 2019
+     * @purpose  
+    **/
+    createPlayer(playerId, isClient) {
+        let spawnPoint = this.getRandomSpawnPoint();
+        let sprite = this.physics.add.sprite(spawnPoint.x, spawnPoint.y, 'dude');
+        sprite.setGravityY(300);
+        this.players[playerId] = new Player(sprite, isClient);
+
+        this.physics.add.collider(this.players[playerId].sprite, this.layers.ground, () => { if(this.players[this.socket.id].sprite.body.blocked.down){this.canJump = true; this.canDoubleJump = false; }});
+        this.physics.add.overlap(this.players[playerId].sprite, this.groups.flightOrbs, this.collideWithFlightOrb, null, this);
+        this.physics.add.overlap(this.players[playerId].sprite, this.groups.endPoints, this.collideWithTombstone, null, this);
     }
 
     /**
@@ -178,19 +283,24 @@ class MultiplayerGameScene extends Phaser.Scene {
     **/
     handleJump() {
 
-        if(this.canJump && this.player.body.blocked.down) {
+        if(this.players[this.socket.id] === undefined) {
+            return;
+        }
+
+        if(this.canJump && this.players[this.socket.id].sprite.body.blocked.down) {
 
             // Apply jumping force
-            this.player.body.setVelocityY(-300);
+            this.players[this.socket.id].sprite.body.setVelocityY(-300);
             this.canJump = false;
             this.canDoubleJump = true;
 
         } else {
-
+ 
             // Check if player can double jump
             if(this.canDoubleJump){
+                this.socket.emit('event', {message: 'Double Jumping'});
                 this.canDoubleJump = false;
-                this.player.body.setVelocityY(-300);
+                this.players[this.socket.id].sprite.body.setVelocityY(-300);
             }
 
         }
