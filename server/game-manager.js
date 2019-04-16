@@ -8,7 +8,7 @@ module.exports = class GameManager {
 
     constructor() {
         this.players = {};       // Represents list of current players, mapped by socket id.
-        this.heartbeat = 33.3;   // Represents time (in ms) between each emit to all clients. (1000 / 33.3 === 30 emits per second)
+        this.heartbeat = 16.6;   // Represents time (in ms) between each emit to all clients. (1000 / 33.3 === 30 emits per second)
         this.intervalId = 0;     // Represents Id from setInterval function.
     }
 

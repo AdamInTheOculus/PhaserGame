@@ -52,17 +52,39 @@ class TestScene extends Phaser.Scene {
         // == Set up socket.io connection ==
         // =================================
         this.socket = io(); // Defaults to window.location
+        const heartbeatInterval = 16.6; // Every 16.6ms an update is sent to server
 
-        this.socket.on('player_new', (player) => {
+        this.socket.on('player_new', (data) => {
             console.log(`New player has joined ...`);
 
-            if(this.socket.id !== player.id) {
-                console.log(player);
-                console.log(player.id);
-                this.createPlayer(player.id, false);
-            } else {
+            if(this.socket.id === data.player.id) {
                 this.createPlayer(this.socket.id, true);
                 this.cameras.main.startFollow(this.players[this.socket.id].sprite);
+            }
+
+            let clientPlayerIdList = Object.keys(this.players);
+
+            // Create any other players currently in game.
+            Object.keys(data.playerList).forEach((id) => {
+
+                // Ignore current player.
+                if(id === this.socket.id) {
+                    return;
+                }
+
+                // Ignore players who have already been created on client.
+                if(clientPlayerIdList.includes(id)) {
+                    return;
+                }
+
+                this.createPlayer(id, false);
+            });
+        });
+
+        this.socket.on('player_disconnect', (id) => {
+            if(this.players[id] !== undefined) {
+                this.players[id].sprite.destroy();
+                delete this.players[id];
             }
         });
 
@@ -85,7 +107,6 @@ class TestScene extends Phaser.Scene {
             
             // Ignore interval function if client player does not exist.
             if(this.players[this.socket.id] === undefined) {
-                console.log('Avoiding setInterval()');
                 return;
             }
 
@@ -96,14 +117,15 @@ class TestScene extends Phaser.Scene {
                     y: this.players[this.socket.id].sprite.y
                 }
             });
-        },  33.3);
+        },  heartbeatInterval);
 
         this.socket.on('player_update', (players) => {
-
-            console.log(players);
-
             Object.keys(players).forEach(id => {
                 if(this.players[id] === undefined) {
+                    return;
+                }
+
+                if(id === this.socket.id) {
                     return;
                 }
 

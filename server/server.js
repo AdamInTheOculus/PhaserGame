@@ -36,7 +36,10 @@ io.on('connection', (socket) => {
     };
 
     gameManager.addPlayer(newPlayer);
-    io.emit('player_new', newPlayer);
+    io.emit('player_new', {
+        player: newPlayer,
+        playerList: gameManager.getPlayers()
+    });
     console.log(`User [${socket.id}] has connected ...`);
 
     // ============================================================
@@ -50,6 +53,7 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log(`User [${socket.id}] has disconnected.`);
         gameManager.removePlayer(socket.id);
+        io.emit('player_disconnect', socket.id);
     });
 
     // ==========================================================
