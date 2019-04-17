@@ -47,6 +47,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.groups.flightOrbs = this.physics.add.staticGroup();
 
         this.players = {};
+        this.ui = {};
 
         // =================================
         // == Set up socket.io connection ==
@@ -54,17 +55,23 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.socket = io(); // Defaults to window.location
         const heartbeatInterval = 16.6; // Every 16.6ms an update is sent to server
 
+        // =========================================
+        // == Handle when a player newly connects ==
+        // =========================================
         this.socket.on('player_new', (data) => {
-            console.log(`New player has joined ...`);
 
+            // ============================================
+            // == Create client player and attach camera ==
+            // ============================================
             if(this.socket.id === data.player.id) {
                 this.createPlayer(this.socket.id, true);
                 this.cameras.main.startFollow(this.players[this.socket.id].sprite);
             }
 
+            // ================================================
+            // == Create any other players currently in game ==
+            // ================================================
             let clientPlayerIdList = Object.keys(this.players);
-
-            // Create any other players currently in game.
             Object.keys(data.playerList).forEach((id) => {
 
                 // Ignore current player.
@@ -79,8 +86,20 @@ class MultiplayerGameScene extends Phaser.Scene {
 
                 this.createPlayer(id, false);
             });
+
+            // ================================================
+            // == Create/update text displaying player count ==
+            // ================================================
+            if(this.ui.playerList) {
+                this.ui.playerList.setText(`# of players: ${Object.keys(this.players).length}`);
+            } else {
+                this.ui.playerList = this.add.text(50, 100, `# of players: ${Object.keys(this.players).length}`, {fill: '#000', fontSize: 26});
+            }
         });
 
+        // ======================================
+        // == Handle when a player disconnects ==
+        // ======================================
         this.socket.on('player_disconnect', (id) => {
             if(this.players[id] !== undefined) {
                 this.players[id].sprite.destroy();
