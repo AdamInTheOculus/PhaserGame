@@ -1,5 +1,5 @@
 /**
- * @author   AdamInTheOculus  
+ * @author   AdamInTheOculus
  * @date     April 13th 2019
  * @purpose  Contains all data and logic of GameManager class.
 **/
