@@ -46,7 +46,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.groups.endPoints = this.physics.add.staticGroup();
         this.groups.flightOrbs = this.physics.add.staticGroup();
 
-        this.scene.bringToTop('GUIScene')
+        //this.scene.bringToTop('GUIScene')
 
         this.players = {};
         this.ui = {};
