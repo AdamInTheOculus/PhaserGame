@@ -1,18 +1,18 @@
 /**
  * @author   JonCatalano
- * @date     Thurs Aprl 11th 2019
+ * @date     April 18th 2019
  * @purpose  Startup GUI Scene
  */
 
 class GUIScene extends Phaser.Scene {
+
     constructor() {
         super({
             key: 'GUIScene', active: true
         });
     }
-    create() {
-      this.title = this.add.text(0, 0, 'GUI', { fill: '#000', fontSize: 40 });
 
+    create(){
       // Health Bar
       this.hp = 150;
       this.health_bar = this.add.graphics()
@@ -20,8 +20,14 @@ class GUIScene extends Phaser.Scene {
       this.health_bar.fillRect(window.innerWidth+10, window.innerHeight*0.02, this.hp, window.innerHeight*0.03);
     }
 
-    update(time, delta) {
-
+    /**
+     * @author   AdamInTheOculus
+     * @date     April 18th 2019
+     * @purpose  Updates `this.title` text with updated player list.
+     * @param    `playerCount` - Number representing length of player list.
+    **/
+    updatePlayerList(playerCount) {
+        this.title.setText(`# of players: ${playerCount}`);
     }
 
 }

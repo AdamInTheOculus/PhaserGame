@@ -17,12 +17,13 @@ class MultiplayerGameScene extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('background', 'game/assets/backgrounds/landscape.png');       // Load background image.
-        this.load.image('game_tiles', 'game/assets/tilesets/platformer_1.png');       // Load Tiled tileset.
-        this.load.image('blue_orb', 'game/assets/triggerables/blue_orb.png');         // Load FlightOrb image.
-        this.load.image('tombstone', 'game/assets/triggerables/tombstone.png');       // Load Tombstone image.
-        this.load.tilemapTiledJSON('map_1', 'game/assets/maps/adam-test.json');       // Load Tiled map.
-        this.load.spritesheet('dude', 'game/assets/spritesheets/dude.png', {          // Load spritesheet for player.
+        this.load.image('background', 'game/assets/backgrounds/landscape.png');         // Load background image.
+        this.load.image('game_tiles', 'game/assets/tilesets/platformer_1.png');         // Load Tiled tileset.
+        this.load.image('blue_orb', 'game/assets/triggerables/blue_orb.png');           // Load FlightOrb image.
+        this.load.image('tombstone', 'game/assets/triggerables/tombstone.png');         // Load Tombstone image.
+        this.load.image('question_mark', 'game/assets/triggerables/question_mark.png'); // Load QuestionMark image.
+        this.load.tilemapTiledJSON('map_1', 'game/assets/maps/adam-test.json');         // Load Tiled map.
+        this.load.spritesheet('dude', 'game/assets/spritesheets/dude.png', {            // Load spritesheet for player.
             frameWidth: 32, frameHeight: 48
         });
     }
@@ -34,6 +35,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         // ===================================================================
         let map = this.make.tilemap({key: 'map_1'});
         let tileset = map.addTilesetImage('platformer_1', 'game_tiles');
+
         this.add.image(0, 0, 'background').setOrigin(0, 0);
         this.layers = {};
         this.groups = {};
@@ -52,6 +54,7 @@ class MultiplayerGameScene extends Phaser.Scene {
 
         this.players = {};
         this.ui = {};
+        this.guiScene = this.scene.get('GUIScene');
 
         this.inputs = {
           jump: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W),
@@ -103,12 +106,7 @@ class MultiplayerGameScene extends Phaser.Scene {
             // ================================================
             // == Create/update text displaying player count ==
             // ================================================
-            if(this.ui.playerList) {
-                this.ui.playerList.setText(`# of players: ${Object.keys(this.players).length}`);
-            } else {
-
-                this.ui.playerList = this.add.text(50, 100, `# of players: ${Object.keys(this.players).length}`, {fill: '#000', fontSize: 26});
-            }
+            this.guiScene.updatePlayerList(Object.keys(this.players).length);
         });
 
         // ======================================
@@ -116,8 +114,15 @@ class MultiplayerGameScene extends Phaser.Scene {
         // ======================================
         this.socket.on('player_disconnect', (id) => {
             if(this.players[id] !== undefined) {
+
+                // Clean up username
+                this.players[id].nameUI.destroy();
                 this.players[id].sprite.destroy();
+
                 delete this.players[id];
+
+                // Update player list count
+                this.guiScene.updatePlayerList(Object.keys(this.players).length);
             }
         });
 
@@ -136,24 +141,27 @@ class MultiplayerGameScene extends Phaser.Scene {
         // ======================================
         // == Emit player update every 33.3 ms ==
         // ======================================
-
-
         setInterval( () => {
 
-            // Ignore interval function if client player does not exist.
-            if(this.players[this.socket.id] === undefined) {
-                return;
-            }
-
-            this.socket.emit('player_update', {
-                id: this.socket.id,
-                position: {
-                    x: this.players[this.socket.id].sprite.x,
-                    y: this.players[this.socket.id].sprite.y
+                // Ignore interval function if client player does not exist.
+                if(this.players[this.socket.id] === undefined) {
+                    return;
                 }
-            });
-        },  heartbeatInterval);
 
+                this.socket.emit('player_update', {
+                    id: this.socket.id,
+                    position: {
+                        x: this.players[this.socket.id].sprite.x,
+                        y: this.players[this.socket.id].sprite.y
+                    }
+                });
+
+            },  heartbeatInterval
+        );
+
+        // =================================================================================
+        // == Handle when player update is received. THIS WILL BE REPLACED WITH heartbeat ==
+        // =================================================================================
         this.socket.on('player_update', (players) => {
             Object.keys(players).forEach(id => {
                 if(this.players[id] === undefined) {
@@ -164,8 +172,16 @@ class MultiplayerGameScene extends Phaser.Scene {
                     return;
                 }
 
+                // Update player position from server data.
                 this.players[id].sprite.x = players[id].position.x;
                 this.players[id].sprite.y = players[id].position.y;
+
+                // Display name above player.
+                if(this.players[id].nameUI === undefined) {
+                    this.players[id].nameUI = this.add.text(this.players[id].sprite.x - 75, this.players[id].sprite.y - 40, this.players[id].name, {fill: '#FFF', fontSize: 14});
+                } else {
+                    this.players[id].nameUI.setPosition(this.players[id].sprite.x - 75, this.players[id].sprite.y - 40);
+                }
             });
         });
 
@@ -298,6 +314,7 @@ class MultiplayerGameScene extends Phaser.Scene {
     /**
      * @author   AdamInTheOculus
      * @date     April 16th 2019
+     * @TODO     This should be refactored into player class.
      * @purpose
     **/
     createPlayer(playerId, isClient) {
@@ -305,6 +322,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         let sprite = this.physics.add.sprite(spawnPoint.x, spawnPoint.y, 'dude');
         sprite.setGravityY(300);
         this.players[playerId] = new Player(sprite, isClient);
+        this.players[playerId].name = playerId;
 
         this.physics.add.collider(this.players[playerId].sprite, this.layers.ground, () => { if(this.players[this.socket.id].sprite.body.blocked.down){this.canJump = true; this.canDoubleJump = false; }});
         this.physics.add.overlap(this.players[playerId].sprite, this.groups.flightOrbs, this.collideWithFlightOrb, null, this);
