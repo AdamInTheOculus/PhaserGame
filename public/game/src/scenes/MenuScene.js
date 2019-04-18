@@ -5,7 +5,7 @@
  */
 
 class MenuScene extends Phaser.Scene {
-    constructor(test) {
+    constructor() {
         super({
             key: 'MenuScene'
         });
@@ -15,30 +15,29 @@ class MenuScene extends Phaser.Scene {
 
       this.registry.set('restartScene', false);
 
-      let sh = window.innerHeight;
-      let sw = window.innerWidth;
+      //save canvas dimensions
+      this.sh = window.innerHeight;
+      this.sw = window.innerWidth;
 
-      // let ch = 0;
-      // let cw = 0;
       let multiplier = 1;
-      if (sh / sw > 0.6) {
+      if (this.sh / this.sw > 0.6) {
           // Portrait, fit width
-          multiplier = sw / 300;
+          multiplier = this.sw / 300;
       } else {
-          multiplier = sh / 240;
+          multiplier = this.sh / 240;
       }
       multiplier = Math.floor(multiplier);
       let el = document.getElementsByTagName('canvas')[0];
       //el.style.width = 300 * multiplier + 'px';
       el.style.height = 300 * multiplier + 'px';
 
-      this.title = this.add.text(sw/4, 100, 'Spell Slam 1.0', { fill: '#fff', fontSize: 40 });
+      this.title = this.add.text(this.sw/4, 100, 'Spell Slam 1.0', { fill: '#fff', fontSize: 40 });
 
-      this.single_play_button = this.add.text(sw/4, 250, 'Single Player', { fill: '#0f0' })
+      this.single_play_button = this.add.text(this.sw/4, 250, 'Single Player', { fill: '#0f0' })
         .setInteractive()
         .on('pointerdown', () => this.startSPGame());
 
-      this.multiplay_button = this.add.text(sw/4, 300, 'Multiplayer', { fill: '#0f0' })
+      this.multiplay_button = this.add.text(this.sw/4, 300, 'Multiplayer', { fill: '#0f0' })
         .setInteractive()
         .on('pointerdown', () => this.startMPGame());
 

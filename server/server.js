@@ -7,6 +7,8 @@
 const GameManager = require('./game-manager.js');
 const gameManager = new GameManager();
 
+const PlayerState = require('./player-state.js');
+
 const express = require('express');
 const app = express();
 const server = require('http').Server(app);
@@ -27,20 +29,15 @@ io.on('connection', (socket) => {
     // =============================================
     // == Handle when new player connects to game ==
     // =============================================
-    let newPlayer = {
-        id: socket.id,
-        position: {
-            x: 0,
-            y: 0
-        }
-    };
+    let newPlayer = new PlayerState();
+    newPlayer.id = socket.id;
 
     gameManager.addPlayer(newPlayer);
     io.emit('player_new', {
         player: newPlayer,
         playerList: gameManager.getPlayers()
     });
-    console.log(`User [${socket.id}] has connected ...`);
+    console.log(`User [${newPlayer.id}] has connected ...`);
 
     // ============================================================
     // == Set up periodic server emits to newly connected player ==

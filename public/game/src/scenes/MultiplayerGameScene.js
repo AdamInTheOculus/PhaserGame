@@ -22,7 +22,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.load.image('question_mark', 'game/assets/triggerables/question_mark.png'); // Load QuestionMark image.
         this.load.tilemapTiledJSON('map_1', 'game/assets/maps/adam-test.json');         // Load Tiled map.
         this.load.spritesheet('dude', 'game/assets/spritesheets/dude.png', {            // Load spritesheet for player.
-            frameWidth: 32, frameHeight: 48 
+            frameWidth: 32, frameHeight: 48
         });
     }
 
@@ -47,8 +47,19 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.groups.endPoints = this.physics.add.staticGroup();
         this.groups.flightOrbs = this.physics.add.staticGroup();
 
+        //this.scene.bringToTop('GUIScene')
+
         this.players = {};
         this.ui = {};
+
+        this.inputs = {
+          jump: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W),
+          jump2: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE),
+          fire: this.input.activePointer,
+          left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A),
+          right: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D),
+          down: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S)
+        };
 
         // =================================
         // == Set up socket.io connection ==
@@ -124,6 +135,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         // == Emit player update every 33.3 ms ==
         // ======================================
         setInterval( () => {
+
                 // Ignore interval function if client player does not exist.
                 if(this.players[this.socket.id] === undefined) {
                     return;
@@ -136,6 +148,7 @@ class MultiplayerGameScene extends Phaser.Scene {
                         y: this.players[this.socket.id].sprite.y
                     }
                 });
+
             },  heartbeatInterval
         );
 
@@ -232,7 +245,7 @@ class MultiplayerGameScene extends Phaser.Scene {
          *
          * @author  AdamInTheOculus
          * @date    April 7th 2019
-         * @see     https://github.com/photonstorm/phaser/issues/4414#issuecomment-480515615 
+         * @see     https://github.com/photonstorm/phaser/issues/4414#issuecomment-480515615
         **/
         this.input.update();
 
@@ -257,7 +270,7 @@ class MultiplayerGameScene extends Phaser.Scene {
                 this.players[this.socket.id].sprite.setVelocityX(0);
                 this.players[this.socket.id].sprite.anims.play('turn');
             }
-        } 
+        }
 
         // ===========================================
         // == Otherwise, handle input from keyboard ==
@@ -294,8 +307,8 @@ class MultiplayerGameScene extends Phaser.Scene {
     /**
      * @author   AdamInTheOculus
      * @date     April 16th 2019
-     * @purpose  
      * @TODO     This should be refactored into player class.
+     * @purpose
     **/
     createPlayer(playerId, isClient) {
         let spawnPoint = this.getRandomSpawnPoint();
@@ -328,7 +341,7 @@ class MultiplayerGameScene extends Phaser.Scene {
             this.canDoubleJump = true;
 
         } else {
- 
+
             // Check if player can double jump
             if(this.canDoubleJump){
                 this.canDoubleJump = false;
