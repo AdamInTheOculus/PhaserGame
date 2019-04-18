@@ -6,6 +6,7 @@
 
 module.exports = class PlayerState {
   constructor() {
+    this.hp = 100;
     this.id = 0;
     this.position = {
       x: 0,

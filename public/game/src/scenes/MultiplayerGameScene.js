@@ -5,6 +5,8 @@
  */
 
 import Player from '../player.js';
+import GUIScene from '.././scenes/GUIScene.js';
+
 
 class MultiplayerGameScene extends Phaser.Scene {
 
@@ -46,7 +48,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.groups.endPoints = this.physics.add.staticGroup();
         this.groups.flightOrbs = this.physics.add.staticGroup();
 
-        //this.scene.bringToTop('GUIScene')
+        this.scene.bringToTop('GUIScene')
 
         this.players = {};
         this.ui = {};

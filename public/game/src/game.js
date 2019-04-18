@@ -25,10 +25,10 @@ const config = {
     input: { gamepad: true },
     scene: [
         BootScene,
+        GUIScene,
         MenuScene,
         SingleplayerGameScene,
-        MultiplayerGameScene,
-        GUIScene
+        MultiplayerGameScene
     ]
 };
 

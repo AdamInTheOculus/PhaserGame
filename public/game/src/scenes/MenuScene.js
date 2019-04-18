@@ -12,6 +12,7 @@ class MenuScene extends Phaser.Scene {
     }
     create() {
       this.scene.bringToTop();
+      //this.cameras.main.setBackgroundColor('rgba(255, 0, 0, 0.5)');
 
       this.registry.set('restartScene', false);
 
@@ -28,8 +29,13 @@ class MenuScene extends Phaser.Scene {
       }
       multiplier = Math.floor(multiplier);
       let el = document.getElementsByTagName('canvas')[0];
-      //el.style.width = 300 * multiplier + 'px';
-      el.style.height = 300 * multiplier + 'px';
+      el.style.width = 300 * multiplier + 'px';
+      el.style.height = 240 * multiplier + 'px';
+
+      this.background = this.add.graphics()
+      this.background.fillStyle(0x000, 1);
+      this.background.fillRect(0, 0, 1000, 1000);
+
 
       this.title = this.add.text(this.sw/4, 100, 'Spell Slam 1.0', { fill: '#fff', fontSize: 40 });
 
