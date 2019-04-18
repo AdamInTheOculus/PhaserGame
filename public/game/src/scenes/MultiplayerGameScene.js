@@ -104,6 +104,7 @@ class MultiplayerGameScene extends Phaser.Scene {
             if(this.ui.playerList) {
                 this.ui.playerList.setText(`# of players: ${Object.keys(this.players).length}`);
             } else {
+
                 this.ui.playerList = this.add.text(50, 100, `# of players: ${Object.keys(this.players).length}`, {fill: '#000', fontSize: 26});
             }
         });
@@ -133,6 +134,8 @@ class MultiplayerGameScene extends Phaser.Scene {
         // ======================================
         // == Emit player update every 33.3 ms ==
         // ======================================
+
+
         setInterval( () => {
 
             // Ignore interval function if client player does not exist.
@@ -328,7 +331,6 @@ class MultiplayerGameScene extends Phaser.Scene {
 
             // Check if player can double jump
             if(this.canDoubleJump){
-                this.socket.emit('event', {message: 'Double Jumping'});
                 this.canDoubleJump = false;
                 this.players[this.socket.id].sprite.body.setVelocityY(-300);
             }
