@@ -27,7 +27,11 @@ class GUIScene extends Phaser.Scene {
      * @param    `playerCount` - Number representing length of player list.
     **/
     updatePlayerList(playerCount) {
-        this.title.setText(`# of players: ${playerCount}`);
+        if(this.title === undefined) {
+            this.title = this.add.text(10, 10, `# of players: ${playerCount}`, {fill: '#000', fontSize: 26})
+        } else {
+            this.title.setText(`# of players: ${playerCount}`);
+        }
     }
 
 }
