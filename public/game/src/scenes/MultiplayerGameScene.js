@@ -33,6 +33,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         // ===================================================================
         let map = this.make.tilemap({key: 'map_1'});
         let tileset = map.addTilesetImage('platformer_1', 'game_tiles');
+
         this.add.image(0, 0, 'background').setOrigin(0, 0);
         this.layers = {};
         this.groups = {};
@@ -51,6 +52,7 @@ class MultiplayerGameScene extends Phaser.Scene {
 
         this.players = {};
         this.ui = {};
+        this.guiScene = this.scene.get('GUIScene');
 
         this.inputs = {
           jump: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W),
@@ -102,11 +104,7 @@ class MultiplayerGameScene extends Phaser.Scene {
             // ================================================
             // == Create/update text displaying player count ==
             // ================================================
-            if(this.ui.playerList) {
-                this.ui.playerList.setText(`# of players: ${Object.keys(this.players).length}`);
-            } else {
-                this.ui.playerList = this.add.text(50, 100, `# of players: ${Object.keys(this.players).length}`, {fill: '#000', fontSize: 26});
-            }
+            this.guiScene.updatePlayerList(Object.keys(this.players).length);
         });
 
         // ======================================
@@ -114,8 +112,15 @@ class MultiplayerGameScene extends Phaser.Scene {
         // ======================================
         this.socket.on('player_disconnect', (id) => {
             if(this.players[id] !== undefined) {
+
+                // Clean up username
+                this.players[id].nameUI.destroy();
                 this.players[id].sprite.destroy();
+
                 delete this.players[id];
+
+                // Update player list count
+                this.guiScene.updatePlayerList(Object.keys(this.players).length);
             }
         });
 
