@@ -9,6 +9,7 @@ class Player {
     constructor(sprite, isClient) {
         this.sprite = sprite;
         this.isClient = isClient;
+        
     }
 }
 
