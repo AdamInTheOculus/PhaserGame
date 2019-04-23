@@ -296,7 +296,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         // ===================================================
         // == Reset player position after falling off world ==
         // ===================================================
-        if(this.players[this.socket.id].sprite.y > 1250) {
+        if(this.players[this.socket.id].sprite.y > 1375) {
 
             // Shake camera when player reaches out-of-bounds.
             this.cameras.main.shake(1000, 0.02, null, (camera, progress) => {
