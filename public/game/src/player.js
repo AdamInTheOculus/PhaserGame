@@ -92,9 +92,6 @@ class Player {
 
             // Prevent double jump from occurring too rapidly. Wait for 100ms between last key press.
             if(this.canDoubleJump && inputHeldTime > (this.lastJumpTime + 100)){
-
-                console.log('Is about to double jump!');
-
                 this.canDoubleJump = false;
                 this.sprite.body.setVelocityY(-300);
             }
