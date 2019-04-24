@@ -8,7 +8,6 @@ class Spell {
     constructor() {
         this.isAOE = false;
         this.isProjectile = false;
-        this.id = 0;
     }
 }
 

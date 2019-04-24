@@ -13,11 +13,20 @@ class GUIScene extends Phaser.Scene {
     }
 
     create(){
+      let sw = this.cameras.main.width;
+      let sh = this.cameras.main.height;
+
       // Health Bar
       this.hp = 150;
       this.health_bar = this.add.graphics()
       this.health_bar.fillStyle(0xff0000, 1);
-      this.health_bar.fillRect(window.innerWidth+10, window.innerHeight*0.02, this.hp, window.innerHeight*0.03);
+      this.health_bar.fillRect(sw-10, sh*0.02, this.hp, sh*0.03);
+
+      // Spells
+      this.spells = [];
+      this.spellsInventory = this.add.graphics()
+      this.spellsInventory.fillStyle(0xff0000, 1);
+      this.spellsInventory.strokeRect(sw*0.02+10, sh*0.02, sw*0.04, sh*0.03);
     }
 
     /**

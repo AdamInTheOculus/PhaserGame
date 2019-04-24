@@ -20,17 +20,6 @@ class MenuScene extends Phaser.Scene {
       this.sh = window.innerHeight;
       this.sw = window.innerWidth;
 
-      let multiplier = 1;
-      if (this.sh / this.sw > 0.6) {
-          // Portrait, fit width
-          multiplier = this.sw / 300;
-      } else {
-          multiplier = this.sh / 240;
-      }
-      multiplier = Math.floor(multiplier);
-      let el = document.getElementsByTagName('canvas')[0];
-      el.style.width = 300 * multiplier + 'px';
-      el.style.height = 240 * multiplier + 'px';
 
       this.background = this.add.graphics()
       this.background.fillStyle(0x000, 1);
