@@ -8,3 +8,7 @@ export const MOVE_LEFT = 1;
 export const MOVE_RIGHT = 2;
 export const JUMP = 3;
 export const IDLE = 4;
+export const ids = {
+    basic: 0,
+    fireball: 1
+};

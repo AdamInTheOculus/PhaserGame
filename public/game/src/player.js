@@ -3,17 +3,21 @@
  * @date     April 24th 2019
  * @purpose  Contains client-side data and logic for anything related to the player.
  **/
+import Fireball_Spell from './spells/fireball.js'
 
-class Player {
+export default class Player {
     constructor(data) {
         this.id = data.id;
         this.name = data.name;
         this.sprite = data.sprite;
         this.spawnPoint = data.spawn;
+        this.scene = data.scene;
 
         this.lastJumpTime = 0;
         this.canJump = true;
         this.canDoubleJump = false;
+        this.spells = {};
+        this.spells['fireball'] = new Fireball_Spell(true);
     }
 
     update(input) {
@@ -41,7 +45,7 @@ class Player {
         if(input.left.isDown) {
             this.sprite.setVelocityX(-160);
             this.sprite.anims.play('left', true);
-        } 
+        }
         else if (input.right.isDown) {
             this.sprite.setVelocityX(160);
             this.sprite.anims.play('right', true);
@@ -53,6 +57,11 @@ class Player {
         if(input.jump.isDown) {
             this.handleJump(input.jump.timeDown);
             this.lastJumpTime = input.jump.timeDown;
+        }
+
+        if(input.fire.isDown) {
+            alert(input.fire.isDown)
+            this.shoot('fireball')
         }
     }
 
@@ -107,6 +116,9 @@ class Player {
         this.canJump = false;
         this.canDoubleJump = true;
     }
-}
 
-export default Player;
+    shoot(spellIndex){
+        alert('shooting')
+        this.spells[spellIndex].cast(this.scene.physcis, {x: this.sprite.x, y: this.sprite.y}, {x: 100, y: 100});
+    }
+}

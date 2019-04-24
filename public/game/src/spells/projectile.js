@@ -4,19 +4,54 @@
  * @purpose  Contains client-side data and logic for anything related to a projectile.
  **/
 
-class Projectile {
-    constructor(speed, damage, isAOE, radius, name) {
-        this.speed = speed;
-        this.damage = damage;
-        this.isAOE = isAOE;
-        this.radius = radius;
-        this.name = name;
-        //this.sprite = constants.fireball.sprite or something
+export default class Projectile extends Phaser.GameObjects.Sprite {
+    constructor(config) {
+        super(config.startPosition.x, config.startPosition.y)
+
+        this.speed = config.speed;
+        this.damage = config.damage;
+        this.isAOE = config.isAOE;
+        this.radius = config.radius;
+        console.log('herps')
+        config.physics.world.enable(this);
+
+        this.body.setSize(8, 8);
+        this.body.offset.set(12, 12);
+
+        /*this.on('animationcomplete', () => {
+            if (this.anims.currentAnim.key === 'fireExplode') {
+                this.setActive(false);
+                this.setVisible(false);
+            }
+        }, this);
+        */
     }
 
-    update(){
+    update(time, delta){
+        if (!this.active) {
+            return;
+        }
+        /* collision
+        this.scene.physics.world.collide(this, this.scene.groundLayer, () => this.collided());
+        this.scene.physics.world.overlap(this, this.scene.enemyGroup, (me, enemy) => {
+            me.explode();
+            enemy.starKilled();
+        });
+        */
+    }
 
+    collided() {
+        console.log('COLLIDED');
+
+        if (this.body.velocity.x === 0 || this.body.velocity.y === 0) {
+            //this.scene.sound.playAudioSprite('sfx', 'smb_bump');
+            this.explode();
+        }
+    }
+
+    explode() {
+        this.body.allowGravity = false;
+        this.body.velocity.y = 0;
+        //this.play('fireExplode');
     }
 }
-
-export default Projectile;

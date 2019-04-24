@@ -5,9 +5,10 @@
  */
 
 import Player from '../player.js';
-import GUIScene from '.././scenes/GUIScene.js';
+import GUIScene from './GUIScene.js';
+import * as constants from '../helpers/constants.js';
+import FireBall from '../spells/fireball.js';
 import InputHandler from '../input_handler.js';
-
 
 class MultiplayerGameScene extends Phaser.Scene {
 
@@ -15,6 +16,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         super({
             key: 'MultiplayerGameScene'
         });
+        this.ids = constants.ids;
     }
 
     preload() {
@@ -246,6 +248,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         sprite.setGravityY(300);
 
         let player = new Player({
+            scene: this,
             id: playerId,
             name: playerId,
             sprite: sprite,
@@ -315,7 +318,7 @@ class MultiplayerGameScene extends Phaser.Scene {
     **/
     collideWithTombstone(id, player, tombstone) {
         tombstone.destroy(tombstone.x, tombstone.y);
-        
+
         if(id === this.player.id) {
             alert('You touched the tombstone!');
         } else {
