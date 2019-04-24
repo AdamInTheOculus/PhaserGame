@@ -31,12 +31,13 @@ export default class Fireball_Spell extends Spell {
         projectile.body.allowGravity = true;
 
         projectile.setPosition(startPosition.x, startPosition.y);
-        let angle = Phaser.Math.Angle.Between(startPosition.x, startPosition.y, projectile.scene.cameras.main.scrollX+pointerPosition.x, projectile.scene.cameras.main.scrollY+pointerPosition.x)
+        let angle = Phaser.Math.Angle.Between(startPosition.x, startPosition.y, projectile.scene.cameras.main.scrollX+pointerPosition.x, projectile.scene.cameras.main.scrollY+pointerPosition.y)
+        console.log(angle)
         projectile.body.velocity.x =  300*Math.cos(angle);
         projectile.body.velocity.y = 300*Math.sin(angle);
+
         //this.play('potionGreen');
 
         //this.scene.sound.playAudioSprite('sfx', 'smb_fireball');
-
     }
 }
