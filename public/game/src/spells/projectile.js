@@ -13,7 +13,7 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
         this.isAOE = config.isAOE;
         this.radius = config.radius;
 
-        this.scene.physics.world.enable(this);
+        config.scene.physics.world.enable(this);
 
         this.body.setSize(8, 8);
         this.body.offset.set(12, 12);
@@ -31,20 +31,18 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
         if (!this.active) {
             return;
         }
-        /* collision
-        this.scene.physics.world.collide(this, this.scene.groundLayer, () => this.collided());
-        this.scene.physics.world.overlap(this, this.scene.enemyGroup, (me, enemy) => {
+
+        config.scene.physics.world.collide(this, config.scene.groundLayer, () => this.collided());
+        config.scene.physics.world.overlap(this, config.scene.enemyGroup, (me, enemy) => {
             me.explode();
-            enemy.starKilled();
         });
-        */
     }
 
     collided() {
         console.log('COLLIDED');
 
         if (this.body.velocity.x === 0 || this.body.velocity.y === 0) {
-            //this.scene.sound.playAudioSprite('sfx', 'smb_bump');
+            //config.scene.sound.playAudioSprite('sfx', 'smb_bump');
             this.explode();
         }
     }

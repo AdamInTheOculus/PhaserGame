@@ -13,6 +13,7 @@ export default class Fireball_Spell extends Spell {
         this.speed = 10;
         this.damage = 10;
         this.radius = 10;
+        this.coolDown = 100;
     }
 
     cast(scene, startPosition, pointerPosition) {

@@ -20,7 +20,7 @@ export default class Player {
         this.cursorPosition = {};
         this.spells = {};
         this.spells['fireball'] = new Fireball_Spell(true);
-
+        this.coolDown = 0;
     }
 
     update(input) {
@@ -62,9 +62,12 @@ export default class Player {
             this.lastJumpTime = input.jump.timeDown;
         }
 
-        if(input.fire.isDown) {
-            this.shoot('fireball')
+        if(input.fire.isDown&&this.coolDown<=0) {
+            this.shoot('fireball');
+            this.coolDown = this.spells['fireball'].coolDown;
         }
+
+        this.coolDown -= 1;
     }
 
     /**
