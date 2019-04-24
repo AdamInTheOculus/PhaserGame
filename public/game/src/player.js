@@ -78,7 +78,7 @@ class Player {
         // == Secondary jump after falling off ground ==
         // =============================================
         else if(this.canJump && this.sprite.body.blocked.down === false) {
-            
+
             // Apply jumping force
             this.sprite.body.setVelocityY(-300);
             this.canJump = false;
@@ -92,6 +92,9 @@ class Player {
 
             // Prevent double jump from occurring too rapidly. Wait for 100ms between last key press.
             if(this.canDoubleJump && inputHeldTime > (this.lastJumpTime + 100)){
+
+                console.log('Is about to double jump!');
+
                 this.canDoubleJump = false;
                 this.sprite.body.setVelocityY(-300);
             }
@@ -106,7 +109,6 @@ class Player {
     addExtraJump() {
         this.canJump = false;
         this.canDoubleJump = true;
-        this.lastJumpTime = 0;
     }
 }
 
