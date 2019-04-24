@@ -14,7 +14,7 @@ import GUIScene from './scenes/GUIScene.js';
 const config = {
     type: Phaser.AUTO,    // Attempts to load WebGL. If it fails then load Canvas.
     width: window.innerWidth*window.devicePixelRatio,
-    height: window.innerWidth*window.devicePixelRatio,
+    height: window.innerHeight*window.devicePixelRatio,
     physics: {
         default: 'arcade',
         arcade: {
