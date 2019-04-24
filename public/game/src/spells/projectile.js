@@ -12,7 +12,7 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
         this.damage = config.damage;
         this.isAOE = config.isAOE;
         this.radius = config.radius;
-        console.log('herps')
+
         this.scene.physics.world.enable(this);
 
         this.body.setSize(8, 8);

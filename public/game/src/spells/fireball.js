@@ -24,18 +24,19 @@ export default class Fireball_Spell extends Spell {
             damage: this.damage,
             isAOE: this.isAOE,
             radius: this.radius});
-        /*this.setActive(true);
-        this.setVisible(true);
 
-        this.body.allowGravity = true;
+        projectile.setActive(true);
+        projectile.setVisible(true);
 
-        this.setPosition(x, y);
-        this.angle = Phaser.Math.Angle.Between(x, y, this.scene.cameras.main.scrollX+pointerX, this.scene.cameras.main.scrollY+pointerY)
-        this.body.velocity.x =  300*Math.cos(this.angle);
-        this.body.velocity.y = 300*Math.sin(this.angle);
+        projectile.body.allowGravity = true;
+
+        projectile.setPosition(startPosition.x, startPosition.y);
+        let angle = Phaser.Math.Angle.Between(startPosition.x, startPosition.y, projectile.scene.cameras.main.scrollX+pointerPosition.x, projectile.scene.cameras.main.scrollY+pointerPosition.x)
+        projectile.body.velocity.x =  300*Math.cos(angle);
+        projectile.body.velocity.y = 300*Math.sin(angle);
         //this.play('potionGreen');
 
         //this.scene.sound.playAudioSprite('sfx', 'smb_fireball');
-        console.log(this.scene.physics.world.collide);*/
+
     }
 }
