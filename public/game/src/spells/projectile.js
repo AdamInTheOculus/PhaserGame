@@ -6,14 +6,14 @@
 
 export default class Projectile extends Phaser.GameObjects.Sprite {
     constructor(config) {
-        super(config.startPosition.x, config.startPosition.y)
+        super(config.scene, config.startPosition.x, config.startPosition.y, 'dude')
 
         this.speed = config.speed;
         this.damage = config.damage;
         this.isAOE = config.isAOE;
         this.radius = config.radius;
         console.log('herps')
-        config.physics.world.enable(this);
+        this.scene.physics.world.enable(this);
 
         this.body.setSize(8, 8);
         this.body.offset.set(12, 12);

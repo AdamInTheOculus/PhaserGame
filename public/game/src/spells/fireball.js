@@ -15,16 +15,16 @@ export default class Fireball_Spell extends Spell {
         this.radius = 10;
     }
 
-    cast(physics, startPosition, pointerPosition) {
+    cast(scene, startPosition, pointerPosition) {
         let projectile = new Projectile({
-            physics: physics,
+            scene: scene,
             startPosition: startPosition,
             pointerPosition: pointerPosition,
             speed: this.speed,
             damage: this.damage,
             isAOE: this.isAOE,
             radius: this.radius});
-        this.setActive(true);
+        /*this.setActive(true);
         this.setVisible(true);
 
         this.body.allowGravity = true;
@@ -36,6 +36,6 @@ export default class Fireball_Spell extends Spell {
         //this.play('potionGreen');
 
         //this.scene.sound.playAudioSprite('sfx', 'smb_fireball');
-        console.log(this.scene.physics.world.collide);
+        console.log(this.scene.physics.world.collide);*/
     }
 }

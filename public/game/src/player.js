@@ -122,6 +122,6 @@ export default class Player {
 
     shoot(spellIndex){
         alert('shooting')
-        this.spells[spellIndex].cast(this.scene.physcis, {x: this.sprite.x, y: this.sprite.y}, {x: 100, y: 100});
+        this.spells[spellIndex].cast(this.scene, {x: this.sprite.x, y: this.sprite.y}, {x: 100, y: 100});
     }
 }
