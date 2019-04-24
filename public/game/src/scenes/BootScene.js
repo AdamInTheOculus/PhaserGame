@@ -20,6 +20,10 @@ class BootScene extends Phaser.Scene {
           progress.fillRect(window.innerWidth*0.1, this.sys.game.config.height / 4, value*(window.innerWidth*0.77), 10); // x,y,w,h
       });
 
+      window.addEventListener('resize', function (event) {
+          this.game.scale.resize(window.innerWidth*window.devicePixelRatio, window.innerHeight*window.devicePixelRatio);
+      }, false);
+
       // Register a load complete event to launch the title screen when all files are loaded
       this.load.on('complete', () => {
           // prepare all animations, defined in a separate file

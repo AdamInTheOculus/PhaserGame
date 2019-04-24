@@ -4,14 +4,16 @@
  * @purpose  Contains client-side data and logic for anything related to the player.
  **/
 
+
 class Player {
     constructor(sprite, isClient) {
         this.sprite = sprite;
         this.isClient = isClient;
+        this.spells = ['FireBall object'];
     }
 
-    update(){
-        
+    shoot(spellIndex){
+        this.spells[spellsIndex].cast();
     }
 }
 
