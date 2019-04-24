@@ -7,7 +7,7 @@
 class InputHandler {
 
     constructor(phaserInput) {
-        this.phaser = phaserInput;
+        this.input = phaserInput;
     }
 
     getState() {
@@ -20,7 +20,7 @@ class InputHandler {
          * @date    April 7th 2019
          * @see     https://github.com/photonstorm/phaser/issues/4414#issuecomment-480515615
         **/
-        this.phaser.update();
+        this.input.update();
 
         let inputState = {
             jump: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W),

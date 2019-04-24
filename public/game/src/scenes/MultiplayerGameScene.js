@@ -6,6 +6,7 @@
 
 import Player from '../player.js';
 import GUIScene from '.././scenes/GUIScene.js';
+import InputHandler from '../input_handler.js';
 
 
 class MultiplayerGameScene extends Phaser.Scene {
@@ -30,6 +31,11 @@ class MultiplayerGameScene extends Phaser.Scene {
 
     create() {
 
+        this.inputHandler = new InputHandler(this.input);
+
+        this.player = undefined;
+        this.players = {};
+
         // ===================================================================
         // == Build world with background image, tilemaps, and game objects ==
         // ===================================================================
@@ -51,19 +57,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.groups.flightOrbs = this.physics.add.staticGroup();
 
         this.scene.bringToTop('GUIScene');
-
-        this.players = {};
-        this.ui = {};
         this.guiScene = this.scene.get('GUIScene');
-
-        this.inputs = {
-          jump: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W),
-          jump2: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE),
-          fire: this.input.activePointer,
-          left: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A),
-          right: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D),
-          down: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S)
-        };
 
         // =================================
         // == Set up socket.io connection ==
@@ -80,8 +74,26 @@ class MultiplayerGameScene extends Phaser.Scene {
             // == Create client player and attach camera ==
             // ============================================
             if(this.socket.id === data.player.id) {
-                this.createPlayer(this.socket.id, true);
-                this.cameras.main.startFollow(this.players[this.socket.id].sprite);
+                this.player = this.createPlayer(this.socket.id, true);
+                this.cameras.main.startFollow(this.player.sprite);
+
+                // ======================================
+                // == Emit player update every 33.3 ms ==
+                // ======================================
+                console.log('Setting player update interval!');
+                setInterval( () => {
+
+                        this.socket.emit('player_update', {
+                            id: this.socket.id,
+                            position: {
+                                x: this.player.sprite.x,
+                                y: this.player.sprite.y
+                            }
+                        });
+
+                    },  heartbeatInterval
+                );
+
             }
 
             // ================================================
@@ -90,8 +102,7 @@ class MultiplayerGameScene extends Phaser.Scene {
             let clientPlayerIdList = Object.keys(this.players);
             Object.keys(data.playerList).forEach((id) => {
 
-                // Ignore current player.
-                if(id === this.socket.id) {
+                if(this.player.id === id) {
                     return;
                 }
 
@@ -100,13 +111,13 @@ class MultiplayerGameScene extends Phaser.Scene {
                     return;
                 }
 
-                this.createPlayer(id, false);
+                this.players[id] = this.createPlayer(id);
             });
 
             // ================================================
             // == Create/update text displaying player count ==
             // ================================================
-            this.guiScene.updatePlayerList(Object.keys(this.players).length);
+            this.guiScene.updatePlayerList(Object.keys(this.players).length + 1); // +1 for client player
         });
 
         // ======================================
@@ -122,53 +133,17 @@ class MultiplayerGameScene extends Phaser.Scene {
                 delete this.players[id];
 
                 // Update player list count
-                this.guiScene.updatePlayerList(Object.keys(this.players).length);
+                this.guiScene.updatePlayerList(Object.keys(this.players).length + 1); // +1 for client player
             }
         });
-
-        // this.socket.on('heartbeat', (players) => {
-        //     Object.keys(this.players).forEach((id) => {
-
-        //         if(players[id] === undefined || players[id] !== this.players[id]) {
-        //             return;
-        //         }
-
-        //         this.players[id].sprite.x = players[id].position.x;
-        //         this.players[id].sprite.y = players[id].position.y;
-        //     });
-        // });
-
-        // ======================================
-        // == Emit player update every 33.3 ms ==
-        // ======================================
-        setInterval( () => {
-
-                // Ignore interval function if client player does not exist.
-                if(this.players[this.socket.id] === undefined) {
-                    return;
-                }
-
-                this.socket.emit('player_update', {
-                    id: this.socket.id,
-                    position: {
-                        x: this.players[this.socket.id].sprite.x,
-                        y: this.players[this.socket.id].sprite.y
-                    }
-                });
-
-            },  heartbeatInterval
-        );
 
         // =================================================================================
         // == Handle when player update is received. THIS WILL BE REPLACED WITH heartbeat ==
         // =================================================================================
         this.socket.on('player_update', (players) => {
             Object.keys(players).forEach(id => {
-                if(this.players[id] === undefined) {
-                    return;
-                }
 
-                if(id === this.socket.id) {
+                if(this.players[id] === undefined) {
                     return;
                 }
 
@@ -199,10 +174,6 @@ class MultiplayerGameScene extends Phaser.Scene {
             tombstone.body.height = endpoint.height;
         });
 
-        // Set up custom variables for jumping / double jumping.
-        this.canJump = true;
-        this.canDoubleJump = false;
-
         // =============================
         // == Setup player animations ==
         // =============================
@@ -231,13 +202,6 @@ class MultiplayerGameScene extends Phaser.Scene {
         // ===================================
         this.layers.ground.setCollisionByProperty({ collidable: true });
 
-        // =============================
-        // == Set up input management ==
-        // =============================
-        this.keyboard = this.input.keyboard.createCursorKeys();
-        this.input.keyboard.on('keydown-UP', this.handleJump, this);
-        this.input.gamepad.on('down', this.handleGamepadInput, this);
-
         // ========================================
         // == Bind camera within game boundaries ==
         // ========================================
@@ -246,66 +210,25 @@ class MultiplayerGameScene extends Phaser.Scene {
 
     update(time, delta) {
 
-        /**
-         * In order for Gamepad input to be properly registered, we must manually update input.
-         * This is because of an InputPlugin bug -- not having InputPlugin.update() called automatically every frame.
-         *
-         * @author  AdamInTheOculus
-         * @date    April 7th 2019
-         * @see     https://github.com/photonstorm/phaser/issues/4414#issuecomment-480515615
-        **/
-        this.input.update();
-
-        if(this.socket.id === undefined || this.players[this.socket.id] === undefined) {
+        if(this.player === undefined) {
             return;
         }
 
-        // ===================================================
-        // == Handle input from gamepad if one is connected ==
-        // ===================================================
-        if(this.input.gamepad.gamepads[0] !== undefined) {
-
-            let gamepad = this.input.gamepad.gamepads[0];
-
-            if(gamepad.leftStick.x > 0.2) {
-                this.players[this.socket.id].sprite.setVelocityX(160);
-                this.players[this.socket.id].sprite.anims.play('right', true);
-            } else if(gamepad.leftStick.x < -0.2) {
-                this.players[this.socket.id].sprite.setVelocityX(-160);
-                this.players[this.socket.id].sprite.anims.play('left', true);
-            } else {
-                this.players[this.socket.id].sprite.setVelocityX(0);
-                this.players[this.socket.id].sprite.anims.play('turn');
-            }
-        }
-
-        // ===========================================
-        // == Otherwise, handle input from keyboard ==
-        // ===========================================
-        if (this.keyboard.left.isDown) {
-            this.players[this.socket.id].sprite.setVelocityX(-160);
-            this.players[this.socket.id].sprite.anims.play('left', true);
-        } else if (this.keyboard.right.isDown) {
-            this.players[this.socket.id].sprite.setVelocityX(160);
-            this.players[this.socket.id].sprite.anims.play('right', true);
-        } else if(this.input.gamepad.gamepads[0] === undefined) {
-            this.players[this.socket.id].sprite.setVelocityX(0);
-            this.players[this.socket.id].sprite.anims.play('turn');
-        }
+        this.player.update(this.inputHandler.getState());
 
         // ===================================================
         // == Reset player position after falling off world ==
         // ===================================================
-        if(this.players[this.socket.id].sprite.y > 1375) {
+        if(this.player.sprite.y > 1375) {
 
             // Shake camera when player reaches out-of-bounds.
             this.cameras.main.shake(1000, 0.02, null, (camera, progress) => {
                 if(progress >= 1) {
                     let spawnPoint = this.getRandomSpawnPoint();
-                    this.players[this.socket.id].sprite.setVelocityY(0);
-                    this.players[this.socket.id].sprite.setVelocityX(0);
-                    this.players[this.socket.id].sprite.x = spawnPoint.x;
-                    this.players[this.socket.id].sprite.y = spawnPoint.y;
+                    this.player.sprite.setVelocityY(0);
+                    this.player.sprite.setVelocityX(0);
+                    this.player.sprite.x = spawnPoint.x;
+                    this.player.sprite.y = spawnPoint.y;
                 }
             });
         }
@@ -314,61 +237,26 @@ class MultiplayerGameScene extends Phaser.Scene {
     /**
      * @author   AdamInTheOculus
      * @date     April 16th 2019
-     * @TODO     This should be refactored into player class.
      * @purpose
     **/
-    createPlayer(playerId, isClient) {
+    createPlayer(playerId) {
+
         let spawnPoint = this.getRandomSpawnPoint();
         let sprite = this.physics.add.sprite(spawnPoint.x, spawnPoint.y, 'dude');
         sprite.setGravityY(300);
-        this.players[playerId] = new Player(sprite, isClient);
-        this.players[playerId].name = playerId;
 
-        this.physics.add.collider(this.players[playerId].sprite, this.layers.ground, () => { if(this.players[this.socket.id].sprite.body.blocked.down){this.canJump = true; this.canDoubleJump = false; }});
-        this.physics.add.overlap(this.players[playerId].sprite, this.groups.flightOrbs, this.collideWithFlightOrb, null, this);
-        this.physics.add.overlap(this.players[playerId].sprite, this.groups.endPoints, this.collideWithTombstone, null, this);
-    }
+        let player = new Player({
+            id: playerId,
+            name: playerId,
+            sprite: sprite,
+            spawnPoint: spawnPoint
+        });
 
-    /**
-     * @author   AdamInTheOculus
-     * @date     March 18th 2019
-     * @purpose  Handles single and double jump logic.
-    **/
-    handleJump() {
+        this.physics.add.collider(player.sprite, this.layers.ground, () => { if(player.sprite.body.blocked.down){ player.canJump = true; player.canDoubleJump = false; }});
+        this.physics.add.overlap(player.sprite, this.groups.flightOrbs, (obj1, obj2) => { this.collideWithFlightOrb(player.id, obj1, obj2); }, null, this);
+        this.physics.add.overlap(player.sprite, this.groups.endPoints, (obj1, obj2) => { this.collideWithTombstone(player.id, obj1, obj2); }, null, this);
 
-        if(this.players[this.socket.id] === undefined) {
-            return;
-        }
-
-        if(this.canJump && this.players[this.socket.id].sprite.body.blocked.down) {
-
-            // Apply jumping force
-            this.players[this.socket.id].sprite.body.setVelocityY(-300);
-            this.canJump = false;
-            this.canDoubleJump = true;
-
-        } else {
-
-            // Check if player can double jump
-            if(this.canDoubleJump){
-                this.canDoubleJump = false;
-                this.players[this.socket.id].sprite.body.setVelocityY(-300);
-            }
-
-        }
-    }
-
-    /**
-     * @author   AdamInTheOculus
-     * @date     April 8th 2019
-     * @purpose  Handles all input logic for Gamepads.
-    **/
-    handleGamepadInput(gamepad, button) {
-
-        // Button A (X on PlayStation) was pressed.
-        if(button.index == 11) {
-            this.handleJump();
-        }
+        return player;
     }
 
     /**
@@ -411,12 +299,13 @@ class MultiplayerGameScene extends Phaser.Scene {
      * @date     April 7th 2019
      * @purpose  Logic when a player collides with a blue flight orb.
     **/
-    collideWithFlightOrb(player, orb) {
+    collideWithFlightOrb(id, player, orb) {
         orb.destroy(orb.x, orb.y);
         player.setVelocityY(-500); // Give player flight boost.
 
-        this.canJump = false;
-        this.canDoubleJump = true;
+        if(id === this.player.id) {
+            this.player.addExtraJump();
+        }
     }
 
     /**
@@ -424,9 +313,15 @@ class MultiplayerGameScene extends Phaser.Scene {
      * @date     April 7th 2019
      * @purpose  Logic when a players collides with a tombstone.
     **/
-    collideWithTombstone(player, tombstone) {
+    collideWithTombstone(id, player, tombstone) {
         tombstone.destroy(tombstone.x, tombstone.y);
-        alert('Game Over!');
+        
+        if(id === this.player.id) {
+            alert('You touched the tombstone!');
+        } else {
+            alert(`${this.players[id].name} touched the tombstone!`);
+        }
+
         location.reload();
     }
 }
