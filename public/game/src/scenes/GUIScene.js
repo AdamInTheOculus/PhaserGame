@@ -22,18 +22,23 @@ class GUIScene extends Phaser.Scene {
       this.health_bar.fillStyle(0xff0000, 1);
       this.health_bar.fillRect(sw*0.02, sh*0.02, this.hp, sh*0.03);
 
-      // Spells
-      this.spellsInventory[1] = this.add.graphics()
-      this.spellsInventory[1].fillStyle(0xff0000, 1);
-      this.spellsInventory[1].strokeRect(sw*0.02, sh*0.82, sw*0.1, sh*0.13);
-
-      this.spellsInventory[2] = this.add.graphics()
-      this.spellsInventory[2].fillStyle(0xff0000, 1);
-      this.spellsInventory[2].strokeRect(sw*0.02+(sw*0.1), sh*0.82, sw*0.1, sh*0.13);
+      this.drawSpellsInventory();
     }
 
-    update(){
+    /**
+     * @author   JonCatalano
+     * @date     April 25th 2019
+     * @purpose  Draws `this.spellsInventory` in the GUI Scene
+    **/
+    drawSpellsInventory(){
+        // Draw Spell Inventory
+        this.spellsInventory[1] = this.add.graphics()
+        this.spellsInventory[1].fillStyle(0xff0000, 1);
+        this.spellsInventory[1].strokeRect(this.sw*0.02, this.sh*0.82, this.sw*0.1, this.sh*0.13);
 
+        this.spellsInventory[2] = this.add.graphics()
+        this.spellsInventory[2].fillStyle(0xff0000, 1);
+        this.spellsInventory[2].strokeRect(this.sw*0.02+(this.sw*0.1), this.sh*0.82, this.sw*0.1, this.sh*0.13);
     }
 
     /**
@@ -43,13 +48,17 @@ class GUIScene extends Phaser.Scene {
      * @param    `spellsInventoryIndex` - Number representing index of spellsInventory.
     **/
     updateSpellsInventory(spellsInventoryIndex, key) {
+        if(this.spellsInventory[spellsInventoryIndex]!=undefined){
+            this.spellsInventory[spellsInventoryIndex].destroy();
+            this.drawSpellsInventory();
+        }
         if(spellsInventoryIndex===1){
             this.spellsInventory[spellsInventoryIndex] = this.add.image(this.sw*0.072, this.sh*0.89, key)
         }else if(spellsInventoryIndex===2){
             this.spellsInventory[spellsInventoryIndex] = this.add.image(this.sw*0.02+(this.sw*0.1), this.sh*0.85, key)
         }
         this.spellsInventory[spellsInventoryIndex].displayWidth = this.sw*0.1;
-        this.spellsInventory[spellsInventoryIndex].displayHeight = this.sw*0.1;
+        this.spellsInventory[spellsInventoryIndex].displayHeight = this.sh*0.13;
     }
 
     /**
