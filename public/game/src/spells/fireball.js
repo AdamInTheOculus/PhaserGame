@@ -33,7 +33,6 @@ export default class Fireball_Spell extends Spell {
 
         projectile.setPosition(startPosition.x, startPosition.y);
         let angle = Phaser.Math.Angle.Between(startPosition.x, startPosition.y, projectile.scene.cameras.main.scrollX+pointerPosition.x, projectile.scene.cameras.main.scrollY+pointerPosition.y)
-        console.log(angle)
         projectile.body.velocity.x =  300*Math.cos(angle);
         projectile.body.velocity.y = 300*Math.sin(angle);
 

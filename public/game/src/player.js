@@ -67,6 +67,14 @@ export default class Player {
             this.coolDown = this.spells['fireball'].coolDown;
         }
 
+        if(input.key_binding_1.isDown) {
+            alert('KEY BINDING 1')
+        }
+
+        if(input.key_binding_2.isDown) {
+            alert('KEY BINDING 1')
+        }
+
         this.coolDown -= 1;
     }
 

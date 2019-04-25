@@ -23,6 +23,8 @@ class InputHandler {
         this.input.update();
 
         let inputState = {
+            key_binding_1: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ONE),
+            key_binding_2: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.TWO),
             jump: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W),
             jump2: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE),
             fire: this.input.activePointer,
