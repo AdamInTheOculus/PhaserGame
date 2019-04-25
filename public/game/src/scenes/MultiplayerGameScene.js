@@ -30,6 +30,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.load.spritesheet('dude', 'game/assets/spritesheets/dude.png', {            // Load spritesheet for player.
             frameWidth: 32, frameHeight: 48
         });
+        this.load.image('fireball_spell_icon', 'game/assets/icons/fireball_spell_icon.png');
     }
 
     create() {
@@ -185,6 +186,7 @@ class MultiplayerGameScene extends Phaser.Scene {
 
         if(id === this.player.id) {
             this.player.addExtraJump();
+            this.guiScene.updateSpellsInventory(1, 'fireball_spell_icon')
         }
     }
 
