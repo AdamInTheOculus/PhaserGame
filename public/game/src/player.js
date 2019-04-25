@@ -4,7 +4,7 @@
  * @purpose  Contains client-side data and logic for anything related to the player.
  **/
 
-import { MOVE_LEFT, MOVE_RIGHT, IDLE, JUMP } from './helpers/constants.js';
+import { MOVE_LEFT, MOVE_RIGHT, IDLE, JUMP, GAMEPAD, KEYBOARD } from './helpers/constants.js';
 import Fireball_Spell from './spells/fireball.js'
 
 export default class Player {
@@ -26,7 +26,7 @@ export default class Player {
         this.coolDown = 0;
     }
 
-    update(input) {
+    update(time, input) {
 
         this.cursorPosition = {
             x: input.fire.position.x,
@@ -51,45 +51,61 @@ export default class Player {
                 this.sprite.anims.play('turn');
                 this.state = IDLE;
             }
-        }
+
+            // Handle JUMP with A button
+            if(input.gamepad.buttons[11].value) {
+                this.handleJump(time);
+                this.lastJumpTime = time;
+            }
+
+            // Handle spell cast with X button
+            if(input.gamepad.buttons[13].value && this.coolDown <= 0) {
+                this.shoot('fireball', GAMEPAD);
+                this.coolDown = this.spells['fireball'].coolDown;
+            }
+        } // end of gamepad input
 
         // ===========================================
         // == Otherwise, handle input from keyboard ==
         // ===========================================
-        if(input.left.isDown) {
-            this.sprite.setVelocityX(-160);
-            this.sprite.anims.play('left', true);
-            this.state = MOVE_LEFT;
-        }
-        else if (input.right.isDown) {
-            this.sprite.setVelocityX(160);
-            this.sprite.anims.play('right', true);
-            this.state = MOVE_RIGHT;
-        } else if(input.gamepad === undefined) {
-            this.sprite.setVelocityX(0);
-            this.sprite.anims.play('turn');
-            this.state = IDLE;
-        }
+        else {
+            if(input.left.isDown) {
+                this.sprite.setVelocityX(-160);
+                this.sprite.anims.play('left', true);
+                this.state = MOVE_LEFT;
+            }
+            else if (input.right.isDown) {
+                this.sprite.setVelocityX(160);
+                this.sprite.anims.play('right', true);
+                this.state = MOVE_RIGHT;
+            } else if(input.gamepad === undefined) {
+                this.sprite.setVelocityX(0);
+                this.sprite.anims.play('turn');
+                this.state = IDLE;
+            }
 
-        if(input.jump.isDown) {
-            this.handleJump(input.jump.timeDown);
-            this.lastJumpTime = input.jump.timeDown;
-        }
+            if(input.jump.isDown) {
+                this.handleJump(input.jump.timeDown);
+                this.lastJumpTime = input.jump.timeDown;
+            }
 
-        if(input.fire.isDown&&this.coolDown<=0) {
-            this.shoot('fireball');
-            this.coolDown = this.spells['fireball'].coolDown;
-        }
+            if(input.fire.isDown&&this.coolDown<=0) {
+                this.shoot('fireball');
+                this.coolDown = this.spells['fireball'].coolDown;
+            }
 
-        if(input.key_binding_1.isDown) {
-            alert('KEY BINDING 1');
-        }
+            if(input.key_binding_1.isDown) {
+                alert('KEY BINDING 1');
+            }
 
-        if(input.key_binding_2.isDown) {
-            alert('KEY BINDING 2');
-        }
+            if(input.key_binding_2.isDown) {
+                alert('KEY BINDING 2');
+            }
+        } // end of keyboard/mouse input
 
-        this.coolDown -= 1;
+        if(this.coolDown > 0) {
+            this.coolDown -= 1;
+        }
     }
 
     /**
@@ -144,9 +160,22 @@ export default class Player {
         this.canDoubleJump = true;
     }
 
-    shoot(spellIndex){
+    shoot(spellIndex, inputType){
+
+        let cursorPosition = {};
         let spritePosition = { x: this.sprite.x, y: this.sprite.y };
-        let cursorPosition = { x: this.cursorPosition.x, y: this.cursorPosition.y };
+
+        switch(inputType) {
+            case KEYBOARD:
+                cursorPosition = { x: this.cursorPosition.x, y: this.cursorPosition.y };
+                break;
+            case GAMEPAD:
+                cursorPosition = { x: 100, y: 100 };
+                break;
+            default: 
+                cursorPosition = { x: this.cursorPosition.x, y: this.cursorPosition.y };
+        }
+
         this.spells[spellIndex].cast(this.scene, spritePosition, cursorPosition);
     }
 

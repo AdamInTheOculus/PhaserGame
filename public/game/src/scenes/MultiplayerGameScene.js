@@ -120,7 +120,7 @@ class MultiplayerGameScene extends Phaser.Scene {
             return;
         }
 
-        this.player.update(this.inputHandler.getState());
+        this.player.update(time, this.inputHandler.getState());
 
         // ===================================================
         // == Reset player position after falling off world ==
