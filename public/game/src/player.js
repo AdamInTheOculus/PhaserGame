@@ -24,7 +24,12 @@ export default class Player {
     }
 
     update(input) {
-        this.cursorPosition = {x: input.fire.downX, y: input.fire.downY};
+
+        this.cursorPosition = {
+            x: input.fire.position.x,
+            y: input.fire.position.y
+        };
+
         // ===================================================
         // == Handle input from gamepad if one is connected ==
         // ===================================================
@@ -68,11 +73,11 @@ export default class Player {
         }
 
         if(input.key_binding_1.isDown) {
-            alert('KEY BINDING 1')
+            alert('KEY BINDING 1');
         }
 
         if(input.key_binding_2.isDown) {
-            alert('KEY BINDING 1')
+            alert('KEY BINDING 2');
         }
 
         this.coolDown -= 1;

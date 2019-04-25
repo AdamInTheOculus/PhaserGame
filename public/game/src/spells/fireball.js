@@ -24,7 +24,8 @@ export default class Fireball_Spell extends Spell {
             speed: this.speed,
             damage: this.damage,
             isAOE: this.isAOE,
-            radius: this.radius});
+            radius: this.radius
+        });
 
         projectile.setActive(true);
         projectile.setVisible(true);
@@ -39,5 +40,11 @@ export default class Fireball_Spell extends Spell {
         //this.play('potionGreen');
 
         //this.scene.sound.playAudioSprite('sfx', 'smb_fireball');
+
+        // ====================================================================================================
+        // == TODO: Add collision here. What will occur if the fireball collides with a player/wall/nothing? ==
+        // ====================================================================================================
+
+        // Reminder: You have access to `scene`.
     }
 }
