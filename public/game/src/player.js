@@ -16,12 +16,15 @@ export default class Player {
         this.lastJumpTime = 0;
         this.canJump = true;
         this.canDoubleJump = false;
+
+        this.cursorPosition = {};
         this.spells = {};
         this.spells['fireball'] = new Fireball_Spell(true);
+        this.coolDown = 0;
     }
 
     update(input) {
-
+        this.cursorPosition = {x: input.fire.downX, y: input.fire.downY};
         // ===================================================
         // == Handle input from gamepad if one is connected ==
         // ===================================================
@@ -59,10 +62,20 @@ export default class Player {
             this.lastJumpTime = input.jump.timeDown;
         }
 
-        if(input.fire.isDown) {
-            alert(input.fire.isDown)
-            this.shoot('fireball')
+        if(input.fire.isDown&&this.coolDown<=0) {
+            this.shoot('fireball');
+            this.coolDown = this.spells['fireball'].coolDown;
         }
+
+        if(input.key_binding_1.isDown) {
+            alert('KEY BINDING 1')
+        }
+
+        if(input.key_binding_2.isDown) {
+            alert('KEY BINDING 1')
+        }
+
+        this.coolDown -= 1;
     }
 
     /**
@@ -118,7 +131,6 @@ export default class Player {
     }
 
     shoot(spellIndex){
-        alert('shooting')
-        this.spells[spellIndex].cast(this.scene, {x: this.sprite.x, y: this.sprite.y}, {x: 100, y: 100});
+        this.spells[spellIndex].cast(this.scene, {x: this.sprite.x, y: this.sprite.y}, {x: this.cursorPosition.x, y: this.cursorPosition.y});
     }
 }
