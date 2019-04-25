@@ -17,9 +17,14 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
 
         this.scene.physics.world.enable(this);
 
-        this.body.setSize(8, 8);
-        this.body.offset.set(12, 12);
+        this.body.setSize(config.width, config.height);
+        this.body.offset.set(0, 0);
 
+        this.particles = this.scene.add.particles('dude');
+
+        this.particles.createEmitter({
+
+        });
         /*this.on('animationcomplete', () => {
             if (this.anims.currentAnim.key === 'fireExplode') {
                 this.setActive(false);
@@ -32,10 +37,10 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
     update(time, delta){
         this.scene.physics.world.collide(this, this.scene.layers.ground, () => this.explode());
 
-        for (var player in this.scene.players) {
-          if (this.scene.players.hasOwnProperty(player)) {
-              this.scene.physics.world.collide(this, player.sprite, () => this.explode());
-          }
+        const players = Object.values(this.scene.players)
+
+        for (const player of players) {
+            this.scene.physics.world.collide(this, player.sprite, () => this.explode());
         }
     }
 
