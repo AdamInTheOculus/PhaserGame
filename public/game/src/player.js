@@ -38,11 +38,11 @@ export default class Player {
         // ===================================================
         if(input.gamepad !== undefined) {
 
-            if(gamepad.leftStick.x > 0.2) {
+            if(input.gamepad.leftStick.x > 0.2) {
                 this.sprite.setVelocityX(160);
                 this.sprite.anims.play('right', true);
                 this.state = MOVE_RIGHT
-            } else if(gamepad.leftStick.x < -0.2) {
+            } else if(input.gamepad.leftStick.x < -0.2) {
                 this.sprite.setVelocityX(-160);
                 this.sprite.anims.play('left', true);
                 this.state = MOVE_LEFT;
