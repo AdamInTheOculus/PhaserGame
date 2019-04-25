@@ -6,14 +6,16 @@
 
 export default class Projectile extends Phaser.GameObjects.Sprite {
     constructor(config) {
-        super(config.scene, config.startPosition.x, config.startPosition.y, 'dude')
+        super(config.scene, config.startPosition.x, config.startPosition.y, 'dude');
+        this.scene = config.scene;
+        this.scene.add.existing(this);
 
         this.speed = config.speed;
         this.damage = config.damage;
         this.isAOE = config.isAOE;
         this.radius = config.radius;
 
-        config.scene.physics.world.enable(this);
+        this.scene.physics.world.enable(this);
 
         this.body.setSize(8, 8);
         this.body.offset.set(12, 12);
@@ -32,8 +34,8 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
             return;
         }
 
-        config.scene.physics.world.collide(this, config.scene.groundLayer, () => this.collided());
-        config.scene.physics.world.overlap(this, config.scene.enemyGroup, (me, enemy) => {
+        this.scene.physics.world.collide(this, this.scene.groundLayer, () => this.collided());
+        this.scene.physics.world.overlap(this, this.scene.enemyGroup, (me, enemy) => {
             me.explode();
         });
     }
@@ -42,7 +44,7 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
         console.log('COLLIDED');
 
         if (this.body.velocity.x === 0 || this.body.velocity.y === 0) {
-            //config.scene.sound.playAudioSprite('sfx', 'smb_bump');
+            //this.scene.sound.playAudioSprite('sfx', 'smb_bump');
             this.explode();
         }
     }
