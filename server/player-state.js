@@ -5,12 +5,13 @@
 **/
 
 module.exports = class PlayerState {
-  constructor() {
-    this.hp = 100;
-    this.id = 0;
-    this.position = {
-      x: 0,
-      y: 0
-    };
-  }
+    constructor() {
+        this.hp = 100;
+        this.id = 0;
+        this.state = 4; // IDLE
+        this.position = {
+            x: 0,
+            y: 0
+        };
+    }
 };

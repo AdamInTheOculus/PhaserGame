@@ -62,7 +62,7 @@ module.exports = class GameManager {
      * @date     April 15th 2019
      * @purpose  Update player specified by `id` parameter. If server successfully validates new position, the player is updated.
     **/
-    updatePlayer(id, position) {
+    updatePlayer(id, state, position) {
         if(position === undefined || typeof position !== 'object') {
             return;
         } else if(this.players[id] === undefined) {
@@ -71,6 +71,7 @@ module.exports = class GameManager {
 
         // TODO: Perform server verification of client player position.
         this.players[id].position = position;
+        this.players[id].state = state;
     }
 
     /**

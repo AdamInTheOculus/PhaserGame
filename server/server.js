@@ -66,7 +66,7 @@ io.on('connection', (socket) => {
     // == Handle when client emits player information message ==
     // =========================================================
     socket.on('player_update', (data) => {
-        gameManager.updatePlayer(data.id, data.position);
+        gameManager.updatePlayer(data.id, data.state, data.position);
         io.emit('player_update', gameManager.getPlayers());
     });
 });

@@ -9,6 +9,7 @@ import GUIScene from './GUIScene.js';
 import * as constants from '../helpers/constants.js';
 import FireBall from '../spells/fireball.js';
 import InputHandler from '../input_handler.js';
+import NetworkHandler from '../network_handler.js';
 
 class MultiplayerGameScene extends Phaser.Scene {
 
@@ -34,6 +35,7 @@ class MultiplayerGameScene extends Phaser.Scene {
     create() {
 
         this.inputHandler = new InputHandler(this.input);
+        this.networkHandler = new NetworkHandler(this);
 
         this.player = undefined;
         this.players = {};
@@ -61,106 +63,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.scene.bringToTop('GUIScene');
         this.guiScene = this.scene.get('GUIScene');
 
-        // =================================
-        // == Set up socket.io connection ==
-        // =================================
-        this.socket = io(); // Defaults to window.location
-        const heartbeatInterval = 16.6; // Every 16.6ms an update is sent to server
-
-        // =========================================
-        // == Handle when a player newly connects ==
-        // =========================================
-        this.socket.on('player_new', (data) => {
-
-            // ============================================
-            // == Create client player and attach camera ==
-            // ============================================
-            if(this.socket.id === data.player.id) {
-                this.player = this.createPlayer(this.socket.id, true);
-                this.cameras.main.startFollow(this.player.sprite);
-
-                // ======================================
-                // == Emit player update every 33.3 ms ==
-                // ======================================
-                console.log('Setting player update interval!');
-                setInterval( () => {
-
-                        this.socket.emit('player_update', {
-                            id: this.socket.id,
-                            position: {
-                                x: this.player.sprite.x,
-                                y: this.player.sprite.y
-                            }
-                        });
-
-                    },  heartbeatInterval
-                );
-
-            }
-
-            // ================================================
-            // == Create any other players currently in game ==
-            // ================================================
-            let clientPlayerIdList = Object.keys(this.players);
-            Object.keys(data.playerList).forEach((id) => {
-
-                if(this.player.id === id) {
-                    return;
-                }
-
-                // Ignore players who have already been created on client.
-                if(clientPlayerIdList.includes(id)) {
-                    return;
-                }
-
-                this.players[id] = this.createPlayer(id);
-            });
-
-            // ================================================
-            // == Create/update text displaying player count ==
-            // ================================================
-            this.guiScene.updatePlayerList(Object.keys(this.players).length + 1); // +1 for client player
-        });
-
-        // ======================================
-        // == Handle when a player disconnects ==
-        // ======================================
-        this.socket.on('player_disconnect', (id) => {
-            if(this.players[id] !== undefined) {
-
-                // Clean up username
-                this.players[id].nameUI.destroy();
-                this.players[id].sprite.destroy();
-
-                delete this.players[id];
-
-                // Update player list count
-                this.guiScene.updatePlayerList(Object.keys(this.players).length + 1); // +1 for client player
-            }
-        });
-
-        // =================================================================================
-        // == Handle when player update is received. THIS WILL BE REPLACED WITH heartbeat ==
-        // =================================================================================
-        this.socket.on('player_update', (players) => {
-            Object.keys(players).forEach(id => {
-
-                if(this.players[id] === undefined) {
-                    return;
-                }
-
-                // Update player position from server data.
-                this.players[id].sprite.x = players[id].position.x;
-                this.players[id].sprite.y = players[id].position.y;
-
-                // Display name above player.
-                if(this.players[id].nameUI === undefined) {
-                    this.players[id].nameUI = this.add.text(this.players[id].sprite.x - 75, this.players[id].sprite.y - 40, this.players[id].name, {fill: '#FFF', fontSize: 14});
-                } else {
-                    this.players[id].nameUI.setPosition(this.players[id].sprite.x - 75, this.players[id].sprite.y - 40);
-                }
-            });
-        });
+        this.networkHandler.registerSocketListeners();
 
         // Set up flight orb triggerables
         this.layers.flightOrbs.forEach(flightOrb => {
@@ -234,32 +137,6 @@ class MultiplayerGameScene extends Phaser.Scene {
                 }
             });
         }
-    }
-
-    /**
-     * @author   AdamInTheOculus
-     * @date     April 16th 2019
-     * @purpose
-    **/
-    createPlayer(playerId) {
-
-        let spawnPoint = this.getRandomSpawnPoint();
-        let sprite = this.physics.add.sprite(spawnPoint.x, spawnPoint.y, 'dude');
-        sprite.setGravityY(300);
-
-        let player = new Player({
-            scene: this,
-            id: playerId,
-            name: playerId,
-            sprite: sprite,
-            spawnPoint: spawnPoint
-        });
-
-        this.physics.add.collider(player.sprite, this.layers.ground, () => { if(player.sprite.body.blocked.down){ player.canJump = true; player.canDoubleJump = false; }});
-        this.physics.add.overlap(player.sprite, this.groups.flightOrbs, (obj1, obj2) => { this.collideWithFlightOrb(player.id, obj1, obj2); }, null, this);
-        this.physics.add.overlap(player.sprite, this.groups.endPoints, (obj1, obj2) => { this.collideWithTombstone(player.id, obj1, obj2); }, null, this);
-
-        return player;
     }
 
     /**
