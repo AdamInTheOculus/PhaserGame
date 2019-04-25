@@ -28,6 +28,17 @@ class GUIScene extends Phaser.Scene {
     /**
      * @author   JonCatalano
      * @date     April 25th 2019
+     * @purpose  Removes item from `this.spellsInventory` at Index
+     * @param    `spellsInventoryIndex` - Number representing index of spellsInventory.
+    **/
+    removeFromSpellsInventory(spellsInventoryIndex){
+        this.spellsInventory[spellsInventoryIndex].destroy();
+        this.drawSpellsInventory();
+    }
+
+    /**
+     * @author   JonCatalano
+     * @date     April 25th 2019
      * @purpose  Draws `this.spellsInventory` in the GUI Scene
     **/
     drawSpellsInventory(){

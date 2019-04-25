@@ -138,6 +138,7 @@ class MultiplayerGameScene extends Phaser.Scene {
                 }
             });
         }
+
     }
 
     /**

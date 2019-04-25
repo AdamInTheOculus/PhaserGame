@@ -27,6 +27,9 @@ export default class Player {
     }
 
     update(time, input) {
+        this.spells['fireball'].projectiles.forEach(proj=>{
+            proj.update();
+        });
 
         this.cursorPosition = {
             x: input.fire.position.x,
@@ -95,11 +98,11 @@ export default class Player {
             }
 
             if(input.key_binding_1.isDown) {
-                alert('KEY BINDING 1');
+                this.scene.guiScene.removeFromSpellsInventory(1);
             }
 
             if(input.key_binding_2.isDown) {
-                alert('KEY BINDING 2');
+
             }
         } // end of keyboard/mouse input
 
@@ -172,7 +175,7 @@ export default class Player {
             case GAMEPAD:
                 cursorPosition = { x: 100, y: 100 };
                 break;
-            default: 
+            default:
                 cursorPosition = { x: this.cursorPosition.x, y: this.cursorPosition.y };
         }
 

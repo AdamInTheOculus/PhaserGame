@@ -14,6 +14,7 @@ export default class Fireball_Spell extends Spell {
         this.damage = 10;
         this.radius = 10;
         this.coolDown = 100;
+        this.projectiles = [];
     }
 
     cast(scene, startPosition, pointerPosition) {
@@ -46,5 +47,6 @@ export default class Fireball_Spell extends Spell {
         // ====================================================================================================
 
         // Reminder: You have access to `scene`.
+        this.projectiles.push(projectile);
     }
 }

@@ -30,28 +30,19 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
     }
 
     update(time, delta){
-        if (!this.active) {
-            return;
-        }
+        this.scene.physics.world.collide(this, this.scene.layers.ground, () => this.explode());
 
-        this.scene.physics.world.collide(this, this.scene.groundLayer, () => this.collided());
-        this.scene.physics.world.overlap(this, this.scene.enemyGroup, (me, enemy) => {
-            me.explode();
-        });
-    }
-
-    collided() {
-        console.log('COLLIDED');
-
-        if (this.body.velocity.x === 0 || this.body.velocity.y === 0) {
-            //this.scene.sound.playAudioSprite('sfx', 'smb_bump');
-            this.explode();
+        for (var player in this.scene.players) {
+          if (this.scene.players.hasOwnProperty(player)) {
+              this.scene.physics.world.collide(this, player.sprite, () => this.explode());
+          }
         }
     }
 
     explode() {
-        this.body.allowGravity = false;
-        this.body.velocity.y = 0;
-        //this.play('fireExplode');
+        this.scene.player.spells['fireball'].projectiles.pop();
+        this.setActive(false);
+        this.setVisible(false);﻿
+        this.body.destroy();
     }
 }
