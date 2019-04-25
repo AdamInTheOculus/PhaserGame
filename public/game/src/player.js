@@ -136,6 +136,8 @@ export default class Player {
     }
 
     shoot(spellIndex){
-        this.spells[spellIndex].cast(this.scene, {x: this.sprite.x, y: this.sprite.y}, {x: this.cursorPosition.x, y: this.cursorPosition.y});
+        let spritePosition = { x: this.sprite.x, y: this.sprite.y };
+        let cursorPosition = { x: this.cursorPosition.x, y: this.cursorPosition.y };
+        this.spells[spellIndex].cast(this.scene, spritePosition, cursorPosition);
     }
 }
