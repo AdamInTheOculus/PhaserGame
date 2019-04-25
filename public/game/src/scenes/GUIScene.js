@@ -25,15 +25,31 @@ class GUIScene extends Phaser.Scene {
       // Spells
       this.spellsInventory[1] = this.add.graphics()
       this.spellsInventory[1].fillStyle(0xff0000, 1);
-      this.spellsInventory[1].strokeRect(sw*0.02, sh*0.85, sw*0.1, sh*0.1);
+      this.spellsInventory[1].strokeRect(sw*0.02, sh*0.82, sw*0.1, sh*0.13);
 
       this.spellsInventory[2] = this.add.graphics()
       this.spellsInventory[2].fillStyle(0xff0000, 1);
-      this.spellsInventory[2].strokeRect(sw*0.02+(sw*0.1), sh*0.85, sw*0.1, sh*0.1);
+      this.spellsInventory[2].strokeRect(sw*0.02+(sw*0.1), sh*0.82, sw*0.1, sh*0.13);
     }
 
     update(){
 
+    }
+
+    /**
+     * @author   JonCatalano
+     * @date     April 25th 2019
+     * @purpose  Updates `this.spellsInventory` menu with updated spell icon.
+     * @param    `spellsInventoryIndex` - Number representing index of spellsInventory.
+    **/
+    updateSpellsInventory(spellsInventoryIndex, key) {
+        if(spellsInventoryIndex===1){
+            this.spellsInventory[spellsInventoryIndex] = this.add.image(this.sw*0.072, this.sh*0.89, key)
+        }else if(spellsInventoryIndex===2){
+            this.spellsInventory[spellsInventoryIndex] = this.add.image(this.sw*0.02+(this.sw*0.1), this.sh*0.85, key)
+        }
+        this.spellsInventory[spellsInventoryIndex].displayWidth = this.sw*0.1;
+        this.spellsInventory[spellsInventoryIndex].displayHeight = this.sw*0.1;
     }
 
     /**
