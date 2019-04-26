@@ -4,6 +4,8 @@
  * @purpose  Contains client-side data and logic for anything related to a projectile.
  **/
 
+import AOE from './area_effect.js';
+
 export default class Projectile extends Phaser.GameObjects.Sprite {
     constructor(config) {
         super(config.scene, config.startPosition.x, config.startPosition.y, config.key);
@@ -41,6 +43,10 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
         });
 
         this.emitter.startFollow(this)
+
+        // Decrement Spell Stock
+        this.scene.player.spells[this.key].stock -=1;
+        this.scene.guiScene.updateSpellsInventory(this.scene.player.spells)
     }
 
     update(time, delta){
@@ -49,11 +55,23 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
         const players = Object.values(this.scene.players)
 
         for (const player of players) {
-            this.scene.physics.world.collide(this, player.sprite, () => this.explode());
+            this.scene.physics.world.collide(this, player.sprite, () => this.explode(player.sprite));
         }
     }
 
     explode(){
+        if(this.isAOE===true){
+            let aoe = new AOE({
+                scene: this.scene,
+                startPosition: {x: this.x, y: this.y},
+                scale: 0.4,
+                key: this.key,
+                damage: this.damage,
+                radius: this.radius
+            });
+            aoe.body.allowGravity = false;
+        }
+
         this.scene.player.spells[this.key].projectiles.pop();
         this.setActive(false);
         this.setVisible(false);﻿

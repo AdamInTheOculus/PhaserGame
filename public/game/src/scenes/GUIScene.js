@@ -76,10 +76,20 @@ class GUIScene extends Phaser.Scene {
      * @date     April 26th 2019
      * @purpose  Draws keybindings spells inventory gui item
     **/
-    drawKeyBindings(){
-        for (var i = 0; i < 3; i++) {
-            this.spellsInventory[1] = this.add.text(this.sw*0.02+(this.sw*0.042), this.sh*0.79, `1`, {fill: '#000', fontSize: this.sw*0.03})
-            this.spellsInventory[2] = this.add.text(this.sw*0.02+(this.sw*0.1)+(this.sw*0.042), this.sh*0.79, `2`, {fill: '#000', fontSize: this.sw*0.03})
+    drawStock(spellStock){
+        if(this.spellsInventoryText1===undefined){
+            if(spellStock.a!=undefined){
+                this.spellsInventoryText1 = this.add.text(this.sw*0.02+(this.sw*0.042), this.sh*0.79, `${spellStock.a}`, {fill: '#000', fontSize: this.sw*0.03});
+            }
+            if(spellStock.b!=undefined){
+                this.spellsInventoryText2 = this.add.text(this.sw*0.02+(this.sw*0.1)+(this.sw*0.042), this.sh*0.79, `${spellStock.b}`, {fill: '#000', fontSize: this.sw*0.03});
+            }
+        }else{
+            if(spellStock.a!=undefined){
+                this.spellsInventoryText1.setText(`${spellStock.a}`);
+            }if(spellStock.b!=undefined){
+                this.spellsInventoryText2.setText(`${spellStock.b}`);
+            }
         }
     }
 
@@ -89,19 +99,29 @@ class GUIScene extends Phaser.Scene {
      * @purpose  Updates `this.spellsInventory` menu with updated spell icon.
      * @param    `spellsInventoryIndex` - Number representing index of spellsInventory.
     **/
-    updateSpellsInventory(spellsInventoryIndex, key) {
-        if(this.spellsInventory[spellsInventoryIndex]!=undefined){
-            this.spellsInventory[spellsInventoryIndex].destroy();
-            this.drawSpellsInventory();
+    updateSpellsInventory(spellsList) {
+        let spellsArray = Object.values(spellsList);
+        for(var i; i<spellsArray.length; i++){
+            if(this.spellsInventory[i]!=undefined){
+                this.spellsInventory[i].destroy();
+                this.drawSpellsInventory();
+            }
         }
-        if(spellsInventoryIndex===1){
-            this.spellsInventory[spellsInventoryIndex] = this.add.image(this.sw*0.072, this.sh*0.89, key)
-        }else if(spellsInventoryIndex===2){
-            this.spellsInventory[spellsInventoryIndex] = this.add.image(this.sw*0.072+(this.sw*0.1), this.sh*0.89, key)
+        let stockA = undefined;
+        let stockB = undefined;
+        if(spellsArray[0]!=undefined){
+            this.spellsInventory[1] = this.add.image(this.sw*0.072, this.sh*0.89, spellsArray[0].icon)
+            this.spellsInventory[1].displayWidth = this.sw*0.1;
+            this.spellsInventory[1].displayHeight = this.sh*0.13;
+            stockA = spellsArray[0].stock;
         }
-        this.spellsInventory[spellsInventoryIndex].displayWidth = this.sw*0.1;
-        this.spellsInventory[spellsInventoryIndex].displayHeight = this.sh*0.13;
-        this.drawKeyBindings()
+        if(spellsArray[1]!=undefined){
+            this.spellsInventory[2] = this.add.image(this.sw*0.072+(this.sw*0.1), this.sh*0.89, spellsArray[1].icon)
+            this.spellsInventory[2].displayWidth = this.sw*0.1;
+            this.spellsInventory[2].displayHeight = this.sh*0.13;
+            stockB = spellsArray[1].stock;
+        }
+        this.drawStock({a: stockA, b: stockB})
     }
 
     /**

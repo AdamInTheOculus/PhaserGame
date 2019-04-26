@@ -4,14 +4,13 @@
  * @purpose  Contains client-side data and logic for anything related to a projectile.
  **/
 
-export default class Projectile extends Phaser.GameObjects.Sprite {
+export default class AOE extends Phaser.GameObjects.Sprite {
     constructor(config) {
         super(config.scene, config.startPosition.x, config.startPosition.y, config.key);
         this.scene = config.scene;
         this.scene.add.existing(this);
-
+        this.key = config.key;
         this.damage = config.damage;
-        this.isAOE = config.isAOE;
         this.radius = config.radius;
 
         this.scene.physics.world.enable(this);
@@ -23,11 +22,6 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
         var height = img.cutHeight*config.scale;
 
         this.body.setSize(width, height);
-
-        // For spin
-        this.body.allowRotation = true;
-        this.body.angularVelocity = -10;
-        //this.body.offset.set(config.width/2, config.height/2);
 
         this.anims.play(config.key, true);
 
@@ -41,20 +35,27 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
         });
 
         this.emitter.startFollow(this)
+
+        // This is weird
+        let _this = this;
+        setTimeout(function(){
+            _this.explode();
+        }, 5000);
     }
 
     update(time, delta){
-        this.scene.physics.world.collide(this, this.scene.layers.ground, () => this.explode());
-
         const players = Object.values(this.scene.players)
 
         for (const player of players) {
-            this.scene.physics.world.collide(this, player.sprite, () => this.explode());
+            this.scene.physics.world.collide(this, player.sprite, () => this.applyDamage(player.sprite));
         }
     }
 
+    applyDamage(){
+
+    }
+
     explode(){
-        this.scene.player.spells['fireball'].projectiles.pop();
         this.setActive(false);
         this.setVisible(false);﻿
         this.body.destroy();

@@ -81,6 +81,7 @@ class MultiplayerGameScene extends Phaser.Scene {
             let orb = this.groups.flightOrbs.create(flightOrb.x, flightOrb.y, 'blue_orb');
             orb.body.width = flightOrb.width;
             orb.body.height = flightOrb.height;
+            orb.key = 'ice';
         });
 
         // Set up endpoint (tombstone) triggerables
@@ -171,13 +172,15 @@ class MultiplayerGameScene extends Phaser.Scene {
      * @purpose  Logic when a player collides with a blue flight orb.
     **/
     collideWithFlightOrb(id, player, orb) {
+        let key = orb.key;
         orb.destroy(orb.x, orb.y);
         player.setVelocityY(-500); // Give player flight boost.
 
         if(id === this.player.id) {
             this.player.addExtraJump();
-            this.guiScene.updateSpellsInventory(1, 'fireball_spell_icon')
-            this.guiScene.updateSpellsInventory(2, 'ice_spell_icon')
+            this.player.collectSpell(key);
+            this.player.updateSpellStock(key);
+            this.guiScene.updateSpellsInventory(this.player.spells)
         }
     }
 

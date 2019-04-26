@@ -24,18 +24,11 @@ export default class Player {
 
         this.cursorPosition = {};
         this.spells = {};
-        this.spells['fireball'] = new Fireball_Spell(true);
-        this.spells['ice'] = new Ice_Spell(true);
-        this.coolDown = 0;
     }
 
     update(time, input) {
-        this.spells['fireball'].projectiles.forEach(proj=>{
-            proj.update();
-        });
-        this.spells['ice'].projectiles.forEach(proj=>{
-            proj.update();
-        });
+        let spellsArr = Object.values(this.spells);
+
 
         this.cursorPosition = {
             x: input.fire.position.x,
@@ -69,7 +62,7 @@ export default class Player {
 
             // Handle spell cast with X button
             if(input.gamepad.buttons[13].value && this.coolDown <= 0) {
-                this.shoot('fireball', GAMEPAD);
+                this.shoot(0, GAMEPAD);
                 this.coolDown = this.spells['fireball'].coolDown;
             }
         } // end of gamepad input
@@ -98,24 +91,30 @@ export default class Player {
                 this.lastJumpTime = input.jump.timeDown;
             }
 
-            if(input.fire.isDown&&this.coolDown<=0) {
-                this.shoot('fireball');
-                this.coolDown = this.spells['fireball'].coolDown;
+
+            if(input.fire.isDown) {
+                if(spellsArr[0]!=undefined){
+                    if(spellsArr[0].coolDown<=0){
+                        this.shoot(0);
+                    }
+                }
             }
 
-            if(input.key_binding_1.isDown&&this.coolDown<=0) {
-                this.shoot('fireball');
-                this.coolDown = this.spells['fireball'].coolDown;
+            if(input.key_binding_1.isDown) {
+                if(spellsArr[0]!=undefined&&spellsArr[0].coolDown===spellsArr[0].initCoolDown){
+                    this.shoot(0);
+                }
             }
 
-            if(input.key_binding_2.isDown&&this.coolDown<=0) {
-                this.shoot('ice');
-                this.coolDown = this.spells['ice'].coolDown;
+            if(input.key_binding_2.isDown) {
+                if(spellsArr[1]!=undefined&&spellsArr[1].coolDown===spellsArr[1].initCoolDown){
+                    this.shoot(1);
+                }
             }
         } // end of keyboard/mouse input
 
-        if(this.coolDown > 0) {
-            this.coolDown -= 1;
+        for(let i = 0; i<spellsArr.length;i++){
+            spellsArr[i].update();
         }
     }
 
@@ -172,7 +171,6 @@ export default class Player {
     }
 
     shoot(spellIndex, inputType){
-
         let cursorPosition = {};
         let spritePosition = { x: this.sprite.x, y: this.sprite.y };
 
@@ -186,8 +184,11 @@ export default class Player {
             default:
                 cursorPosition = { x: this.cursorPosition.x, y: this.cursorPosition.y };
         }
-
-        this.spells[spellIndex].cast(this.scene, spritePosition, cursorPosition);
+        let spellsArr = Object.values(this.spells);
+        if(spellsArr[spellIndex]!=undefined){
+            spellsArr[spellIndex].coolDown = spellsArr[spellIndex].initCoolDown;
+            spellsArr[spellIndex].cast(this.scene, spritePosition, cursorPosition);
+        }
     }
 
     /**
@@ -209,6 +210,29 @@ export default class Player {
             // case JUMP:  NOTE: No jumping animation implemented yet.
             //     break;
             default: this.sprite.anims.play('turn', true);
+        }
+    }
+
+    /**
+     * @author   JonCatalano
+     * @date     April 26th 2019
+     * @purpose  Resets spells stock
+    **/
+    updateSpellStock(spellKey) {
+        this.spells[spellKey].stock = this.spells[spellKey].initStock;
+    }
+
+    /**
+     * @author   JonCatalano
+     * @date     April 26th 2019
+     * @purpose  Resets spells stock
+    **/
+    collectSpell(spellKey) {
+        switch(spellKey){
+            case 'fireball':
+                this.spells[spellKey] = new Fireball_Spell(true);
+            case 'ice':
+                this.spells['ice'] = new Ice_Spell(true);
         }
     }
 }
