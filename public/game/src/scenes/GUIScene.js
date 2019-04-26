@@ -48,9 +48,12 @@ class GUIScene extends Phaser.Scene {
      * @purpose  Removes item from `this.spellsInventory` at Index
      * @param    `spellsInventoryIndex` - Number representing index of spellsInventory.
     **/
-    removeFromSpellsInventory(spellsInventoryIndex, spellsList){
-        this.spellsInventory[spellsInventoryIndex].destroy();
-        this.drawSpellsInventory(spellsList);
+    removeSpellsInventory(){
+        for(var i = 0; i<this.spellsInventory.length; i++){
+            if(this.spellsInventory[i]!=undefined){
+                this.spellsInventory[i].destroy();
+            }
+        }
     }
 
     /**
@@ -102,14 +105,27 @@ class GUIScene extends Phaser.Scene {
             if(spellStock.a!=undefined){
                 this.spellsInventoryText1 = this.add.text(this.sw*0.02+(this.sw*0.042), this.sh*0.79, `${spellStock.a}`, {fill: '#000', fontSize: this.sw*0.03});
             }
+        }else{
+            if(spellStock.a>=0){
+                if(spellStock.a!=undefined){
+                    this.spellsInventoryText1.setText(`${spellStock.a}`);
+                }
+            }else{
+                this.spellsInventoryText1.setText('');
+            }
+        }
+
+        if(this.spellsInventoryText2===undefined){
             if(spellStock.b!=undefined){
                 this.spellsInventoryText2 = this.add.text(this.sw*0.02+(this.sw*0.1)+(this.sw*0.042), this.sh*0.79, `${spellStock.b}`, {fill: '#000', fontSize: this.sw*0.03});
             }
         }else{
-            if(spellStock.a!=undefined){
-                this.spellsInventoryText1.setText(`${spellStock.a}`);
-            }if(spellStock.b!=undefined){
-                this.spellsInventoryText2.setText(`${spellStock.b}`);
+            if(spellStock.b>=0){
+                if(spellStock.b!=undefined){
+                    this.spellsInventoryText2.setText(`${spellStock.b}`);
+                }
+            }else{
+                this.spellsInventoryText2.setText('');
             }
         }
     }

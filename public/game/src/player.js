@@ -27,6 +27,7 @@ export default class Player {
     }
 
     update(time, input) {
+        this.time = time;
         let spellsArr = Object.values(this.spells);
 
         this.scene.guiScene.updateHealthBar(this.hp)
@@ -123,7 +124,7 @@ export default class Player {
         } // end of keyboard/mouse input
 
         for(let i = 0; i<spellsArr.length;i++){
-            spellsArr[i].update();
+            spellsArr[i].update(this);
         }
     }
 
@@ -160,7 +161,6 @@ export default class Player {
         // == Secondary jump while mid-air ==
         // ==================================
         else {
-
             // Prevent double jump from occurring too rapidly. Wait for 100ms between last key press.
             if(this.canDoubleJump && inputHeldTime > (this.lastJumpTime + 100)){
                 this.canDoubleJump = false;
@@ -195,7 +195,6 @@ export default class Player {
         }
         let spellsArr = Object.values(this.spells);
         if(spellsArr[spellIndex]!=undefined){
-            spellsArr[spellIndex].coolDown = spellsArr[spellIndex].initCoolDown;
             spellsArr[spellIndex].cast(this.scene, spritePosition, cursorPosition);
         }
     }
@@ -241,7 +240,17 @@ export default class Player {
             case 'fireball':
                 this.spells[spellKey] = new Fireball_Spell(true);
             case 'ice':
-                this.spells['ice'] = new Ice_Spell(true);
+                this.spells[spellKey] = new Ice_Spell(true);
         }
+    }
+
+    /**
+     * @author   JonCatalano
+     * @date     April 26th 2019
+     * @purpose  Deletes spell from player spell inventory
+    **/
+    removeSpell(spellKey) {
+        delete this.spells[spellKey];
+        this.scene.guiScene.removeSpellsInventory()
     }
 }

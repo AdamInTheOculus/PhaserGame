@@ -40,7 +40,7 @@ export default class AOE extends Phaser.GameObjects.Sprite {
         let _this = this;
         setTimeout(function(){
             _this.explode();
-        }, 5000);
+        }, 2000);
     }
 
     update(time, delta){
