@@ -6,11 +6,13 @@
 
 import { MOVE_LEFT, MOVE_RIGHT, IDLE, JUMP, GAMEPAD, KEYBOARD } from './helpers/constants.js';
 import Fireball_Spell from './spells/fireball.js'
+import Ice_Spell from './spells/ice.js'
 
 export default class Player {
     constructor(data) {
         this.id = data.id;
         this.name = data.name;
+        this.hp = 200;
         this.sprite = data.sprite;
         this.spawnPoint = data.spawn;
         this.scene = data.scene;
@@ -23,11 +25,15 @@ export default class Player {
         this.cursorPosition = {};
         this.spells = {};
         this.spells['fireball'] = new Fireball_Spell(true);
+        this.spells['ice'] = new Ice_Spell(true);
         this.coolDown = 0;
     }
 
     update(time, input) {
         this.spells['fireball'].projectiles.forEach(proj=>{
+            proj.update();
+        });
+        this.spells['ice'].projectiles.forEach(proj=>{
             proj.update();
         });
 
@@ -97,12 +103,14 @@ export default class Player {
                 this.coolDown = this.spells['fireball'].coolDown;
             }
 
-            if(input.key_binding_1.isDown) {
-                this.scene.guiScene.removeFromSpellsInventory(1);
+            if(input.key_binding_1.isDown&&this.coolDown<=0) {
+                this.shoot('fireball');
+                this.coolDown = this.spells['fireball'].coolDown;
             }
 
-            if(input.key_binding_2.isDown) {
-
+            if(input.key_binding_2.isDown&&this.coolDown<=0) {
+                this.shoot('ice');
+                this.coolDown = this.spells['ice'].coolDown;
             }
         } // end of keyboard/mouse input
 

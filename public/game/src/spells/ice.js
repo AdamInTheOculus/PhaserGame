@@ -7,11 +7,11 @@
 import Spell from './spell.js';
 import Projectile from './projectile.js';
 
-export default class Fireball_Spell extends Spell {
+export default class Ice_Spell extends Spell {
     constructor(isAOE) {
         super(isAOE);
-        this.key = 'fireball';
-        this.speed = 500;
+        this.key = 'ice';
+        this.speed = 1000;
         this.damage = 10;
         this.radius = 10;
         this.coolDown = 100;
@@ -19,16 +19,16 @@ export default class Fireball_Spell extends Spell {
     }
 
     /**
-     * @author   JonCatalano
-     * @date     April 24th 2019
-     * @purpose  Casts the Fire Spell
-     **/
+    * @author   JonCatalano
+    * @date     April 26th 2019
+    * @purpose  Casts the Ice_Spell
+    **/
 
     cast(scene, startPosition, pointerPosition) {
         let projectile = new Projectile({
             scene: scene,
             scale: 0.4,
-            key:this.key,
+            key: this.key,
             startPosition: startPosition,
             pointerPosition: pointerPosition,
             speed: this.speed,
@@ -60,6 +60,6 @@ export default class Fireball_Spell extends Spell {
     }
 
     effect(){
-        
+
     }
 }

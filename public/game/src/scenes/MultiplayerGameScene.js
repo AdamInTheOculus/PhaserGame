@@ -34,7 +34,11 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.load.spritesheet('fireball', 'game/assets/spritesheets/fireball.png', {            // Load spritesheet for player.
             frameWidth: 134, frameHeight: 134
         });
+        this.load.spritesheet('ice', 'game/assets/spritesheets/ice.png', {            // Load spritesheet for player.
+            frameWidth: 192, frameHeight: 192
+        });
         this.load.image('fireball_spell_icon', 'game/assets/icons/fireball_spell_icon.png');
+        this.load.image('ice_spell_icon', 'game/assets/icons/ice_spell_icon.png');
     }
 
     create() {
@@ -171,6 +175,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         if(id === this.player.id) {
             this.player.addExtraJump();
             this.guiScene.updateSpellsInventory(1, 'fireball_spell_icon')
+            this.guiScene.updateSpellsInventory(2, 'ice_spell_icon')
         }
     }
 

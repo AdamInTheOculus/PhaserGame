@@ -33,4 +33,11 @@
          frameRate: 10,
          repeat: -1
      });
+
+     scene.anims.create({
+         key: 'ice',
+         frames: scene.anims.generateFrameNumbers('ice', { start: 0, end: 19 }),
+         frameRate: 10,
+         repeat: -1
+     });
 }

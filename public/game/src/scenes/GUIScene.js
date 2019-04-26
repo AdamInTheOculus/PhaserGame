@@ -13,16 +13,36 @@ class GUIScene extends Phaser.Scene {
     }
 
     create(){
-      let sw = this.sw = this.cameras.main.width;
-      let sh = this.sh = this.cameras.main.height;
+      this.sw = this.cameras.main.width;
+      this.sh = this.cameras.main.height;
 
-      // Health Bar
-      this.hp = 150;
-      this.health_bar = this.add.graphics()
-      this.health_bar.fillStyle(0xff0000, 1);
-      this.health_bar.fillRect(sw*0.02, sh*0.02, this.hp, sh*0.03);
-
+      this.drawHealthBar(200);
       this.drawSpellsInventory();
+    }
+
+    /**
+     * @author   JonCatalano
+     * @date     April 26th 2019
+     * @purpose  Draws `this.healthBar` with hp amount of health
+     * @param    `hp` - Health Points in Health Bar
+    **/
+    drawHealthBar(hp){
+        this.healthBar = this.add.graphics()
+        this.healthBar.fillStyle(0xff0000, 1);
+        this.healthBar.fillRect(this.sw*0.02, this.sh*0.02, hp, this.sh*0.03);
+    }
+
+    /**
+     * @author   JonCatalano
+     * @date     April 26th 2019
+     * @purpose  Updates `this.spellsInventory` menu with updated spell icon.
+     * @param    `spellsInventoryIndex` - Number representing index of spellsInventory.
+    **/
+    updateHealthBar(hp) {
+        if(this.healthBar!=undefined){
+            this.healthBar.destroy();
+        }
+        this.drawHealthBar(hp);
     }
 
     /**
@@ -42,7 +62,6 @@ class GUIScene extends Phaser.Scene {
      * @purpose  Draws `this.spellsInventory` in the GUI Scene
     **/
     drawSpellsInventory(){
-        // Draw Spell Inventory
         this.spellsInventory[1] = this.add.graphics()
         this.spellsInventory[1].fillStyle(0xff0000, 1);
         this.spellsInventory[1].strokeRect(this.sw*0.02, this.sh*0.82, this.sw*0.1, this.sh*0.13);
@@ -50,6 +69,18 @@ class GUIScene extends Phaser.Scene {
         this.spellsInventory[2] = this.add.graphics()
         this.spellsInventory[2].fillStyle(0xff0000, 1);
         this.spellsInventory[2].strokeRect(this.sw*0.02+(this.sw*0.1), this.sh*0.82, this.sw*0.1, this.sh*0.13);
+    }
+
+    /**
+     * @author   JonCatalano
+     * @date     April 26th 2019
+     * @purpose  Draws keybindings spells inventory gui item
+    **/
+    drawKeyBindings(){
+        for (var i = 0; i < 3; i++) {
+            this.spellsInventory[1] = this.add.text(this.sw*0.02+(this.sw*0.042), this.sh*0.79, `1`, {fill: '#000', fontSize: this.sw*0.03})
+            this.spellsInventory[2] = this.add.text(this.sw*0.02+(this.sw*0.1)+(this.sw*0.042), this.sh*0.79, `2`, {fill: '#000', fontSize: this.sw*0.03})
+        }
     }
 
     /**
@@ -66,10 +97,11 @@ class GUIScene extends Phaser.Scene {
         if(spellsInventoryIndex===1){
             this.spellsInventory[spellsInventoryIndex] = this.add.image(this.sw*0.072, this.sh*0.89, key)
         }else if(spellsInventoryIndex===2){
-            this.spellsInventory[spellsInventoryIndex] = this.add.image(this.sw*0.02+(this.sw*0.1), this.sh*0.85, key)
+            this.spellsInventory[spellsInventoryIndex] = this.add.image(this.sw*0.072+(this.sw*0.1), this.sh*0.89, key)
         }
         this.spellsInventory[spellsInventoryIndex].displayWidth = this.sw*0.1;
         this.spellsInventory[spellsInventoryIndex].displayHeight = this.sh*0.13;
+        this.drawKeyBindings()
     }
 
     /**
