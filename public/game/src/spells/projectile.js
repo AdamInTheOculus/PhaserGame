@@ -17,7 +17,10 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
 
         this.scene.physics.world.enable(this);
 
-        this.body.setSize(config.width, config.height);
+        // Grab image from game cache
+        var img = Object.values(this.scene.textures.get('fireball'))[2][0];
+
+        this.body.setSize(img.width*0.67, img.height*0.67);
         //this.body.offset.set(config.width/2, config.height/2);
 
         this.particles = this.scene.add.particles('dude');
