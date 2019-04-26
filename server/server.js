@@ -12,9 +12,9 @@ const port = (process.env.PORT || 9001);
 
 const GameManager = require('./GameManager.js');
 const gameManager = new GameManager({
-    heartbeat: 16.6,                  // Interval rate (in ms) to send data to clients.
-    mapFile: 'adam-test_base64_gzip.json', // Name of TiledMap file.
-    mapLayer: 'Collidable'            // Name of TiledMap layer with world data.
+    heartbeat: 16.6,
+    mapFile: 'adam-test_base64.json',
+    mapLayer: 'Collidable'
 });
 
 const Player = require('./Player.js');
