@@ -6,7 +6,7 @@
 
 export default class Projectile extends Phaser.GameObjects.Sprite {
     constructor(config) {
-        super(config.scene, config.startPosition.x, config.startPosition.y, 'dude');
+        super(config.scene, config.startPosition.x, config.startPosition.y, 'fireball');
         this.scene = config.scene;
         this.scene.add.existing(this);
 
@@ -18,10 +18,10 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
         this.scene.physics.world.enable(this);
 
         this.body.setSize(config.width, config.height);
-        this.body.offset.set(0, 0);
+        //this.body.offset.set(config.width/2, config.height/2);
 
         this.particles = this.scene.add.particles('dude');
-
+        //this.anims.play('left', true);
         this.particles.createEmitter({
 
         });

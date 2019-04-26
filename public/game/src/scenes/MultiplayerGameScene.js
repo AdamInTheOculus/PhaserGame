@@ -7,6 +7,7 @@
 import Player from '../player.js';
 import GUIScene from './GUIScene.js';
 import * as constants from '../helpers/constants.js';
+import makeAnimations from '../animations.js';
 import FireBall from '../spells/fireball.js';
 import InputHandler from '../input_handler.js';
 import NetworkHandler from '../network_handler.js';
@@ -30,6 +31,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.load.spritesheet('dude', 'game/assets/spritesheets/dude.png', {            // Load spritesheet for player.
             frameWidth: 32, frameHeight: 48
         });
+        this.load.image('fireball', 'game/assets/icons/fireball.png')
         this.load.image('fireball_spell_icon', 'game/assets/icons/fireball_spell_icon.png');
     }
 
@@ -80,28 +82,7 @@ class MultiplayerGameScene extends Phaser.Scene {
             tombstone.body.height = endpoint.height;
         });
 
-        // =============================
-        // == Setup player animations ==
-        // =============================
-        this.anims.create({
-            key: 'left',
-            frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
-            frameRate: 10,
-            repeat: -1
-        });
-
-        this.anims.create({
-            key: 'turn',
-            frames: [ { key: 'dude', frame: 4 } ],
-            frameRate: 20
-        });
-
-        this.anims.create({
-            key: 'right',
-            frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
-            frameRate: 10,
-            repeat: -1
-        });
+        makeAnimations(this);
 
         // ===================================
         // == Set up collisions and physics ==

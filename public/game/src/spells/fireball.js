@@ -10,8 +10,8 @@ import Projectile from './projectile.js';
 export default class Fireball_Spell extends Spell {
     constructor(isAOE) {
         super(isAOE);
-        this.width = 20;
-        this.height = 20;
+        this.width = 32;
+        this.height = 32;
         this.speed = 10;
         this.damage = 10;
         this.radius = 10;
