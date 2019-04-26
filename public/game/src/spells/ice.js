@@ -16,8 +16,8 @@ export default class Ice_Spell extends Spell {
         this.speed = 500;
         this.damage = 10;
         this.radius = 10;
-        this.coolDown = 0;
-        this.initCoolDown = 200;
+        this.lastCastTime = 0;
+        this.initCoolDown = 2000;
         this.projectiles = [];
     }
 
@@ -68,9 +68,6 @@ export default class Ice_Spell extends Spell {
         this.projectiles.forEach(proj=>{
             proj.update();
         });
-        if(this.coolDown>0){
-            this.coolDown -=1;
-        }
     }
 
     effect(){

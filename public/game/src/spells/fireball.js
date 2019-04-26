@@ -8,7 +8,7 @@ import Spell from './spell.js';
 import Projectile from './projectile.js';
 
 export default class Fireball_Spell extends Spell {
-    constructor(isAOE) {
+    constructor(isAOE, time) {
         super(isAOE);
         this.key = 'fireball';
         this.icon = 'fireball_spell_icon';
@@ -16,7 +16,8 @@ export default class Fireball_Spell extends Spell {
         this.speed = 250;
         this.damage = 10;
         this.radius = 10;
-        this.coolDown = this.initCoolDown = 100;
+        this.lastCastTime = 0;
+        this.initCoolDown = 100;
         this.isAOE = true;
         this.projectiles = [];
     }
@@ -62,6 +63,12 @@ export default class Fireball_Spell extends Spell {
             // Reminder: You have access to `scene`.
             this.projectiles.push(projectile);
         }
+    }
+
+    update(){
+        this.projectiles.forEach(proj=>{
+            proj.update();
+        });
     }
 
     effect(){

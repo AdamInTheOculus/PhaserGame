@@ -29,6 +29,8 @@ export default class Player {
     update(time, input) {
         let spellsArr = Object.values(this.spells);
 
+        this.scene.guiScene.updateHealthBar(this.hp)
+        this.scene.guiScene.updateSpellsInventory(this.spells, time)
 
         this.cursorPosition = {
             x: input.fire.position.x,
@@ -94,21 +96,28 @@ export default class Player {
 
             if(input.fire.isDown) {
                 if(spellsArr[0]!=undefined){
-                    if(spellsArr[0].coolDown<=0){
+                    if(time >= (spellsArr[0].lastCastTime+spellsArr[0].initCoolDown)){
+                        spellsArr[0].lastCastTime = time;
                         this.shoot(0);
                     }
                 }
             }
 
             if(input.key_binding_1.isDown) {
-                if(spellsArr[0]!=undefined&&spellsArr[0].coolDown===spellsArr[0].initCoolDown){
-                    this.shoot(0);
+                if(spellsArr[0]!=undefined){
+                    if(time >= (spellsArr[0].lastCastTime+spellsArr[0].initCoolDown)){
+                        spellsArr[0].lastCastTime = time;
+                        this.shoot(0);
+                    }
                 }
             }
 
             if(input.key_binding_2.isDown) {
-                if(spellsArr[1]!=undefined&&spellsArr[1].coolDown===spellsArr[1].initCoolDown){
-                    this.shoot(1);
+                if(spellsArr[1]!=undefined){
+                    if(time >= (spellsArr[1].lastCastTime+spellsArr[1].initCoolDown)){
+                        spellsArr[1].lastCastTime = time;
+                        this.shoot(1);
+                    }
                 }
             }
         } // end of keyboard/mouse input

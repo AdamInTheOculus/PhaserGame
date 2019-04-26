@@ -15,9 +15,6 @@ class GUIScene extends Phaser.Scene {
     create(){
       this.sw = this.cameras.main.width;
       this.sh = this.cameras.main.height;
-
-      this.drawHealthBar(200);
-      this.drawSpellsInventory();
     }
 
     /**
@@ -51,9 +48,9 @@ class GUIScene extends Phaser.Scene {
      * @purpose  Removes item from `this.spellsInventory` at Index
      * @param    `spellsInventoryIndex` - Number representing index of spellsInventory.
     **/
-    removeFromSpellsInventory(spellsInventoryIndex){
+    removeFromSpellsInventory(spellsInventoryIndex, spellsList){
         this.spellsInventory[spellsInventoryIndex].destroy();
-        this.drawSpellsInventory();
+        this.drawSpellsInventory(spellsList);
     }
 
     /**
@@ -61,14 +58,38 @@ class GUIScene extends Phaser.Scene {
      * @date     April 25th 2019
      * @purpose  Draws `this.spellsInventory` in the GUI Scene
     **/
-    drawSpellsInventory(){
-        this.spellsInventory[1] = this.add.graphics()
-        this.spellsInventory[1].fillStyle(0xff0000, 1);
-        this.spellsInventory[1].strokeRect(this.sw*0.02, this.sh*0.82, this.sw*0.1, this.sh*0.13);
+    drawSpellsInventory(spellsList, time){
+        if(this.spellsInventory[1]!=undefined){
+            this.spellsInventory[1].destroy();
+        }
+        if(this.spellsInventory[2]!=undefined){
+            this.spellsInventory[2].destroy();
+        }
+        let spellsArray = Object.values(spellsList);
 
-        this.spellsInventory[2] = this.add.graphics()
-        this.spellsInventory[2].fillStyle(0xff0000, 1);
-        this.spellsInventory[2].strokeRect(this.sw*0.02+(this.sw*0.1), this.sh*0.82, this.sw*0.1, this.sh*0.13);
+        if(spellsArray[0]!=undefined){
+            if(time >= (spellsArray[0].lastCastTime+spellsArray[0].initCoolDown)){
+                this.spellsInventory[1] = this.add.graphics()
+                this.spellsInventory[1].lineStyle(2, 0xfff000, 1);
+                this.spellsInventory[1].strokeRect(this.sw*0.02, this.sh*0.82, this.sw*0.1, this.sh*0.13);
+            }else{
+                this.spellsInventory[1] = this.add.graphics()
+                this.spellsInventory[1].lineStyle(2, 0x000, 1);
+                this.spellsInventory[1].strokeRect(this.sw*0.02, this.sh*0.82, this.sw*0.1, this.sh*0.13);
+            }
+        }
+
+        if(spellsArray[1]!=undefined){
+            if(time >= (spellsArray[1].lastCastTime+spellsArray[1].initCoolDown)){
+                this.spellsInventory[2] = this.add.graphics()
+                this.spellsInventory[2].lineStyle(2, 0xfff000, 1);
+                this.spellsInventory[2].strokeRect(this.sw*0.02+(this.sw*0.11), this.sh*0.82, this.sw*0.1, this.sh*0.13);
+            }else{
+                this.spellsInventory[2] = this.add.graphics()
+                this.spellsInventory[2].lineStyle(2, 0x000, 1);
+                this.spellsInventory[2].strokeRect(this.sw*0.02+(this.sw*0.11), this.sh*0.82, this.sw*0.1, this.sh*0.13);
+            }
+        }
     }
 
     /**
@@ -99,14 +120,9 @@ class GUIScene extends Phaser.Scene {
      * @purpose  Updates `this.spellsInventory` menu with updated spell icon.
      * @param    `spellsInventoryIndex` - Number representing index of spellsInventory.
     **/
-    updateSpellsInventory(spellsList) {
+    updateSpellsInventory(spellsList, time) {
         let spellsArray = Object.values(spellsList);
-        for(var i; i<spellsArray.length; i++){
-            if(this.spellsInventory[i]!=undefined){
-                this.spellsInventory[i].destroy();
-                this.drawSpellsInventory();
-            }
-        }
+        this.drawSpellsInventory(spellsList, time);
         let stockA = undefined;
         let stockB = undefined;
         if(spellsArray[0]!=undefined){
