@@ -7,10 +7,11 @@
 import Player from '../player.js';
 import GUIScene from './GUIScene.js';
 import * as constants from '../helpers/constants.js';
-import makeAnimations from '../animations.js';
 import FireBall from '../spells/fireball.js';
+
 import InputHandler from '../input_handler.js';
 import NetworkHandler from '../network_handler.js';
+import AnimationHandler from '../animation_handler.js';
 
 class MultiplayerGameScene extends Phaser.Scene {
 
@@ -45,6 +46,7 @@ class MultiplayerGameScene extends Phaser.Scene {
 
         this.inputHandler = new InputHandler(this.input);
         this.networkHandler = new NetworkHandler(this);
+        this.animationsHandler = new AnimationHandler(this);
 
         this.player = undefined;
         this.players = {};
@@ -88,7 +90,7 @@ class MultiplayerGameScene extends Phaser.Scene {
             tombstone.body.height = endpoint.height;
         });
 
-        makeAnimations(this);
+        this.animationsHandler.setupAnimations();
 
         // ===================================
         // == Set up collisions and physics ==
