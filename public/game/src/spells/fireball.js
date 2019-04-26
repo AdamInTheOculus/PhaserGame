@@ -11,7 +11,7 @@ export default class Fireball_Spell extends Spell {
     constructor(isAOE) {
         super(isAOE);
         this.key = 'fireball';
-        this.speed = 500;
+        this.speed = 250;
         this.damage = 10;
         this.radius = 10;
         this.coolDown = 100;
@@ -60,6 +60,6 @@ export default class Fireball_Spell extends Spell {
     }
 
     effect(){
-        
+
     }
 }

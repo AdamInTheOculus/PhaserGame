@@ -11,7 +11,7 @@ export default class Ice_Spell extends Spell {
     constructor(isAOE) {
         super(isAOE);
         this.key = 'ice';
-        this.speed = 1000;
+        this.speed = 500;
         this.damage = 10;
         this.radius = 10;
         this.coolDown = 100;
@@ -40,7 +40,7 @@ export default class Ice_Spell extends Spell {
         projectile.setActive(true);
         projectile.setVisible(true);
 
-        projectile.body.allowGravity = true;
+        projectile.body.allowGravity = false;
 
         projectile.setPosition(startPosition.x, startPosition.y);
         let angle = Phaser.Math.Angle.Between(startPosition.x, startPosition.y, projectile.scene.cameras.main.scrollX+pointerPosition.x, projectile.scene.cameras.main.scrollY+pointerPosition.y)

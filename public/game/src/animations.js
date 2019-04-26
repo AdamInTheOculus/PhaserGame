@@ -30,7 +30,7 @@
      scene.anims.create({
          key: 'fireball',
          frames: scene.anims.generateFrameNumbers('fireball', { start: 0, end: 23 }),
-         frameRate: 10,
+         frameRate: 20,
          repeat: -1
      });
 

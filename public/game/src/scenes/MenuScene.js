@@ -42,11 +42,6 @@ class MenuScene extends Phaser.Scene {
         if (this.registry.get('restartScene')) {
             this.restartScene();
         }
-        this.blink -= delta;
-        if (this.blink < 0) {
-            this.single_play_button.alpha = this.single_play_button.alpha === 1 ? 0 : 1;
-            this.blink = 500;
-        }
     }
 
     startSPGame() {
