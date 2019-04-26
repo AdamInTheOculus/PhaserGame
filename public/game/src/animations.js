@@ -4,8 +4,6 @@
  * @purpose  Contains client-side data and logic for game animations.
  **/
  export default function makeAnimations(scene) {
-     // TONS of animations. Everything animation-related is ugly and stupid below.
-     // TODO:  maybe use JSON to load animations
      // =============================
      // == Setup player animations ==
      // =============================
@@ -25,6 +23,13 @@
      scene.anims.create({
          key: 'right',
          frames: scene.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+         frameRate: 10,
+         repeat: -1
+     });
+
+     scene.anims.create({
+         key: 'fireball',
+         frames: scene.anims.generateFrameNumbers('fireball', { start: 0, end: 23 }),
          frameRate: 10,
          repeat: -1
      });

@@ -10,7 +10,7 @@ import Projectile from './projectile.js';
 export default class Fireball_Spell extends Spell {
     constructor(isAOE) {
         super(isAOE);
-        this.speed = 10;
+        this.speed = 500;
         this.damage = 10;
         this.radius = 10;
         this.coolDown = 100;
@@ -20,6 +20,7 @@ export default class Fireball_Spell extends Spell {
     cast(scene, startPosition, pointerPosition) {
         let projectile = new Projectile({
             scene: scene,
+            scale: 0.4,
             startPosition: startPosition,
             pointerPosition: pointerPosition,
             speed: this.speed,
@@ -35,8 +36,8 @@ export default class Fireball_Spell extends Spell {
 
         projectile.setPosition(startPosition.x, startPosition.y);
         let angle = Phaser.Math.Angle.Between(startPosition.x, startPosition.y, projectile.scene.cameras.main.scrollX+pointerPosition.x, projectile.scene.cameras.main.scrollY+pointerPosition.y)
-        projectile.body.velocity.x =  300*Math.cos(angle);
-        projectile.body.velocity.y = 300*Math.sin(angle);
+        projectile.body.velocity.x =  this.speed*Math.cos(angle);
+        projectile.body.velocity.y = this.speed*Math.sin(angle);
 
         //this.play('potionGreen');
 

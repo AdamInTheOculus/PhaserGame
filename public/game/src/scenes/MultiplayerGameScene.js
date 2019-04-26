@@ -31,7 +31,9 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.load.spritesheet('dude', 'game/assets/spritesheets/dude.png', {            // Load spritesheet for player.
             frameWidth: 32, frameHeight: 48
         });
-        this.load.image('fireball', 'game/assets/icons/fireball.png')
+        this.load.spritesheet('fireball', 'game/assets/spritesheets/fireball.png', {            // Load spritesheet for player.
+            frameWidth: 134, frameHeight: 134
+        });
         this.load.image('fireball_spell_icon', 'game/assets/icons/fireball_spell_icon.png');
     }
 

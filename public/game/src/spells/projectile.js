@@ -6,11 +6,10 @@
 
 export default class Projectile extends Phaser.GameObjects.Sprite {
     constructor(config) {
-        super(config.scene, config.startPosition.x, config.startPosition.y, 'fireball');
+        super(config.scene, config.startPosition.x, config.startPosition.y, );
         this.scene = config.scene;
         this.scene.add.existing(this);
 
-        this.speed = config.speed;
         this.damage = config.damage;
         this.isAOE = config.isAOE;
         this.radius = config.radius;
@@ -18,23 +17,28 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
         this.scene.physics.world.enable(this);
 
         // Grab image from game cache
-        var img = Object.values(this.scene.textures.get('fireball'))[2][0];
+        var img = Object.values(this.scene.textures.get('fireball'))[2][0].texture.frames[0];
 
-        this.body.setSize(img.width*0.67, img.height*0.67);
+        var width = img.cutWidth*config.scale;
+        var height = img.cutHeight*config.scale;
+
+        this.body.setSize(width, height);
+
+        // For spin
+        this.body.allowRotation = true;
+        this.body.angularVelocity = -10;
         //this.body.offset.set(config.width/2, config.height/2);
 
-        this.particles = this.scene.add.particles('dude');
-        //this.anims.play('left', true);
-        this.particles.createEmitter({
+        this.anims.play('fireball', true);
 
+        const emitter = this.scene.add.particles('dude').createEmitter({
+            blendMode: 'SCREEN',
+            scale: { start: 0.2, end: 0 },
+            speed: { min: -100, max: 100 },
+            quantity: 50
         });
-        /*this.on('animationcomplete', () => {
-            if (this.anims.currentAnim.key === 'fireExplode') {
-                this.setActive(false);
-                this.setVisible(false);
-            }
-        }, this);
-        */
+
+        emitter.startFollow(this)
     }
 
     update(time, delta){
