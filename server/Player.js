@@ -1,10 +1,10 @@
 /**
  * @author   JonCatalano
  * @date     April 16th 2019
- * @purpose  Player State Class for server update information
+ * @purpose  Player class for server update information
 **/
 
-module.exports = class PlayerState {
+module.exports = class Player {
     constructor() {
         this.hp = 100;
         this.id = 0;
