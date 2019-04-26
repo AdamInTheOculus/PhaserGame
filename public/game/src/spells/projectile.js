@@ -9,7 +9,7 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
         super(config.scene, config.startPosition.x, config.startPosition.y, config.key);
         this.scene = config.scene;
         this.scene.add.existing(this);
-
+        this.key = config.key;
         this.damage = config.damage;
         this.isAOE = config.isAOE;
         this.radius = config.radius;
@@ -54,7 +54,7 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
     }
 
     explode(){
-        this.scene.player.spells['fireball'].projectiles.pop();
+        this.scene.player.spells[this.key].projectiles.pop();
         this.setActive(false);
         this.setVisible(false);﻿
         this.body.destroy();
