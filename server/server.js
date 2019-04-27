@@ -8,7 +8,7 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io').listen(server);
-const port = (process.env.PORT || 9001);
+const port = (process.env.PORT || 3000);
 
 const GameManager = require('./GameManager.js');
 const gameManager = new GameManager({

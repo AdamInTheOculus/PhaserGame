@@ -17,7 +17,7 @@ export default class Ice_Spell extends Spell {
         this.damage = 10;
         this.radius = 10;
         this.lastCastTime = 0;
-        this.initCoolDown = 2000;
+        this.initCoolDown = 1000; // in ms
         this.isAOE = true;
         this.projectiles = [];
     }
