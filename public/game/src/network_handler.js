@@ -66,6 +66,14 @@ class NetworkHandler {
         this.scene.physics.add.overlap(player.sprite, this.scene.groups.flightOrbs, (obj1, obj2) => { this.scene.collideWithFlightOrb(player.id, obj1, obj2); }, null, this);
         this.scene.physics.add.overlap(player.sprite, this.scene.groups.endPoints, (obj1, obj2) => { this.scene.collideWithTombstone(player.id, obj1, obj2); }, null, this);
 
+        // Send back player size to server. This is important for physics/collision calculations.
+        this.socket.emit('player_size', {
+            size: {
+                w: sprite.displayWidth,
+                h: sprite.displayHeight
+            }
+        });
+
         return player;
     }
 

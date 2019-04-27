@@ -12,6 +12,7 @@ module.exports = class GameManager {
      * @param  config - Config data for the GameManager.
      *         config.heartbeat - Interval rate (in ms) to send data to clients.
      *         config.mapFile   - Name of file with map data.
+     *         config.mapLayer  - Name of desired layer within conig.mapFile.
     **/
     constructor(config) {
         this.players = {};
@@ -58,7 +59,7 @@ module.exports = class GameManager {
         }
 
         if(this.players[newPlayer.id] !== undefined) {
-            throw new Error(`GameManager.addPlayer -- Warning -- Player id [${newPlayer.id}] already exists. Nothing added.`);
+            throw new Error(`GameManager -- addPlayer -- Player id [${newPlayer.id}] already exists.`);
         }
 
         this.players[newPlayer.id] = newPlayer;

@@ -13,7 +13,7 @@ const port = (process.env.PORT || 3000);
 const GameManager = require('./GameManager.js');
 const gameManager = new GameManager({
     heartbeat: 16.6,
-    mapFile: 'adam-test.json',
+    mapFile: 'adam-test_base64.json',
     mapLayer: 'Collidable'
 });
 
@@ -72,6 +72,14 @@ io.on('connection', (socket) => {
     socket.on('player_update', (data) => {
         gameManager.updatePlayer(data.id, data.state, data.position);
         io.emit('player_update', gameManager.getPlayers());
+    });
+
+    // ==============================================================================
+    // == Handle when client provides player size. This will occur once per player ==
+    // ==============================================================================
+    socket.on('player_size', (data) => {
+        gameManager.getPlayerById(socket.id).size = data.size;
+        console.log(gameManager.getPlayerById(socket.id));
     });
 });
 

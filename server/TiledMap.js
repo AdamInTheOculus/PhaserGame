@@ -41,10 +41,6 @@ module.exports = class TiledMap {
         // == Get each tile and its metadata ==
         // ====================================
         this.layerTiles = this.getTileMetadata(this.data.tilesets);
-
-        // let x = 25;
-        // let y = 29;
-        // console.log(this.layerTiles[this.layerData[y][x]]);
     }
 
     /**
@@ -168,5 +164,22 @@ module.exports = class TiledMap {
         });
 
         return metadata;
+    }
+
+    /**
+     * @author           AdamInTheOculus
+     * @date             April 27th 2019
+     * @purpose          Returns metadata of one tile, based on given position.
+     * @param  position  Object containing (x,y) positions.
+    **/
+    getTileAtPosition(position) {
+        if(position === undefined) {
+            throw new Error('TiledMap - getTileAtPosition - `position` parameter is undefined.');
+        }
+
+        let x = Math.floor(position.x / this.data.tilewidth);
+        let y = Math.floor(position.y / this.data.tileheight);
+
+        return this.layerTiles[this.layerData[x][y]];
     }
 };
