@@ -238,7 +238,7 @@ export default class Player {
         switch(spellKey){
             case 'fireball':
                 this.spells[spellKey] = new Fireball_Spell(true);
-            case 'ice':
+            case 'iceball':
                 this.spells[spellKey] = new Ice_Spell(true);
         }
     }

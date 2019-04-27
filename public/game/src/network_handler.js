@@ -63,7 +63,7 @@ class NetworkHandler {
         });
 
         this.scene.physics.add.collider(player.sprite, this.scene.layers.ground, () => { if(player.sprite.body.blocked.down){ player.canJump = true; player.canDoubleJump = false; }});
-        this.scene.physics.add.overlap(player.sprite, this.scene.groups.flightOrbs, (obj1, obj2) => { this.scene.collideWithFlightOrb(player.id, obj1, obj2); }, null, this);
+        this.scene.physics.add.overlap(player.sprite, this.scene.groups.collectables, (obj1, obj2) => { this.scene.collideWithCollectable(player.id, obj1, obj2); }, null, this);
         this.scene.physics.add.overlap(player.sprite, this.scene.groups.endPoints, (obj1, obj2) => { this.scene.collideWithTombstone(player.id, obj1, obj2); }, null, this);
 
         return player;

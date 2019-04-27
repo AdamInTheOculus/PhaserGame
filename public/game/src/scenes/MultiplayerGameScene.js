@@ -7,7 +7,6 @@
 import Player from '../player.js';
 import GUIScene from './GUIScene.js';
 import * as constants from '../helpers/constants.js';
-import FireBall from '../spells/fireball.js';
 
 import InputHandler from '../input_handler.js';
 import NetworkHandler from '../network_handler.js';
@@ -23,19 +22,10 @@ class MultiplayerGameScene extends Phaser.Scene {
     }
 
     preload() {
-        // this.load.image('background', 'game/assets/backgrounds/landscape.png');         // Load background image.
-        // this.load.image('game_tiles', 'game/assets/tilesets/platformer_1.png');         // Load Tiled tileset.
-        // this.load.image('blue_orb', 'game/assets/triggerables/blue_orb.png');           // Load FlightOrb image.
-        // this.load.image('tombstone', 'game/assets/triggerables/tombstone.png');         // Load Tombstone image.
-        // this.load.image('question_mark', 'game/assets/triggerables/question_mark.png'); // Load QuestionMark image.
-        // this.load.tilemapTiledJSON('map_1', 'game/assets/maps/adam-test_base64.json');         // Load Tiled map.
-        // this.load.spritesheet('dude', 'game/assets/spritesheets/dude.png', {            // Load spritesheet for player.
-        //     frameWidth: 32, frameHeight: 48
-        // });
         this.load.spritesheet('fireball', 'game/assets/spritesheets/fireball.png', {            // Load spritesheet for player.
             frameWidth: 134, frameHeight: 134
         });
-        this.load.spritesheet('ice', 'game/assets/spritesheets/ice.png', {            // Load spritesheet for player.
+        this.load.spritesheet('iceball', 'game/assets/spritesheets/ice.png', {            // Load spritesheet for player.
             frameWidth: 192, frameHeight: 192
         });
         this.load.image('fireball_spell_icon', 'game/assets/icons/fireball_spell_icon.png');
@@ -55,8 +45,8 @@ class MultiplayerGameScene extends Phaser.Scene {
         // == Build world with background image, tilemaps, and game objects ==
         // ===================================================================
         let map = this.make.tilemap({key: 'map_1'});
-        let tileset = map.addTilesetImage('platformer_1', 'game_tiles');
-
+        let tileset = map.addTilesetImage('tiles', 'game_tiles');
+        let tilesetData = this.getTileMetadata(map.tilesets);
         this.add.image(0, 0, 'background').setOrigin(0, 0);
         this.layers = {};
         this.groups = {};
@@ -65,11 +55,11 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.layers.ground = map.createStaticLayer(0, tileset, 0, 0);
         this.layers.spawnPoints = map.getObjectLayer('SpawnPoints')['objects'];
         this.layers.endPoints = map.getObjectLayer('EndPoints')['objects'];
-        this.layers.flightOrbs = map.getObjectLayer('FlightOrbs')['objects'];
+        this.layers.collectables = map.getObjectLayer('Collectables')['objects'];
 
         // Set up groups
         this.groups.endPoints = this.physics.add.staticGroup();
-        this.groups.flightOrbs = this.physics.add.staticGroup();
+        this.groups.collectables = this.physics.add.staticGroup();
 
         this.scene.bringToTop('GUIScene');
         this.guiScene = this.scene.get('GUIScene');
@@ -77,11 +67,20 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.networkHandler.registerSocketListeners();
 
         // Set up flight orb triggerables
-        this.layers.flightOrbs.forEach(flightOrb => {
-            let orb = this.groups.flightOrbs.create(flightOrb.x, flightOrb.y, 'blue_orb');
-            orb.body.width = flightOrb.width;
-            orb.body.height = flightOrb.height;
-            orb.key = 'ice';
+        this.layers.collectables.forEach(collectable => {
+            let type = tilesetData[collectable.gid][0][1].type;
+            let orb = this.groups.collectables.create(collectable.x, collectable.y, 'map_atlas', `${type}_collectable`);
+            orb.body.width = collectable.width;
+            orb.body.height = collectable.height;
+            orb.key = type;
+            orb.particles = this.add.particles(orb.key)
+            orb.emitter = orb.particles.createEmitter({
+                blendMode: 'ADD',
+                scale: { start: 0, end: 0.05 },
+                speed: { min: -25, max: 25 },
+                quantity: 5
+            });
+            orb.emitter.startFollow(orb)
         });
 
         // Set up endpoint (tombstone) triggerables
@@ -171,8 +170,9 @@ class MultiplayerGameScene extends Phaser.Scene {
      * @date     April 7th 2019
      * @purpose  Logic when a player collides with a blue flight orb.
     **/
-    collideWithFlightOrb(id, player, orb) {
+    collideWithCollectable(id, player, orb) {
         let key = orb.key;
+        orb.particles.destroy();
         orb.destroy(orb.x, orb.y);
         player.setVelocityY(-500); // Give player flight boost.
 
@@ -199,6 +199,48 @@ class MultiplayerGameScene extends Phaser.Scene {
         }
 
         location.reload();
+    }
+
+    /**
+     * @author           AdamInTheOculus
+     * @date             April 26th 2019
+     * @purpose          Returns an object. Mapped by unique tile ID. Each property contains tile metadata.
+     * @param  tilesets  Array containing all tileset objects associated with layer.
+    **/
+    getTileMetadata(tilesets) {
+
+        let metadata = {};
+
+        tilesets.forEach(tileset => {
+
+            // ======================================================
+            // == Skip iteration if no tiles exist within tileset. ==
+            // ======================================================
+            if(tileset.tileData === undefined) {
+                return;
+            }
+
+            // ===========================================================================
+            // == Iterate over each tile and add to metadata object, mapped by Tile ID. ==
+            // ===========================================================================
+            Object.keys(tileset.tileData).map(function(key) {
+              return [Number(key), tileset.tileData[key]];
+            }).forEach(tile => {
+                // This link explains the `offsetId` - https://stackoverflow.com/questions/25414596/why-property-ids-not-match-to-correct-tile-ids
+                let offsetId = tile[0] + tileset.firstgid;
+
+                // ===========================================================
+                // == Add tile object to metadata, mapped by offset tile ID ==
+                // ===========================================================
+                if(metadata[offsetId] === undefined) {
+                    metadata[offsetId] = [tile];
+                } else {
+                    throw new Error(`TiledMap - getTileMetadata - Duplicate tile ID found [${offsetId}]`);
+                }
+            });
+        });
+
+        return metadata;
     }
 }
 

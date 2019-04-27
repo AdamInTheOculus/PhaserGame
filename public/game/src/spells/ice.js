@@ -10,7 +10,7 @@ import Projectile from './projectile.js';
 export default class Ice_Spell extends Spell {
     constructor(isAOE) {
         super(isAOE);
-        this.key = 'ice';
+        this.key = 'iceball';
         this.icon = 'ice_spell_icon';
         this.stock = this.initStock = 5;
         this.speed = 500;
