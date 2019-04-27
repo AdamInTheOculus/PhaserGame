@@ -94,7 +94,6 @@ export default class Player {
                 this.lastJumpTime = input.jump.timeDown;
             }
 
-
             if(input.fire.isDown) {
                 if(spellsArr[0]!=undefined){
                     if(time >= (spellsArr[0].lastCastTime+spellsArr[0].initCoolDown)){
