@@ -97,8 +97,14 @@ export default class Player {
             if(input.fire.isDown) {
                 if(spellsArr[0]!=undefined){
                     if(time >= (spellsArr[0].lastCastTime+spellsArr[0].initCoolDown)){
+
+                        // Send data to server that we shot a spell
+                        // this.scene.networkHandler.broadcastSpellCast()
+
                         spellsArr[0].lastCastTime = time;
                         this.shoot(0);
+
+
                     }
                 }
             }

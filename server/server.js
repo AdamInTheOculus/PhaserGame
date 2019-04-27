@@ -12,7 +12,7 @@ const port = (process.env.PORT || 3000);
 
 const GameManager = require('./GameManager.js');
 const gameManager = new GameManager({
-    heartbeat: 40, // Send data to client 25 times per second. (1000 / 40 === 25)
+    heartbeat: 16.6, // Send data to client 25 times per second. (1000 / 40 === 25)
     mapFile: 'adam-test_base64.json',
     mapLayer: 'Collidable'
 });

@@ -10,7 +10,7 @@ class NetworkHandler {
     constructor(scene) {
         this.socket = io();
         this.scene = scene;
-        this.heartbeatInterval = 40; // (40ms) Send data to server 25 times per second (1000 / 40 === 25).
+        this.heartbeatInterval = 16.6; // (40ms) Send data to server 25 times per second (1000 / 40 === 25).
     }
 
     /**
