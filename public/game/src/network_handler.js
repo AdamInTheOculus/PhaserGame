@@ -10,7 +10,7 @@ class NetworkHandler {
     constructor(scene) {
         this.socket = io();
         this.scene = scene;
-        this.heartbeatInterval = 16.6;
+        this.heartbeatInterval = 40; // (40ms) Send data to server 25 times per second (1000 / 40 === 25).
     }
 
     /**
@@ -31,14 +31,7 @@ class NetworkHandler {
     **/
     registerPlayerUpdate() {
         setInterval( () => {
-                this.socket.emit('player_update', {
-                    id: this.socket.id,
-                    position: {
-                        x: this.scene.player.sprite.x,
-                        y: this.scene.player.sprite.y
-                    },
-                    state: this.scene.player.state
-                });
+                this.socket.emit('player_update', this.scene.player.getCompressedData());
             },  this.heartbeatInterval
         );
     }
@@ -154,6 +147,7 @@ class NetworkHandler {
     **/
     onServerHeartbeat() {
         this.socket.on('player_update', (players) => {
+
             Object.keys(players).forEach(id => {
 
                 if(this.scene.players[id] === undefined) {
@@ -161,11 +155,11 @@ class NetworkHandler {
                 }
 
                 // Update player position from server data.
-                this.scene.players[id].sprite.x = players[id].position.x;
-                this.scene.players[id].sprite.y = players[id].position.y;
+                this.scene.players[id].sprite.x = players[id].position[0];
+                this.scene.players[id].sprite.y = players[id].position[1];
 
                 // Update player state
-                this.scene.players[id].state = players[id].state;
+                this.scene.players[id].state = players[id].state[0];
                 this.scene.players[id].updatePlayerAnimation();
 
                 // Display name above player.
@@ -176,6 +170,45 @@ class NetworkHandler {
                 }
             });
         });
+    }
+
+    /**
+     * @author     thomas-peter (StackOverflow answer)
+     * @date       Apritl 27th 2019
+     * @purpose    Utility function to calculate size of Javascript object, in bytes.
+     * @reference  https://stackoverflow.com/questions/1248302/how-to-get-the-size-of-a-javascript-object
+    **/
+    getRoughSizeOfObject( object ) {
+        let objectList = [];
+        let stack = [ object ];
+        let bytes = 0;
+
+        while ( stack.length ) {
+            let value = stack.pop();
+
+            if ( typeof value === 'boolean' ) {
+                bytes += 4;
+            }
+            else if ( typeof value === 'string' ) {
+                bytes += value.length * 2;
+            }
+            else if ( typeof value === 'number' ) {
+                bytes += 8;
+            }
+            else if
+            (
+                typeof value === 'object'
+                && objectList.indexOf( value ) === -1
+            )
+            {
+                objectList.push( value );
+
+                for( let i in value ) {
+                    stack.push( value[ i ] );
+                }
+            }
+        }
+        return bytes;
     }
 }
 

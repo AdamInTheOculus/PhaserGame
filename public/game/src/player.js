@@ -250,6 +250,30 @@ export default class Player {
     **/
     removeSpell(spellKey) {
         delete this.spells[spellKey];
-        this.scene.guiScene.removeSpellsInventory()
+        this.scene.guiScene.removeSpellsInventory();
+    }
+
+    /**
+     * @author   AdamInTheOculus
+     * @date     April 27th 2019
+     * @purpose  Compresses player data that will be sent to server.
+    **/
+    getCompressedData() {
+
+        let positionArray = new Float32Array(2); // 4 bytes per index
+        let velocityArray = new Float32Array(2); // 4 bytes per index
+        let state = new Uint8Array(1);           // 1 byte  per index
+
+        positionArray[0] = this.sprite.x;
+        positionArray[1] = this.sprite.y;
+        velocityArray[0] = this.sprite.body.velocity.x;
+        velocityArray[1] = this.sprite.body.velocity.y;
+        state[0] = this.state;
+
+        return {
+            position: positionArray,
+            velocity: velocityArray,
+            state: state
+        };
     }
 }

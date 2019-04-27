@@ -68,18 +68,19 @@ module.exports = class GameManager {
     /**
      * @author   AdamInTheOculus
      * @date     April 15th 2019
-     * @purpose  Update player specified by `id` parameter. If server successfully validates new position, the player is updated.
+     * @purpose  Update player data from server packet. If server validates new position and velocity, the player is updated.
     **/
-    updatePlayer(id, state, position) {
-        if(position === undefined || typeof position !== 'object') {
+    updatePlayer(id, packet) {
+        if(packet === undefined || typeof packet !== 'object') {
             return;
         } else if(this.players[id] === undefined) {
             return;
         }
 
         // TODO: Perform server verification of client player position.
-        this.players[id].position = position;
-        this.players[id].state = state;
+        this.players[id].position = packet.position;
+        this.players[id].velocity = packet.velocity;
+        this.players[id].state = packet.state;
     }
 
     /**
