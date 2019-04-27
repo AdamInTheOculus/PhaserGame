@@ -27,8 +27,11 @@ export default class Player {
     }
 
     update(time, input) {
+        this.time = time;
         let spellsArr = Object.values(this.spells);
 
+        this.scene.guiScene.updateHealthBar(this.hp)
+        this.scene.guiScene.updateSpellsInventory(this.spells, time)
 
         this.cursorPosition = {
             x: input.fire.position.x,
@@ -94,27 +97,34 @@ export default class Player {
 
             if(input.fire.isDown) {
                 if(spellsArr[0]!=undefined){
-                    if(spellsArr[0].coolDown<=0){
+                    if(time >= (spellsArr[0].lastCastTime+spellsArr[0].initCoolDown)){
+                        spellsArr[0].lastCastTime = time;
                         this.shoot(0);
                     }
                 }
             }
 
             if(input.key_binding_1.isDown) {
-                if(spellsArr[0]!=undefined&&spellsArr[0].coolDown===spellsArr[0].initCoolDown){
-                    this.shoot(0);
+                if(spellsArr[0]!=undefined){
+                    if(time >= (spellsArr[0].lastCastTime+spellsArr[0].initCoolDown)){
+                        spellsArr[0].lastCastTime = time;
+                        this.shoot(0);
+                    }
                 }
             }
 
             if(input.key_binding_2.isDown) {
-                if(spellsArr[1]!=undefined&&spellsArr[1].coolDown===spellsArr[1].initCoolDown){
-                    this.shoot(1);
+                if(spellsArr[1]!=undefined){
+                    if(time >= (spellsArr[1].lastCastTime+spellsArr[1].initCoolDown)){
+                        spellsArr[1].lastCastTime = time;
+                        this.shoot(1);
+                    }
                 }
             }
         } // end of keyboard/mouse input
 
         for(let i = 0; i<spellsArr.length;i++){
-            spellsArr[i].update();
+            spellsArr[i].update(this);
         }
     }
 
@@ -151,7 +161,6 @@ export default class Player {
         // == Secondary jump while mid-air ==
         // ==================================
         else {
-
             // Prevent double jump from occurring too rapidly. Wait for 100ms between last key press.
             if(this.canDoubleJump && inputHeldTime > (this.lastJumpTime + 100)){
                 this.canDoubleJump = false;
@@ -186,7 +195,6 @@ export default class Player {
         }
         let spellsArr = Object.values(this.spells);
         if(spellsArr[spellIndex]!=undefined){
-            spellsArr[spellIndex].coolDown = spellsArr[spellIndex].initCoolDown;
             spellsArr[spellIndex].cast(this.scene, spritePosition, cursorPosition);
         }
     }
@@ -232,7 +240,17 @@ export default class Player {
             case 'fireball':
                 this.spells[spellKey] = new Fireball_Spell(true);
             case 'ice':
-                this.spells['ice'] = new Ice_Spell(true);
+                this.spells[spellKey] = new Ice_Spell(true);
         }
+    }
+
+    /**
+     * @author   JonCatalano
+     * @date     April 26th 2019
+     * @purpose  Deletes spell from player spell inventory
+    **/
+    removeSpell(spellKey) {
+        delete this.spells[spellKey];
+        this.scene.guiScene.removeSpellsInventory()
     }
 }

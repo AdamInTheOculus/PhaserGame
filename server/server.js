@@ -4,16 +4,20 @@
  * @purpose  Contains server-side logic for PhaserGame.
 **/
 
-const GameManager = require('./game-manager.js');
-const gameManager = new GameManager();
-
-const PlayerState = require('./player-state.js');
-
 const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io').listen(server);
 const port = (process.env.PORT || 9001);
+
+const GameManager = require('./GameManager.js');
+const gameManager = new GameManager({
+    heartbeat: 16.6,
+    mapFile: 'adam-test.json',
+    mapLayer: 'Collidable'
+});
+
+const Player = require('./Player.js');
 
 app.use(express.static('public/'));
 
@@ -29,7 +33,7 @@ io.on('connection', (socket) => {
     // =============================================
     // == Handle when new player connects to game ==
     // =============================================
-    let newPlayer = new PlayerState();
+    let newPlayer = new Player();
     newPlayer.id = socket.id;
 
     gameManager.addPlayer(newPlayer);

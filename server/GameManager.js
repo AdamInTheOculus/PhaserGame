@@ -4,12 +4,19 @@
  * @purpose  Contains all data and logic of GameManager class.
 **/
 
+const TiledMap = require('./TiledMap.js');
+
 module.exports = class GameManager {
 
-    constructor() {
-        this.players = {};       // Represents list of current players, mapped by socket id.
-        this.heartbeat = 16.6;   // Represents time (in ms) between each emit to all clients. (1000 / 33.3 === 30 emits per second)
-        this.intervalId = 0;     // Represents Id from setInterval function.
+    /**
+     * @param  config - Config data for the GameManager.
+     *         config.heartbeat - Interval rate (in ms) to send data to clients.
+     *         config.mapFile   - Name of file with map data.
+    **/
+    constructor(config) {
+        this.players = {};
+        this.heartbeat = config.heartbeat;
+        this.map = new TiledMap(config.mapFile, config.mapLayer);
     }
 
     /**
