@@ -17,9 +17,6 @@ module.exports = class GameManager {
         this.players = {};
         this.heartbeat = config.heartbeat;
         this.map = new TiledMap(config.mapFile, config.mapLayer);
-
-        console.log(this.map.encoding);
-        console.log(this.map.compression);
     }
 
     /**
