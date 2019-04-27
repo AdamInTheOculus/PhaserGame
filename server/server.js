@@ -13,7 +13,7 @@ const port = (process.env.PORT || 9001);
 const GameManager = require('./GameManager.js');
 const gameManager = new GameManager({
     heartbeat: 16.6,
-    mapFile: 'adam-test_base64.json',
+    mapFile: 'adam-test_base64_gzip.json',
     mapLayer: 'Collidable'
 });
 

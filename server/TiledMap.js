@@ -35,13 +35,7 @@ module.exports = class TiledMap {
         // ==========================================================
         // == Get individual tile data and store in 2D Uint8 array ==
         // ==========================================================
-        this.worldData = this.getTiles(mapLayer);
-
-        this.worldData.forEach(element => {
-            process.stdout.write(element + ' ');
-        });
-
-        console.log('\nNo more world data!');
+        this.layerData = this.getTilesFromLayer(mapLayer);
     }
 
     /**
@@ -54,10 +48,10 @@ module.exports = class TiledMap {
         // =======================================================================
         // == Find layer with static map information (currently: 'Collidable'). ==
         // =======================================================================
-        let mapLayer = {};
+        let tempLayer = {};
         for(let i=0; i<map.layers.length; i++) {
             if(map.layers[i].name === layer) {
-                mapLayer = map.layers[i];
+                tempLayer = map.layers[i];
                 break;
             }
         }
@@ -65,19 +59,20 @@ module.exports = class TiledMap {
         // =========================================
         // == Check if layer was correctly found. ==
         // =========================================
-        if(Object.keys(mapLayer).length === 0) {
+        if(Object.keys(tempLayer).length === 0) {
             throw new Error(`TiledMap -- getMapLayer() -- Layer [${layer}] not found.`)
         }
 
-        return mapLayer;
+        return tempLayer;
     }
 
     /**
-     * @author   AdamInTheOculus
-     * @date     April 26th 2019
-     * @purpose  Returns a 2D Uint8 array representing the game world. Each ID represents a specific tile from Tiled.
+     * @author         AdamInTheOculus
+     * @date           April 26th 2019
+     * @purpose        Returns an array of Tiled layer data from a given layer.
+     * @param  layer   Layer object. Contains metadata and map data.
     **/
-    getTiles(layer) {
+    getTilesFromLayer(layer) {
 
         let data = null;
         let rawData = layer.data;
@@ -86,7 +81,6 @@ module.exports = class TiledMap {
         // == If applicable, decode Base64 ==
         // ==================================
         if(layer.encoding === 'base64') {
-            console.log('Decoding data!');
             data = Buffer.from(rawData, 'base64');
         }
 
@@ -94,9 +88,7 @@ module.exports = class TiledMap {
         // == If applicable, extract compressed data ==
         // ============================================
         if(layer.compression === 'gzip') {
-            console.log('Extracting data!');
-            zlib.gunzipSync(data);
-            // TODO: Display compressed size
+            data = zlib.gunzipSync(data);
         }
 
         // =============================================================
@@ -107,10 +99,13 @@ module.exports = class TiledMap {
             return new Uint8Array(data);
         }
 
+        // Each 32-bit integer is placed in an 8-bit integer array.
+        // There will never be a tile ID greater than 255, so only 1 byte is required.
+        let array = new Uint8Array(layer.width * layer.height);
+
         // ====================================
         // == Read buffer data every 4 bytes ==
         // ====================================
-        let array = new Uint8Array(1600); // TODO: Should not be hard coded.
         for(let i=0, index=0; i<data.length; i += 4, index++) {
             array[index] = data.readUInt32LE(i);
             index++;

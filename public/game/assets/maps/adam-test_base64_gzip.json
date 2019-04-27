@@ -182,6 +182,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -191,6 +196,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -200,6 +210,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -209,6 +224,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -218,6 +238,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -227,6 +252,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -236,6 +266,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -245,6 +280,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -254,6 +294,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -263,6 +308,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -272,6 +322,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -281,6 +336,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -290,6 +350,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -299,6 +364,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -308,6 +378,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -317,6 +392,11 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }, 
                 {
@@ -326,21 +406,13 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"ground"
                         }]
                 }],
-         "tilewidth":32
-        }, 
-        {
-         "columns":16,
-         "firstgid":257,
-         "image":"..\/..\/..\/SpellSlam\/assets\/tilesets\/platformer_1.png",
-         "imageheight":512,
-         "imagewidth":512,
-         "margin":0,
-         "name":"platformer_2",
-         "spacing":0,
-         "tilecount":0,
-         "tileheight":32,
          "tilewidth":32
         }],
  "tilewidth":32,
