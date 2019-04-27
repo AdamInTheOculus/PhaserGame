@@ -41,6 +41,10 @@ module.exports = class TiledMap {
         // == Get each tile and its metadata ==
         // ====================================
         this.layerTiles = this.getTileMetadata(this.data.tilesets);
+
+        // let x = 25;
+        // let y = 29;
+        // console.log(this.layerTiles[this.layerData[y][x]]);
     }
 
     /**

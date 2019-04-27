@@ -99,6 +99,63 @@ export default class Player {
             }
 
             if(input.fire.isDown&&this.coolDown<=0) {
+
+                // let center = {
+                //     x: this.sprite.x,
+                //     y: this.sprite.y
+                // };
+
+                // let topLeft = {
+                //     x: this.sprite.x - (this.sprite.displayWidth / 2),
+                //     y: this.sprite.y - (this.sprite.displayHeight / 2)
+                // };
+
+                // let topRight = {
+                //     x: this.sprite.x + (this.sprite.displayWidth / 2),
+                //     y: this.sprite.y - (this.sprite.displayHeight / 2)
+                // };
+
+                // let bottomLeft = {
+                //     x: this.sprite.x - (this.sprite.displayWidth / 2),
+                //     y: this.sprite.y + (this.sprite.displayHeight / 2)
+                // };
+
+                // let bottomRight = {
+                //     x: this.sprite.x + (this.sprite.displayWidth / 2),
+                //     y: this.sprite.y + (this.sprite.displayHeight / 2)
+                // };
+
+                // center.coords = {
+                //     x:  Math.floor(center.x / 32),
+                //     y:  Math.floor(center.y / 32)
+                // }
+
+                // topLeft.coords = {
+                //     x:  Math.floor(topLeft.x / 32),
+                //     y:  Math.floor(topLeft.y / 32)
+                // }
+
+                // topRight.coords = {
+                //     x:  Math.floor(topRight.x / 32),
+                //     y:  Math.floor(topRight.y / 32)
+                // }
+
+                // bottomLeft.coords = {
+                //     x:  Math.floor(bottomLeft.x / 32),
+                //     y:  Math.floor(bottomLeft.y / 32)
+                // }
+
+                // bottomRight.coords = {
+                //     x:  Math.floor(bottomRight.x / 32),
+                //     y:  Math.floor(bottomRight.y / 32)
+                // }
+
+                // console.log(topLeft);
+                // console.log(topRight);
+                // console.log(bottomLeft);
+                // console.log(bottomRight);
+                // console.log(`Width [${this.sprite.displayWidth}] ---- Height [${this.sprite.displayHeight}]`);
+
                 this.shoot('fireball');
                 this.coolDown = this.spells['fireball'].coolDown;
             }
