@@ -36,6 +36,13 @@ module.exports = class TiledMap {
         // == Get individual tile data and store in 2D Uint8 array ==
         // ==========================================================
         this.layerData = this.getTilesFromLayer(mapLayer);
+
+        // ====================================
+        // == Get each tile and its metadata ==
+        // ====================================
+        this.layerTiles = this.getTileMetadata(this.data.tilesets);
+
+        console.log(this.layerTiles);
     }
 
     /**
@@ -76,6 +83,7 @@ module.exports = class TiledMap {
 
         let data = null;
         let rawData = layer.data;
+        let isEncoded = true;
 
         // ==================================
         // == If applicable, decode Base64 ==
@@ -95,22 +103,68 @@ module.exports = class TiledMap {
         // == Use raw data if no Base64 encoding or GZIP compression. ==
         // =============================================================
         if(data === null) {
+            isEncoded = false;
             data = rawData;
-            return new Uint8Array(data);
         }
-
-        // Each 32-bit integer is placed in an 8-bit integer array.
-        // There will never be a tile ID greater than 255, so only 1 byte is required.
-        let array = new Uint8Array(layer.width * layer.height);
 
         // ====================================
         // == Read buffer data every 4 bytes ==
         // ====================================
-        for(let i=0, index=0; i<data.length; i += 4, index++) {
-            array[index] = data.readUInt32LE(i);
-            index++;
+        let array = [];
+        let offset = 0;
+        for(let i=0; i<layer.width; i++) {
+            array.push(new Uint8Array(layer.width));
+            for(let j=0; j<layer.height; j++, offset += 4) {
+
+                if(isEncoded) {
+                    array[i][j] = data.readUInt32LE(offset);
+                } else {
+                    array[i][j] = data[(i * layer.width) + j]; // If CSV data, no need to call readUInt32LE();
+                }
+            }
         }
 
         return array;
+    }
+
+    /**
+     * @author           AdamInTheOculus
+     * @date             April 26th 2019
+     * @purpose          Returns an object. Mapped by unique tile ID. Each property contains tile metadata.
+     * @param  tilesets  Array containing all tileset objects associated with layer.  
+    **/
+    getTileMetadata(tilesets) {
+
+        let metadata = {};
+
+        tilesets.forEach(tileset => {
+
+            // ======================================================
+            // == Skip iteration if no tiles exist within tileset. ==
+            // ======================================================
+            if(tileset.tiles === undefined) {
+                return;
+            }
+
+            // ===========================================================================
+            // == Iterate over each tile and add to metadata object, mapped by Tile ID. ==
+            // ===========================================================================
+            tileset.tiles.forEach(tile => {
+
+                // @see https://stackoverflow.com/questions/25414596/why-property-ids-not-match-to-correct-tile-ids
+                let offsetId = tile.id + tileset.firstgid;
+
+                // ===========================================================
+                // == Add tile object to metadata, mapped by offset tile ID ==
+                // ===========================================================
+                if(metadata[offsetId] === undefined) {
+                    metadata[offsetId] = [tile];
+                } else {
+                    throw new Error(`TiledMap - getTileMetadata - Duplicate tile ID found [${offsetId}]`);
+                }
+            });
+        });
+
+        return metadata;
     }
 };
