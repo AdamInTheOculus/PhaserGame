@@ -41,8 +41,6 @@ module.exports = class TiledMap {
         // == Get each tile and its metadata ==
         // ====================================
         this.layerTiles = this.getTileMetadata(this.data.tilesets);
-
-        console.log(this.layerTiles);
     }
 
     /**
@@ -151,7 +149,7 @@ module.exports = class TiledMap {
             // ===========================================================================
             tileset.tiles.forEach(tile => {
 
-                // @see https://stackoverflow.com/questions/25414596/why-property-ids-not-match-to-correct-tile-ids
+                // This link explains the `offsetId` - https://stackoverflow.com/questions/25414596/why-property-ids-not-match-to-correct-tile-ids
                 let offsetId = tile.id + tileset.firstgid;
 
                 // ===========================================================
