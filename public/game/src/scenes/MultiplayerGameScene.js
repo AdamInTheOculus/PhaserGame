@@ -5,6 +5,7 @@
  */
 
 import Player from '../player.js';
+import Enemy from '../enemies/enemy.js'
 import GUIScene from './GUIScene.js';
 import * as constants from '../helpers/constants.js';
 
@@ -21,17 +22,6 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.ids = constants.ids;
     }
 
-    preload() {
-        this.load.spritesheet('fireball', 'game/assets/spritesheets/fireball.png', {            // Load spritesheet for player.
-            frameWidth: 134, frameHeight: 134
-        });
-        this.load.spritesheet('iceball', 'game/assets/spritesheets/ice.png', {            // Load spritesheet for player.
-            frameWidth: 192, frameHeight: 192
-        });
-        this.load.image('fireball_spell_icon', 'game/assets/icons/fireball_spell_icon.png');
-        this.load.image('iceball_spell_icon', 'game/assets/icons/ice_spell_icon.png');
-    }
-
     create() {
 
         this.inputHandler = new InputHandler(this.input);
@@ -40,6 +30,7 @@ class MultiplayerGameScene extends Phaser.Scene {
 
         this.player = undefined;
         this.players = {};
+        this.enemies = [];
 
         // ===================================================================
         // == Build world with background image, tilemaps, and game objects ==
@@ -81,6 +72,21 @@ class MultiplayerGameScene extends Phaser.Scene {
                 quantity: 5
             });
             orb.emitter.startFollow(orb)
+
+
+            // spawn enemies
+            let enemy = new Enemy({
+                scene: this,
+                key: 'enemy',
+                startPosition: {x: collectable.x, y: collectable.y}
+            });
+
+            enemy.setActive(true);
+            enemy.setVisible(true);
+
+            enemy.body.setGravityY(300);
+
+            this.enemies.push(enemy);
         });
 
         // Set up endpoint (tombstone) triggerables
@@ -101,6 +107,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         // == Bind camera within game boundaries ==
         // ========================================
         this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
+
     }
 
     update(time, delta) {
@@ -110,6 +117,14 @@ class MultiplayerGameScene extends Phaser.Scene {
         }
 
         this.player.update(time, this.inputHandler.getState());
+
+        if(time<20000){
+            this.enemies.forEach(enemy => {
+                enemy.update();
+            });
+        }
+
+
 
         // ===================================================
         // == Reset player position after falling off world ==
@@ -127,7 +142,6 @@ class MultiplayerGameScene extends Phaser.Scene {
                 }
             });
         }
-
     }
 
     /**

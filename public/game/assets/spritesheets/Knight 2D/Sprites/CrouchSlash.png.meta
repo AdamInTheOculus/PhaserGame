@@ -1,0 +1,1018 @@
+fileFormatVersion: 2
+guid: 4ee782752095f9f48a779863df9261fb
+timeCreated: 1478983403
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CrouchSlash0000
+    21300002: CrouchSlash0001
+    21300004: CrouchSlash0002
+    21300006: CrouchSlash0003
+    21300008: CrouchSlash0004
+    21300010: CrouchSlash0005
+    21300012: CrouchSlash0006
+    21300014: CrouchSlash0007
+    21300016: CrouchSlash0008
+    21300018: CrouchSlash0009
+    21300020: CrouchSlash0010
+    21300022: CrouchSlash0011
+    21300024: CrouchSlash0012
+    21300026: CrouchSlash0013
+    21300028: CrouchSlash0014
+    21300030: CrouchSlash0015
+    21300032: CrouchSlash0016
+    21300034: CrouchSlash0017
+    21300036: CrouchSlash0018
+    21300038: CrouchSlash0019
+    21300040: CrouchSlash0020
+    21300042: CrouchSlash0021
+    21300044: CrouchSlash0022
+    21300046: CrouchSlash0023
+    21300048: CrouchSlash0024
+    21300050: CrouchSlash0025
+    21300052: CrouchSlash0026
+    21300054: CrouchSlash0027
+    21300056: CrouchSlash0028
+    21300058: CrouchSlash0029
+    21300060: CrouchSlash0030
+    21300062: CrouchSlash0031
+    21300064: CrouchSlash0032
+    21300066: CrouchSlash0033
+    21300068: CrouchSlash0034
+    21300070: CrouchSlash0035
+    21300072: CrouchSlash0036
+    21300074: CrouchSlash0037
+    21300076: CrouchSlash0038
+    21300078: CrouchSlash0039
+    21300080: CrouchSlash0040
+    21300082: CrouchSlash0041
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CrouchSlash0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 891
+        width: 120
+        height: 132
+      alignment: 9
+      pivot: {x: 0.425, y: 1.0227273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: -6}
+        - {x: -51, y: -50}
+        - {x: -51, y: -135}
+        - {x: 59, y: -135}
+        - {x: 59, y: -30}
+        - {x: 42, y: -6}
+    - name: CrouchSlash0001
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 886
+        width: 117
+        height: 137
+      alignment: 9
+      pivot: {x: 0.45299146, y: 0.98540145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 60, y: -126}
+        - {x: 60, y: -40}
+        - {x: 28, y: -7}
+        - {x: 23, y: -6}
+        - {x: 8, y: -6}
+        - {x: 6, y: -8}
+        - {x: -18, y: -27}
+        - {x: -20, y: -30}
+        - {x: -52, y: -74}
+        - {x: -52, y: -96}
+        - {x: -44, y: -135}
+        - {x: -21, y: -135}
+        - {x: -1, y: -110}
+        - {x: -3, y: -102}
+        - {x: 29, y: -129}
+    - name: CrouchSlash0002
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 886
+        width: 119
+        height: 137
+      alignment: 9
+      pivot: {x: 0.46218488, y: 0.98540145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 63, y: -42}
+        - {x: 27, y: -6}
+        - {x: 6, y: -6}
+        - {x: -22, y: -18}
+        - {x: -54, y: -66}
+        - {x: -54, y: -116}
+        - {x: -45, y: -135}
+        - {x: -25, y: -135}
+        - {x: -24, y: -128}
+        - {x: 33, y: -135}
+        - {x: 63, y: -135}
+    - name: CrouchSlash0003
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 885
+        width: 128
+        height: 138
+      alignment: 9
+      pivot: {x: 0.453125, y: 0.9782609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 67, y: -45}
+        - {x: 29, y: -5}
+        - {x: -5, y: -5}
+        - {x: -56, y: -66}
+        - {x: -56, y: -111}
+        - {x: -42, y: -135}
+        - {x: 8, y: -135}
+        - {x: 67, y: -122}
+    - name: CrouchSlash0004
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 887
+        width: 132
+        height: 136
+      alignment: 9
+      pivot: {x: 0.4469697, y: 0.99264705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: -89}
+        - {x: 54, y: -94}
+        - {x: 72, y: -87}
+        - {x: 72, y: -41}
+        - {x: 45, y: -5}
+        - {x: 2, y: -5}
+        - {x: -27, y: -18}
+        - {x: -57, y: -65}
+        - {x: -57, y: -119}
+        - {x: -54, y: -135}
+        - {x: 66, y: -135}
+        - {x: 59, y: -115}
+        - {x: 52, y: -111}
+        - {x: 44, y: -106}
+    - name: CrouchSlash0005
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 883
+        width: 140
+        height: 140
+      alignment: 9
+      pivot: {x: 0.45, y: 0.95714283}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: -62}
+        - {x: 58, y: -89}
+        - {x: 76, y: -87}
+        - {x: 76, y: -37}
+        - {x: 61, y: -5}
+        - {x: -46, y: -5}
+        - {x: -59, y: -50}
+        - {x: -59, y: -134}
+        - {x: 61, y: -134}
+        - {x: 58, y: -115}
+        - {x: 44, y: -72}
+        - {x: 36, y: -65}
+    - name: CrouchSlash0006
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 885
+        width: 152
+        height: 138
+      alignment: 9
+      pivot: {x: 0.45394737, y: 0.9782609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: -62}
+        - {x: 64, y: -81}
+        - {x: 75, y: -81}
+        - {x: 80, y: -78}
+        - {x: 80, y: -55}
+        - {x: 75, y: -37}
+        - {x: 45, y: -4}
+        - {x: 0, y: -4}
+        - {x: -60, y: -51}
+        - {x: -60, y: -101}
+        - {x: -42, y: -135}
+        - {x: 56, y: -135}
+        - {x: 58, y: -115}
+        - {x: 44, y: -74}
+    - name: CrouchSlash0007
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 886
+        width: 153
+        height: 137
+      alignment: 9
+      pivot: {x: 0.4509804, y: 0.9781022}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54, y: -3}
+        - {x: 9, y: -3}
+        - {x: -20, y: -23}
+        - {x: -61, y: -64}
+        - {x: -61, y: -72}
+        - {x: -58, y: -78}
+        - {x: -46, y: -133}
+        - {x: -44, y: -134}
+        - {x: 12, y: -134}
+        - {x: 71, y: -118}
+        - {x: 83, y: -102}
+        - {x: 83, y: -42}
+    - name: CrouchSlash0008
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 877
+        width: 146
+        height: 146
+      alignment: 9
+      pivot: {x: 0.43150684, y: 0.91780823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 83, y: -27}
+        - {x: 42, y: 11}
+        - {x: 22, y: 11}
+        - {x: -50, y: -37}
+        - {x: -61, y: -52}
+        - {x: -61, y: -106}
+        - {x: -42, y: -134}
+        - {x: 46, y: -134}
+        - {x: 72, y: -117}
+        - {x: 83, y: -82}
+    - name: CrouchSlash0009
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 858
+        width: 151
+        height: 165
+      alignment: 9
+      pivot: {x: 0.397351, y: 0.8121212}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: 27}
+        - {x: 22, y: 27}
+        - {x: -42, y: -22}
+        - {x: -58, y: -51}
+        - {x: -58, y: -68}
+        - {x: -51, y: -68}
+        - {x: -48, y: -133}
+        - {x: -46, y: -134}
+        - {x: 63, y: -134}
+        - {x: 82, y: -78}
+        - {x: 82, y: -25}
+    - name: CrouchSlash0010
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 835
+        width: 149
+        height: 188
+      alignment: 9
+      pivot: {x: 0.4161074, y: 0.70212764}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: -60}
+        - {x: 30, y: -58}
+        - {x: 52, y: -60}
+        - {x: 76, y: -64}
+        - {x: 82, y: -53}
+        - {x: 82, y: -35}
+        - {x: 30, y: 11}
+        - {x: 17, y: 2}
+        - {x: 11, y: -11}
+        - {x: 10, y: -3}
+        - {x: 35, y: 19}
+        - {x: 45, y: 37}
+        - {x: 32, y: 37}
+        - {x: -52, y: -24}
+        - {x: -52, y: -132}
+        - {x: 33, y: -132}
+        - {x: 51, y: -123}
+        - {x: 55, y: -116}
+        - {x: 49, y: -111}
+        - {x: 51, y: -70}
+    - name: CrouchSlash0011
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 848
+        width: 130
+        height: 175
+      alignment: 9
+      pivot: {x: 0.36923078, y: 0.7657143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: 4}
+        - {x: 24, y: 4}
+        - {x: 17, y: 1}
+        - {x: 15, y: -6}
+        - {x: 15, y: 2}
+        - {x: 35, y: 28}
+        - {x: 41, y: 41}
+        - {x: 32, y: 41}
+        - {x: 28, y: 37}
+        - {x: 24, y: 31}
+        - {x: -28, y: 1}
+        - {x: -42, y: -49}
+        - {x: -42, y: -133}
+        - {x: 41, y: -133}
+        - {x: 65, y: -129}
+        - {x: 79, y: -69}
+        - {x: 79, y: -33}
+        - {x: 45, y: -2}
+    - name: CrouchSlash0012
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 838
+        width: 124
+        height: 185
+      alignment: 9
+      pivot: {x: 0.4032258, y: 0.7297297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: -54}
+        - {x: 41, y: -54}
+        - {x: 49, y: -54}
+        - {x: 64, y: -51}
+        - {x: 72, y: -42}
+        - {x: 72, y: -29}
+        - {x: 25, y: 41}
+        - {x: 18, y: 41}
+        - {x: -10, y: 1}
+        - {x: -41, y: -86}
+        - {x: -41, y: -131}
+        - {x: -40, y: -132}
+        - {x: -32, y: -133}
+        - {x: -20, y: -133}
+        - {x: 72, y: -122}
+        - {x: 72, y: -120}
+        - {x: 55, y: -57}
+    - name: CrouchSlash0013
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 854
+        width: 134
+        height: 169
+      alignment: 9
+      pivot: {x: 0.3955224, y: 0.78698224}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: 36}
+        - {x: -10, y: 36}
+        - {x: -41, y: -60}
+        - {x: -41, y: -131}
+        - {x: -37, y: -133}
+        - {x: 38, y: -133}
+        - {x: 73, y: -130}
+        - {x: 73, y: -14}
+        - {x: 70, y: 19}
+    - name: CrouchSlash0014
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 662
+        width: 137
+        height: 171
+      alignment: 9
+      pivot: {x: 0.3649635, y: 0.7836257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 82, y: -133}
+        - {x: 82, y: -70}
+        - {x: 49, y: 19}
+        - {x: 22, y: 30}
+        - {x: -41, y: 30}
+        - {x: -41, y: -133}
+    - name: CrouchSlash0015
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 666
+        width: 142
+        height: 167
+      alignment: 9
+      pivot: {x: 0.33802816, y: 0.79640716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 60, y: 13}
+        - {x: 11, y: 31}
+        - {x: -37, y: 31}
+        - {x: -40, y: 18}
+        - {x: -40, y: -133}
+        - {x: 13, y: -133}
+        - {x: 29, y: -130}
+        - {x: 83, y: -122}
+        - {x: 90, y: -115}
+        - {x: 90, y: -14}
+    - name: CrouchSlash0016
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 649
+        width: 142
+        height: 184
+      alignment: 9
+      pivot: {x: 0.29577464, y: 0.7282609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: 41}
+        - {x: 36, y: 40}
+        - {x: 40, y: 28}
+        - {x: 47, y: 20}
+        - {x: 70, y: -9}
+        - {x: 65, y: -17}
+        - {x: 67, y: -23}
+        - {x: 60, y: -26}
+        - {x: 59, y: 4}
+        - {x: 57, y: 7}
+        - {x: 6, y: 41}
+        - {x: -24, y: 41}
+        - {x: -40, y: 4}
+        - {x: -40, y: -134}
+        - {x: 100, y: -134}
+        - {x: 100, y: 11}
+        - {x: 45, y: 41}
+    - name: CrouchSlash0017
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 680
+        width: 222
+        height: 153
+      alignment: 9
+      pivot: {x: 0.21621622, y: 0.88235295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 140, y: -3}
+        - {x: 84, y: 15}
+        - {x: 28, y: 15}
+        - {x: -39, y: -24}
+        - {x: -39, y: -134}
+        - {x: 94, y: -134}
+        - {x: 174, y: -24}
+        - {x: 174, y: 15}
+        - {x: 169, y: 15}
+        - {x: 162, y: 11}
+    - name: CrouchSlash0018
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 687
+        width: 237
+        height: 146
+      alignment: 9
+      pivot: {x: 0.1814346, y: 0.9246575}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 94, y: -113}
+        - {x: 191, y: -35}
+        - {x: 192, y: -32}
+        - {x: 192, y: -29}
+        - {x: 190, y: -26}
+        - {x: 85, y: 8}
+        - {x: 31, y: 8}
+        - {x: -38, y: -29}
+        - {x: -38, y: -134}
+        - {x: 13, y: -134}
+        - {x: 26, y: -127}
+        - {x: 38, y: -107}
+        - {x: 58, y: -119}
+        - {x: 88, y: -124}
+    - name: CrouchSlash0019
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 691
+        width: 207
+        height: 142
+      alignment: 9
+      pivot: {x: 0.19323671, y: 0.9507042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: 5}
+        - {x: -37, y: -19}
+        - {x: -37, y: -129}
+        - {x: -34, y: -134}
+        - {x: 120, y: -134}
+        - {x: 140, y: -85}
+        - {x: 140, y: -36}
+        - {x: 76, y: 5}
+    - name: CrouchSlash0020
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 691
+        width: 135
+        height: 142
+      alignment: 9
+      pivot: {x: 0.2888889, y: 0.9507042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: -60}
+        - {x: 58, y: -55}
+        - {x: 76, y: -62}
+        - {x: 88, y: -60}
+        - {x: 91, y: -57}
+        - {x: 91, y: -20}
+        - {x: 71, y: 3}
+        - {x: 0, y: 3}
+        - {x: -37, y: -19}
+        - {x: -37, y: -134}
+        - {x: 91, y: -134}
+        - {x: 91, y: -71}
+        - {x: 69, y: -60}
+    - name: CrouchSlash0021
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 690
+        width: 135
+        height: 143
+      alignment: 9
+      pivot: {x: 0.2888889, y: 0.9440559}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 91, y: -91}
+        - {x: 89, y: -64}
+        - {x: 82, y: -4}
+        - {x: 65, y: 1}
+        - {x: 17, y: 1}
+        - {x: -13, y: 0}
+        - {x: -37, y: -47}
+        - {x: -37, y: -134}
+        - {x: 6, y: -134}
+        - {x: 25, y: -126}
+        - {x: 33, y: -120}
+        - {x: 62, y: -124}
+        - {x: 91, y: -122}
+    - name: CrouchSlash0022
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 691
+        width: 132
+        height: 142
+      alignment: 9
+      pivot: {x: 0.27272728, y: 0.9507042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: -1}
+        - {x: -36, y: -26}
+        - {x: -36, y: -134}
+        - {x: 91, y: -134}
+        - {x: 91, y: -1}
+    - name: CrouchSlash0023
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 697
+        width: 136
+        height: 136
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.9852941}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 91, y: -76}
+        - {x: 89, y: -27}
+        - {x: 75, y: -4}
+        - {x: 70, y: -3}
+        - {x: 43, y: -3}
+        - {x: -37, y: -19}
+        - {x: -37, y: -129}
+        - {x: -33, y: -134}
+        - {x: -21, y: -134}
+        - {x: 28, y: -125}
+        - {x: 33, y: -120}
+        - {x: 87, y: -122}
+        - {x: 91, y: -116}
+    - name: CrouchSlash0024
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 700
+        width: 135
+        height: 133
+      alignment: 9
+      pivot: {x: 0.2888889, y: 1.0150375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 55, y: -5}
+        - {x: -37, y: -25}
+        - {x: -37, y: -124}
+        - {x: -33, y: -134}
+        - {x: 91, y: -134}
+        - {x: 91, y: -7}
+        - {x: 84, y: -5}
+    - name: CrouchSlash0025
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 703
+        width: 139
+        height: 130
+      alignment: 9
+      pivot: {x: 0.29496402, y: 1.0307692}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 97, y: -38}
+        - {x: 90, y: -7}
+        - {x: 30, y: -7}
+        - {x: -4, y: -12}
+        - {x: -34, y: -32}
+        - {x: -37, y: -47}
+        - {x: -37, y: -132}
+        - {x: -35, y: -134}
+        - {x: -24, y: -134}
+        - {x: 22, y: -126}
+        - {x: 31, y: -120}
+        - {x: 97, y: -126}
+    - name: CrouchSlash0026
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 510
+        width: 150
+        height: 137
+      alignment: 9
+      pivot: {x: 0.29333332, y: 0.98540145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 101, y: -7}
+        - {x: 45, y: -7}
+        - {x: -32, y: -40}
+        - {x: -37, y: -101}
+        - {x: -37, y: -125}
+        - {x: -35, y: -133}
+        - {x: -34, y: -134}
+        - {x: -18, y: -134}
+        - {x: 22, y: -125}
+        - {x: 30, y: -120}
+        - {x: 87, y: -121}
+        - {x: 101, y: -116}
+    - name: CrouchSlash0027
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 516
+        width: 148
+        height: 131
+      alignment: 9
+      pivot: {x: 0.2635135, y: 1.0152671}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: -7}
+        - {x: 4, y: -18}
+        - {x: -23, y: -50}
+        - {x: -38, y: -83}
+        - {x: -38, y: -133}
+        - {x: 101, y: -133}
+        - {x: 101, y: -35}
+        - {x: 80, y: -7}
+    - name: CrouchSlash0028
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 510
+        width: 137
+        height: 137
+      alignment: 9
+      pivot: {x: 0.27737227, y: 0.9708029}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 98, y: -28}
+        - {x: 83, y: -5}
+        - {x: 29, y: -5}
+        - {x: -24, y: -26}
+        - {x: -38, y: -59}
+        - {x: -38, y: -133}
+        - {x: -8, y: -133}
+        - {x: 21, y: -126}
+        - {x: 62, y: -123}
+        - {x: 92, y: -120}
+        - {x: 98, y: -110}
+    - name: CrouchSlash0029
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 506
+        width: 153
+        height: 141
+      alignment: 9
+      pivot: {x: 0.37254903, y: 0.9574468}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47, y: -3}
+        - {x: -13, y: -30}
+        - {x: -41, y: -115}
+        - {x: -41, y: -131}
+        - {x: -34, y: -135}
+        - {x: 6, y: -135}
+        - {x: 94, y: -127}
+        - {x: 94, y: -16}
+        - {x: 91, y: -3}
+    - name: CrouchSlash0030
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 510
+        width: 140
+        height: 137
+      alignment: 9
+      pivot: {x: 0.29285714, y: 0.9781022}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 93, y: -84}
+        - {x: 93, y: -77}
+        - {x: 87, y: -62}
+        - {x: 77, y: -52}
+        - {x: 73, y: -9}
+        - {x: 68, y: 0}
+        - {x: 48, y: 0}
+        - {x: -2, y: -30}
+        - {x: -41, y: -109}
+        - {x: -41, y: -134}
+        - {x: 34, y: -134}
+        - {x: 92, y: -120}
+        - {x: 92, y: -113}
+        - {x: 76, y: -100}
+        - {x: 82, y: -98}
+    - name: CrouchSlash0031
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 510
+        width: 142
+        height: 137
+      alignment: 9
+      pivot: {x: 0.32394367, y: 0.98540145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76, y: 2}
+        - {x: 34, y: 2}
+        - {x: -18, y: -50}
+        - {x: -42, y: -81}
+        - {x: -42, y: -135}
+        - {x: 93, y: -135}
+        - {x: 93, y: -59}
+        - {x: 78, y: 0}
+    - name: CrouchSlash0032
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 504
+        width: 154
+        height: 143
+      alignment: 9
+      pivot: {x: 0.32467532, y: 0.9440559}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27, y: 3}
+        - {x: -27, y: -83}
+        - {x: -42, y: -100}
+        - {x: -42, y: -135}
+        - {x: 102, y: -135}
+        - {x: 102, y: -84}
+        - {x: 73, y: 3}
+    - name: CrouchSlash0033
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 503
+        width: 154
+        height: 144
+      alignment: 9
+      pivot: {x: 0.2857143, y: 0.9375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: 3}
+        - {x: -1, y: -8}
+        - {x: -43, y: -92}
+        - {x: -43, y: -135}
+        - {x: 106, y: -135}
+        - {x: 106, y: -12}
+        - {x: 62, y: 3}
+    - name: CrouchSlash0034
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 504
+        width: 161
+        height: 143
+      alignment: 9
+      pivot: {x: 0.29813665, y: 0.9440559}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76, y: -95}
+        - {x: 80, y: -36}
+        - {x: 52, y: 2}
+        - {x: 24, y: 2}
+        - {x: 0, y: -14}
+        - {x: -43, y: -106}
+        - {x: -43, y: -135}
+        - {x: 65, y: -135}
+        - {x: 89, y: -131}
+        - {x: 102, y: -114}
+        - {x: 102, y: -107}
+        - {x: 94, y: -100}
+    - name: CrouchSlash0035
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 507
+        width: 147
+        height: 140
+      alignment: 9
+      pivot: {x: 0.30612245, y: 0.96428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 65, y: 1}
+        - {x: 5, y: 1}
+        - {x: -12, y: -15}
+        - {x: -43, y: -58}
+        - {x: -43, y: -135}
+        - {x: -1, y: -135}
+        - {x: 75, y: -131}
+        - {x: 93, y: -119}
+        - {x: 93, y: -61}
+    - name: CrouchSlash0036
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 509
+        width: 131
+        height: 138
+      alignment: 9
+      pivot: {x: 0.36641222, y: 0.9782609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 53, y: -1}
+        - {x: 6, y: -1}
+        - {x: -14, y: -19}
+        - {x: -44, y: -57}
+        - {x: -44, y: -130}
+        - {x: -42, y: -135}
+        - {x: -12, y: -135}
+        - {x: 70, y: -130}
+        - {x: 81, y: -122}
+        - {x: 81, y: -50}
+    - name: CrouchSlash0037
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 507
+        width: 117
+        height: 140
+      alignment: 9
+      pivot: {x: 0.43589744, y: 0.96428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: -129}
+        - {x: 60, y: -124}
+        - {x: 66, y: -119}
+        - {x: 66, y: -37}
+        - {x: 35, y: -3}
+        - {x: -2, y: -3}
+        - {x: -49, y: -64}
+        - {x: -49, y: -117}
+        - {x: -47, y: -125}
+        - {x: -42, y: -135}
+        - {x: -26, y: -135}
+        - {x: -25, y: -131}
+        - {x: -26, y: -124}
+        - {x: -6, y: -103}
+    - name: CrouchSlash0038
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 512
+        width: 125
+        height: 135
+      alignment: 9
+      pivot: {x: 0.44, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: -4}
+        - {x: -21, y: -19}
+        - {x: -52, y: -73}
+        - {x: -52, y: -135}
+        - {x: 53, y: -135}
+        - {x: 60, y: -133}
+        - {x: 62, y: -114}
+        - {x: 62, y: -33}
+        - {x: 37, y: -4}
+    - name: CrouchSlash0039
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 512
+        width: 126
+        height: 135
+      alignment: 9
+      pivot: {x: 0.45238096, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: -5}
+        - {x: -53, y: -58}
+        - {x: -53, y: -130}
+        - {x: -52, y: -135}
+        - {x: 60, y: -135}
+        - {x: 60, y: -26}
+        - {x: 36, y: -5}
+    - name: CrouchSlash0040
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 361
+        width: 122
+        height: 140
+      alignment: 9
+      pivot: {x: 0.43442622, y: 0.96428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: -6}
+        - {x: -52, y: -38}
+        - {x: -52, y: -135}
+        - {x: 59, y: -135}
+        - {x: 59, y: -39}
+        - {x: 34, y: -6}
+    - name: CrouchSlash0041
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 369
+        width: 119
+        height: 132
+      alignment: 9
+      pivot: {x: 0.42857143, y: 1.0227273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: -6}
+        - {x: -23, y: -23}
+        - {x: -51, y: -67}
+        - {x: -51, y: -105}
+        - {x: -44, y: -135}
+        - {x: 59, y: -135}
+        - {x: 59, y: -30}
+        - {x: 31, y: -6}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

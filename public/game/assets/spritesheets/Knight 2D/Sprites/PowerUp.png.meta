@@ -1,0 +1,1672 @@
+fileFormatVersion: 2
+guid: 0989ebb5b50b90d45a1db477705c0880
+timeCreated: 1478979785
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PowerUp0000
+    21300002: PowerUp0001
+    21300004: PowerUp0002
+    21300006: PowerUp0003
+    21300008: PowerUp0004
+    21300010: PowerUp0005
+    21300012: PowerUp0006
+    21300014: PowerUp0007
+    21300016: PowerUp0008
+    21300018: PowerUp0009
+    21300020: PowerUp0010
+    21300022: PowerUp0011
+    21300024: PowerUp0012
+    21300026: PowerUp0013
+    21300028: PowerUp0014
+    21300030: PowerUp0015
+    21300032: PowerUp0016
+    21300034: PowerUp0017
+    21300036: PowerUp0018
+    21300038: PowerUp0019
+    21300040: PowerUp0020
+    21300042: PowerUp0021
+    21300044: PowerUp0022
+    21300046: PowerUp0023
+    21300048: PowerUp0024
+    21300050: PowerUp0025
+    21300052: PowerUp0026
+    21300054: PowerUp0027
+    21300056: PowerUp0028
+    21300058: PowerUp0029
+    21300060: PowerUp0030
+    21300062: PowerUp0031
+    21300064: PowerUp0032
+    21300066: PowerUp0033
+    21300068: PowerUp0034
+    21300070: PowerUp0035
+    21300072: PowerUp0036
+    21300074: PowerUp0037
+    21300076: PowerUp0038
+    21300078: PowerUp0039
+    21300080: PowerUp0040
+    21300082: PowerUp0041
+    21300084: PowerUp0042
+    21300086: PowerUp0043
+    21300088: PowerUp0044
+    21300090: PowerUp0045
+    21300092: PowerUp0046
+    21300094: PowerUp0047
+    21300096: PowerUp0048
+    21300098: PowerUp0049
+    21300100: PowerUp0050
+    21300102: PowerUp0051
+    21300104: PowerUp0052
+    21300106: PowerUp0053
+    21300108: PowerUp0054
+    21300110: PowerUp0055
+    21300112: PowerUp0056
+    21300114: PowerUp0057
+    21300116: PowerUp0058
+    21300118: PowerUp0059
+    21300120: PowerUp0060
+    21300122: PowerUp0061
+    21300124: PowerUp0062
+    21300126: PowerUp0063
+    21300128: PowerUp0064
+    21300130: PowerUp0065
+    21300132: PowerUp0066
+    21300134: PowerUp0067
+    21300136: PowerUp0068
+    21300138: PowerUp0069
+    21300140: PowerUp0070
+    21300142: PowerUp0071
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PowerUp0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1854
+        width: 124
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5967742, y: 0.69948184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: -114}
+        - {x: 36, y: -67}
+        - {x: 16, y: -45}
+        - {x: 32, y: -61}
+        - {x: 45, y: -28}
+        - {x: 38, y: 23}
+        - {x: 22, y: 24}
+        - {x: 31, y: 50}
+        - {x: 28, y: 55}
+        - {x: -5, y: 55}
+        - {x: -58, y: 32}
+        - {x: -74, y: -53}
+        - {x: -74, y: -135}
+        - {x: 42, y: -135}
+        - {x: 48, y: -130}
+        - {x: 48, y: -119}
+    - name: PowerUp0001
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1863
+        width: 124
+        height: 184
+      alignment: 9
+      pivot: {x: 0.5967742, y: 0.7336956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56, y: -44}
+        - {x: -52, y: -46}
+        - {x: -48, y: -46}
+        - {x: -74, y: -109}
+        - {x: -74, y: -135}
+        - {x: 48, y: -135}
+        - {x: 48, y: 44}
+        - {x: 47, y: 47}
+        - {x: -26, y: 47}
+        - {x: -61, y: -4}
+    - name: PowerUp0002
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 1865
+        width: 133
+        height: 182
+      alignment: 9
+      pivot: {x: 0.57894737, y: 0.7417582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: 19}
+        - {x: 38, y: 19}
+        - {x: 47, y: 28}
+        - {x: 48, y: 32}
+        - {x: 45, y: 38}
+        - {x: 29, y: 47}
+        - {x: -37, y: 47}
+        - {x: -74, y: -23}
+        - {x: -74, y: -135}
+        - {x: 7, y: -135}
+        - {x: 53, y: -129}
+        - {x: 53, y: 25}
+        - {x: 39, y: 19}
+    - name: PowerUp0003
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1861
+        width: 139
+        height: 186
+      alignment: 9
+      pivot: {x: 0.5611511, y: 0.7258065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 47}
+        - {x: -48, y: 31}
+        - {x: -71, y: -11}
+        - {x: -74, y: -52}
+        - {x: -74, y: -135}
+        - {x: 49, y: -135}
+        - {x: 55, y: -132}
+        - {x: 55, y: 47}
+    - name: PowerUp0004
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 1864
+        width: 143
+        height: 183
+      alignment: 9
+      pivot: {x: 0.53846157, y: 0.73770493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 57, y: 42}
+        - {x: 20, y: 48}
+        - {x: -28, y: 48}
+        - {x: -52, y: 17}
+        - {x: -74, y: -69}
+        - {x: -74, y: -135}
+        - {x: -54, y: -135}
+        - {x: 46, y: -130}
+        - {x: 55, y: -120}
+        - {x: 57, y: -93}
+    - name: PowerUp0005
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 1863
+        width: 133
+        height: 184
+      alignment: 9
+      pivot: {x: 0.57894737, y: 0.7336956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 48}
+        - {x: -74, y: -99}
+        - {x: -74, y: -135}
+        - {x: 55, y: -135}
+        - {x: 56, y: -124}
+        - {x: 56, y: 48}
+    - name: PowerUp0006
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1854
+        width: 143
+        height: 193
+      alignment: 9
+      pivot: {x: 0.53846157, y: 0.69948184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 57, y: 56}
+        - {x: -32, y: 56}
+        - {x: -74, y: -71}
+        - {x: -74, y: -135}
+        - {x: 55, y: -135}
+        - {x: 65, y: -91}
+        - {x: 65, y: 24}
+    - name: PowerUp0007
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 1850
+        width: 146
+        height: 197
+      alignment: 9
+      pivot: {x: 0.51369864, y: 0.6852792}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41, y: 62}
+        - {x: 17, y: 62}
+        - {x: 1, y: 61}
+        - {x: -68, y: 20}
+        - {x: -74, y: -39}
+        - {x: -74, y: -135}
+        - {x: 71, y: -135}
+        - {x: 71, y: 27}
+        - {x: 44, y: 61}
+    - name: PowerUp0008
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 1847
+        width: 152
+        height: 200
+      alignment: 9
+      pivot: {x: 0.4868421, y: 0.675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 75, y: -79}
+        - {x: 75, y: 33}
+        - {x: 41, y: 63}
+        - {x: 34, y: 64}
+        - {x: 19, y: 64}
+        - {x: -27, y: 60}
+        - {x: -74, y: -65}
+        - {x: -74, y: -135}
+        - {x: -58, y: -135}
+        - {x: -54, y: -129}
+        - {x: -7, y: -135}
+        - {x: 57, y: -135}
+    - name: PowerUp0009
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 1842
+        width: 152
+        height: 205
+      alignment: 9
+      pivot: {x: 0.48026314, y: 0.6585366}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 66}
+        - {x: -43, y: 29}
+        - {x: -73, y: -116}
+        - {x: -73, y: -135}
+        - {x: 76, y: -135}
+        - {x: 76, y: 49}
+        - {x: 32, y: 66}
+    - name: PowerUp0010
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1842
+        width: 157
+        height: 205
+      alignment: 9
+      pivot: {x: 0.4968153, y: 0.6585366}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: -47}
+        - {x: 58, y: -3}
+        - {x: 75, y: 15}
+        - {x: 75, y: 28}
+        - {x: 25, y: 66}
+        - {x: 20, y: 66}
+        - {x: -44, y: 30}
+        - {x: -63, y: -52}
+        - {x: -74, y: -118}
+        - {x: -74, y: -135}
+        - {x: 75, y: -135}
+        - {x: 75, y: -120}
+        - {x: 38, y: -70}
+    - name: PowerUp0011
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 1839
+        width: 158
+        height: 208
+      alignment: 9
+      pivot: {x: 0.49367088, y: 0.64903843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 66}
+        - {x: -48, y: 37}
+        - {x: -74, y: -111}
+        - {x: -74, y: -135}
+        - {x: 74, y: -135}
+        - {x: 74, y: 49}
+        - {x: 24, y: 66}
+    - name: PowerUp0012
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 1839
+        width: 156
+        height: 208
+      alignment: 9
+      pivot: {x: 0.49358973, y: 0.64903843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 67}
+        - {x: -54, y: 28}
+        - {x: -74, y: -104}
+        - {x: -74, y: -135}
+        - {x: 73, y: -135}
+        - {x: 73, y: 55}
+        - {x: 50, y: 67}
+    - name: PowerUp0013
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 1844
+        width: 151
+        height: 203
+      alignment: 9
+      pivot: {x: 0.50993377, y: 0.66502464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 68}
+        - {x: -62, y: 16}
+        - {x: -74, y: -104}
+        - {x: -74, y: -135}
+        - {x: 71, y: -135}
+        - {x: 71, y: 29}
+        - {x: 22, y: 68}
+    - name: PowerUp0014
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1634
+        width: 141
+        height: 203
+      alignment: 9
+      pivot: {x: 0.5531915, y: 0.66502464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 66}
+        - {x: -20, y: 52}
+        - {x: -62, y: 5}
+        - {x: -60, y: -8}
+        - {x: -49, y: -16}
+        - {x: -42, y: -16}
+        - {x: -67, y: -85}
+        - {x: -74, y: -120}
+        - {x: -74, y: -135}
+        - {x: 58, y: -135}
+        - {x: 63, y: -120}
+        - {x: 63, y: 52}
+        - {x: 44, y: 66}
+    - name: PowerUp0015
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1636
+        width: 132
+        height: 201
+      alignment: 9
+      pivot: {x: 0.57575756, y: 0.67164177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 63}
+        - {x: -74, y: -9}
+        - {x: -74, y: -34}
+        - {x: -70, y: -39}
+        - {x: -74, y: -44}
+        - {x: -74, y: -135}
+        - {x: 56, y: -135}
+        - {x: 56, y: 63}
+    - name: PowerUp0016
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 1650
+        width: 140
+        height: 187
+      alignment: 9
+      pivot: {x: 0.55, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 56, y: -129}
+        - {x: 61, y: -81}
+        - {x: 61, y: 19}
+        - {x: 5, y: 51}
+        - {x: -41, y: 51}
+        - {x: -76, y: -14}
+        - {x: -76, y: -51}
+        - {x: -74, y: -52}
+        - {x: -67, y: -51}
+        - {x: -76, y: -97}
+        - {x: -76, y: -133}
+        - {x: -74, y: -135}
+        - {x: -58, y: -135}
+        - {x: -38, y: -100}
+        - {x: 18, y: -127}
+        - {x: 32, y: -130}
+    - name: PowerUp0017
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1650
+        width: 133
+        height: 187
+      alignment: 9
+      pivot: {x: 0.556391, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 52}
+        - {x: -51, y: 52}
+        - {x: -74, y: -20}
+        - {x: -74, y: -135}
+        - {x: -54, y: -135}
+        - {x: 55, y: -129}
+        - {x: 57, y: -102}
+        - {x: 57, y: 9}
+    - name: PowerUp0018
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 1649
+        width: 133
+        height: 188
+      alignment: 9
+      pivot: {x: 0.5864662, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 52}
+        - {x: -75, y: 11}
+        - {x: -75, y: -50}
+        - {x: -74, y: -56}
+        - {x: -59, y: -52}
+        - {x: -54, y: -49}
+        - {x: -75, y: -120}
+        - {x: -75, y: -130}
+        - {x: -73, y: -135}
+        - {x: -6, y: -135}
+        - {x: 53, y: -130}
+        - {x: 53, y: 11}
+        - {x: -16, y: 52}
+    - name: PowerUp0019
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1645
+        width: 159
+        height: 192
+      alignment: 9
+      pivot: {x: 0.6603774, y: 0.703125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 34}
+        - {x: -11, y: 51}
+        - {x: -54, y: 51}
+        - {x: -105, y: 11}
+        - {x: -105, y: -119}
+        - {x: -98, y: -135}
+        - {x: 30, y: -135}
+        - {x: 46, y: -129}
+        - {x: 50, y: -120}
+        - {x: 52, y: -107}
+        - {x: 52, y: 3}
+    - name: PowerUp0020
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 1650
+        width: 184
+        height: 187
+      alignment: 9
+      pivot: {x: 0.70108694, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -62, y: 51}
+        - {x: -126, y: 0}
+        - {x: -126, y: -84}
+        - {x: -79, y: -135}
+        - {x: 53, y: -135}
+        - {x: 53, y: 51}
+    - name: PowerUp0021
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 1644
+        width: 195
+        height: 193
+      alignment: 9
+      pivot: {x: 0.71282053, y: 0.69948184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 51}
+        - {x: -73, y: 51}
+        - {x: -137, y: 11}
+        - {x: -137, y: -82}
+        - {x: -121, y: -135}
+        - {x: 52, y: -135}
+        - {x: 54, y: -128}
+        - {x: 54, y: 9}
+    - name: PowerUp0022
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 1646
+        width: 200
+        height: 191
+      alignment: 9
+      pivot: {x: 0.715, y: 0.7068063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28, y: -74}
+        - {x: 54, y: -16}
+        - {x: 54, y: 3}
+        - {x: -15, y: 51}
+        - {x: -59, y: 51}
+        - {x: -141, y: -7}
+        - {x: -141, y: -39}
+        - {x: -90, y: -135}
+        - {x: -58, y: -135}
+        - {x: -54, y: -129}
+        - {x: 46, y: -130}
+        - {x: 50, y: -120}
+    - name: PowerUp0023
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 1648
+        width: 204
+        height: 189
+      alignment: 9
+      pivot: {x: 0.71568626, y: 0.71428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 20}
+        - {x: -8, y: 51}
+        - {x: -67, y: 51}
+        - {x: -144, y: 24}
+        - {x: -144, y: -135}
+        - {x: 53, y: -135}
+        - {x: 55, y: -127}
+        - {x: 55, y: 15}
+        - {x: 13, y: 22}
+    - name: PowerUp0024
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 1646
+        width: 206
+        height: 191
+      alignment: 9
+      pivot: {x: 0.71359223, y: 0.7068063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -108, y: 51}
+        - {x: -147, y: 8}
+        - {x: -147, y: -21}
+        - {x: -94, y: -135}
+        - {x: 6, y: -135}
+        - {x: 46, y: -130}
+        - {x: 57, y: -125}
+        - {x: 57, y: 4}
+        - {x: 26, y: 51}
+    - name: PowerUp0025
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1443
+        width: 211
+        height: 189
+      alignment: 9
+      pivot: {x: 0.7156398, y: 0.71428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 51}
+        - {x: -52, y: 51}
+        - {x: -149, y: 0}
+        - {x: -149, y: -18}
+        - {x: -124, y: -79}
+        - {x: -80, y: -135}
+        - {x: 56, y: -135}
+        - {x: 58, y: -105}
+        - {x: 58, y: 6}
+    - name: PowerUp0026
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1445
+        width: 211
+        height: 187
+      alignment: 9
+      pivot: {x: 0.7156398, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57, y: 51}
+        - {x: -150, y: 15}
+        - {x: -150, y: -51}
+        - {x: -96, y: -135}
+        - {x: 28, y: -135}
+        - {x: 54, y: -129}
+        - {x: 58, y: -78}
+        - {x: 58, y: 6}
+        - {x: -17, y: 51}
+    - name: PowerUp0027
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1446
+        width: 213
+        height: 186
+      alignment: 9
+      pivot: {x: 0.7183099, y: 0.7258065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -150, y: -45}
+        - {x: -100, y: -135}
+        - {x: 4, y: -135}
+        - {x: 46, y: -129}
+        - {x: 58, y: -126}
+        - {x: 58, y: 51}
+        - {x: -115, y: 51}
+        - {x: -150, y: 43}
+    - name: PowerUp0028
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1446
+        width: 211
+        height: 186
+      alignment: 9
+      pivot: {x: 0.7109005, y: 0.7258065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 51}
+        - {x: -68, y: 51}
+        - {x: -150, y: 17}
+        - {x: -150, y: 4}
+        - {x: -141, y: -6}
+        - {x: -127, y: -14}
+        - {x: -90, y: -52}
+        - {x: -76, y: -134}
+        - {x: -74, y: -135}
+        - {x: 54, y: -135}
+        - {x: 58, y: -75}
+        - {x: 58, y: 11}
+    - name: PowerUp0029
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1446
+        width: 213
+        height: 186
+      alignment: 9
+      pivot: {x: 0.7183099, y: 0.7258065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102, y: 51}
+        - {x: -149, y: 41}
+        - {x: -149, y: -54}
+        - {x: -109, y: -135}
+        - {x: 18, y: -135}
+        - {x: 55, y: -129}
+        - {x: 58, y: -103}
+        - {x: 58, y: 17}
+        - {x: -3, y: 51}
+    - name: PowerUp0030
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 1448
+        width: 214
+        height: 184
+      alignment: 9
+      pivot: {x: 0.71028036, y: 0.7336956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: 28}
+        - {x: 8, y: 49}
+        - {x: -73, y: 49}
+        - {x: -148, y: 12}
+        - {x: -148, y: 5}
+        - {x: -142, y: -3}
+        - {x: -79, y: -135}
+        - {x: -50, y: -135}
+        - {x: 20, y: -132}
+        - {x: 55, y: -129}
+        - {x: 59, y: -102}
+    - name: PowerUp0031
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 1443
+        width: 210
+        height: 189
+      alignment: 9
+      pivot: {x: 0.7095238, y: 0.71428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 50}
+        - {x: -40, y: 50}
+        - {x: -63, y: 17}
+        - {x: -64, y: -10}
+        - {x: -66, y: -24}
+        - {x: -66, y: -27}
+        - {x: -67, y: -28}
+        - {x: -67, y: -31}
+        - {x: -66, y: -23}
+        - {x: -65, y: -17}
+        - {x: -138, y: 11}
+        - {x: -148, y: 14}
+        - {x: -148, y: -57}
+        - {x: -112, y: -135}
+        - {x: 18, y: -135}
+        - {x: 46, y: -130}
+        - {x: 53, y: -119}
+        - {x: 59, y: -50}
+        - {x: 59, y: 10}
+    - name: PowerUp0032
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 1443
+        width: 212
+        height: 189
+      alignment: 9
+      pivot: {x: 0.7122642, y: 0.71428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37, y: 50}
+        - {x: -40, y: 48}
+        - {x: -57, y: 15}
+        - {x: -146, y: 12}
+        - {x: -148, y: 11}
+        - {x: -148, y: 5}
+        - {x: -142, y: -6}
+        - {x: -80, y: -135}
+        - {x: 58, y: -135}
+        - {x: 58, y: 27}
+        - {x: 10, y: 50}
+    - name: PowerUp0033
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 1444
+        width: 208
+        height: 188
+      alignment: 9
+      pivot: {x: 0.7067308, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 58, y: 16}
+        - {x: 17, y: 50}
+        - {x: -89, y: 50}
+        - {x: -147, y: 25}
+        - {x: -147, y: -22}
+        - {x: -75, y: -134}
+        - {x: -73, y: -135}
+        - {x: 3, y: -135}
+        - {x: 19, y: -134}
+        - {x: 55, y: -129}
+        - {x: 58, y: -96}
+    - name: PowerUp0034
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1253
+        width: 212
+        height: 188
+      alignment: 9
+      pivot: {x: 0.7169811, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 58, y: 22}
+        - {x: 35, y: 50}
+        - {x: -135, y: 50}
+        - {x: -148, y: 45}
+        - {x: -148, y: -40}
+        - {x: -88, y: -135}
+        - {x: -54, y: -135}
+        - {x: 20, y: -132}
+        - {x: 52, y: -128}
+        - {x: 58, y: -53}
+    - name: PowerUp0035
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1253
+        width: 212
+        height: 188
+      alignment: 9
+      pivot: {x: 0.7169811, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -111, y: 50}
+        - {x: -148, y: 31}
+        - {x: -148, y: 3}
+        - {x: -144, y: -3}
+        - {x: -134, y: -10}
+        - {x: -129, y: -135}
+        - {x: 58, y: -135}
+        - {x: 58, y: 24}
+        - {x: 30, y: 50}
+    - name: PowerUp0036
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1254
+        width: 210
+        height: 187
+      alignment: 9
+      pivot: {x: 0.71428573, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 58, y: 26}
+        - {x: 13, y: 50}
+        - {x: -81, y: 50}
+        - {x: -148, y: 7}
+        - {x: -148, y: 4}
+        - {x: -140, y: -5}
+        - {x: -125, y: -14}
+        - {x: -106, y: -25}
+        - {x: -88, y: -51}
+        - {x: -81, y: -135}
+        - {x: -53, y: -135}
+        - {x: 20, y: -132}
+        - {x: 54, y: -129}
+        - {x: 58, y: -112}
+    - name: PowerUp0037
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1253
+        width: 207
+        height: 188
+      alignment: 9
+      pivot: {x: 0.71014494, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -125, y: 50}
+        - {x: -147, y: 46}
+        - {x: -147, y: -75}
+        - {x: -124, y: -135}
+        - {x: 59, y: -135}
+        - {x: 59, y: 37}
+        - {x: 30, y: 50}
+    - name: PowerUp0038
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1254
+        width: 210
+        height: 187
+      alignment: 9
+      pivot: {x: 0.7095238, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: 50}
+        - {x: -36, y: 50}
+        - {x: -52, y: 26}
+        - {x: -149, y: 14}
+        - {x: -149, y: -18}
+        - {x: -91, y: -135}
+        - {x: 17, y: -135}
+        - {x: 46, y: -132}
+        - {x: 57, y: -127}
+        - {x: 59, y: -78}
+        - {x: 59, y: 16}
+    - name: PowerUp0039
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 1253
+        width: 212
+        height: 188
+      alignment: 9
+      pivot: {x: 0.7122642, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -149, y: 50}
+        - {x: -149, y: 2}
+        - {x: -82, y: -53}
+        - {x: -78, y: -111}
+        - {x: -75, y: -135}
+        - {x: 59, y: -135}
+        - {x: 59, y: 50}
+    - name: PowerUp0040
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 1254
+        width: 208
+        height: 187
+      alignment: 9
+      pivot: {x: 0.71153843, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: 29}
+        - {x: 12, y: 24}
+        - {x: 7, y: 14}
+        - {x: 8, y: 14}
+        - {x: 7, y: 16}
+        - {x: 5, y: 30}
+        - {x: -22, y: 50}
+        - {x: -64, y: 50}
+        - {x: -148, y: 28}
+        - {x: -148, y: -6}
+        - {x: -144, y: -10}
+        - {x: -81, y: -135}
+        - {x: -54, y: -135}
+        - {x: 20, y: -132}
+        - {x: 54, y: -129}
+        - {x: 59, y: -48}
+    - name: PowerUp0041
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 1252
+        width: 208
+        height: 189
+      alignment: 9
+      pivot: {x: 0.71153843, y: 0.71428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 50}
+        - {x: -70, y: 50}
+        - {x: -147, y: 23}
+        - {x: -147, y: -56}
+        - {x: -128, y: -135}
+        - {x: 52, y: -135}
+        - {x: 54, y: -129}
+        - {x: 59, y: -70}
+        - {x: 59, y: 9}
+    - name: PowerUp0042
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 1254
+        width: 206
+        height: 187
+      alignment: 9
+      pivot: {x: 0.70388347, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: 50}
+        - {x: -145, y: 50}
+        - {x: -145, y: -96}
+        - {x: -119, y: -135}
+        - {x: 20, y: -135}
+        - {x: 54, y: -129}
+        - {x: 29, y: -71}
+        - {x: 45, y: -37}
+        - {x: 59, y: -19}
+    - name: PowerUp0043
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1055
+        width: 210
+        height: 195
+      alignment: 9
+      pivot: {x: 0.71428573, y: 0.6923077}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -72, y: 50}
+        - {x: -146, y: 11}
+        - {x: -146, y: -23}
+        - {x: -95, y: -135}
+        - {x: 1, y: -135}
+        - {x: 54, y: -129}
+        - {x: 59, y: -71}
+        - {x: 59, y: 10}
+        - {x: -4, y: 50}
+    - name: PowerUp0044
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 1054
+        width: 210
+        height: 196
+      alignment: 9
+      pivot: {x: 0.71428573, y: 0.68877554}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: -120}
+        - {x: 59, y: 18}
+        - {x: 58, y: 33}
+        - {x: -3, y: 50}
+        - {x: -39, y: 50}
+        - {x: -56, y: 15}
+        - {x: -145, y: 15}
+        - {x: -145, y: -14}
+        - {x: -90, y: -135}
+        - {x: -57, y: -135}
+        - {x: -56, y: -134}
+        - {x: 20, y: -132}
+        - {x: 52, y: -128}
+    - name: PowerUp0045
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 1062
+        width: 206
+        height: 188
+      alignment: 9
+      pivot: {x: 0.70873785, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 51}
+        - {x: -74, y: 51}
+        - {x: -143, y: 10}
+        - {x: -144, y: 9}
+        - {x: -144, y: 4}
+        - {x: -139, y: -4}
+        - {x: -81, y: -51}
+        - {x: -78, y: -50}
+        - {x: -79, y: -118}
+        - {x: -75, y: -135}
+        - {x: 5, y: -135}
+        - {x: 56, y: -130}
+        - {x: 59, y: -97}
+        - {x: 59, y: 12}
+    - name: PowerUp0046
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 1063
+        width: 205
+        height: 187
+      alignment: 9
+      pivot: {x: 0.702439, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: 46}
+        - {x: 20, y: 51}
+        - {x: -79, y: 51}
+        - {x: -144, y: 13}
+        - {x: -144, y: 4}
+        - {x: -138, y: -5}
+        - {x: -80, y: -135}
+        - {x: 11, y: -135}
+        - {x: 48, y: -132}
+        - {x: 51, y: -120}
+        - {x: 59, y: -45}
+        - {x: 59, y: 8}
+    - name: PowerUp0047
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1063
+        width: 205
+        height: 187
+      alignment: 9
+      pivot: {x: 0.702439, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25, y: 51}
+        - {x: -68, y: 51}
+        - {x: -144, y: 13}
+        - {x: -144, y: -27}
+        - {x: -75, y: -134}
+        - {x: -73, y: -135}
+        - {x: 51, y: -135}
+        - {x: 59, y: -74}
+        - {x: 59, y: 28}
+    - name: PowerUp0048
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 1061
+        width: 204
+        height: 189
+      alignment: 9
+      pivot: {x: 0.7107843, y: 0.71428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 58, y: -113}
+        - {x: 58, y: 51}
+        - {x: -143, y: 51}
+        - {x: -143, y: -20}
+        - {x: -76, y: -135}
+        - {x: -50, y: -135}
+        - {x: 20, y: -132}
+        - {x: 46, y: -128}
+        - {x: 51, y: -126}
+    - name: PowerUp0049
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 1062
+        width: 202
+        height: 188
+      alignment: 9
+      pivot: {x: 0.7029703, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -131, y: 51}
+        - {x: -142, y: 47}
+        - {x: -142, y: 7}
+        - {x: -133, y: -4}
+        - {x: -82, y: -49}
+        - {x: -119, y: -135}
+        - {x: 58, y: -135}
+        - {x: 58, y: 20}
+        - {x: 34, y: 51}
+    - name: PowerUp0050
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 1064
+        width: 201
+        height: 186
+      alignment: 9
+      pivot: {x: 0.70149255, y: 0.7258065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65, y: 51}
+        - {x: -139, y: 18}
+        - {x: -139, y: 12}
+        - {x: -132, y: 2}
+        - {x: -86, y: -31}
+        - {x: -84, y: -44}
+        - {x: -115, y: -135}
+        - {x: 58, y: -135}
+        - {x: 58, y: 3}
+        - {x: -11, y: 51}
+    - name: PowerUp0051
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 1065
+        width: 193
+        height: 185
+      alignment: 9
+      pivot: {x: 0.68911916, y: 0.7297297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 50}
+        - {x: -104, y: 50}
+        - {x: -132, y: 39}
+        - {x: -132, y: -113}
+        - {x: -126, y: -135}
+        - {x: 52, y: -135}
+        - {x: 54, y: -129}
+        - {x: 59, y: -61}
+        - {x: 59, y: 7}
+    - name: PowerUp0052
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 1059
+        width: 182
+        height: 191
+      alignment: 9
+      pivot: {x: 0.6593407, y: 0.7068063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -120, y: 52}
+        - {x: -120, y: -28}
+        - {x: -113, y: -55}
+        - {x: -59, y: -57}
+        - {x: -50, y: -55}
+        - {x: -49, y: -47}
+        - {x: -54, y: -43}
+        - {x: -41, y: -17}
+        - {x: -49, y: -53}
+        - {x: -63, y: -97}
+        - {x: -81, y: -135}
+        - {x: 60, y: -135}
+        - {x: 60, y: 52}
+    - name: PowerUp0053
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 845
+        width: 159
+        height: 207
+      alignment: 9
+      pivot: {x: 0.6226415, y: 0.65217394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17, y: -48}
+        - {x: 12, y: -40}
+        - {x: 17, y: -48}
+        - {x: 21, y: -52}
+        - {x: 39, y: -41}
+        - {x: 53, y: -28}
+        - {x: 59, y: -1}
+        - {x: 59, y: 23}
+        - {x: 12, y: 67}
+        - {x: -99, y: 67}
+        - {x: -99, y: -31}
+        - {x: -61, y: -54}
+        - {x: -54, y: -57}
+        - {x: -77, y: -125}
+        - {x: -73, y: -135}
+        - {x: -17, y: -135}
+        - {x: 46, y: -129}
+        - {x: 48, y: -125}
+        - {x: 49, y: -120}
+    - name: PowerUp0054
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 835
+        width: 134
+        height: 217
+      alignment: 9
+      pivot: {x: 0.58208954, y: 0.62211984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -59, y: 81}
+        - {x: -70, y: 81}
+        - {x: -72, y: 79}
+        - {x: -71, y: 30}
+        - {x: -74, y: 13}
+        - {x: -74, y: -28}
+        - {x: -71, y: -45}
+        - {x: -64, y: -48}
+        - {x: -59, y: -48}
+        - {x: -55, y: -46}
+        - {x: -74, y: -115}
+        - {x: -74, y: -133}
+        - {x: -73, y: -135}
+        - {x: 19, y: -135}
+        - {x: 48, y: -133}
+        - {x: 55, y: -129}
+        - {x: 55, y: 65}
+    - name: PowerUp0055
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 826
+        width: 130
+        height: 226
+      alignment: 9
+      pivot: {x: 0.5692308, y: 0.5973451}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43, y: 86}
+        - {x: -74, y: -13}
+        - {x: -74, y: -38}
+        - {x: -65, y: -44}
+        - {x: -55, y: -40}
+        - {x: -73, y: -115}
+        - {x: -74, y: -123}
+        - {x: -74, y: -135}
+        - {x: 56, y: -135}
+        - {x: 56, y: 66}
+        - {x: -5, y: 86}
+    - name: PowerUp0056
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 829
+        width: 138
+        height: 223
+      alignment: 9
+      pivot: {x: 0.5362319, y: 0.6053812}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1, y: 82}
+        - {x: -17, y: 82}
+        - {x: -54, y: 20}
+        - {x: -60, y: -2}
+        - {x: -60, y: -8}
+        - {x: -65, y: -25}
+        - {x: -66, y: -30}
+        - {x: -58, y: -35}
+        - {x: -54, y: -34}
+        - {x: -74, y: -115}
+        - {x: -74, y: -133}
+        - {x: -73, y: -135}
+        - {x: 61, y: -135}
+        - {x: 61, y: 49}
+        - {x: 40, y: 62}
+    - name: PowerUp0057
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 843
+        width: 137
+        height: 209
+      alignment: 9
+      pivot: {x: 0.540146, y: 0.64593303}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 74}
+        - {x: -72, y: 27}
+        - {x: -74, y: 5}
+        - {x: -74, y: -135}
+        - {x: 63, y: -135}
+        - {x: 63, y: 27}
+        - {x: 29, y: 74}
+    - name: PowerUp0058
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 852
+        width: 139
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5323741, y: 0.675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65, y: 65}
+        - {x: -74, y: 44}
+        - {x: -74, y: -135}
+        - {x: 65, y: -135}
+        - {x: 65, y: 17}
+        - {x: 41, y: 65}
+    - name: PowerUp0059
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 845
+        width: 146
+        height: 207
+      alignment: 9
+      pivot: {x: 0.5479452, y: 0.65217394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 59}
+        - {x: -74, y: 9}
+        - {x: -74, y: -135}
+        - {x: 66, y: -135}
+        - {x: 66, y: 59}
+    - name: PowerUp0060
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 858
+        width: 145
+        height: 194
+      alignment: 9
+      pivot: {x: 0.537931, y: 0.6958763}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 56}
+        - {x: -41, y: 51}
+        - {x: -63, y: -13}
+        - {x: -51, y: -18}
+        - {x: -46, y: -18}
+        - {x: -48, y: -18}
+        - {x: -52, y: -23}
+        - {x: -53, y: -27}
+        - {x: -49, y: -32}
+        - {x: -45, y: -32}
+        - {x: -64, y: -55}
+        - {x: -74, y: -83}
+        - {x: -74, y: -135}
+        - {x: 60, y: -135}
+        - {x: 66, y: -119}
+        - {x: 66, y: 5}
+        - {x: 37, y: 56}
+    - name: PowerUp0061
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 864
+        width: 141
+        height: 188
+      alignment: 9
+      pivot: {x: 0.5460993, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 53}
+        - {x: -74, y: 24}
+        - {x: -74, y: 6}
+        - {x: -65, y: -38}
+        - {x: -45, y: -38}
+        - {x: -42, y: -35}
+        - {x: -74, y: -118}
+        - {x: -74, y: -133}
+        - {x: -73, y: -135}
+        - {x: 64, y: -135}
+        - {x: 64, y: 32}
+        - {x: 50, y: 53}
+    - name: PowerUp0062
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 868
+        width: 141
+        height: 184
+      alignment: 9
+      pivot: {x: 0.5673759, y: 0.7336956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51, y: 49}
+        - {x: -74, y: 35}
+        - {x: -74, y: -135}
+        - {x: 54, y: -135}
+        - {x: 61, y: -92}
+        - {x: 61, y: 49}
+    - name: PowerUp0063
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 870
+        width: 141
+        height: 182
+      alignment: 9
+      pivot: {x: 0.5673759, y: 0.7417582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51, y: 47}
+        - {x: -26, y: 47}
+        - {x: -74, y: -1}
+        - {x: -74, y: -135}
+        - {x: 3, y: -135}
+        - {x: 52, y: -127}
+        - {x: 60, y: -62}
+        - {x: 60, y: -18}
+    - name: PowerUp0064
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 872
+        width: 139
+        height: 180
+      alignment: 9
+      pivot: {x: 0.5755396, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 45}
+        - {x: -58, y: 14}
+        - {x: -70, y: -40}
+        - {x: -55, y: -47}
+        - {x: -49, y: -46}
+        - {x: -44, y: -41}
+        - {x: -47, y: -60}
+        - {x: -74, y: -119}
+        - {x: -74, y: -133}
+        - {x: -73, y: -135}
+        - {x: 57, y: -135}
+        - {x: 57, y: 45}
+    - name: PowerUp0065
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 869
+        width: 132
+        height: 183
+      alignment: 9
+      pivot: {x: 0.6060606, y: 0.73770493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38, y: 44}
+        - {x: 29, y: 41}
+        - {x: 8, y: 45}
+        - {x: -21, y: 45}
+        - {x: -62, y: -9}
+        - {x: -74, y: -81}
+        - {x: -74, y: -135}
+        - {x: 52, y: -135}
+        - {x: 52, y: 15}
+        - {x: 46, y: 44}
+    - name: PowerUp0066
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 870
+        width: 130
+        height: 182
+      alignment: 9
+      pivot: {x: 0.6, y: 0.7417582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 45}
+        - {x: -66, y: -12}
+        - {x: -74, y: -61}
+        - {x: -74, y: -135}
+        - {x: 50, y: -135}
+        - {x: 50, y: 45}
+    - name: PowerUp0067
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 644
+        width: 130
+        height: 180
+      alignment: 9
+      pivot: {x: 0.61538464, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 45}
+        - {x: -66, y: 34}
+        - {x: -74, y: -21}
+        - {x: -74, y: -135}
+        - {x: 48, y: -135}
+        - {x: 48, y: 45}
+    - name: PowerUp0068
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 637
+        width: 125
+        height: 187
+      alignment: 9
+      pivot: {x: 0.624, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 46}
+        - {x: -74, y: -8}
+        - {x: -74, y: -135}
+        - {x: 47, y: -135}
+        - {x: 47, y: 46}
+    - name: PowerUp0069
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 635
+        width: 123
+        height: 189
+      alignment: 9
+      pivot: {x: 0.5934959, y: 0.71428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: -68}
+        - {x: 24, y: -55}
+        - {x: 10, y: -41}
+        - {x: 33, y: -56}
+        - {x: 36, y: -58}
+        - {x: 44, y: -42}
+        - {x: 46, y: 18}
+        - {x: 42, y: 49}
+        - {x: -6, y: 49}
+        - {x: -42, y: 34}
+        - {x: -64, y: -7}
+        - {x: -73, y: -89}
+        - {x: -73, y: -135}
+        - {x: 43, y: -135}
+        - {x: 48, y: -129}
+        - {x: 48, y: -115}
+    - name: PowerUp0070
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 636
+        width: 128
+        height: 188
+      alignment: 9
+      pivot: {x: 0.609375, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: -66}
+        - {x: 16, y: -45}
+        - {x: 30, y: -57}
+        - {x: 34, y: -57}
+        - {x: 38, y: -50}
+        - {x: 40, y: -38}
+        - {x: 40, y: -10}
+        - {x: 37, y: 53}
+        - {x: -39, y: 53}
+        - {x: -74, y: -34}
+        - {x: -74, y: -135}
+        - {x: 43, y: -135}
+        - {x: 48, y: -130}
+        - {x: 48, y: -114}
+    - name: PowerUp0071
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 631
+        width: 124
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5967742, y: 0.69948184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: -114}
+        - {x: 36, y: -67}
+        - {x: 16, y: -45}
+        - {x: 32, y: -61}
+        - {x: 45, y: -28}
+        - {x: 38, y: 23}
+        - {x: 22, y: 24}
+        - {x: 31, y: 50}
+        - {x: 28, y: 55}
+        - {x: -5, y: 55}
+        - {x: -58, y: 32}
+        - {x: -74, y: -53}
+        - {x: -74, y: -135}
+        - {x: 42, y: -135}
+        - {x: 48, y: -130}
+        - {x: 48, y: -119}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

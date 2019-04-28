@@ -1,0 +1,666 @@
+fileFormatVersion: 2
+guid: 2ebc373eed2765643a4595a66b1bfb88
+timeCreated: 1478971176
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 2CrouchBlock0000
+    21300002: 2CrouchBlock0001
+    21300004: 2CrouchBlock0002
+    21300006: 2CrouchBlock0003
+    21300008: 2CrouchBlock0004
+    21300010: 2CrouchBlock0005
+    21300012: 2CrouchBlock0006
+    21300014: 2CrouchBlock0007
+    21300016: 2CrouchBlock0008
+    21300018: 2CrouchBlock0009
+    21300020: 2CrouchBlock0010
+    21300022: 2CrouchBlock0011
+    21300024: 2CrouchBlock0012
+    21300026: 2CrouchBlock0013
+    21300028: 2CrouchBlock0014
+    21300030: 2CrouchBlock0015
+    21300032: 2CrouchBlock0016
+    21300034: 2CrouchBlock0017
+    21300036: 2CrouchBlock0018
+    21300038: 2CrouchBlock0019
+    21300040: 2CrouchBlock0020
+    21300042: 2CrouchBlock0021
+    21300044: 2CrouchBlock0022
+    21300046: 2CrouchBlock0023
+    21300048: 2CrouchBlock0024
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 2CrouchBlock0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 890
+        width: 139
+        height: 133
+      alignment: 9
+      pivot: {x: 0.5179856, y: 1.0150375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 56.000008, y: -4}
+        - {x: 1.0000076, y: -4}
+        - {x: -69.99999, y: -55}
+        - {x: -69.99999, y: -135}
+        - {x: 62.000008, y: -135}
+        - {x: 67.00001, y: -127}
+        - {x: 67.00001, y: -9}
+        - {x: 65.00001, y: -6}
+    - name: 2CrouchBlock0001
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 886
+        width: 138
+        height: 137
+      alignment: 9
+      pivot: {x: 0.5, y: 0.98540145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 67, y: -80}
+        - {x: 67, y: -10}
+        - {x: 61, y: -4}
+        - {x: -17, y: -4}
+        - {x: -31, y: -6}
+        - {x: -69, y: -52}
+        - {x: -69, y: -135}
+        - {x: -27, y: -135}
+        - {x: -27, y: -130}
+        - {x: -7, y: -135}
+        - {x: 61, y: -135}
+    - name: 2CrouchBlock0002
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 885
+        width: 143
+        height: 138
+      alignment: 9
+      pivot: {x: 0.53846157, y: 0.9782609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: -62}
+        - {x: 49, y: -88}
+        - {x: 57, y: -93}
+        - {x: 63, y: -81}
+        - {x: 63, y: -24}
+        - {x: 61, y: -9}
+        - {x: 51, y: -4}
+        - {x: -2, y: -4}
+        - {x: -70, y: -48}
+        - {x: -70, y: -135}
+        - {x: 45, y: -135}
+        - {x: 46, y: -70}
+        - {x: 7, y: -67}
+        - {x: 5, y: -67}
+    - name: 2CrouchBlock0003
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 887
+        width: 134
+        height: 136
+      alignment: 9
+      pivot: {x: 0.53731346, y: 0.99264705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: -94}
+        - {x: 55, y: -91}
+        - {x: 60, y: -70}
+        - {x: 60, y: -9}
+        - {x: 43, y: -4}
+        - {x: -14, y: -4}
+        - {x: -60, y: -28}
+        - {x: -70, y: -50}
+        - {x: -70, y: -135}
+        - {x: 29, y: -135}
+        - {x: 41, y: -116}
+        - {x: 40, y: -86}
+        - {x: 37, y: -74}
+    - name: 2CrouchBlock0004
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 888
+        width: 131
+        height: 135
+      alignment: 9
+      pivot: {x: 0.55725193, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: -60}
+        - {x: 42, y: -93}
+        - {x: 53, y: -90}
+        - {x: 58, y: -57}
+        - {x: 58, y: -12}
+        - {x: 48, y: -7}
+        - {x: 44, y: -20}
+        - {x: 24, y: -6}
+        - {x: 16, y: -3}
+        - {x: 7, y: -3}
+        - {x: -46, y: -34}
+        - {x: -70, y: -63}
+        - {x: -70, y: -135}
+        - {x: 42, y: -135}
+        - {x: 38, y: -76}
+        - {x: 32, y: -70}
+        - {x: 21, y: -69}
+    - name: 2CrouchBlock0005
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 879
+        width: 127
+        height: 144
+      alignment: 9
+      pivot: {x: 0.56692916, y: 0.9375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: -71}
+        - {x: 43, y: -88}
+        - {x: 54, y: -83}
+        - {x: 55, y: -61}
+        - {x: 55, y: -3}
+        - {x: 5, y: -3}
+        - {x: -7, y: -6}
+        - {x: -70, y: -57}
+        - {x: -70, y: -135}
+        - {x: -39, y: -135}
+        - {x: -32, y: -134}
+        - {x: -25, y: -131}
+        - {x: -26, y: -122}
+        - {x: 35, y: -134}
+    - name: 2CrouchBlock0006
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 878
+        width: 129
+        height: 145
+      alignment: 9
+      pivot: {x: 0.58914727, y: 0.9310345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39, y: -53}
+        - {x: 41, y: -76}
+        - {x: 42, y: -79}
+        - {x: 51, y: -80}
+        - {x: 52, y: -58}
+        - {x: 52, y: 2}
+        - {x: 4, y: 2}
+        - {x: -70, y: -32}
+        - {x: -70, y: -135}
+        - {x: 9, y: -135}
+        - {x: 39, y: -121}
+        - {x: 40, y: -72}
+        - {x: 24, y: -67}
+    - name: 2CrouchBlock0007
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 733
+        width: 122
+        height: 143
+      alignment: 9
+      pivot: {x: 0.59016395, y: 0.9440559}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: -73}
+        - {x: 50, y: -73}
+        - {x: 50, y: 1}
+        - {x: 44, y: 8}
+        - {x: 2, y: 8}
+        - {x: -71, y: -61}
+        - {x: -71, y: -91}
+        - {x: -68, y: -96}
+        - {x: -64, y: -97}
+        - {x: -70, y: -123}
+        - {x: -71, y: -129}
+        - {x: -71, y: -135}
+        - {x: -29, y: -135}
+        - {x: 31, y: -130}
+        - {x: 40, y: -84}
+        - {x: 37, y: -73}
+        - {x: 24, y: -67}
+    - name: 2CrouchBlock0008
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 720
+        width: 124
+        height: 156
+      alignment: 9
+      pivot: {x: 0.58870965, y: 0.86538464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: 11}
+        - {x: 4, y: 2}
+        - {x: -23, y: -20}
+        - {x: -46, y: -41}
+        - {x: -50, y: -46}
+        - {x: -72, y: -64}
+        - {x: -72, y: -135}
+        - {x: 50, y: -135}
+        - {x: 50, y: 9}
+        - {x: 48, y: 11}
+    - name: 2CrouchBlock0009
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 722
+        width: 130
+        height: 154
+      alignment: 9
+      pivot: {x: 0.5846154, y: 0.8766234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: -126}
+        - {x: 27, y: -126}
+        - {x: 30, y: -118}
+        - {x: 39, y: -85}
+        - {x: 36, y: -74}
+        - {x: 29, y: -69}
+        - {x: 50, y: -76}
+        - {x: 52, y: -65}
+        - {x: 52, y: -5}
+        - {x: 46, y: 14}
+        - {x: 20, y: 14}
+        - {x: -54, y: -35}
+        - {x: -73, y: -69}
+        - {x: -73, y: -135}
+        - {x: -3, y: -135}
+        - {x: -5, y: -124}
+        - {x: -7, y: -118}
+        - {x: -4, y: -123}
+    - name: 2CrouchBlock0010
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 722
+        width: 133
+        height: 154
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0.8766234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: -123}
+        - {x: 1, y: -126}
+        - {x: 27, y: -126}
+        - {x: 55, y: -95}
+        - {x: 55, y: 16}
+        - {x: 15, y: 16}
+        - {x: 1, y: 4}
+        - {x: -73, y: -64}
+        - {x: -73, y: -135}
+        - {x: -38, y: -135}
+        - {x: -9, y: -133}
+        - {x: 0, y: -130}
+        - {x: -9, y: -114}
+    - name: 2CrouchBlock0011
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 714
+        width: 137
+        height: 162
+      alignment: 9
+      pivot: {x: 0.55474454, y: 0.8333333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: -126}
+        - {x: 15, y: -135}
+        - {x: 58, y: -135}
+        - {x: 60, y: -128}
+        - {x: 60, y: -21}
+        - {x: 55, y: -1}
+        - {x: 48, y: 16}
+        - {x: -3, y: 16}
+        - {x: -74, y: -35}
+        - {x: -74, y: -135}
+        - {x: -2, y: -135}
+        - {x: -2, y: -131}
+        - {x: -4, y: -122}
+        - {x: -4, y: -123}
+    - name: 2CrouchBlock0012
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 719
+        width: 141
+        height: 157
+      alignment: 9
+      pivot: {x: 0.53900707, y: 0.85987264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: -135}
+        - {x: 35, y: -135}
+        - {x: 50, y: -64}
+        - {x: 62, y: -61}
+        - {x: 63, y: -59}
+        - {x: 63, y: -13}
+        - {x: 43, y: 15}
+        - {x: 17, y: 15}
+        - {x: 0, y: 1}
+        - {x: -51, y: -47}
+        - {x: -74, y: -72}
+        - {x: -74, y: -135}
+        - {x: -2, y: -135}
+        - {x: -1, y: -130}
+        - {x: -19, y: -108}
+        - {x: 0, y: -127}
+    - name: 2CrouchBlock0013
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 724
+        width: 141
+        height: 152
+      alignment: 9
+      pivot: {x: 0.5319149, y: 0.8881579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 14}
+        - {x: -73, y: -54}
+        - {x: -73, y: -133}
+        - {x: -71, y: -135}
+        - {x: 64, y: -135}
+        - {x: 64, y: 14}
+    - name: 2CrouchBlock0014
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 564
+        width: 140
+        height: 148
+      alignment: 9
+      pivot: {x: 0.5285714, y: 0.9121622}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 12}
+        - {x: -1, y: 6}
+        - {x: -73, y: -71}
+        - {x: -73, y: -79}
+        - {x: -65, y: -88}
+        - {x: -67, y: -98}
+        - {x: -67, y: -102}
+        - {x: -64, y: -103}
+        - {x: -58, y: -100}
+        - {x: -70, y: -129}
+        - {x: -70, y: -135}
+        - {x: 65, y: -135}
+        - {x: 65, y: 11}
+        - {x: 63, y: 12}
+    - name: 2CrouchBlock0015
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 566
+        width: 139
+        height: 146
+      alignment: 9
+      pivot: {x: 0.52517986, y: 0.9246575}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: -132}
+        - {x: -2, y: -131}
+        - {x: 27, y: -126}
+        - {x: 65, y: -96}
+        - {x: 65, y: -22}
+        - {x: 56, y: 9}
+        - {x: 13, y: 9}
+        - {x: -72, y: -52}
+        - {x: -72, y: -129}
+        - {x: -70, y: -135}
+        - {x: -15, y: -135}
+    - name: 2CrouchBlock0016
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 570
+        width: 138
+        height: 142
+      alignment: 9
+      pivot: {x: 0.5217391, y: 0.9507042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: -69}
+        - {x: 17, y: -49}
+        - {x: 63, y: -86}
+        - {x: 65, y: -79}
+        - {x: 65, y: -7}
+        - {x: 55, y: 6}
+        - {x: 34, y: 6}
+        - {x: 1, y: 2}
+        - {x: -71, y: -60}
+        - {x: -71, y: -135}
+        - {x: -10, y: -135}
+        - {x: 27, y: -126}
+        - {x: 31, y: -118}
+        - {x: 37, y: -72}
+    - name: 2CrouchBlock0017
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 574
+        width: 138
+        height: 138
+      alignment: 9
+      pivot: {x: 0.5217391, y: 0.9782609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33, y: -68}
+        - {x: 63, y: -91}
+        - {x: 65, y: -78}
+        - {x: 65, y: 0}
+        - {x: 64, y: 2}
+        - {x: -3, y: 2}
+        - {x: -70, y: -54}
+        - {x: -70, y: -135}
+        - {x: 9, y: -135}
+        - {x: 23, y: -132}
+        - {x: 32, y: -118}
+        - {x: 41, y: -84}
+    - name: 2CrouchBlock0018
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 573
+        width: 137
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5328467, y: 0.971223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 0}
+        - {x: -70, y: -50}
+        - {x: -70, y: -135}
+        - {x: 48, y: -135}
+        - {x: 64, y: -122}
+        - {x: 64, y: 0}
+    - name: 2CrouchBlock0019
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 575
+        width: 136
+        height: 137
+      alignment: 9
+      pivot: {x: 0.5294118, y: 0.98540145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 64, y: -91}
+        - {x: 64, y: -2}
+        - {x: -46, y: -2}
+        - {x: -70, y: -51}
+        - {x: -70, y: -135}
+        - {x: -33, y: -135}
+        - {x: -33, y: -130}
+        - {x: 20, y: -135}
+        - {x: 24, y: -135}
+    - name: 2CrouchBlock0020
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 576
+        width: 138
+        height: 136
+      alignment: 9
+      pivot: {x: 0.5217391, y: 0.99264705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 34, y: -73}
+        - {x: 28, y: -71}
+        - {x: 23, y: -70}
+        - {x: 46, y: -51}
+        - {x: 53, y: -86}
+        - {x: 59, y: -84}
+        - {x: 66, y: -67}
+        - {x: 66, y: -3}
+        - {x: -44, y: -3}
+        - {x: -70, y: -37}
+        - {x: -70, y: -135}
+        - {x: 11, y: -135}
+        - {x: 49, y: -113}
+        - {x: 41, y: -87}
+        - {x: 37, y: -77}
+    - name: 2CrouchBlock0021
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 425
+        width: 144
+        height: 137
+      alignment: 9
+      pivot: {x: 0.5208333, y: 0.98540145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 66, y: -84}
+        - {x: 68, y: -71}
+        - {x: 68, y: -4}
+        - {x: -19, y: -4}
+        - {x: -70, y: -29}
+        - {x: -70, y: -135}
+        - {x: -34, y: -135}
+        - {x: -33, y: -128}
+        - {x: -1, y: -129}
+        - {x: 27, y: -126}
+    - name: 2CrouchBlock0022
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 426
+        width: 143
+        height: 136
+      alignment: 9
+      pivot: {x: 0.5314685, y: 0.99264705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: -4}
+        - {x: -70, y: -47}
+        - {x: -70, y: -135}
+        - {x: 58, y: -135}
+        - {x: 67, y: -68}
+        - {x: 67, y: -4}
+    - name: 2CrouchBlock0023
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 424
+        width: 141
+        height: 138
+      alignment: 9
+      pivot: {x: 0.5106383, y: 0.9782609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: -122}
+        - {x: -1, y: -129}
+        - {x: 27, y: -126}
+        - {x: 30, y: -118}
+        - {x: 24, y: -114}
+        - {x: 36, y: -94}
+        - {x: 40, y: -77}
+        - {x: 36, y: -73}
+        - {x: 61, y: -87}
+        - {x: 68, y: -66}
+        - {x: 68, y: -4}
+        - {x: -7, y: -4}
+        - {x: -70, y: -59}
+        - {x: -70, y: -92}
+        - {x: -65, y: -93}
+        - {x: -70, y: -123}
+        - {x: -70, y: -135}
+        - {x: -53, y: -135}
+        - {x: -51, y: -129}
+        - {x: -31, y: -133}
+        - {x: -29, y: -131}
+    - name: 2CrouchBlock0024
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 423
+        width: 139
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5179856, y: 0.971223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: -4}
+        - {x: -69, y: -58}
+        - {x: -70, y: -65}
+        - {x: -70, y: -135}
+        - {x: 63, y: -135}
+        - {x: 67, y: -132}
+        - {x: 67, y: -4}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

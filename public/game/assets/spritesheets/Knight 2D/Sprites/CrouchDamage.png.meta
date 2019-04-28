@@ -1,0 +1,523 @@
+fileFormatVersion: 2
+guid: 8d5c319b3b36a2646aeaaf9636fc2742
+timeCreated: 1478973283
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CrouchDamage0000
+    21300002: CrouchDamage0001
+    21300004: CrouchDamage0002
+    21300006: CrouchDamage0003
+    21300008: CrouchDamage0004
+    21300010: CrouchDamage0005
+    21300012: CrouchDamage0006
+    21300014: CrouchDamage0007
+    21300016: CrouchDamage0008
+    21300018: CrouchDamage0009
+    21300020: CrouchDamage0010
+    21300022: CrouchDamage0011
+    21300024: CrouchDamage0012
+    21300026: CrouchDamage0013
+    21300028: CrouchDamage0014
+    21300030: CrouchDamage0015
+    21300032: CrouchDamage0016
+    21300034: CrouchDamage0017
+    21300036: CrouchDamage0018
+    21300038: CrouchDamage0019
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CrouchDamage0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 889
+        width: 120
+        height: 134
+      alignment: 9
+      pivot: {x: 0.425, y: 1.0074627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: -6}
+        - {x: -51, y: -50}
+        - {x: -51, y: -135}
+        - {x: 59, y: -135}
+        - {x: 59, y: -30}
+        - {x: 42, y: -6}
+    - name: CrouchDamage0001
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 887
+        width: 122
+        height: 136
+      alignment: 9
+      pivot: {x: 0.43442622, y: 0.99264705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: -129}
+        - {x: 64, y: -128}
+        - {x: 64, y: -39}
+        - {x: 39, y: -11}
+        - {x: 25, y: -6}
+        - {x: -1, y: -6}
+        - {x: -19, y: -21}
+        - {x: -51, y: -72}
+        - {x: -51, y: -101}
+        - {x: -46, y: -124}
+        - {x: -42, y: -135}
+        - {x: -21, y: -135}
+        - {x: 2, y: -122}
+        - {x: -1, y: -112}
+        - {x: 26, y: -122}
+    - name: CrouchDamage0002
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 887
+        width: 121
+        height: 136
+      alignment: 9
+      pivot: {x: 0.42975205, y: 0.99264705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: -129}
+        - {x: 67, y: -128}
+        - {x: 67, y: -49}
+        - {x: 23, y: -5}
+        - {x: -5, y: -5}
+        - {x: -44, y: -16}
+        - {x: -51, y: -67}
+        - {x: -51, y: -135}
+        - {x: -26, y: -135}
+        - {x: -25, y: -131}
+        - {x: 4, y: -132}
+        - {x: 5, y: -123}
+    - name: CrouchDamage0003
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 886
+        width: 123
+        height: 137
+      alignment: 9
+      pivot: {x: 0.42276424, y: 0.98540145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 69, y: -51}
+        - {x: 30, y: -10}
+        - {x: 15, y: -3}
+        - {x: 0, y: -3}
+        - {x: -31, y: -34}
+        - {x: -50, y: -72}
+        - {x: -50, y: -118}
+        - {x: -46, y: -135}
+        - {x: 69, y: -135}
+    - name: CrouchDamage0004
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 750
+        width: 124
+        height: 134
+      alignment: 9
+      pivot: {x: 0.41935483, y: 1.0074627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 69, y: -55}
+        - {x: 69, y: -49}
+        - {x: 22, y: -1}
+        - {x: -14, y: -1}
+        - {x: -50, y: -21}
+        - {x: -50, y: -135}
+        - {x: 36, y: -135}
+        - {x: 58, y: -126}
+        - {x: 60, y: -118}
+        - {x: 52, y: -111}
+    - name: CrouchDamage0005
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 746
+        width: 123
+        height: 138
+      alignment: 9
+      pivot: {x: 0.42276424, y: 0.9782609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 1}
+        - {x: -50, y: -52}
+        - {x: -50, y: -135}
+        - {x: 51, y: -135}
+        - {x: 69, y: -125}
+        - {x: 69, y: -20}
+        - {x: 59, y: 1}
+    - name: CrouchDamage0006
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 746
+        width: 123
+        height: 138
+      alignment: 9
+      pivot: {x: 0.41463414, y: 0.9782609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17, y: -118}
+        - {x: 30, y: -125}
+        - {x: 58, y: -126}
+        - {x: 60, y: -118}
+        - {x: 70, y: -66}
+        - {x: 70, y: -34}
+        - {x: 69, y: -31}
+        - {x: 13, y: 2}
+        - {x: -20, y: 2}
+        - {x: -34, y: -16}
+        - {x: -50, y: -66}
+        - {x: -50, y: -108}
+        - {x: -45, y: -135}
+        - {x: -26, y: -135}
+        - {x: -25, y: -131}
+        - {x: 17, y: -128}
+        - {x: 20, y: -126}
+    - name: CrouchDamage0007
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 743
+        width: 122
+        height: 141
+      alignment: 9
+      pivot: {x: 0.39344263, y: 0.9574468}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: -97}
+        - {x: 26, y: -95}
+        - {x: 28, y: -121}
+        - {x: 30, y: -125}
+        - {x: 58, y: -126}
+        - {x: 71, y: -74}
+        - {x: 71, y: -28}
+        - {x: 14, y: 2}
+        - {x: -32, y: 2}
+        - {x: -48, y: -54}
+        - {x: -48, y: -124}
+        - {x: -44, y: -134}
+        - {x: -42, y: -135}
+        - {x: -26, y: -135}
+        - {x: -24, y: -131}
+        - {x: 27, y: -114}
+        - {x: 20, y: -103}
+    - name: CrouchDamage0008
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 597
+        width: 127
+        height: 144
+      alignment: 9
+      pivot: {x: 0.40944883, y: 0.9375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27, y: -102}
+        - {x: 19, y: -96}
+        - {x: 28, y: -100}
+        - {x: 28, y: -121}
+        - {x: 30, y: -125}
+        - {x: 65, y: -134}
+        - {x: 71, y: -52}
+        - {x: 71, y: -29}
+        - {x: 64, y: -25}
+        - {x: 39, y: -16}
+        - {x: 27, y: -11}
+        - {x: -3, y: 3}
+        - {x: -29, y: 3}
+        - {x: -43, y: -26}
+        - {x: -49, y: -55}
+        - {x: -49, y: -120}
+        - {x: -45, y: -135}
+        - {x: -26, y: -135}
+        - {x: -24, y: -131}
+        - {x: 22, y: -109}
+        - {x: 28, y: -105}
+    - name: CrouchDamage0009
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 596
+        width: 124
+        height: 145
+      alignment: 9
+      pivot: {x: 0.41935483, y: 0.9310345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: 3}
+        - {x: -50, y: -24}
+        - {x: -50, y: -112}
+        - {x: -47, y: -135}
+        - {x: 52, y: -135}
+        - {x: 64, y: -134}
+        - {x: 71, y: -130}
+        - {x: 71, y: -20}
+        - {x: 53, y: 3}
+    - name: CrouchDamage0010
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 602
+        width: 124
+        height: 139
+      alignment: 9
+      pivot: {x: 0.41129032, y: 0.971223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 3}
+        - {x: -50, y: -54}
+        - {x: -50, y: -135}
+        - {x: 71, y: -135}
+        - {x: 71, y: -16}
+        - {x: 24, y: 3}
+    - name: CrouchDamage0011
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 602
+        width: 129
+        height: 139
+      alignment: 9
+      pivot: {x: 0.42635658, y: 0.971223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 72, y: -24}
+        - {x: 6, y: 3}
+        - {x: -10, y: 3}
+        - {x: -20, y: -8}
+        - {x: -32, y: -33}
+        - {x: -51, y: -59}
+        - {x: -51, y: -135}
+        - {x: 67, y: -135}
+        - {x: 60, y: -118}
+        - {x: 52, y: -111}
+        - {x: 72, y: -43}
+    - name: CrouchDamage0012
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 455
+        width: 127
+        height: 139
+      alignment: 9
+      pivot: {x: 0.41732284, y: 0.971223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 2}
+        - {x: -38, y: 0}
+        - {x: -51, y: -49}
+        - {x: -51, y: -135}
+        - {x: 63, y: -135}
+        - {x: 72, y: -94}
+        - {x: 72, y: -24}
+        - {x: 25, y: 2}
+    - name: CrouchDamage0013
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 454
+        width: 127
+        height: 140
+      alignment: 9
+      pivot: {x: 0.42519686, y: 0.96428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 34, y: 0}
+        - {x: -14, y: 0}
+        - {x: -52, y: -55}
+        - {x: -52, y: -120}
+        - {x: -46, y: -135}
+        - {x: -15, y: -135}
+        - {x: 69, y: -129}
+        - {x: 72, y: -67}
+        - {x: 72, y: -18}
+    - name: CrouchDamage0014
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 462
+        width: 126
+        height: 132
+      alignment: 9
+      pivot: {x: 0.42857143, y: 1.0227273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -3}
+        - {x: -13, y: -3}
+        - {x: -38, y: -20}
+        - {x: -52, y: -75}
+        - {x: -52, y: -132}
+        - {x: -49, y: -135}
+        - {x: -17, y: -135}
+        - {x: 70, y: -128}
+        - {x: 70, y: -22}
+    - name: CrouchDamage0015
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 462
+        width: 123
+        height: 132
+      alignment: 9
+      pivot: {x: 0.43089432, y: 1.0227273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25, y: -3}
+        - {x: -2, y: -3}
+        - {x: -52, y: -60}
+        - {x: -52, y: -116}
+        - {x: -48, y: -135}
+        - {x: 13, y: -135}
+        - {x: 66, y: -126}
+        - {x: 68, y: -92}
+        - {x: 68, y: -27}
+    - name: CrouchDamage0016
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 315
+        width: 123
+        height: 137
+      alignment: 9
+      pivot: {x: 0.4390244, y: 0.98540145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: -122}
+        - {x: 46, y: -129}
+        - {x: 66, y: -126}
+        - {x: 66, y: -29}
+        - {x: 27, y: -4}
+        - {x: -2, y: -4}
+        - {x: -52, y: -69}
+        - {x: -52, y: -104}
+        - {x: -44, y: -133}
+        - {x: -42, y: -135}
+        - {x: -26, y: -135}
+        - {x: -24, y: -131}
+        - {x: 10, y: -113}
+        - {x: 21, y: -104}
+    - name: CrouchDamage0017
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 318
+        width: 120
+        height: 134
+      alignment: 9
+      pivot: {x: 0.44166666, y: 1.0074627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: -123}
+        - {x: 46, y: -129}
+        - {x: 61, y: -124}
+        - {x: 57, y: -110}
+        - {x: 63, y: -82}
+        - {x: 64, y: -72}
+        - {x: 64, y: -43}
+        - {x: 30, y: -5}
+        - {x: 0, y: -5}
+        - {x: -52, y: -67}
+        - {x: -52, y: -112}
+        - {x: -46, y: -134}
+        - {x: -43, y: -135}
+        - {x: -26, y: -135}
+        - {x: -24, y: -131}
+        - {x: 9, y: -113}
+        - {x: 5, y: -104}
+    - name: CrouchDamage0018
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 319
+        width: 120
+        height: 133
+      alignment: 9
+      pivot: {x: 0.44166666, y: 1.0150375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -6}
+        - {x: -52, y: -63}
+        - {x: -52, y: -116}
+        - {x: -50, y: -125}
+        - {x: -41, y: -135}
+        - {x: 62, y: -135}
+        - {x: 62, y: -25}
+        - {x: 29, y: -6}
+    - name: CrouchDamage0019
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 318
+        width: 120
+        height: 134
+      alignment: 9
+      pivot: {x: 0.425, y: 1.0074627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: -127}
+        - {x: 59, y: -45}
+        - {x: 28, y: -6}
+        - {x: 3, y: -6}
+        - {x: -23, y: -22}
+        - {x: -51, y: -67}
+        - {x: -51, y: -105}
+        - {x: -44, y: -135}
+        - {x: -26, y: -135}
+        - {x: -25, y: -131}
+        - {x: 9, y: -135}
+        - {x: 52, y: -135}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

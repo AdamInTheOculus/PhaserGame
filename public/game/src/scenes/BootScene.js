@@ -36,10 +36,25 @@ class BootScene extends Phaser.Scene {
       this.load.spritesheet('dude', 'game/assets/spritesheets/dude.png', {          // Load spritesheet for player
           frameWidth: 32, frameHeight: 48
       });
+      this.load.spritesheet('enemy', 'game/assets/spritesheets/dude_blue.png', {          // Load spritesheet for player
+          frameWidth: 32, frameHeight: 48
+      });
 
       this.load.atlas('map_atlas', 'game/assets/tilesets/map.png', 'game/assets/tilesets/map.json');
 
       this.load.bitmapFont('font', 'game/assets/fonts/font.png', 'game/assets/fonts/font.fnt');
+
+      //
+      // Spells
+      //
+      this.load.spritesheet('fireball', 'game/assets/spritesheets/fireball.png', {            // Load spritesheet for player.
+          frameWidth: 134, frameHeight: 134
+      });
+      this.load.spritesheet('iceball', 'game/assets/spritesheets/ice.png', {            // Load spritesheet for player.
+          frameWidth: 192, frameHeight: 192
+      });
+      this.load.image('fireball_spell_icon', 'game/assets/icons/fireball_spell_icon.png');
+      this.load.image('iceball_spell_icon', 'game/assets/icons/ice_spell_icon.png');
     }
 }
 

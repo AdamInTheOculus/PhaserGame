@@ -1,0 +1,411 @@
+fileFormatVersion: 2
+guid: 17b9ffc50a3716844848e70eaf9f4ea7
+timeCreated: 1478962701
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SheathSword0000
+    21300002: SheathSword0001
+    21300004: SheathSword0002
+    21300006: SheathSword0003
+    21300008: SheathSword0004
+    21300010: SheathSword0005
+    21300012: SheathSword0006
+    21300014: SheathSword0007
+    21300016: SheathSword0008
+    21300018: SheathSword0009
+    21300020: SheathSword0010
+    21300022: SheathSword0011
+    21300024: SheathSword0012
+    21300026: SheathSword0013
+    21300028: SheathSword0014
+    21300030: SheathSword0015
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: SheathSword0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 827
+        width: 132
+        height: 196
+      alignment: 9
+      pivot: {x: 0.4090909, y: 0.68367344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 62}
+        - {x: -25, y: 62}
+        - {x: -34, y: 61}
+        - {x: -43, y: 29}
+        - {x: -53, y: -1}
+        - {x: -53, y: -49}
+        - {x: -37, y: -134}
+        - {x: 0, y: -134}
+        - {x: 13, y: -122}
+        - {x: 78, y: -71}
+        - {x: 78, y: -33}
+    - name: SheathSword0001
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 827
+        width: 131
+        height: 196
+      alignment: 9
+      pivot: {x: 0.41984734, y: 0.68367344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: 62}
+        - {x: -33, y: 62}
+        - {x: -36, y: 60}
+        - {x: -54, y: 10}
+        - {x: -54, y: -54}
+        - {x: -36, y: -133}
+        - {x: -30, y: -134}
+        - {x: 3, y: -134}
+        - {x: 65, y: -81}
+        - {x: 76, y: -57}
+        - {x: 76, y: 38}
+    - name: SheathSword0002
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 821
+        width: 133
+        height: 202
+      alignment: 9
+      pivot: {x: 0.42105263, y: 0.6633663}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 62}
+        - {x: -33, y: 62}
+        - {x: -55, y: -2}
+        - {x: -55, y: -44}
+        - {x: -33, y: -130}
+        - {x: -23, y: -134}
+        - {x: 0, y: -134}
+        - {x: 14, y: -123}
+        - {x: 73, y: -52}
+        - {x: 73, y: -15}
+    - name: SheathSword0003
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 616
+        width: 137
+        height: 203
+      alignment: 9
+      pivot: {x: 0.40145984, y: 0.66502464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 62}
+        - {x: -55, y: 23}
+        - {x: -55, y: -83}
+        - {x: -31, y: -134}
+        - {x: 17, y: -134}
+        - {x: 31, y: -127}
+        - {x: 71, y: -43}
+        - {x: 71, y: -15}
+        - {x: -7, y: 62}
+    - name: SheathSword0004
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 621
+        width: 127
+        height: 198
+      alignment: 9
+      pivot: {x: 0.4488189, y: 0.67676765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54, y: 61}
+        - {x: -34, y: 61}
+        - {x: -35, y: 59}
+        - {x: -54, y: -19}
+        - {x: -54, y: -23}
+        - {x: -44, y: -31}
+        - {x: -33, y: -130}
+        - {x: -23, y: -134}
+        - {x: 0, y: -134}
+        - {x: 14, y: -123}
+        - {x: 70, y: -78}
+        - {x: 70, y: 19}
+    - name: SheathSword0005
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 624
+        width: 111
+        height: 195
+      alignment: 9
+      pivot: {x: 0.4774775, y: 0.6871795}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 58, y: -48}
+        - {x: 58, y: 26}
+        - {x: 10, y: 61}
+        - {x: -42, y: 61}
+        - {x: -53, y: -3}
+        - {x: -53, y: -41}
+        - {x: -31, y: -134}
+        - {x: 2, y: -134}
+        - {x: 9, y: -128}
+        - {x: 13, y: -117}
+        - {x: 6, y: -113}
+    - name: SheathSword0006
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 621
+        width: 94
+        height: 198
+      alignment: 9
+      pivot: {x: 0.5531915, y: 0.67676765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: 39}
+        - {x: 17, y: 27}
+        - {x: 2, y: 59}
+        - {x: -2, y: 61}
+        - {x: -38, y: 61}
+        - {x: -50, y: 16}
+        - {x: -50, y: -96}
+        - {x: -46, y: -117}
+        - {x: -32, y: -134}
+        - {x: 6, y: -134}
+        - {x: 11, y: -130}
+        - {x: 13, y: -117}
+        - {x: 36, y: 25}
+    - name: SheathSword0007
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 412
+        width: 73
+        height: 202
+      alignment: 9
+      pivot: {x: 0.65753424, y: 0.6633663}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 60}
+        - {x: -47, y: 60}
+        - {x: -47, y: -134}
+        - {x: 5, y: -134}
+        - {x: 17, y: -124}
+        - {x: 24, y: -48}
+        - {x: 24, y: 24}
+    - name: SheathSword0008
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 417
+        width: 73
+        height: 197
+      alignment: 9
+      pivot: {x: 0.5890411, y: 0.6852792}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 60}
+        - {x: -42, y: 46}
+        - {x: -42, y: -103}
+        - {x: -32, y: -134}
+        - {x: 19, y: -134}
+        - {x: 28, y: -127}
+        - {x: 28, y: 48}
+        - {x: -9, y: 60}
+    - name: SheathSword0009
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 415
+        width: 77
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0.67839193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 59}
+        - {x: -44, y: 17}
+        - {x: -44, y: -31}
+        - {x: -33, y: -130}
+        - {x: -25, y: -134}
+        - {x: 16, y: -134}
+        - {x: 32, y: -72}
+        - {x: 32, y: 39}
+        - {x: -5, y: 59}
+    - name: SheathSword0010
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 422
+        width: 111
+        height: 192
+      alignment: 9
+      pivot: {x: 0.6576577, y: 0.6979167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: 5}
+        - {x: 32, y: 22}
+        - {x: -6, y: 58}
+        - {x: -42, y: 58}
+        - {x: -58, y: 9}
+        - {x: -58, y: -56}
+        - {x: -34, y: -131}
+        - {x: -25, y: -134}
+        - {x: 0, y: -134}
+        - {x: 10, y: -129}
+        - {x: 18, y: -115}
+        - {x: 36, y: -46}
+    - name: SheathSword0011
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 416
+        width: 118
+        height: 198
+      alignment: 9
+      pivot: {x: 0.65254235, y: 0.67676765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 58}
+        - {x: -69, y: -17}
+        - {x: -69, y: -54}
+        - {x: -37, y: -133}
+        - {x: -33, y: -134}
+        - {x: 15, y: -134}
+        - {x: 40, y: -25}
+        - {x: 40, y: -5}
+        - {x: 10, y: 58}
+    - name: SheathSword0012
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 214
+        width: 129
+        height: 196
+      alignment: 9
+      pivot: {x: 0.65891474, y: 0.68367344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: 58}
+        - {x: -76, y: -9}
+        - {x: -76, y: -62}
+        - {x: -34, y: -131}
+        - {x: -29, y: -134}
+        - {x: -1, y: -134}
+        - {x: 11, y: -130}
+        - {x: 42, y: -112}
+        - {x: 42, y: 10}
+        - {x: 31, y: 58}
+    - name: SheathSword0013
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 218
+        width: 124
+        height: 192
+      alignment: 9
+      pivot: {x: 0.63709676, y: 0.6979167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 57}
+        - {x: -79, y: -12}
+        - {x: -79, y: -63}
+        - {x: -33, y: -134}
+        - {x: 6, y: -134}
+        - {x: 44, y: -112}
+        - {x: 44, y: 37}
+        - {x: 41, y: 57}
+    - name: SheathSword0014
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 214
+        width: 127
+        height: 196
+      alignment: 9
+      pivot: {x: 0.6456693, y: 0.6785714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 57}
+        - {x: -25, y: 57}
+        - {x: -38, y: 31}
+        - {x: -40, y: 24}
+        - {x: -81, y: -11}
+        - {x: -81, y: -61}
+        - {x: -33, y: -129}
+        - {x: -29, y: -133}
+        - {x: 19, y: -133}
+        - {x: 44, y: -48}
+        - {x: 44, y: 19}
+    - name: SheathSword0015
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 219
+        width: 123
+        height: 191
+      alignment: 9
+      pivot: {x: 0.6504065, y: 0.7015707}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 56}
+        - {x: 1, y: 57}
+        - {x: -37, y: 57}
+        - {x: -80, y: -5}
+        - {x: -80, y: -59}
+        - {x: -35, y: -129}
+        - {x: -32, y: -134}
+        - {x: 24, y: -134}
+        - {x: 42, y: -105}
+        - {x: 42, y: 5}
+        - {x: 35, y: 11}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1711 @@
+fileFormatVersion: 2
+guid: 0da0e4c5c796bc04fb6586e1e6a1d798
+timeCreated: 1478983400
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 4Slash0000
+    21300002: 4Slash0001
+    21300004: 4Slash0002
+    21300006: 4Slash0003
+    21300008: 4Slash0004
+    21300010: 4Slash0005
+    21300012: 4Slash0006
+    21300014: 4Slash0007
+    21300016: 4Slash0008
+    21300018: 4Slash0009
+    21300020: 4Slash0010
+    21300022: 4Slash0011
+    21300024: 4Slash0012
+    21300026: 4Slash0013
+    21300028: 4Slash0014
+    21300030: 4Slash0015
+    21300032: 4Slash0016
+    21300034: 4Slash0017
+    21300036: 4Slash0018
+    21300038: 4Slash0019
+    21300040: 4Slash0020
+    21300042: 4Slash0021
+    21300044: 4Slash0022
+    21300046: 4Slash0023
+    21300048: 4Slash0024
+    21300050: 4Slash0025
+    21300052: 4Slash0026
+    21300054: 4Slash0027
+    21300056: 4Slash0028
+    21300058: 4Slash0029
+    21300060: 4Slash0030
+    21300062: 4Slash0031
+    21300064: 4Slash0032
+    21300066: 4Slash0033
+    21300068: 4Slash0034
+    21300070: 4Slash0035
+    21300072: 4Slash0036
+    21300074: 4Slash0037
+    21300076: 4Slash0038
+    21300078: 4Slash0039
+    21300080: 4Slash0040
+    21300082: 4Slash0041
+    21300084: 4Slash0042
+    21300086: 4Slash0043
+    21300088: 4Slash0044
+    21300090: 4Slash0045
+    21300092: 4Slash0046
+    21300094: 4Slash0047
+    21300096: 4Slash0048
+    21300098: 4Slash0049
+    21300100: 4Slash0050
+    21300102: 4Slash0051
+    21300104: 4Slash0052
+    21300106: 4Slash0053
+    21300108: 4Slash0054
+    21300110: 4Slash0055
+    21300112: 4Slash0056
+    21300114: 4Slash0057
+    21300116: 4Slash0058
+    21300118: 4Slash0059
+    21300120: 4Slash0060
+    21300122: 4Slash0061
+    21300124: 4Slash0062
+    21300126: 4Slash0063
+    21300128: 4Slash0064
+    21300130: 4Slash0065
+    21300132: 4Slash0066
+    21300134: 4Slash0067
+    21300136: 4Slash0068
+    21300138: 4Slash0069
+    21300140: 4Slash0070
+    21300142: 4Slash0071
+    21300144: 4Slash0072
+    21300146: 4Slash0073
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 4Slash0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 832
+        width: 116
+        height: 191
+      alignment: 9
+      pivot: {x: 0.61206895, y: 0.7068063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: 49}
+        - {x: 37, y: 55}
+        - {x: -25, y: 55}
+        - {x: -66, y: -13}
+        - {x: -71, y: -52}
+        - {x: -71, y: -135}
+        - {x: 24, y: -135}
+        - {x: 45, y: -131}
+        - {x: 45, y: 18}
+        - {x: 39, y: 21}
+        - {x: 19, y: 23}
+    - name: 4Slash0001
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 838
+        width: 116
+        height: 185
+      alignment: 9
+      pivot: {x: 0.61206895, y: 0.7297297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: -113}
+        - {x: 34, y: -67}
+        - {x: 9, y: -40}
+        - {x: 24, y: -57}
+        - {x: 39, y: -61}
+        - {x: 45, y: -42}
+        - {x: 45, y: 49}
+        - {x: -36, y: 49}
+        - {x: -59, y: -5}
+        - {x: -71, y: -121}
+        - {x: -71, y: -135}
+        - {x: -26, y: -135}
+        - {x: 31, y: -132}
+        - {x: 45, y: -127}
+        - {x: 45, y: -116}
+    - name: 4Slash0002
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 840
+        width: 118
+        height: 183
+      alignment: 9
+      pivot: {x: 0.60169494, y: 0.73770493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: -115}
+        - {x: 33, y: -68}
+        - {x: 27, y: -61}
+        - {x: 21, y: -55}
+        - {x: 19, y: -51}
+        - {x: 13, y: -44}
+        - {x: 19, y: -52}
+        - {x: 22, y: -55}
+        - {x: 25, y: -57}
+        - {x: 45, y: -31}
+        - {x: 47, y: -27}
+        - {x: 47, y: 48}
+        - {x: -28, y: 48}
+        - {x: -71, y: -6}
+        - {x: -71, y: -135}
+        - {x: -35, y: -135}
+        - {x: 43, y: -132}
+        - {x: 47, y: -122}
+        - {x: 47, y: -118}
+    - name: 4Slash0003
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 839
+        width: 121
+        height: 184
+      alignment: 9
+      pivot: {x: 0.58677685, y: 0.7336956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: 49}
+        - {x: -71, y: -28}
+        - {x: -71, y: -135}
+        - {x: -37, y: -135}
+        - {x: 50, y: -131}
+        - {x: 50, y: 49}
+    - name: 4Slash0004
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 837
+        width: 126
+        height: 186
+      alignment: 9
+      pivot: {x: 0.56349206, y: 0.7258065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -71, y: 51}
+        - {x: -71, y: -135}
+        - {x: 37, y: -135}
+        - {x: 54, y: -125}
+        - {x: 54, y: 51}
+    - name: 4Slash0005
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 836
+        width: 117
+        height: 187
+      alignment: 9
+      pivot: {x: 0.52991456, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 52}
+        - {x: -62, y: -15}
+        - {x: -62, y: -135}
+        - {x: 55, y: -135}
+        - {x: 55, y: 51}
+        - {x: 53, y: 52}
+    - name: 4Slash0006
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 838
+        width: 108
+        height: 185
+      alignment: 9
+      pivot: {x: 0.46296296, y: 0.7189189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: -128}
+        - {x: 48, y: -119}
+        - {x: 57, y: -51}
+        - {x: 57, y: 41}
+        - {x: 37, y: 52}
+        - {x: -19, y: 52}
+        - {x: -49, y: 24}
+        - {x: -50, y: -17}
+        - {x: -50, y: -133}
+        - {x: -36, y: -133}
+        - {x: -35, y: -132}
+        - {x: -31, y: -122}
+        - {x: 17, y: -132}
+    - name: 4Slash0007
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 837
+        width: 98
+        height: 186
+      alignment: 9
+      pivot: {x: 0.42857143, y: 0.72043014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 52}
+        - {x: -42, y: 0}
+        - {x: -42, y: -134}
+        - {x: 56, y: -134}
+        - {x: 56, y: 48}
+        - {x: 38, y: 52}
+    - name: 4Slash0008
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 835
+        width: 91
+        height: 188
+      alignment: 9
+      pivot: {x: 0.36263737, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 53}
+        - {x: -33, y: -24}
+        - {x: -33, y: -135}
+        - {x: 37, y: -135}
+        - {x: 48, y: -134}
+        - {x: 58, y: -31}
+        - {x: 58, y: 39}
+        - {x: 16, y: 53}
+    - name: 4Slash0009
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 838
+        width: 91
+        height: 185
+      alignment: 9
+      pivot: {x: 0.36263737, y: 0.7297297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 50}
+        - {x: -33, y: 22}
+        - {x: -33, y: -135}
+        - {x: 58, y: -135}
+        - {x: 58, y: 47}
+        - {x: 52, y: 50}
+    - name: 4Slash0010
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 839
+        width: 93
+        height: 184
+      alignment: 9
+      pivot: {x: 0.34408602, y: 0.7336956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 49}
+        - {x: -32, y: 24}
+        - {x: -32, y: -135}
+        - {x: 58, y: -135}
+        - {x: 61, y: -124}
+        - {x: 61, y: 49}
+    - name: 4Slash0011
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 842
+        width: 97
+        height: 181
+      alignment: 9
+      pivot: {x: 0.3298969, y: 0.74585634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 56, y: 25}
+        - {x: 20, y: 46}
+        - {x: -14, y: 46}
+        - {x: -32, y: 20}
+        - {x: -32, y: -135}
+        - {x: 65, y: -135}
+        - {x: 65, y: 29}
+        - {x: 63, y: 30}
+    - name: 4Slash0012
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 845
+        width: 105
+        height: 178
+      alignment: 9
+      pivot: {x: 0.31428573, y: 0.75842696}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: 43}
+        - {x: -27, y: 43}
+        - {x: -33, y: 13}
+        - {x: -33, y: -135}
+        - {x: 62, y: -135}
+        - {x: 68, y: -96}
+        - {x: 72, y: -42}
+        - {x: 72, y: 26}
+    - name: 4Slash0013
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 847
+        width: 114
+        height: 176
+      alignment: 9
+      pivot: {x: 0.28947368, y: 0.76704544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 72, y: 13}
+        - {x: 44, y: -21}
+        - {x: 54, y: -2}
+        - {x: 57, y: 6}
+        - {x: 22, y: 41}
+        - {x: -23, y: 41}
+        - {x: -33, y: 12}
+        - {x: -33, y: -135}
+        - {x: 80, y: -135}
+        - {x: 80, y: 13}
+        - {x: 77, y: 14}
+    - name: 4Slash0014
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 849
+        width: 122
+        height: 174
+      alignment: 9
+      pivot: {x: 0.2704918, y: 0.7758621}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 60, y: -110}
+        - {x: 88, y: -47}
+        - {x: 88, y: 39}
+        - {x: -18, y: 39}
+        - {x: -33, y: -47}
+        - {x: -33, y: -135}
+        - {x: -6, y: -135}
+        - {x: -5, y: -121}
+        - {x: 38, y: -125}
+        - {x: 51, y: -123}
+    - name: 4Slash0015
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 848
+        width: 129
+        height: 175
+      alignment: 9
+      pivot: {x: 0.25581396, y: 0.7714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31, y: -127}
+        - {x: 51, y: -132}
+        - {x: 71, y: -115}
+        - {x: 96, y: -40}
+        - {x: 96, y: 25}
+        - {x: 77, y: 40}
+        - {x: -19, y: 40}
+        - {x: -33, y: -13}
+        - {x: -33, y: -135}
+        - {x: -23, y: -135}
+        - {x: -18, y: -133}
+        - {x: -8, y: -126}
+        - {x: -4, y: -90}
+    - name: 4Slash0016
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 852
+        width: 130
+        height: 171
+      alignment: 9
+      pivot: {x: 0.23846154, y: 0.7719298}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 99, y: -124}
+        - {x: 99, y: 39}
+        - {x: 1, y: 39}
+        - {x: -31, y: -8}
+        - {x: -31, y: -132}
+        - {x: -19, y: -132}
+        - {x: -8, y: -124}
+        - {x: 17, y: -132}
+        - {x: 64, y: -132}
+    - name: 4Slash0017
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 657
+        width: 154
+        height: 173
+      alignment: 9
+      pivot: {x: 0.25324675, y: 0.7630058}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 63, y: 41}
+        - {x: -10, y: 41}
+        - {x: -39, y: -15}
+        - {x: -39, y: -132}
+        - {x: 52, y: -132}
+        - {x: 101, y: -98}
+        - {x: 115, y: -70}
+        - {x: 115, y: 29}
+    - name: 4Slash0018
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 656
+        width: 167
+        height: 174
+      alignment: 9
+      pivot: {x: 0.28143713, y: 0.75287354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 73, y: 43}
+        - {x: 1, y: 43}
+        - {x: -47, y: 1}
+        - {x: -47, y: -131}
+        - {x: 64, y: -131}
+        - {x: 67, y: -126}
+        - {x: 65, y: -110}
+        - {x: 120, y: -11}
+        - {x: 120, y: 24}
+    - name: 4Slash0019
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 655
+        width: 169
+        height: 175
+      alignment: 9
+      pivot: {x: 0.2781065, y: 0.74857146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 121, y: -24}
+        - {x: 121, y: -1}
+        - {x: 110, y: 19}
+        - {x: 49, y: 44}
+        - {x: -1, y: 44}
+        - {x: -47, y: 2}
+        - {x: -47, y: -98}
+        - {x: -45, y: -99}
+        - {x: -20, y: -97}
+        - {x: 37, y: -131}
+        - {x: 60, y: -131}
+        - {x: 68, y: -127}
+        - {x: 66, y: -111}
+        - {x: 60, y: -36}
+    - name: 4Slash0020
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 650
+        width: 162
+        height: 180
+      alignment: 9
+      pivot: {x: 0.28395063, y: 0.73333335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: 48}
+        - {x: -46, y: 19}
+        - {x: -46, y: 12}
+        - {x: -39, y: -16}
+        - {x: -25, y: -18}
+        - {x: -46, y: -64}
+        - {x: -46, y: -77}
+        - {x: -45, y: -79}
+        - {x: -20, y: -82}
+        - {x: -5, y: -62}
+        - {x: 37, y: -132}
+        - {x: 97, y: -132}
+        - {x: 116, y: -100}
+        - {x: 116, y: 34}
+        - {x: 91, y: 48}
+    - name: 4Slash0021
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 643
+        width: 152
+        height: 187
+      alignment: 9
+      pivot: {x: 0.26973686, y: 0.70053476}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 111, y: 44}
+        - {x: 73, y: 56}
+        - {x: -6, y: 56}
+        - {x: -40, y: 29}
+        - {x: -33, y: -1}
+        - {x: -41, y: -32}
+        - {x: -41, y: -53}
+        - {x: -40, y: -56}
+        - {x: -15, y: -62}
+        - {x: 35, y: -131}
+        - {x: 58, y: -131}
+        - {x: 69, y: -125}
+        - {x: 97, y: -106}
+        - {x: 111, y: -70}
+    - name: 4Slash0022
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 637
+        width: 138
+        height: 193
+      alignment: 9
+      pivot: {x: 0.23188406, y: 0.6735751}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 63}
+        - {x: -30, y: 47}
+        - {x: -32, y: 41}
+        - {x: -32, y: -56}
+        - {x: 32, y: -128}
+        - {x: 34, y: -130}
+        - {x: 106, y: -130}
+        - {x: 106, y: 63}
+    - name: 4Slash0023
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 628
+        width: 131
+        height: 202
+      alignment: 9
+      pivot: {x: 0.20610687, y: 0.64851487}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 71}
+        - {x: -27, y: 11}
+        - {x: 26, y: -130}
+        - {x: 53, y: -130}
+        - {x: 56, y: -128}
+        - {x: 103, y: -25}
+        - {x: 103, y: 27}
+        - {x: 72, y: 71}
+    - name: 4Slash0024
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 623
+        width: 126
+        height: 207
+      alignment: 9
+      pivot: {x: 0.1904762, y: 0.6183575}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 79}
+        - {x: -24, y: -9}
+        - {x: 8, y: -127}
+        - {x: 55, y: -127}
+        - {x: 101, y: -33}
+        - {x: 101, y: 26}
+        - {x: 47, y: 79}
+    - name: 4Slash0025
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 628
+        width: 116
+        height: 202
+      alignment: 9
+      pivot: {x: 0.1637931, y: 0.5841584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: -118}
+        - {x: 47, y: -118}
+        - {x: 97, y: -20}
+        - {x: 97, y: 32}
+        - {x: 60, y: 84}
+        - {x: -19, y: 84}
+        - {x: -19, y: -68}
+    - name: 4Slash0026
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 629
+        width: 114
+        height: 201
+      alignment: 9
+      pivot: {x: 0.14035088, y: 0.5572139}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 89}
+        - {x: -14, y: 85}
+        - {x: -16, y: 79}
+        - {x: -16, y: 67}
+        - {x: -15, y: 64}
+        - {x: 20, y: -112}
+        - {x: 50, y: -112}
+        - {x: 96, y: -48}
+        - {x: 96, y: 55}
+        - {x: 66, y: 89}
+    - name: 4Slash0027
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 630
+        width: 103
+        height: 200
+      alignment: 9
+      pivot: {x: 0.097087376, y: 0.525}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 94}
+        - {x: -10, y: -21}
+        - {x: 12, y: -102}
+        - {x: 15, y: -105}
+        - {x: 81, y: -105}
+        - {x: 91, y: -78}
+        - {x: 91, y: 94}
+    - name: 4Slash0028
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 635
+        width: 96
+        height: 195
+      alignment: 9
+      pivot: {x: 0.072916664, y: 0.50769234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 96}
+        - {x: -6, y: -98}
+        - {x: 41, y: -98}
+        - {x: 89, y: -61}
+        - {x: 89, y: 35}
+        - {x: 72, y: 96}
+    - name: 4Slash0029
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 642
+        width: 113
+        height: 188
+      alignment: 9
+      pivot: {x: 0.088495575, y: 0.47340426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 98}
+        - {x: -10, y: 96}
+        - {x: -10, y: -89}
+        - {x: 70, y: -89}
+        - {x: 102, y: -74}
+        - {x: 102, y: 39}
+        - {x: 69, y: 98}
+    - name: 4Slash0030
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 642
+        width: 135
+        height: 188
+      alignment: 9
+      pivot: {x: 0.16296296, y: 0.4574468}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 64, y: 101}
+        - {x: -9, y: 101}
+        - {x: -22, y: 58}
+        - {x: -22, y: -29}
+        - {x: -7, y: -84}
+        - {x: 8, y: -84}
+        - {x: 15, y: -65}
+        - {x: 112, y: -63}
+        - {x: 112, y: 29}
+    - name: 4Slash0031
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 441
+        width: 154
+        height: 180
+      alignment: 9
+      pivot: {x: 0.20779221, y: 0.42777777}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 103}
+        - {x: 10, y: 86}
+        - {x: -13, y: 61}
+        - {x: -31, y: 31}
+        - {x: -31, y: 11}
+        - {x: -21, y: -77}
+        - {x: 51, y: -77}
+        - {x: 119, y: -64}
+        - {x: 119, y: 54}
+        - {x: 65, y: 103}
+    - name: 4Slash0032
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 444
+        width: 159
+        height: 177
+      alignment: 9
+      pivot: {x: 0.2327044, y: 0.4180791}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61, y: 103}
+        - {x: 5, y: 103}
+        - {x: -37, y: 53}
+        - {x: -37, y: -10}
+        - {x: -14, y: -72}
+        - {x: -8, y: -74}
+        - {x: 122, y: -74}
+        - {x: 122, y: -15}
+        - {x: 76, y: 97}
+    - name: 4Slash0033
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 438
+        width: 165
+        height: 183
+      alignment: 9
+      pivot: {x: 0.25454545, y: 0.43715847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 103}
+        - {x: -40, y: 51}
+        - {x: -40, y: 8}
+        - {x: -12, y: -80}
+        - {x: 123, y: -80}
+        - {x: 123, y: 71}
+        - {x: 75, y: 103}
+    - name: 4Slash0034
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 432
+        width: 159
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25786164, y: 0.47089946}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 100}
+        - {x: -39, y: 51}
+        - {x: -39, y: 26}
+        - {x: -4, y: -16}
+        - {x: 23, y: -12}
+        - {x: 25, y: -7}
+        - {x: 30, y: 17}
+        - {x: 31, y: 9}
+        - {x: 24, y: -12}
+        - {x: -8, y: -48}
+        - {x: -5, y: -89}
+        - {x: 118, y: -89}
+        - {x: 118, y: 36}
+        - {x: 82, y: 100}
+    - name: 4Slash0035
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 424
+        width: 148
+        height: 197
+      alignment: 9
+      pivot: {x: 0.25, y: 0.51269037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: 94}
+        - {x: 0, y: 76}
+        - {x: -35, y: 42}
+        - {x: -35, y: 37}
+        - {x: -24, y: 3}
+        - {x: 0, y: -12}
+        - {x: 15, y: -13}
+        - {x: 19, y: -7}
+        - {x: 24, y: 11}
+        - {x: 2, y: -68}
+        - {x: 12, y: -80}
+        - {x: 21, y: -82}
+        - {x: 55, y: -100}
+        - {x: 111, y: -100}
+        - {x: 111, y: 20}
+        - {x: 100, y: 94}
+    - name: 4Slash0036
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 423
+        width: 133
+        height: 198
+      alignment: 9
+      pivot: {x: 0.22556391, y: 0.56060606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: 86}
+        - {x: -29, y: 47}
+        - {x: -29, y: -41}
+        - {x: -25, y: -60}
+        - {x: 46, y: -111}
+        - {x: 102, y: -111}
+        - {x: 102, y: 86}
+    - name: 4Slash0037
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 418
+        width: 125
+        height: 203
+      alignment: 9
+      pivot: {x: 0.16, y: 0.6059113}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 78}
+        - {x: -20, y: 64}
+        - {x: -20, y: 0}
+        - {x: 22, y: -96}
+        - {x: 53, y: -115}
+        - {x: 73, y: -123}
+        - {x: 92, y: -123}
+        - {x: 105, y: -68}
+        - {x: 105, y: 78}
+    - name: 4Slash0038
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 419
+        width: 129
+        height: 202
+      alignment: 9
+      pivot: {x: 0.093023255, y: 0.6633663}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 89, y: 63}
+        - {x: 0, y: 63}
+        - {x: -10, y: 62}
+        - {x: -12, y: 47}
+        - {x: -12, y: 0}
+        - {x: 2, y: -8}
+        - {x: 22, y: -90}
+        - {x: 49, y: -134}
+        - {x: 90, y: -134}
+        - {x: 103, y: -74}
+        - {x: 117, y: 19}
+        - {x: 117, y: 51}
+    - name: 4Slash0039
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 423
+        width: 136
+        height: 198
+      alignment: 9
+      pivot: {x: 0.007352941, y: 0.6818182}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: 63}
+        - {x: 27, y: 63}
+        - {x: 26, y: 58}
+        - {x: 0, y: 18}
+        - {x: -1, y: 17}
+        - {x: -1, y: -7}
+        - {x: 10, y: -3}
+        - {x: 22, y: 4}
+        - {x: 44, y: -132}
+        - {x: 52, y: -135}
+        - {x: 106, y: -135}
+        - {x: 133, y: -55}
+        - {x: 133, y: 26}
+        - {x: 112, y: 40}
+    - name: 4Slash0040
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 417
+        width: 129
+        height: 204
+      alignment: 9
+      pivot: {x: -0.054263566, y: 0.6617647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76, y: 66}
+        - {x: 75, y: 65}
+        - {x: 76, y: 56}
+        - {x: 98, y: -9}
+        - {x: 102, y: -15}
+        - {x: 109, y: -13}
+        - {x: 97, y: -18}
+        - {x: 88, y: 16}
+        - {x: 82, y: 36}
+        - {x: 10, y: 20}
+        - {x: 7, y: 16}
+        - {x: 7, y: -40}
+        - {x: 44, y: -135}
+        - {x: 120, y: -135}
+        - {x: 134, y: -88}
+        - {x: 134, y: 38}
+        - {x: 87, y: 66}
+    - name: 4Slash0041
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 454
+        width: 136
+        height: 167
+      alignment: 9
+      pivot: {x: -0.16176471, y: 0.8083832}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 121, y: 30}
+        - {x: 32, y: 6}
+        - {x: 23, y: 1}
+        - {x: 23, y: -3}
+        - {x: 24, y: -6}
+        - {x: 35, y: -5}
+        - {x: 36, y: -73}
+        - {x: 50, y: -131}
+        - {x: 58, y: -135}
+        - {x: 93, y: -135}
+        - {x: 150, y: -56}
+        - {x: 158, y: 4}
+        - {x: 158, y: 30}
+    - name: 4Slash0042
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 486
+        width: 159
+        height: 135
+      alignment: 9
+      pivot: {x: -0.2327044, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39, y: -123}
+        - {x: 44, y: -135}
+        - {x: 103, y: -135}
+        - {x: 193, y: -91}
+        - {x: 193, y: -54}
+        - {x: 140, y: 0}
+        - {x: 37, y: 0}
+        - {x: 37, y: -97}
+    - name: 4Slash0043
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 493
+        width: 138
+        height: 128
+      alignment: 9
+      pivot: {x: -0.28985506, y: 1.0546875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 178, y: -121}
+        - {x: 171, y: -114}
+        - {x: 132, y: -28}
+        - {x: 105, y: -8}
+        - {x: 103, y: -7}
+        - {x: 70, y: -7}
+        - {x: 42, y: -20}
+        - {x: 40, y: -52}
+        - {x: 40, y: -91}
+        - {x: 49, y: -127}
+        - {x: 58, y: -135}
+        - {x: 79, y: -135}
+        - {x: 81, y: -130}
+        - {x: 178, y: -126}
+    - name: 4Slash0044
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 500
+        width: 138
+        height: 121
+      alignment: 9
+      pivot: {x: -0.3115942, y: 1.1157025}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: -60}
+        - {x: 43, y: -135}
+        - {x: 179, y: -135}
+        - {x: 179, y: -112}
+        - {x: 178, y: -108}
+        - {x: 119, y: -14}
+        - {x: 68, y: -14}
+        - {x: 52, y: -26}
+    - name: 4Slash0045
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 301
+        width: 135
+        height: 114
+      alignment: 9
+      pivot: {x: -0.31851852, y: 1.1842105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 81, y: -21}
+        - {x: 66, y: -24}
+        - {x: 47, y: -62}
+        - {x: 43, y: -75}
+        - {x: 43, y: -101}
+        - {x: 50, y: -132}
+        - {x: 56, y: -135}
+        - {x: 178, y: -135}
+        - {x: 178, y: -85}
+        - {x: 141, y: -21}
+    - name: 4Slash0046
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 302
+        width: 133
+        height: 113
+      alignment: 9
+      pivot: {x: -0.33082706, y: 1.1946902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: -66}
+        - {x: 44, y: -135}
+        - {x: 177, y: -135}
+        - {x: 177, y: -119}
+        - {x: 126, y: -29}
+        - {x: 117, y: -24}
+        - {x: 65, y: -24}
+        - {x: 52, y: -26}
+    - name: 4Slash0047
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 305
+        width: 139
+        height: 110
+      alignment: 9
+      pivot: {x: -0.30215827, y: 1.2272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 173, y: -128}
+        - {x: 178, y: -126}
+        - {x: 178, y: -123}
+        - {x: 171, y: -117}
+        - {x: 151, y: -77}
+        - {x: 119, y: -26}
+        - {x: 82, y: -26}
+        - {x: 43, y: -54}
+        - {x: 43, y: -130}
+        - {x: 54, y: -135}
+        - {x: 79, y: -135}
+        - {x: 81, y: -130}
+        - {x: 79, y: -127}
+        - {x: 96, y: -130}
+    - name: 4Slash0048
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 307
+        width: 133
+        height: 108
+      alignment: 9
+      pivot: {x: -0.33834586, y: 1.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 73, y: -27}
+        - {x: 45, y: -62}
+        - {x: 45, y: -135}
+        - {x: 178, y: -135}
+        - {x: 178, y: -65}
+        - {x: 169, y: -27}
+    - name: 4Slash0049
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 307
+        width: 132
+        height: 108
+      alignment: 9
+      pivot: {x: -0.34848484, y: 1.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 66, y: -27}
+        - {x: 46, y: -60}
+        - {x: 46, y: -120}
+        - {x: 48, y: -133}
+        - {x: 53, y: -135}
+        - {x: 178, y: -135}
+        - {x: 178, y: -39}
+        - {x: 135, y: -27}
+    - name: 4Slash0050
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 305
+        width: 135
+        height: 110
+      alignment: 9
+      pivot: {x: -0.32592592, y: 1.2272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78, y: -25}
+        - {x: 45, y: -60}
+        - {x: 45, y: -135}
+        - {x: 179, y: -135}
+        - {x: 179, y: -109}
+        - {x: 140, y: -25}
+    - name: 4Slash0051
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 302
+        width: 133
+        height: 113
+      alignment: 9
+      pivot: {x: -0.35338345, y: 1.1946902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 77, y: -22}
+        - {x: 47, y: -44}
+        - {x: 47, y: -133}
+        - {x: 52, y: -135}
+        - {x: 158, y: -135}
+        - {x: 180, y: -130}
+        - {x: 180, y: -74}
+        - {x: 150, y: -22}
+    - name: 4Slash0052
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 299
+        width: 139
+        height: 116
+      alignment: 9
+      pivot: {x: -0.33093524, y: 1.1637931}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 174, y: -115}
+        - {x: 160, y: -55}
+        - {x: 129, y: -19}
+        - {x: 95, y: -19}
+        - {x: 69, y: -32}
+        - {x: 46, y: -57}
+        - {x: 46, y: -135}
+        - {x: 120, y: -135}
+        - {x: 182, y: -127}
+        - {x: 183, y: -125}
+        - {x: 183, y: -122}
+    - name: 4Slash0053
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 292
+        width: 136
+        height: 123
+      alignment: 9
+      pivot: {x: -0.3382353, y: 1.097561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: -13}
+        - {x: 46, y: -53}
+        - {x: 46, y: -102}
+        - {x: 59, y: -135}
+        - {x: 182, y: -135}
+        - {x: 182, y: -13}
+    - name: 4Slash0054
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 286
+        width: 139
+        height: 129
+      alignment: 9
+      pivot: {x: -0.33093524, y: 1.0465117}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: -8}
+        - {x: 46, y: -115}
+        - {x: 60, y: -135}
+        - {x: 169, y: -135}
+        - {x: 182, y: -131}
+        - {x: 182, y: -14}
+        - {x: 173, y: -8}
+    - name: 4Slash0055
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 281
+        width: 135
+        height: 134
+      alignment: 9
+      pivot: {x: -0.34074074, y: 1.0074627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 115, y: -3}
+        - {x: 89, y: -3}
+        - {x: 71, y: -8}
+        - {x: 47, y: -71}
+        - {x: 47, y: -93}
+        - {x: 60, y: -135}
+        - {x: 174, y: -135}
+        - {x: 181, y: -132}
+        - {x: 181, y: -66}
+        - {x: 136, y: -16}
+    - name: 4Slash0056
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 279
+        width: 135
+        height: 136
+      alignment: 9
+      pivot: {x: -0.34814814, y: 0.99264705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 140, y: -18}
+        - {x: 114, y: -1}
+        - {x: 111, y: 1}
+        - {x: 92, y: 1}
+        - {x: 61, y: -25}
+        - {x: 48, y: -64}
+        - {x: 48, y: -82}
+        - {x: 50, y: -94}
+        - {x: 58, y: -135}
+        - {x: 104, y: -135}
+        - {x: 182, y: -116}
+        - {x: 182, y: -108}
+        - {x: 172, y: -101}
+    - name: 4Slash0057
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 272
+        width: 138
+        height: 143
+      alignment: 9
+      pivot: {x: -0.3478261, y: 0.9440559}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 104, y: -96}
+        - {x: 105, y: -99}
+        - {x: 177, y: -108}
+        - {x: 183, y: -107}
+        - {x: 184, y: -106}
+        - {x: 184, y: -87}
+        - {x: 131, y: 7}
+        - {x: 81, y: 7}
+        - {x: 64, y: -4}
+        - {x: 49, y: -51}
+        - {x: 49, y: -101}
+        - {x: 60, y: -135}
+        - {x: 80, y: -135}
+        - {x: 106, y: -114}
+        - {x: 107, y: -105}
+        - {x: 104, y: -103}
+    - name: 4Slash0058
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 268
+        width: 130
+        height: 147
+      alignment: 9
+      pivot: {x: -0.3846154, y: 0.9183673}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 126, y: 12}
+        - {x: 72, y: 12}
+        - {x: 50, y: -24}
+        - {x: 50, y: -135}
+        - {x: 133, y: -135}
+        - {x: 180, y: -119}
+        - {x: 180, y: -79}
+        - {x: 129, y: 11}
+    - name: 4Slash0059
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 112
+        width: 127
+        height: 154
+      alignment: 9
+      pivot: {x: -0.4015748, y: 0.8766234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51, y: -135}
+        - {x: 100, y: -135}
+        - {x: 178, y: -109}
+        - {x: 178, y: -62}
+        - {x: 127, y: 19}
+        - {x: 82, y: 19}
+        - {x: 60, y: 2}
+        - {x: 51, y: -52}
+    - name: 4Slash0060
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 106
+        width: 125
+        height: 160
+      alignment: 9
+      pivot: {x: -0.424, y: 0.84375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 115, y: -135}
+        - {x: 178, y: -113}
+        - {x: 178, y: -34}
+        - {x: 125, y: 25}
+        - {x: 53, y: 25}
+        - {x: 53, y: -135}
+    - name: 4Slash0061
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 101
+        width: 129
+        height: 165
+      alignment: 9
+      pivot: {x: -0.4108527, y: 0.8181818}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 79, y: -116}
+        - {x: 131, y: -121}
+        - {x: 180, y: -79}
+        - {x: 180, y: -43}
+        - {x: 118, y: 30}
+        - {x: 89, y: 30}
+        - {x: 53, y: 1}
+        - {x: 53, y: -117}
+        - {x: 58, y: -135}
+        - {x: 76, y: -135}
+        - {x: 78, y: -132}
+        - {x: 79, y: -127}
+        - {x: 72, y: -113}
+    - name: 4Slash0062
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 96
+        width: 130
+        height: 170
+      alignment: 9
+      pivot: {x: -0.4, y: 0.7941176}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 121, y: -94}
+        - {x: 126, y: -77}
+        - {x: 179, y: -69}
+        - {x: 181, y: -67}
+        - {x: 181, y: -62}
+        - {x: 172, y: -55}
+        - {x: 127, y: 33}
+        - {x: 118, y: 35}
+        - {x: 95, y: 35}
+        - {x: 53, y: 22}
+        - {x: 52, y: 12}
+        - {x: 52, y: -135}
+        - {x: 75, y: -135}
+        - {x: 78, y: -132}
+        - {x: 74, y: -92}
+        - {x: 85, y: -120}
+    - name: 4Slash0063
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 92
+        width: 135
+        height: 174
+      alignment: 9
+      pivot: {x: -0.34814814, y: 0.7758621}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 88, y: 39}
+        - {x: 61, y: 9}
+        - {x: 47, y: -100}
+        - {x: 47, y: -129}
+        - {x: 51, y: -135}
+        - {x: 98, y: -135}
+        - {x: 182, y: -81}
+        - {x: 182, y: -22}
+        - {x: 138, y: 39}
+    - name: 4Slash0064
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 86
+        width: 140
+        height: 180
+      alignment: 9
+      pivot: {x: -0.30714285, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 183, y: -42}
+        - {x: 183, y: -30}
+        - {x: 175, y: -27}
+        - {x: 126, y: 45}
+        - {x: 90, y: 45}
+        - {x: 47, y: 17}
+        - {x: 43, y: -48}
+        - {x: 43, y: -133}
+        - {x: 44, y: -135}
+        - {x: 60, y: -135}
+        - {x: 61, y: -131}
+        - {x: 111, y: -124}
+        - {x: 126, y: -118}
+    - name: 4Slash0065
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 84
+        width: 142
+        height: 182
+      alignment: 9
+      pivot: {x: -0.28169015, y: 0.7417582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 127, y: -120}
+        - {x: 130, y: -115}
+        - {x: 131, y: -110}
+        - {x: 182, y: -19}
+        - {x: 182, y: 47}
+        - {x: 40, y: 47}
+        - {x: 40, y: -135}
+        - {x: 57, y: -135}
+        - {x: 58, y: -132}
+        - {x: 77, y: -82}
+        - {x: 114, y: -124}
+    - name: 4Slash0066
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 82
+        width: 144
+        height: 184
+      alignment: 9
+      pivot: {x: -0.27083334, y: 0.7336956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 181, y: -9}
+        - {x: 181, y: 2}
+        - {x: 180, y: 3}
+        - {x: 168, y: 3}
+        - {x: 151, y: -3}
+        - {x: 154, y: 25}
+        - {x: 117, y: 49}
+        - {x: 72, y: 49}
+        - {x: 41, y: 25}
+        - {x: 39, y: -10}
+        - {x: 39, y: -135}
+        - {x: 124, y: -135}
+        - {x: 134, y: -125}
+        - {x: 141, y: -114}
+    - name: 4Slash0067
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 82
+        width: 137
+        height: 184
+      alignment: 9
+      pivot: {x: -0.28467155, y: 0.7336956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 90, y: 49}
+        - {x: 48, y: 23}
+        - {x: 39, y: -22}
+        - {x: 39, y: -135}
+        - {x: 173, y: -135}
+        - {x: 176, y: -115}
+        - {x: 176, y: 26}
+        - {x: 135, y: 49}
+    - name: 4Slash0068
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 83
+        width: 133
+        height: 183
+      alignment: 9
+      pivot: {x: -0.2932331, y: 0.73770493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 113, y: -40}
+        - {x: 118, y: -33}
+        - {x: 118, y: -30}
+        - {x: 124, y: -50}
+        - {x: 131, y: -56}
+        - {x: 171, y: -9}
+        - {x: 171, y: 47}
+        - {x: 169, y: 48}
+        - {x: 76, y: 48}
+        - {x: 53, y: 17}
+        - {x: 39, y: -90}
+        - {x: 39, y: -135}
+        - {x: 116, y: -135}
+        - {x: 148, y: -130}
+        - {x: 150, y: -119}
+        - {x: 136, y: -65}
+        - {x: 124, y: -51}
+    - name: 4Slash0069
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 84
+        width: 127
+        height: 182
+      alignment: 9
+      pivot: {x: -0.30708662, y: 0.7417582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 150, y: -119}
+        - {x: 142, y: -113}
+        - {x: 137, y: -110}
+        - {x: 137, y: -76}
+        - {x: 136, y: -66}
+        - {x: 110, y: -40}
+        - {x: 117, y: -30}
+        - {x: 116, y: -27}
+        - {x: 129, y: -54}
+        - {x: 132, y: -55}
+        - {x: 155, y: -40}
+        - {x: 164, y: 17}
+        - {x: 164, y: 47}
+        - {x: 89, y: 47}
+        - {x: 55, y: 23}
+        - {x: 39, y: -86}
+        - {x: 39, y: -135}
+        - {x: 58, y: -135}
+        - {x: 58, y: -130}
+        - {x: 119, y: -133}
+        - {x: 153, y: -126}
+    - name: 4Slash0070
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 84
+        width: 121
+        height: 182
+      alignment: 9
+      pivot: {x: -0.3140496, y: 0.7417582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 142, y: -113}
+        - {x: 138, y: -67}
+        - {x: 112, y: -41}
+        - {x: 116, y: -28}
+        - {x: 130, y: -54}
+        - {x: 135, y: -58}
+        - {x: 149, y: -29}
+        - {x: 159, y: 29}
+        - {x: 159, y: 42}
+        - {x: 150, y: 47}
+        - {x: 48, y: 47}
+        - {x: 38, y: 46}
+        - {x: 38, y: -135}
+        - {x: 127, y: -135}
+        - {x: 146, y: -130}
+        - {x: 149, y: -123}
+        - {x: 150, y: -119}
+    - name: 4Slash0071
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 85
+        width: 118
+        height: 181
+      alignment: 9
+      pivot: {x: -0.3220339, y: 0.74585634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 79, y: 46}
+        - {x: 38, y: -10}
+        - {x: 38, y: -135}
+        - {x: 155, y: -135}
+        - {x: 155, y: 46}
+    - name: 4Slash0072
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 79
+        width: 110
+        height: 187
+      alignment: 9
+      pivot: {x: -0.35454544, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 149, y: -119}
+        - {x: 142, y: -113}
+        - {x: 138, y: -68}
+        - {x: 111, y: -40}
+        - {x: 128, y: -52}
+        - {x: 135, y: -55}
+        - {x: 147, y: -46}
+        - {x: 149, y: -35}
+        - {x: 149, y: 51}
+        - {x: 66, y: 51}
+        - {x: 39, y: -28}
+        - {x: 39, y: -135}
+        - {x: 58, y: -135}
+        - {x: 58, y: -130}
+        - {x: 120, y: -131}
+        - {x: 149, y: -126}
+    - name: 4Slash0073
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 74
+        width: 111
+        height: 192
+      alignment: 9
+      pivot: {x: -0.34234235, y: 0.703125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 137, y: -68}
+        - {x: 132, y: -62}
+        - {x: 112, y: -42}
+        - {x: 130, y: -57}
+        - {x: 135, y: -58}
+        - {x: 149, y: -40}
+        - {x: 149, y: 55}
+        - {x: 107, y: 55}
+        - {x: 52, y: 34}
+        - {x: 38, y: 8}
+        - {x: 38, y: -135}
+        - {x: 149, y: -135}
+        - {x: 149, y: -119}
+        - {x: 142, y: -113}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

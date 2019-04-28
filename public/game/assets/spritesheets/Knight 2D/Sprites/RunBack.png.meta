@@ -1,0 +1,445 @@
+fileFormatVersion: 2
+guid: 67dd829001c44c8489c13c48a6c7bcb7
+timeCreated: 1478979788
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: RunBack0000
+    21300002: RunBack0001
+    21300004: RunBack0002
+    21300006: RunBack0003
+    21300008: RunBack0004
+    21300010: RunBack0005
+    21300012: RunBack0006
+    21300014: RunBack0007
+    21300016: RunBack0008
+    21300018: RunBack0009
+    21300020: RunBack0010
+    21300022: RunBack0011
+    21300024: RunBack0012
+    21300026: RunBack0013
+    21300028: RunBack0014
+    21300030: RunBack0015
+    21300032: RunBack0016
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: RunBack0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 833
+        width: 102
+        height: 190
+      alignment: 9
+      pivot: {x: 0.48039216, y: 0.70526314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 56}
+        - {x: -48, y: 10}
+        - {x: -48, y: -53}
+        - {x: -29, y: -134}
+        - {x: 10, y: -134}
+        - {x: 40, y: -88}
+        - {x: 51, y: -18}
+        - {x: 51, y: 56}
+    - name: RunBack0001
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 835
+        width: 110
+        height: 188
+      alignment: 9
+      pivot: {x: 0.5090909, y: 0.71276593}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: 54}
+        - {x: -53, y: 52}
+        - {x: -53, y: -134}
+        - {x: 31, y: -134}
+        - {x: 51, y: -30}
+        - {x: 52, y: -26}
+        - {x: 52, y: 54}
+    - name: RunBack0002
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 833
+        width: 126
+        height: 190
+      alignment: 9
+      pivot: {x: 0.5793651, y: 0.70526314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 56}
+        - {x: -65, y: 10}
+        - {x: -68, y: -6}
+        - {x: -68, y: -134}
+        - {x: 40, y: -134}
+        - {x: 52, y: -103}
+        - {x: 52, y: 56}
+    - name: RunBack0003
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 830
+        width: 128
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5859375, y: 0.68393785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 58}
+        - {x: -73, y: 36}
+        - {x: -73, y: -120}
+        - {x: -67, y: -124}
+        - {x: -57, y: -132}
+        - {x: 52, y: -132}
+        - {x: 52, y: 46}
+        - {x: 5, y: 58}
+    - name: RunBack0004
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 634
+        width: 123
+        height: 194
+      alignment: 9
+      pivot: {x: 0.55284554, y: 0.68041235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 59}
+        - {x: -61, y: 27}
+        - {x: -67, y: -9}
+        - {x: -67, y: -131}
+        - {x: 50, y: -131}
+        - {x: 53, y: -67}
+        - {x: 53, y: 48}
+        - {x: 21, y: 59}
+    - name: RunBack0005
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 637
+        width: 114
+        height: 191
+      alignment: 9
+      pivot: {x: 0.5263158, y: 0.7015707}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 57}
+        - {x: -58, y: 29}
+        - {x: -58, y: -28}
+        - {x: -55, y: -30}
+        - {x: -49, y: -28}
+        - {x: -58, y: -93}
+        - {x: -58, y: -111}
+        - {x: -48, y: -129}
+        - {x: -44, y: -132}
+        - {x: 43, y: -132}
+        - {x: 49, y: -131}
+        - {x: 54, y: -71}
+        - {x: 54, y: 41}
+        - {x: 15, y: 57}
+    - name: RunBack0006
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 637
+        width: 123
+        height: 191
+      alignment: 9
+      pivot: {x: 0.4796748, y: 0.68586385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47, y: 57}
+        - {x: -44, y: 57}
+        - {x: -56, y: 41}
+        - {x: -56, y: -117}
+        - {x: -49, y: -129}
+        - {x: 36, y: -129}
+        - {x: 57, y: -68}
+        - {x: 57, y: 52}
+    - name: RunBack0007
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 637
+        width: 112
+        height: 191
+      alignment: 9
+      pivot: {x: 0.49107143, y: 0.6963351}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: -122}
+        - {x: -38, y: -129}
+        - {x: 24, y: -129}
+        - {x: 57, y: -78}
+        - {x: 57, y: 55}
+        - {x: -26, y: 55}
+        - {x: -52, y: 52}
+    - name: RunBack0008
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 450
+        width: 130
+        height: 182
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7087912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 49, y: 53}
+        - {x: 18, y: 33}
+        - {x: 16, y: 46}
+        - {x: 7, y: 53}
+        - {x: -10, y: 53}
+        - {x: -13, y: 52}
+        - {x: -55, y: 4}
+        - {x: -63, y: -41}
+        - {x: -63, y: -129}
+        - {x: 22, y: -129}
+        - {x: 34, y: -126}
+        - {x: 58, y: -71}
+        - {x: 58, y: 53}
+    - name: RunBack0009
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 440
+        width: 137
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5985401, y: 0.6770833}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -11}
+        - {x: 29, y: -27}
+        - {x: 38, y: -44}
+        - {x: 42, y: -48}
+        - {x: 53, y: -21}
+        - {x: 55, y: 13}
+        - {x: 55, y: 60}
+        - {x: 13, y: 60}
+        - {x: -14, y: 56}
+        - {x: -61, y: 34}
+        - {x: -81, y: -71}
+        - {x: -81, y: -129}
+        - {x: 28, y: -129}
+        - {x: 37, y: -71}
+        - {x: 19, y: -13}
+        - {x: 17, y: -11}
+    - name: RunBack0010
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 436
+        width: 156
+        height: 196
+      alignment: 9
+      pivot: {x: 0.59615386, y: 0.6530612}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 57, y: -22}
+        - {x: 57, y: 65}
+        - {x: 42, y: 65}
+        - {x: 12, y: 29}
+        - {x: 13, y: 25}
+        - {x: 12, y: 28}
+        - {x: 12, y: 35}
+        - {x: 13, y: 36}
+        - {x: 15, y: 47}
+        - {x: -13, y: 65}
+        - {x: -24, y: 65}
+        - {x: -93, y: -57}
+        - {x: -93, y: -120}
+        - {x: -84, y: -125}
+        - {x: -79, y: -121}
+        - {x: -30, y: -85}
+        - {x: 8, y: -127}
+        - {x: 16, y: -128}
+        - {x: 36, y: -128}
+        - {x: 38, y: -123}
+        - {x: 35, y: -120}
+        - {x: 31, y: -72}
+    - name: RunBack0011
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 235
+        width: 157
+        height: 199
+      alignment: 9
+      pivot: {x: 0.58598727, y: 0.67336684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 60, y: 65}
+        - {x: -16, y: 65}
+        - {x: -92, y: 4}
+        - {x: -92, y: -129}
+        - {x: -73, y: -129}
+        - {x: -33, y: -83}
+        - {x: 17, y: -119}
+        - {x: 36, y: -129}
+        - {x: 43, y: -129}
+        - {x: 47, y: -125}
+        - {x: 46, y: -119}
+        - {x: 60, y: 27}
+    - name: RunBack0012
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 229
+        width: 143
+        height: 205
+      alignment: 9
+      pivot: {x: 0.57342654, y: 0.64878047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: -129}
+        - {x: 52, y: -120}
+        - {x: 59, y: 9}
+        - {x: 59, y: 68}
+        - {x: -22, y: 68}
+        - {x: -81, y: -69}
+        - {x: -81, y: -123}
+        - {x: -72, y: -133}
+        - {x: -63, y: -133}
+        - {x: -60, y: -131}
+        - {x: -59, y: -122}
+        - {x: -23, y: -86}
+        - {x: 19, y: -118}
+    - name: RunBack0013
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 229
+        width: 122
+        height: 205
+      alignment: 9
+      pivot: {x: 0.57377046, y: 0.6536585}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 69}
+        - {x: -69, y: 32}
+        - {x: -69, y: -134}
+        - {x: 34, y: -134}
+        - {x: 48, y: -123}
+        - {x: 52, y: -4}
+        - {x: 52, y: 69}
+    - name: RunBack0014
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 29
+        width: 115
+        height: 198
+      alignment: 9
+      pivot: {x: 0.53913045, y: 0.67171717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 53, y: 63}
+        - {x: 4, y: 63}
+        - {x: -40, y: 48}
+        - {x: -57, y: -55}
+        - {x: -57, y: -133}
+        - {x: 12, y: -133}
+        - {x: 24, y: -125}
+        - {x: 29, y: -120}
+        - {x: 53, y: -48}
+    - name: RunBack0015
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 33
+        width: 98
+        height: 194
+      alignment: 9
+      pivot: {x: 0.46938777, y: 0.69072163}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: -62}
+        - {x: 17, y: -19}
+        - {x: 13, y: -15}
+        - {x: 21, y: -23}
+        - {x: 29, y: -38}
+        - {x: 38, y: -43}
+        - {x: 52, y: -41}
+        - {x: 52, y: 59}
+        - {x: 6, y: 59}
+        - {x: -15, y: 52}
+        - {x: -44, y: 21}
+        - {x: -44, y: -133}
+        - {x: -43, y: -134}
+        - {x: -18, y: -134}
+        - {x: -14, y: -130}
+        - {x: 0, y: -134}
+        - {x: 13, y: -134}
+    - name: RunBack0016
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 37
+        width: 102
+        height: 190
+      alignment: 9
+      pivot: {x: 0.48039216, y: 0.70526314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 56}
+        - {x: -48, y: 10}
+        - {x: -48, y: -53}
+        - {x: -29, y: -134}
+        - {x: 10, y: -134}
+        - {x: 40, y: -88}
+        - {x: 51, y: -18}
+        - {x: 51, y: 56}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

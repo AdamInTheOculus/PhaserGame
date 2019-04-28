@@ -1,0 +1,579 @@
+fileFormatVersion: 2
+guid: c6145c1b76943574f8e59f71a0240b72
+timeCreated: 1478963624
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DrawSword0000
+    21300002: DrawSword0001
+    21300004: DrawSword0002
+    21300006: DrawSword0003
+    21300008: DrawSword0004
+    21300010: DrawSword0005
+    21300012: DrawSword0006
+    21300014: DrawSword0007
+    21300016: DrawSword0008
+    21300018: DrawSword0009
+    21300020: DrawSword0010
+    21300022: DrawSword0011
+    21300024: DrawSword0012
+    21300026: DrawSword0013
+    21300028: DrawSword0014
+    21300030: DrawSword0015
+    21300032: DrawSword0016
+    21300034: DrawSword0017
+    21300036: DrawSword0018
+    21300038: DrawSword0019
+    21300040: DrawSword0020
+    21300042: DrawSword0021
+    21300044: DrawSword0022
+    21300046: DrawSword0023
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: DrawSword0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 831
+        width: 132
+        height: 192
+      alignment: 9
+      pivot: {x: 0.6136364, y: 0.6927083}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: 58}
+        - {x: -71, y: -8}
+        - {x: -71, y: -129}
+        - {x: -62, y: -133}
+        - {x: 50, y: -133}
+        - {x: 50, y: 41}
+        - {x: 23, y: 58}
+    - name: DrawSword0001
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 827
+        width: 135
+        height: 196
+      alignment: 9
+      pivot: {x: 0.6148148, y: 0.68877554}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 58}
+        - {x: -19, y: 58}
+        - {x: -41, y: 43}
+        - {x: -66, y: -18}
+        - {x: -66, y: -46}
+        - {x: -24, y: -132}
+        - {x: -11, y: -135}
+        - {x: 10, y: -135}
+        - {x: 26, y: -133}
+        - {x: 15, y: -69}
+        - {x: 51, y: -30}
+        - {x: 51, y: 22}
+    - name: DrawSword0002
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 830
+        width: 116
+        height: 193
+      alignment: 9
+      pivot: {x: 0.51724136, y: 0.69430053}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 59}
+        - {x: -57, y: 13}
+        - {x: -57, y: -134}
+        - {x: 21, y: -134}
+        - {x: 25, y: -133}
+        - {x: 53, y: -74}
+        - {x: 53, y: 14}
+        - {x: 34, y: 59}
+    - name: DrawSword0003
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 828
+        width: 102
+        height: 195
+      alignment: 9
+      pivot: {x: 0.43137255, y: 0.6923077}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 55, y: 32}
+        - {x: 12, y: 56}
+        - {x: 3, y: 60}
+        - {x: -23, y: 60}
+        - {x: -44, y: 51}
+        - {x: -44, y: -134}
+        - {x: -39, y: -135}
+        - {x: -11, y: -135}
+        - {x: -10, y: -127}
+        - {x: 42, y: -133}
+        - {x: 55, y: -42}
+    - name: DrawSword0004
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 827
+        width: 104
+        height: 196
+      alignment: 9
+      pivot: {x: 0.43269232, y: 0.68877554}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 57, y: -7}
+        - {x: 16, y: 60}
+        - {x: -19, y: 60}
+        - {x: -41, y: 42}
+        - {x: -45, y: -26}
+        - {x: -45, y: -133}
+        - {x: -42, y: -135}
+        - {x: 4, y: -135}
+        - {x: 35, y: -118}
+        - {x: 57, y: -38}
+    - name: DrawSword0005
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 823
+        width: 116
+        height: 200
+      alignment: 9
+      pivot: {x: 0.44827586, y: 0.675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54, y: 46}
+        - {x: 19, y: 59}
+        - {x: -37, y: 59}
+        - {x: -52, y: -65}
+        - {x: -52, y: -135}
+        - {x: 23, y: -135}
+        - {x: 25, y: -133}
+        - {x: 59, y: -77}
+        - {x: 59, y: 38}
+    - name: DrawSword0006
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 827
+        width: 119
+        height: 196
+      alignment: 9
+      pivot: {x: 0.49579832, y: 0.68877554}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 59}
+        - {x: -21, y: 59}
+        - {x: -49, y: 47}
+        - {x: -58, y: -98}
+        - {x: -58, y: -135}
+        - {x: 42, y: -135}
+        - {x: 60, y: -114}
+        - {x: 60, y: 28}
+        - {x: 41, y: 43}
+    - name: DrawSword0007
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 827
+        width: 133
+        height: 196
+      alignment: 9
+      pivot: {x: 0.48120302, y: 0.68877554}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 58}
+        - {x: -43, y: 36}
+        - {x: -50, y: 25}
+        - {x: -63, y: -26}
+        - {x: -63, y: -135}
+        - {x: 65, y: -135}
+        - {x: 65, y: 4}
+        - {x: 37, y: 58}
+    - name: DrawSword0008
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 621
+        width: 135
+        height: 200
+      alignment: 9
+      pivot: {x: 0.4962963, y: 0.675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: 62}
+        - {x: -40, y: 62}
+        - {x: -66, y: -55}
+        - {x: -66, y: -135}
+        - {x: 38, y: -135}
+        - {x: 68, y: -104}
+        - {x: 68, y: 39}
+    - name: DrawSword0009
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 613
+        width: 138
+        height: 208
+      alignment: 9
+      pivot: {x: 0.48550725, y: 0.64903843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 71}
+        - {x: -56, y: 71}
+        - {x: -67, y: 3}
+        - {x: -67, y: -135}
+        - {x: 35, y: -135}
+        - {x: 71, y: -93}
+        - {x: 71, y: 42}
+    - name: DrawSword0010
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 603
+        width: 143
+        height: 218
+      alignment: 9
+      pivot: {x: 0.48251748, y: 0.61926603}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 75}
+        - {x: -57, y: 75}
+        - {x: -68, y: 29}
+        - {x: -68, y: -135}
+        - {x: 41, y: -135}
+        - {x: 74, y: -21}
+        - {x: 74, y: -9}
+        - {x: 35, y: 32}
+    - name: DrawSword0011
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 613
+        width: 157
+        height: 208
+      alignment: 9
+      pivot: {x: 0.43949044, y: 0.64903843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 67}
+        - {x: -68, y: 67}
+        - {x: -68, y: -135}
+        - {x: 77, y: -135}
+        - {x: 77, y: -7}
+        - {x: 10, y: 55}
+    - name: DrawSword0012
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 632
+        width: 158
+        height: 189
+      alignment: 9
+      pivot: {x: 0.51265824, y: 0.71428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 54}
+        - {x: -79, y: 54}
+        - {x: -79, y: -135}
+        - {x: 77, y: -135}
+        - {x: 77, y: 2}
+        - {x: 76, y: 10}
+        - {x: 10, y: 54}
+        - {x: -14, y: 54}
+        - {x: -21, y: 52}
+    - name: DrawSword0013
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 634
+        width: 158
+        height: 187
+      alignment: 9
+      pivot: {x: 0.51898736, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -81, y: 52}
+        - {x: -81, y: 21}
+        - {x: -77, y: 18}
+        - {x: -81, y: -20}
+        - {x: -81, y: -135}
+        - {x: 76, y: -135}
+        - {x: 76, y: 47}
+        - {x: 60, y: 52}
+    - name: DrawSword0014
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 413
+        width: 156
+        height: 188
+      alignment: 9
+      pivot: {x: 0.49358973, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32, y: 51}
+        - {x: -30, y: 51}
+        - {x: -71, y: 36}
+        - {x: -75, y: 23}
+        - {x: -75, y: -135}
+        - {x: 75, y: -135}
+        - {x: 75, y: 11}
+        - {x: 62, y: 29}
+    - name: DrawSword0015
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 406
+        width: 144
+        height: 195
+      alignment: 9
+      pivot: {x: 0.49305555, y: 0.6923077}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 51}
+        - {x: -61, y: 13}
+        - {x: -68, y: -14}
+        - {x: -55, y: -19}
+        - {x: -68, y: -119}
+        - {x: -68, y: -135}
+        - {x: 47, y: -135}
+        - {x: 70, y: -134}
+        - {x: 73, y: -124}
+        - {x: 73, y: 51}
+    - name: DrawSword0016
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 400
+        width: 141
+        height: 201
+      alignment: 9
+      pivot: {x: 0.5106383, y: 0.67164177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 66}
+        - {x: -68, y: 12}
+        - {x: -68, y: -135}
+        - {x: 69, y: -135}
+        - {x: 69, y: 66}
+    - name: DrawSword0017
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 390
+        width: 139
+        height: 211
+      alignment: 9
+      pivot: {x: 0.5323741, y: 0.63981044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 76}
+        - {x: -44, y: 27}
+        - {x: -51, y: -5}
+        - {x: -51, y: -12}
+        - {x: -46, y: -18}
+        - {x: -42, y: -20}
+        - {x: -42, y: -19}
+        - {x: -44, y: -20}
+        - {x: -47, y: -24}
+        - {x: -48, y: -31}
+        - {x: -41, y: -35}
+        - {x: -37, y: -34}
+        - {x: -68, y: -111}
+        - {x: -68, y: -135}
+        - {x: 43, y: -135}
+        - {x: 65, y: -125}
+        - {x: 65, y: 56}
+        - {x: 49, y: 76}
+    - name: DrawSword0018
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 389
+        width: 136
+        height: 212
+      alignment: 9
+      pivot: {x: 0.5294118, y: 0.6367925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 77}
+        - {x: -49, y: -5}
+        - {x: -52, y: -19}
+        - {x: -41, y: -43}
+        - {x: -34, y: -39}
+        - {x: -31, y: -37}
+        - {x: -29, y: -31}
+        - {x: -32, y: -39}
+        - {x: -41, y: -56}
+        - {x: -68, y: -121}
+        - {x: -68, y: -135}
+        - {x: 63, y: -135}
+        - {x: 63, y: 47}
+        - {x: 29, y: 77}
+    - name: DrawSword0019
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 382
+        width: 135
+        height: 219
+      alignment: 9
+      pivot: {x: 0.51111114, y: 0.6164383}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47, y: 14}
+        - {x: 36, y: 21}
+        - {x: 25, y: 73}
+        - {x: 14, y: 73}
+        - {x: -11, y: 48}
+        - {x: -53, y: -10}
+        - {x: -68, y: -122}
+        - {x: -68, y: -134}
+        - {x: -67, y: -135}
+        - {x: 58, y: -135}
+        - {x: 58, y: -16}
+        - {x: 50, y: 11}
+    - name: DrawSword0020
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 389
+        width: 128
+        height: 212
+      alignment: 9
+      pivot: {x: 0.5390625, y: 0.6367925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17, y: 70}
+        - {x: -45, y: 22}
+        - {x: -68, y: -60}
+        - {x: -68, y: -135}
+        - {x: 55, y: -135}
+        - {x: 55, y: 65}
+        - {x: 25, y: 70}
+    - name: DrawSword0021
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 179
+        width: 129
+        height: 201
+      alignment: 9
+      pivot: {x: 0.53488374, y: 0.67164177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 55, y: -131}
+        - {x: 55, y: 18}
+        - {x: 34, y: 66}
+        - {x: 8, y: 66}
+        - {x: -54, y: 40}
+        - {x: -68, y: -39}
+        - {x: -68, y: -135}
+        - {x: -51, y: -135}
+        - {x: -49, y: -130}
+        - {x: -30, y: -135}
+        - {x: 51, y: -135}
+    - name: DrawSword0022
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 178
+        width: 133
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5413534, y: 0.66831684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -47}
+        - {x: 34, y: -56}
+        - {x: 40, y: -59}
+        - {x: 50, y: -61}
+        - {x: 55, y: -18}
+        - {x: 55, y: 31}
+        - {x: 32, y: 62}
+        - {x: 13, y: 62}
+        - {x: -5, y: 52}
+        - {x: -55, y: -3}
+        - {x: -68, y: -117}
+        - {x: -68, y: -135}
+        - {x: 10, y: -135}
+        - {x: 55, y: -133}
+        - {x: 55, y: -105}
+        - {x: 44, y: -68}
+    - name: DrawSword0023
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 183
+        width: 133
+        height: 197
+      alignment: 9
+      pivot: {x: 0.556391, y: 0.6852792}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: -68}
+        - {x: 30, y: -55}
+        - {x: 38, y: -59}
+        - {x: 55, y: -41}
+        - {x: 55, y: -11}
+        - {x: 51, y: 56}
+        - {x: 1, y: 56}
+        - {x: -53, y: 22}
+        - {x: -68, y: -51}
+        - {x: -68, y: -135}
+        - {x: -33, y: -135}
+        - {x: 53, y: -131}
+        - {x: 55, y: -127}
+        - {x: 55, y: -114}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

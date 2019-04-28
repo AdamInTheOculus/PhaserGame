@@ -1,0 +1,942 @@
+fileFormatVersion: 2
+guid: d3a7eeafcd00f8a4686b231b42b018c4
+timeCreated: 1478978650
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Kick0000
+    21300002: Kick0001
+    21300004: Kick0002
+    21300006: Kick0003
+    21300008: Kick0004
+    21300010: Kick0005
+    21300012: Kick0006
+    21300014: Kick0007
+    21300016: Kick0008
+    21300018: Kick0009
+    21300020: Kick0010
+    21300022: Kick0011
+    21300024: Kick0012
+    21300026: Kick0013
+    21300028: Kick0014
+    21300030: Kick0015
+    21300032: Kick0016
+    21300034: Kick0017
+    21300036: Kick0018
+    21300038: Kick0019
+    21300040: Kick0020
+    21300042: Kick0021
+    21300044: Kick0022
+    21300046: Kick0023
+    21300048: Kick0024
+    21300050: Kick0025
+    21300052: Kick0026
+    21300054: Kick0027
+    21300056: Kick0028
+    21300058: Kick0029
+    21300060: Kick0030
+    21300062: Kick0031
+    21300064: Kick0032
+    21300066: Kick0033
+    21300068: Kick0034
+    21300070: Kick0035
+    21300072: Kick0036
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Kick0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 830
+        width: 124
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5967742, y: 0.69948184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: -114}
+        - {x: 36, y: -67}
+        - {x: 16, y: -45}
+        - {x: 32, y: -61}
+        - {x: 45, y: -28}
+        - {x: 38, y: 23}
+        - {x: 22, y: 24}
+        - {x: 31, y: 50}
+        - {x: 28, y: 55}
+        - {x: -5, y: 55}
+        - {x: -58, y: 32}
+        - {x: -74, y: -53}
+        - {x: -74, y: -135}
+        - {x: 42, y: -135}
+        - {x: 48, y: -130}
+        - {x: 48, y: -119}
+    - name: Kick0001
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 828
+        width: 128
+        height: 195
+      alignment: 9
+      pivot: {x: 0.609375, y: 0.6923077}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: -11}
+        - {x: 46, y: 26}
+        - {x: 31, y: 57}
+        - {x: 24, y: 57}
+        - {x: -21, y: 47}
+        - {x: -73, y: 0}
+        - {x: -74, y: -24}
+        - {x: -74, y: -135}
+        - {x: 48, y: -135}
+    - name: Kick0002
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 824
+        width: 121
+        height: 199
+      alignment: 9
+      pivot: {x: 0.60330576, y: 0.67839193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41, y: 22}
+        - {x: 36, y: 55}
+        - {x: 33, y: 61}
+        - {x: 2, y: 61}
+        - {x: -61, y: 30}
+        - {x: -73, y: -35}
+        - {x: -73, y: -135}
+        - {x: 48, y: -135}
+        - {x: 48, y: 7}
+        - {x: 47, y: 21}
+    - name: Kick0003
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 820
+        width: 137
+        height: 203
+      alignment: 9
+      pivot: {x: 0.5839416, y: 0.66502464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42, y: 55}
+        - {x: 38, y: 68}
+        - {x: 16, y: 68}
+        - {x: -20, y: 44}
+        - {x: -61, y: -7}
+        - {x: -74, y: -106}
+        - {x: -74, y: -135}
+        - {x: 49, y: -135}
+        - {x: 49, y: 16}
+        - {x: 45, y: 25}
+        - {x: 41, y: 26}
+        - {x: 38, y: 23}
+    - name: Kick0004
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 807
+        width: 128
+        height: 216
+      alignment: 9
+      pivot: {x: 0.609375, y: 0.625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: 76}
+        - {x: 19, y: 74}
+        - {x: -30, y: 47}
+        - {x: -74, y: -102}
+        - {x: -74, y: -135}
+        - {x: 49, y: -135}
+        - {x: 49, y: -7}
+        - {x: 45, y: 76}
+    - name: Kick0005
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 804
+        width: 129
+        height: 219
+      alignment: 9
+      pivot: {x: 0.58914727, y: 0.6164383}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51, y: -122}
+        - {x: 51, y: -111}
+        - {x: 46, y: -77}
+        - {x: 24, y: -42}
+        - {x: 31, y: -54}
+        - {x: 38, y: -42}
+        - {x: 51, y: 2}
+        - {x: 51, y: 16}
+        - {x: 41, y: 77}
+        - {x: 38, y: 84}
+        - {x: 32, y: 84}
+        - {x: 29, y: 77}
+        - {x: 24, y: 36}
+        - {x: 24, y: 31}
+        - {x: 18, y: 43}
+        - {x: 9, y: 50}
+        - {x: -17, y: 50}
+        - {x: -74, y: -118}
+        - {x: -74, y: -135}
+        - {x: -45, y: -135}
+        - {x: 29, y: -131}
+        - {x: 45, y: -128}
+    - name: Kick0006
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 794
+        width: 139
+        height: 229
+      alignment: 9
+      pivot: {x: 0.52517986, y: 0.5895197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: -131}
+        - {x: 48, y: -133}
+        - {x: 49, y: -124}
+        - {x: 49, y: -122}
+        - {x: 43, y: -116}
+        - {x: 41, y: -78}
+        - {x: 40, y: -67}
+        - {x: 19, y: -44}
+        - {x: 60, y: -39}
+        - {x: 65, y: -5}
+        - {x: 65, y: 26}
+        - {x: 44, y: 88}
+        - {x: 40, y: 90}
+        - {x: 37, y: 90}
+        - {x: 36, y: 86}
+        - {x: 35, y: 79}
+        - {x: 25, y: 27}
+        - {x: 25, y: 24}
+        - {x: 21, y: 43}
+        - {x: 12, y: 51}
+        - {x: -14, y: 50}
+        - {x: -73, y: -120}
+        - {x: -73, y: -135}
+        - {x: -58, y: -135}
+        - {x: -53, y: -128}
+        - {x: -23, y: -88}
+        - {x: -12, y: -72}
+    - name: Kick0007
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 794
+        width: 149
+        height: 229
+      alignment: 9
+      pivot: {x: 0.48322147, y: 0.5895197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 49, y: 87}
+        - {x: 48, y: 88}
+        - {x: 31, y: 88}
+        - {x: -8, y: 71}
+        - {x: -72, y: -86}
+        - {x: -72, y: -135}
+        - {x: -55, y: -135}
+        - {x: -45, y: -129}
+        - {x: -1, y: -135}
+        - {x: 53, y: -135}
+        - {x: 74, y: -9}
+        - {x: 74, y: 32}
+    - name: Kick0008
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 806
+        width: 141
+        height: 217
+      alignment: 9
+      pivot: {x: 0.42553192, y: 0.62211984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: 81}
+        - {x: -16, y: 60}
+        - {x: -60, y: -76}
+        - {x: -60, y: -134}
+        - {x: 67, y: -134}
+        - {x: 79, y: -79}
+        - {x: 79, y: 46}
+        - {x: 72, y: 81}
+    - name: Kick0009
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 808
+        width: 130
+        height: 215
+      alignment: 9
+      pivot: {x: 0.35384616, y: 0.60930234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16, y: 73}
+        - {x: -2, y: 67}
+        - {x: -40, y: -31}
+        - {x: -44, y: -81}
+        - {x: -44, y: -127}
+        - {x: -31, y: -126}
+        - {x: -22, y: -124}
+        - {x: -5, y: -128}
+        - {x: 56, y: -128}
+        - {x: 81, y: -20}
+        - {x: 81, y: 73}
+    - name: Kick0010
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 828
+        width: 106
+        height: 195
+      alignment: 9
+      pivot: {x: 0.2264151, y: 0.6615385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 22}
+        - {x: -24, y: -28}
+        - {x: -24, y: -115}
+        - {x: -11, y: -128}
+        - {x: 58, y: -128}
+        - {x: 79, y: -117}
+        - {x: 82, y: -101}
+        - {x: 82, y: 63}
+        - {x: 8, y: 63}
+        - {x: -3, y: 55}
+    - name: Kick0011
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 834
+        width: 104
+        height: 189
+      alignment: 9
+      pivot: {x: 0.086538464, y: 0.6825397}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 63, y: -50}
+        - {x: 86, y: -3}
+        - {x: 93, y: 44}
+        - {x: 93, y: 51}
+        - {x: 90, y: 54}
+        - {x: 88, y: 55}
+        - {x: 78, y: 43}
+        - {x: 38, y: 59}
+        - {x: -9, y: 59}
+        - {x: -9, y: -52}
+        - {x: 16, y: -123}
+        - {x: 18, y: -128}
+        - {x: 47, y: -128}
+        - {x: 50, y: -122}
+        - {x: 43, y: -116}
+        - {x: 64, y: -56}
+    - name: Kick0012
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 834
+        width: 116
+        height: 189
+      alignment: 9
+      pivot: {x: 0.060344826, y: 0.6825397}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 105, y: 59}
+        - {x: -7, y: 59}
+        - {x: -7, y: -67}
+        - {x: 15, y: -128}
+        - {x: 46, y: -128}
+        - {x: 48, y: -126}
+        - {x: 51, y: -121}
+        - {x: 105, y: 0}
+    - name: Kick0013
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 834
+        width: 123
+        height: 189
+      alignment: 9
+      pivot: {x: 0.048780486, y: 0.6825397}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 117, y: 31}
+        - {x: 115, y: 32}
+        - {x: 104, y: 28}
+        - {x: 26, y: 60}
+        - {x: -6, y: 60}
+        - {x: -6, y: -128}
+        - {x: 47, y: -128}
+        - {x: 50, y: -122}
+        - {x: 108, y: -33}
+        - {x: 117, y: 25}
+    - name: Kick0014
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 837
+        width: 142
+        height: 186
+      alignment: 9
+      pivot: {x: 0.08450704, y: 0.6827957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 104, y: 1}
+        - {x: 98, y: -3}
+        - {x: 102, y: 1}
+        - {x: 104, y: 1}
+        - {x: 122, y: 7}
+        - {x: 124, y: 8}
+        - {x: 124, y: 19}
+        - {x: 48, y: 58}
+        - {x: 0, y: 58}
+        - {x: -11, y: 17}
+        - {x: -11, y: -27}
+        - {x: -9, y: -39}
+        - {x: 15, y: -127}
+        - {x: 59, y: -127}
+        - {x: 109, y: -15}
+        - {x: 109, y: -3}
+        - {x: 105, y: 1}
+    - name: Kick0015
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 607
+        width: 154
+        height: 185
+      alignment: 9
+      pivot: {x: 0.13636364, y: 0.6918919}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 49, y: 56}
+        - {x: -19, y: 56}
+        - {x: -19, y: -44}
+        - {x: -13, y: -45}
+        - {x: 4, y: -39}
+        - {x: 2, y: -128}
+        - {x: 57, y: -128}
+        - {x: 120, y: -84}
+        - {x: 133, y: -56}
+        - {x: 133, y: 18}
+        - {x: 131, y: 18}
+    - name: Kick0016
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 610
+        width: 173
+        height: 182
+      alignment: 9
+      pivot: {x: 0.14450867, y: 0.7087912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 53}
+        - {x: -24, y: -128}
+        - {x: 98, y: -128}
+        - {x: 148, y: -30}
+        - {x: 148, y: 35}
+        - {x: 83, y: 53}
+    - name: Kick0017
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 612
+        width: 184
+        height: 180
+      alignment: 9
+      pivot: {x: 0.14673913, y: 0.71666664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 155, y: 14}
+        - {x: 58, y: 51}
+        - {x: -26, y: 51}
+        - {x: -26, y: -128}
+        - {x: 48, y: -128}
+        - {x: 51, y: -125}
+        - {x: 45, y: -114}
+        - {x: 153, y: -28}
+        - {x: 155, y: -22}
+    - name: Kick0018
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 608
+        width: 185
+        height: 184
+      alignment: 9
+      pivot: {x: 0.13513513, y: 0.70108694}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 158, y: -8}
+        - {x: 154, y: -5}
+        - {x: 32, y: 53}
+        - {x: 2, y: 53}
+        - {x: -14, y: 49}
+        - {x: -22, y: -10}
+        - {x: -22, y: -43}
+        - {x: -9, y: -47}
+        - {x: 15, y: -38}
+        - {x: 14, y: -124}
+        - {x: 16, y: -128}
+        - {x: 52, y: -128}
+        - {x: 57, y: -125}
+        - {x: 147, y: -43}
+        - {x: 158, y: -24}
+    - name: Kick0019
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 612
+        width: 177
+        height: 180
+      alignment: 9
+      pivot: {x: 0.118644066, y: 0.70555556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 153, y: -34}
+        - {x: 154, y: -31}
+        - {x: 154, y: -20}
+        - {x: 145, y: -14}
+        - {x: 24, y: 53}
+        - {x: -18, y: 53}
+        - {x: -18, y: -100}
+        - {x: -12, y: -127}
+        - {x: 49, y: -127}
+        - {x: 51, y: -125}
+        - {x: 45, y: -114}
+        - {x: 51, y: -84}
+        - {x: 140, y: -47}
+    - name: Kick0020
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 610
+        width: 159
+        height: 182
+      alignment: 9
+      pivot: {x: 0.08805031, y: 0.6978022}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 55}
+        - {x: -14, y: 55}
+        - {x: -14, y: -50}
+        - {x: -10, y: -55}
+        - {x: 9, y: -127}
+        - {x: 94, y: -127}
+        - {x: 145, y: -67}
+        - {x: 145, y: 2}
+        - {x: 88, y: 29}
+    - name: Kick0021
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 603
+        width: 148
+        height: 189
+      alignment: 9
+      pivot: {x: 0.074324325, y: 0.6719577}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 124, y: 58}
+        - {x: -8, y: 58}
+        - {x: -8, y: -88}
+        - {x: -2, y: -127}
+        - {x: 87, y: -127}
+        - {x: 118, y: -104}
+        - {x: 131, y: -76}
+        - {x: 131, y: 29}
+    - name: Kick0022
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 607
+        width: 114
+        height: 185
+      alignment: 9
+      pivot: {x: 0.078947365, y: 0.6864865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 93, y: 49}
+        - {x: 52, y: 58}
+        - {x: -9, y: 58}
+        - {x: -9, y: -82}
+        - {x: 1, y: -127}
+        - {x: 80, y: -127}
+        - {x: 105, y: -106}
+        - {x: 105, y: 29}
+        - {x: 102, y: 40}
+    - name: Kick0023
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 607
+        width: 103
+        height: 185
+      alignment: 9
+      pivot: {x: 0.097087376, y: 0.6864865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 58}
+        - {x: -10, y: 49}
+        - {x: -10, y: -58}
+        - {x: 13, y: -127}
+        - {x: 53, y: -127}
+        - {x: 80, y: -121}
+        - {x: 93, y: -63}
+        - {x: 93, y: 58}
+    - name: Kick0024
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 600
+        width: 97
+        height: 192
+      alignment: 9
+      pivot: {x: 0.14432989, y: 0.671875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78, y: 61}
+        - {x: 71, y: 53}
+        - {x: 64, y: 41}
+        - {x: 59, y: 44}
+        - {x: 22, y: 59}
+        - {x: 3, y: 60}
+        - {x: -12, y: 57}
+        - {x: -13, y: 43}
+        - {x: -13, y: -55}
+        - {x: 14, y: -128}
+        - {x: 70, y: -128}
+        - {x: 83, y: -70}
+        - {x: 83, y: 61}
+    - name: Kick0025
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 594
+        width: 92
+        height: 198
+      alignment: 9
+      pivot: {x: 0.16304348, y: 0.6515151}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 40}
+        - {x: -14, y: -104}
+        - {x: -4, y: -124}
+        - {x: 8, y: -121}
+        - {x: 12, y: -114}
+        - {x: 19, y: -128}
+        - {x: 59, y: -128}
+        - {x: 75, y: -64}
+        - {x: 75, y: 69}
+        - {x: 31, y: 69}
+        - {x: -10, y: 55}
+    - name: Kick0026
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 590
+        width: 107
+        height: 202
+      alignment: 9
+      pivot: {x: 0.2897196, y: 0.6386139}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: -82}
+        - {x: -30, y: -128}
+        - {x: 76, y: -128}
+        - {x: 76, y: 73}
+        - {x: 20, y: 73}
+        - {x: -18, y: 64}
+    - name: Kick0027
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 589
+        width: 125
+        height: 203
+      alignment: 9
+      pivot: {x: 0.384, y: 0.6403941}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 73}
+        - {x: -45, y: -100}
+        - {x: -45, y: -126}
+        - {x: -43, y: -130}
+        - {x: -30, y: -130}
+        - {x: -20, y: -126}
+        - {x: -7, y: -130}
+        - {x: 58, y: -130}
+        - {x: 76, y: -70}
+        - {x: 76, y: 73}
+    - name: Kick0028
+      rect:
+        serializedVersion: 2
+        x: 1845
+        y: 585
+        width: 126
+        height: 207
+      alignment: 9
+      pivot: {x: 0.42857143, y: 0.647343}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52, y: 73}
+        - {x: 46, y: 73}
+        - {x: 38, y: 64}
+        - {x: 13, y: 58}
+        - {x: -8, y: 52}
+        - {x: -35, y: -3}
+        - {x: -54, y: -108}
+        - {x: -54, y: -132}
+        - {x: -51, y: -134}
+        - {x: 56, y: -134}
+        - {x: 72, y: -47}
+        - {x: 72, y: 24}
+    - name: Kick0029
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 379
+        width: 130
+        height: 204
+      alignment: 9
+      pivot: {x: 0.5307692, y: 0.6617647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47, y: -135}
+        - {x: 48, y: -135}
+        - {x: 61, y: -98}
+        - {x: 61, y: 69}
+        - {x: -29, y: 69}
+        - {x: -64, y: -68}
+        - {x: -64, y: -133}
+        - {x: -62, y: -134}
+        - {x: -59, y: -135}
+        - {x: -50, y: -135}
+        - {x: -43, y: -124}
+        - {x: -17, y: -91}
+        - {x: 12, y: -126}
+    - name: Kick0030
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 384
+        width: 132
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5681818, y: 0.67839193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56, y: -29}
+        - {x: -72, y: -85}
+        - {x: -72, y: -135}
+        - {x: 55, y: -135}
+        - {x: 55, y: 64}
+        - {x: -13, y: 64}
+        - {x: -21, y: 63}
+    - name: Kick0031
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 382
+        width: 124
+        height: 201
+      alignment: 9
+      pivot: {x: 0.58870965, y: 0.67164177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32, y: 61}
+        - {x: -4, y: 55}
+        - {x: -45, y: 26}
+        - {x: -73, y: -97}
+        - {x: -73, y: -135}
+        - {x: -54, y: -135}
+        - {x: 50, y: -132}
+        - {x: 50, y: 23}
+        - {x: 48, y: 61}
+    - name: Kick0032
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 381
+        width: 123
+        height: 202
+      alignment: 9
+      pivot: {x: 0.5934959, y: 0.66831684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 60}
+        - {x: -10, y: 45}
+        - {x: -34, y: 19}
+        - {x: -52, y: -7}
+        - {x: -73, y: -107}
+        - {x: -73, y: -135}
+        - {x: 48, y: -135}
+        - {x: 48, y: 51}
+        - {x: 38, y: 60}
+    - name: Kick0033
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 391
+        width: 128
+        height: 192
+      alignment: 9
+      pivot: {x: 0.609375, y: 0.703125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: -68}
+        - {x: 19, y: -46}
+        - {x: 33, y: -61}
+        - {x: 47, y: -41}
+        - {x: 46, y: 15}
+        - {x: 43, y: 17}
+        - {x: 48, y: 54}
+        - {x: 48, y: 57}
+        - {x: -43, y: 57}
+        - {x: -74, y: -29}
+        - {x: -74, y: -135}
+        - {x: -54, y: -135}
+        - {x: 46, y: -130}
+        - {x: 48, y: -125}
+        - {x: 48, y: -110}
+    - name: Kick0034
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 393
+        width: 120
+        height: 190
+      alignment: 9
+      pivot: {x: 0.60833335, y: 0.7105263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47, y: -106}
+        - {x: 38, y: -69}
+        - {x: 25, y: -56}
+        - {x: 15, y: -45}
+        - {x: 28, y: -58}
+        - {x: 31, y: -59}
+        - {x: 47, y: -42}
+        - {x: 47, y: -8}
+        - {x: 46, y: 25}
+        - {x: 41, y: 55}
+        - {x: 13, y: 55}
+        - {x: -22, y: 50}
+        - {x: -58, y: -6}
+        - {x: -73, y: -108}
+        - {x: -73, y: -135}
+        - {x: -56, y: -135}
+        - {x: -56, y: -134}
+        - {x: 46, y: -130}
+        - {x: 47, y: -128}
+    - name: Kick0035
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 386
+        width: 125
+        height: 197
+      alignment: 9
+      pivot: {x: 0.624, y: 0.6852792}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47, y: -127}
+        - {x: 47, y: -45}
+        - {x: 42, y: 55}
+        - {x: -7, y: 55}
+        - {x: -65, y: -1}
+        - {x: -60, y: -38}
+        - {x: -48, y: -50}
+        - {x: -43, y: -47}
+        - {x: -39, y: -43}
+        - {x: -44, y: -50}
+        - {x: -47, y: -57}
+        - {x: -74, y: -117}
+        - {x: -74, y: -135}
+        - {x: -59, y: -135}
+        - {x: -57, y: -133}
+        - {x: -55, y: -128}
+        - {x: 46, y: -129}
+    - name: Kick0036
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 390
+        width: 124
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5967742, y: 0.69948184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: -114}
+        - {x: 36, y: -67}
+        - {x: 16, y: -45}
+        - {x: 32, y: -61}
+        - {x: 45, y: -28}
+        - {x: 38, y: 23}
+        - {x: 22, y: 24}
+        - {x: 31, y: 50}
+        - {x: 28, y: 55}
+        - {x: -5, y: 55}
+        - {x: -58, y: 32}
+        - {x: -74, y: -53}
+        - {x: -74, y: -135}
+        - {x: 42, y: -135}
+        - {x: 48, y: -130}
+        - {x: 48, y: -119}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

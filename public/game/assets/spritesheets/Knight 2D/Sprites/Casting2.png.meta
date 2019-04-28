@@ -1,0 +1,811 @@
+fileFormatVersion: 2
+guid: 5ea7dda8f3bfffc469c7e3e8228e785e
+timeCreated: 1478968943
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 2Casting0000
+    21300002: 2Casting0001
+    21300004: 2Casting0002
+    21300006: 2Casting0003
+    21300008: 2Casting0004
+    21300010: 2Casting0005
+    21300012: 2Casting0006
+    21300014: 2Casting0007
+    21300016: 2Casting0008
+    21300018: 2Casting0009
+    21300020: 2Casting0010
+    21300022: 2Casting0011
+    21300024: 2Casting0012
+    21300026: 2Casting0013
+    21300028: 2Casting0014
+    21300030: 2Casting0015
+    21300032: 2Casting0016
+    21300034: 2Casting0017
+    21300036: 2Casting0018
+    21300038: 2Casting0019
+    21300040: 2Casting0020
+    21300042: 2Casting0021
+    21300044: 2Casting0022
+    21300046: 2Casting0023
+    21300048: 2Casting0024
+    21300050: 2Casting0025
+    21300052: 2Casting0026
+    21300054: 2Casting0027
+    21300056: 2Casting0028
+    21300058: 2Casting0029
+    21300060: 2Casting0030
+    21300062: 2Casting0031
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 2Casting0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 828
+        width: 122
+        height: 195
+      alignment: 9
+      pivot: {x: 0.60655737, y: 0.6923077}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 54}
+        - {x: -18, y: 48}
+        - {x: -55, y: -2}
+        - {x: -69, y: -112}
+        - {x: -69, y: -135}
+        - {x: 44, y: -135}
+        - {x: 44, y: 54}
+    - name: 2Casting0001
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 840
+        width: 122
+        height: 183
+      alignment: 9
+      pivot: {x: 0.59016395, y: 0.73770493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 47}
+        - {x: -66, y: 2}
+        - {x: -49, y: -41}
+        - {x: -41, y: -41}
+        - {x: -38, y: -36}
+        - {x: -38, y: -35}
+        - {x: -38, y: -36}
+        - {x: -39, y: -45}
+        - {x: -44, y: -52}
+        - {x: -69, y: -105}
+        - {x: -69, y: -135}
+        - {x: 45, y: -135}
+        - {x: 45, y: 47}
+    - name: 2Casting0002
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 837
+        width: 124
+        height: 186
+      alignment: 9
+      pivot: {x: 0.58870965, y: 0.7258065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: -51}
+        - {x: 49, y: -28}
+        - {x: 49, y: 39}
+        - {x: 21, y: 47}
+        - {x: -23, y: 47}
+        - {x: -48, y: 34}
+        - {x: -69, y: -24}
+        - {x: -69, y: -135}
+        - {x: 49, y: -135}
+        - {x: 49, y: -115}
+        - {x: 32, y: -69}
+    - name: 2Casting0003
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 835
+        width: 132
+        height: 188
+      alignment: 9
+      pivot: {x: 0.56060606, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39, y: -135}
+        - {x: 51, y: -135}
+        - {x: 52, y: -130}
+        - {x: 52, y: 27}
+        - {x: 23, y: 43}
+        - {x: 10, y: 47}
+        - {x: -17, y: 47}
+        - {x: -67, y: 12}
+        - {x: -69, y: -8}
+        - {x: -69, y: -135}
+        - {x: -51, y: -135}
+        - {x: -27, y: -91}
+        - {x: 10, y: -122}
+        - {x: 16, y: -127}
+    - name: 2Casting0004
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 835
+        width: 145
+        height: 188
+      alignment: 9
+      pivot: {x: 0.51724136, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52, y: 6}
+        - {x: 18, y: 48}
+        - {x: -37, y: 48}
+        - {x: -69, y: 41}
+        - {x: -69, y: -135}
+        - {x: 50, y: -135}
+        - {x: 52, y: -124}
+        - {x: 64, y: -50}
+        - {x: 64, y: -16}
+    - name: 2Casting0005
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 838
+        width: 150
+        height: 185
+      alignment: 9
+      pivot: {x: 0.48, y: 0.7297297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 71, y: 28}
+        - {x: 30, y: 48}
+        - {x: -32, y: 48}
+        - {x: -72, y: -4}
+        - {x: -72, y: -119}
+        - {x: -70, y: -135}
+        - {x: -50, y: -135}
+        - {x: -27, y: -90}
+        - {x: 10, y: -135}
+        - {x: 71, y: -135}
+    - name: 2Casting0006
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 833
+        width: 171
+        height: 190
+      alignment: 9
+      pivot: {x: 0.50877196, y: 0.7105263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51, y: -124}
+        - {x: 30, y: -67}
+        - {x: 16, y: -51}
+        - {x: 6, y: -40}
+        - {x: 57, y: -16}
+        - {x: 76, y: -5}
+        - {x: 76, y: 16}
+        - {x: 18, y: 48}
+        - {x: -28, y: 48}
+        - {x: -77, y: -9}
+        - {x: -77, y: -26}
+        - {x: -74, y: -29}
+        - {x: -65, y: -27}
+        - {x: -35, y: -23}
+        - {x: -73, y: -114}
+        - {x: -70, y: -135}
+        - {x: -49, y: -135}
+        - {x: -27, y: -90}
+        - {x: 15, y: -129}
+        - {x: 43, y: -127}
+    - name: 2Casting0007
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 639
+        width: 156
+        height: 187
+      alignment: 9
+      pivot: {x: 0.5, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: -129}
+        - {x: 51, y: -107}
+        - {x: 77, y: -24}
+        - {x: 77, y: 25}
+        - {x: 33, y: 49}
+        - {x: -69, y: 49}
+        - {x: -78, y: 47}
+        - {x: -78, y: -135}
+        - {x: -51, y: -135}
+        - {x: -51, y: -128}
+        - {x: -27, y: -89}
+        - {x: 14, y: -130}
+    - name: 2Casting0008
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 644
+        width: 164
+        height: 182
+      alignment: 9
+      pivot: {x: 0.50609756, y: 0.7417582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: -122}
+        - {x: 29, y: -135}
+        - {x: 79, y: -135}
+        - {x: 81, y: -128}
+        - {x: 81, y: 29}
+        - {x: 73, y: 33}
+        - {x: 17, y: 47}
+        - {x: -20, y: 47}
+        - {x: -77, y: -13}
+        - {x: -77, y: -128}
+        - {x: -73, y: -135}
+        - {x: -51, y: -135}
+        - {x: -51, y: -128}
+        - {x: -27, y: -89}
+        - {x: -21, y: -78}
+    - name: 2Casting0009
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 641
+        width: 176
+        height: 185
+      alignment: 9
+      pivot: {x: 0.4943182, y: 0.7297297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 47}
+        - {x: -75, y: -12}
+        - {x: -75, y: -39}
+        - {x: -73, y: -40}
+        - {x: -71, y: -135}
+        - {x: 72, y: -135}
+        - {x: 84, y: -63}
+        - {x: 84, y: 35}
+        - {x: 56, y: 47}
+    - name: 2Casting0010
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 639
+        width: 169
+        height: 187
+      alignment: 9
+      pivot: {x: 0.49112427, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -75, y: -135}
+        - {x: 68, y: -135}
+        - {x: 84, y: -39}
+        - {x: 84, y: 47}
+        - {x: -44, y: 47}
+        - {x: -75, y: 40}
+    - name: 2Casting0011
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 644
+        width: 169
+        height: 182
+      alignment: 9
+      pivot: {x: 0.47928995, y: 0.7417582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32, y: 47}
+        - {x: -19, y: 47}
+        - {x: -75, y: -18}
+        - {x: -75, y: -35}
+        - {x: -72, y: -37}
+        - {x: -48, y: -37}
+        - {x: -72, y: -114}
+        - {x: -70, y: -135}
+        - {x: -16, y: -135}
+        - {x: 45, y: -129}
+        - {x: 84, y: 5}
+        - {x: 84, y: 23}
+        - {x: 75, y: 36}
+    - name: 2Casting0012
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 645
+        width: 162
+        height: 181
+      alignment: 9
+      pivot: {x: 0.4691358, y: 0.74585634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 79, y: -135}
+        - {x: 84, y: -120}
+        - {x: 84, y: 46}
+        - {x: -17, y: 46}
+        - {x: -38, y: 26}
+        - {x: -75, y: -21}
+        - {x: -75, y: -105}
+        - {x: -74, y: -113}
+        - {x: -70, y: -135}
+        - {x: -50, y: -135}
+        - {x: -25, y: -91}
+        - {x: 9, y: -123}
+        - {x: 27, y: -135}
+    - name: 2Casting0013
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 457
+        width: 165
+        height: 180
+      alignment: 9
+      pivot: {x: 0.45454547, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 45}
+        - {x: -75, y: 1}
+        - {x: -75, y: -127}
+        - {x: -73, y: -135}
+        - {x: 76, y: -135}
+        - {x: 84, y: -106}
+        - {x: 84, y: 45}
+    - name: 2Casting0014
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 450
+        width: 165
+        height: 187
+      alignment: 9
+      pivot: {x: 0.45454547, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 47}
+        - {x: -74, y: -12}
+        - {x: -74, y: -135}
+        - {x: 52, y: -135}
+        - {x: 84, y: -90}
+        - {x: 84, y: 46}
+        - {x: 74, y: 47}
+    - name: 2Casting0015
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 448
+        width: 161
+        height: 189
+      alignment: 9
+      pivot: {x: 0.46583852, y: 0.71428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: 47}
+        - {x: -74, y: -22}
+        - {x: -74, y: -36}
+        - {x: -65, y: -39}
+        - {x: -73, y: -114}
+        - {x: -70, y: -135}
+        - {x: 53, y: -135}
+        - {x: 84, y: -103}
+        - {x: 84, y: 47}
+    - name: 2Casting0016
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 450
+        width: 158
+        height: 187
+      alignment: 9
+      pivot: {x: 0.47468355, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 31}
+        - {x: 21, y: 30}
+        - {x: 17, y: 40}
+        - {x: 15, y: 43}
+        - {x: 8, y: 46}
+        - {x: -2, y: 47}
+        - {x: -6, y: 46}
+        - {x: -10, y: 42}
+        - {x: -59, y: 5}
+        - {x: -74, y: -26}
+        - {x: -74, y: -38}
+        - {x: -71, y: -40}
+        - {x: -36, y: -31}
+        - {x: -73, y: -114}
+        - {x: -70, y: -135}
+        - {x: 70, y: -135}
+        - {x: 83, y: -89}
+        - {x: 83, y: 45}
+        - {x: 46, y: 46}
+    - name: 2Casting0017
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 450
+        width: 175
+        height: 187
+      alignment: 9
+      pivot: {x: 0.50285715, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 47}
+        - {x: -74, y: -6}
+        - {x: -74, y: -122}
+        - {x: -71, y: -135}
+        - {x: 80, y: -135}
+        - {x: 84, y: -121}
+        - {x: 84, y: 46}
+        - {x: 79, y: 47}
+    - name: 2Casting0018
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 445
+        width: 159
+        height: 192
+      alignment: 9
+      pivot: {x: 0.4591195, y: 0.703125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27, y: 47}
+        - {x: -19, y: 47}
+        - {x: -73, y: -16}
+        - {x: -73, y: -120}
+        - {x: -70, y: -135}
+        - {x: 77, y: -135}
+        - {x: 84, y: -113}
+        - {x: 84, y: 31}
+        - {x: 74, y: 37}
+    - name: 2Casting0019
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 254
+        width: 161
+        height: 189
+      alignment: 9
+      pivot: {x: 0.45962733, y: 0.71428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: 47}
+        - {x: -73, y: 39}
+        - {x: -73, y: -135}
+        - {x: 11, y: -135}
+        - {x: 59, y: -125}
+        - {x: 84, y: 2}
+        - {x: 84, y: 47}
+    - name: 2Casting0020
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 256
+        width: 156
+        height: 187
+      alignment: 9
+      pivot: {x: 0.47435898, y: 0.72192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: -66}
+        - {x: 82, y: 2}
+        - {x: 82, y: 23}
+        - {x: 75, y: 36}
+        - {x: 60, y: 47}
+        - {x: -35, y: 47}
+        - {x: -73, y: 1}
+        - {x: -73, y: -135}
+        - {x: -43, y: -135}
+        - {x: 43, y: -127}
+        - {x: 46, y: -123}
+        - {x: 42, y: -113}
+    - name: 2Casting0021
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 255
+        width: 158
+        height: 188
+      alignment: 9
+      pivot: {x: 0.4620253, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38, y: -135}
+        - {x: 51, y: -135}
+        - {x: 49, y: -58}
+        - {x: 83, y: -18}
+        - {x: 83, y: 41}
+        - {x: 67, y: 47}
+        - {x: -16, y: 47}
+        - {x: -58, y: 1}
+        - {x: -71, y: -29}
+        - {x: -71, y: -45}
+        - {x: -35, y: -37}
+        - {x: -71, y: -110}
+        - {x: -71, y: -128}
+        - {x: -70, y: -135}
+        - {x: -51, y: -135}
+        - {x: -51, y: -128}
+        - {x: -26, y: -91}
+        - {x: 16, y: -126}
+    - name: 2Casting0022
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 258
+        width: 162
+        height: 185
+      alignment: 9
+      pivot: {x: 0.46296296, y: 0.7297297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 47}
+        - {x: -69, y: -18}
+        - {x: -69, y: -41}
+        - {x: -64, y: -42}
+        - {x: -59, y: -42}
+        - {x: -69, y: -80}
+        - {x: -69, y: -135}
+        - {x: 69, y: -135}
+        - {x: 83, y: -80}
+        - {x: 83, y: 47}
+    - name: 2Casting0023
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 261
+        width: 159
+        height: 182
+      alignment: 9
+      pivot: {x: 0.4779874, y: 0.7417582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: 47}
+        - {x: 21, y: 46}
+        - {x: 18, y: 47}
+        - {x: -16, y: 47}
+        - {x: -49, y: 31}
+        - {x: -69, y: -18}
+        - {x: -69, y: -39}
+        - {x: -60, y: -44}
+        - {x: -55, y: -43}
+        - {x: -69, y: -70}
+        - {x: -69, y: -135}
+        - {x: 66, y: -135}
+        - {x: 82, y: 8}
+        - {x: 82, y: 27}
+        - {x: 75, y: 47}
+    - name: 2Casting0024
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 260
+        width: 155
+        height: 183
+      alignment: 9
+      pivot: {x: 0.47096774, y: 0.73770493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31, y: 48}
+        - {x: -69, y: 10}
+        - {x: -69, y: -135}
+        - {x: 77, y: -135}
+        - {x: 80, y: -102}
+        - {x: 80, y: 48}
+    - name: 2Casting0025
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 64
+        width: 148
+        height: 188
+      alignment: 9
+      pivot: {x: 0.45945945, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 52}
+        - {x: -68, y: 16}
+        - {x: -68, y: -135}
+        - {x: 65, y: -135}
+        - {x: 76, y: -35}
+        - {x: 76, y: 51}
+        - {x: 72, y: 52}
+    - name: 2Casting0026
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 63
+        width: 148
+        height: 189
+      alignment: 9
+      pivot: {x: 0.5, y: 0.71428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: -127}
+        - {x: 46, y: -123}
+        - {x: 42, y: -113}
+        - {x: 33, y: -66}
+        - {x: 19, y: -50}
+        - {x: 63, y: -29}
+        - {x: 71, y: -24}
+        - {x: 71, y: 14}
+        - {x: 66, y: 37}
+        - {x: 47, y: 54}
+        - {x: -1, y: 54}
+        - {x: -55, y: 35}
+        - {x: -67, y: -47}
+        - {x: -43, y: -42}
+        - {x: -38, y: -37}
+        - {x: -69, y: -106}
+        - {x: -69, y: -135}
+        - {x: -51, y: -135}
+        - {x: -51, y: -124}
+        - {x: -26, y: -89}
+        - {x: 14, y: -129}
+    - name: 2Casting0027
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 61
+        width: 134
+        height: 191
+      alignment: 9
+      pivot: {x: 0.5074627, y: 0.7068063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33, y: -67}
+        - {x: 64, y: -36}
+        - {x: 64, y: -3}
+        - {x: 46, y: 36}
+        - {x: 35, y: 55}
+        - {x: 19, y: 55}
+        - {x: -17, y: 48}
+        - {x: -60, y: 0}
+        - {x: -47, y: -44}
+        - {x: -41, y: -42}
+        - {x: -36, y: -37}
+        - {x: -37, y: -39}
+        - {x: -43, y: -49}
+        - {x: -61, y: -91}
+        - {x: -68, y: -115}
+        - {x: -68, y: -135}
+        - {x: -36, y: -135}
+        - {x: 43, y: -127}
+        - {x: 46, y: -123}
+        - {x: 42, y: -113}
+    - name: 2Casting0028
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 60
+        width: 132
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5681818, y: 0.703125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 57, y: 35}
+        - {x: 54, y: 55}
+        - {x: -9, y: 55}
+        - {x: -67, y: 1}
+        - {x: -69, y: -8}
+        - {x: -69, y: -135}
+        - {x: 56, y: -135}
+        - {x: 31, y: -68}
+        - {x: 25, y: -61}
+        - {x: 57, y: -60}
+    - name: 2Casting0029
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 59
+        width: 129
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5813953, y: 0.69948184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: -118}
+        - {x: 41, y: -114}
+        - {x: 32, y: -67}
+        - {x: 51, y: -46}
+        - {x: 51, y: 7}
+        - {x: 48, y: 55}
+        - {x: -23, y: 55}
+        - {x: -47, y: 21}
+        - {x: -57, y: -13}
+        - {x: -69, y: -90}
+        - {x: -69, y: -135}
+        - {x: -51, y: -135}
+        - {x: -47, y: -128}
+        - {x: 29, y: -130}
+        - {x: 43, y: -127}
+    - name: 2Casting0030
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 54
+        width: 123
+        height: 198
+      alignment: 9
+      pivot: {x: 0.6097561, y: 0.6818182}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: -117}
+        - {x: 39, y: -112}
+        - {x: 44, y: -98}
+        - {x: 44, y: 54}
+        - {x: -13, y: 54}
+        - {x: -64, y: -3}
+        - {x: -69, y: -68}
+        - {x: -69, y: -135}
+        - {x: 38, y: -135}
+        - {x: 42, y: -127}
+        - {x: 44, y: -122}
+    - name: 2Casting0031
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 57
+        width: 122
+        height: 195
+      alignment: 9
+      pivot: {x: 0.60655737, y: 0.6923077}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 54}
+        - {x: -18, y: 48}
+        - {x: -55, y: -2}
+        - {x: -69, y: -112}
+        - {x: -69, y: -135}
+        - {x: 44, y: -135}
+        - {x: 44, y: 54}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,412 @@
+fileFormatVersion: 2
+guid: ea0e7a19c8ef4994b9b13f46852a5a69
+timeCreated: 1478971927
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CrouchBlockIdle0000
+    21300002: CrouchBlockIdle0001
+    21300004: CrouchBlockIdle0002
+    21300006: CrouchBlockIdle0003
+    21300008: CrouchBlockIdle0004
+    21300010: CrouchBlockIdle0005
+    21300012: CrouchBlockIdle0006
+    21300014: CrouchBlockIdle0007
+    21300016: CrouchBlockIdle0008
+    21300018: CrouchBlockIdle0009
+    21300020: CrouchBlockIdle0010
+    21300022: CrouchBlockIdle0011
+    21300024: CrouchBlockIdle0012
+    21300026: CrouchBlockIdle0013
+    21300028: CrouchBlockIdle0014
+    21300030: CrouchBlockIdle0015
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CrouchBlockIdle0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 887
+        width: 139
+        height: 136
+      alignment: 9
+      pivot: {x: 0.5467626, y: 0.99264705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: -76}
+        - {x: 34, y: -71}
+        - {x: 56, y: -83}
+        - {x: 58, y: -85}
+        - {x: 61, y: -87}
+        - {x: 63, y: -83}
+        - {x: 63, y: -7}
+        - {x: 61, y: -5}
+        - {x: 56, y: -5}
+        - {x: 53, y: -6}
+        - {x: 46, y: -5}
+        - {x: -2, y: -5}
+        - {x: -25, y: -21}
+        - {x: -75, y: -45}
+        - {x: -75, y: -135}
+        - {x: 39, y: -135}
+        - {x: 33, y: -119}
+        - {x: 27, y: -115}
+        - {x: 39, y: -95}
+    - name: CrouchBlockIdle0001
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 888
+        width: 140
+        height: 135
+      alignment: 9
+      pivot: {x: 0.54285717, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: -5}
+        - {x: -75, y: -48}
+        - {x: -75, y: -135}
+        - {x: 54, y: -135}
+        - {x: 64, y: -102}
+        - {x: 64, y: -5}
+    - name: CrouchBlockIdle0002
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 885
+        width: 143
+        height: 138
+      alignment: 9
+      pivot: {x: 0.55244756, y: 0.9782609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: -5}
+        - {x: -74, y: -57}
+        - {x: -74, y: -89}
+        - {x: -70, y: -90}
+        - {x: -67, y: -89}
+        - {x: -75, y: -106}
+        - {x: -75, y: -135}
+        - {x: 58, y: -135}
+        - {x: 64, y: -116}
+        - {x: 64, y: -5}
+    - name: CrouchBlockIdle0003
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 745
+        width: 143
+        height: 138
+      alignment: 9
+      pivot: {x: 0.55244756, y: 0.9782609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 64, y: -108}
+        - {x: 64, y: -5}
+        - {x: -33, y: -5}
+        - {x: -75, y: -50}
+        - {x: -75, y: -135}
+        - {x: -25, y: -135}
+        - {x: 31, y: -130}
+        - {x: 33, y: -119}
+    - name: CrouchBlockIdle0004
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 748
+        width: 139
+        height: 135
+      alignment: 9
+      pivot: {x: 0.5467626, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: -5}
+        - {x: -75, y: -46}
+        - {x: -75, y: -135}
+        - {x: 63, y: -135}
+        - {x: 63, y: -5}
+    - name: CrouchBlockIdle0005
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 749
+        width: 139
+        height: 134
+      alignment: 9
+      pivot: {x: 0.5467626, y: 1.0074627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 56, y: -4}
+        - {x: 55, y: -6}
+        - {x: 44, y: -4}
+        - {x: -4, y: -4}
+        - {x: -75, y: -49}
+        - {x: -75, y: -135}
+        - {x: 54, y: -135}
+        - {x: 63, y: -88}
+        - {x: 63, y: -4}
+    - name: CrouchBlockIdle0006
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 611
+        width: 139
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5467626, y: 1.0227273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -5}
+        - {x: -75, y: -35}
+        - {x: -75, y: -135}
+        - {x: 46, y: -135}
+        - {x: 63, y: -109}
+        - {x: 63, y: -5}
+    - name: CrouchBlockIdle0007
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 609
+        width: 139
+        height: 134
+      alignment: 9
+      pivot: {x: 0.5467626, y: 1.0074627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31, y: -131}
+        - {x: 34, y: -119}
+        - {x: 43, y: -84}
+        - {x: 40, y: -72}
+        - {x: 63, y: -94}
+        - {x: 63, y: -5}
+        - {x: -16, y: -5}
+        - {x: -75, y: -47}
+        - {x: -75, y: -135}
+        - {x: -55, y: -135}
+        - {x: -47, y: -130}
+        - {x: -45, y: -128}
+        - {x: -43, y: -124}
+    - name: CrouchBlockIdle0008
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 606
+        width: 139
+        height: 137
+      alignment: 9
+      pivot: {x: 0.5467626, y: 0.98540145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 63, y: -85}
+        - {x: 63, y: -5}
+        - {x: -20, y: -5}
+        - {x: -70, y: -61}
+        - {x: -73, y: -89}
+        - {x: -71, y: -90}
+        - {x: -69, y: -90}
+        - {x: -75, y: -101}
+        - {x: -75, y: -135}
+        - {x: 48, y: -135}
+        - {x: 43, y: -84}
+        - {x: 40, y: -72}
+        - {x: 57, y: -87}
+    - name: CrouchBlockIdle0009
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 469
+        width: 139
+        height: 135
+      alignment: 9
+      pivot: {x: 0.5467626, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 57, y: -87}
+        - {x: 63, y: -85}
+        - {x: 63, y: -7}
+        - {x: 61, y: -5}
+        - {x: -7, y: -5}
+        - {x: -75, y: -52}
+        - {x: -75, y: -135}
+        - {x: 29, y: -135}
+        - {x: 33, y: -133}
+        - {x: 43, y: -84}
+        - {x: 40, y: -72}
+    - name: CrouchBlockIdle0010
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 469
+        width: 139
+        height: 135
+      alignment: 9
+      pivot: {x: 0.5467626, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 57, y: -86}
+        - {x: 61, y: -85}
+        - {x: 63, y: -82}
+        - {x: 63, y: -5}
+        - {x: 3, y: -5}
+        - {x: -39, y: -19}
+        - {x: -70, y: -60}
+        - {x: -73, y: -86}
+        - {x: -75, y: -90}
+        - {x: -75, y: -135}
+        - {x: 40, y: -135}
+        - {x: 43, y: -84}
+        - {x: 40, y: -72}
+    - name: CrouchBlockIdle0011
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 466
+        width: 139
+        height: 138
+      alignment: 9
+      pivot: {x: 0.5467626, y: 0.9782609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61, y: -86}
+        - {x: 63, y: -83}
+        - {x: 63, y: -7}
+        - {x: 60, y: -5}
+        - {x: -18, y: -5}
+        - {x: -75, y: -51}
+        - {x: -75, y: -135}
+        - {x: 41, y: -135}
+        - {x: 34, y: -119}
+        - {x: 57, y: -85}
+        - {x: 48, y: -97}
+    - name: CrouchBlockIdle0012
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 326
+        width: 139
+        height: 138
+      alignment: 9
+      pivot: {x: 0.5467626, y: 0.9782609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 58, y: -85}
+        - {x: 61, y: -85}
+        - {x: 63, y: -82}
+        - {x: 63, y: -5}
+        - {x: -5, y: -5}
+        - {x: -71, y: -60}
+        - {x: -73, y: -88}
+        - {x: -71, y: -90}
+        - {x: -69, y: -90}
+        - {x: -75, y: -102}
+        - {x: -75, y: -135}
+        - {x: 54, y: -135}
+        - {x: 52, y: -103}
+        - {x: 44, y: -75}
+        - {x: 55, y: -84}
+    - name: CrouchBlockIdle0013
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 326
+        width: 139
+        height: 138
+      alignment: 9
+      pivot: {x: 0.5467626, y: 0.9782609}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -5}
+        - {x: -39, y: -18}
+        - {x: -70, y: -60}
+        - {x: -73, y: -86}
+        - {x: -73, y: -88}
+        - {x: -71, y: -90}
+        - {x: -69, y: -90}
+        - {x: -75, y: -125}
+        - {x: -75, y: -135}
+        - {x: 42, y: -135}
+        - {x: 63, y: -114}
+        - {x: 63, y: -5}
+    - name: CrouchBlockIdle0014
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 328
+        width: 139
+        height: 136
+      alignment: 9
+      pivot: {x: 0.5467626, y: 0.99264705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50, y: -5}
+        - {x: -75, y: -55}
+        - {x: -75, y: -135}
+        - {x: 53, y: -135}
+        - {x: 63, y: -103}
+        - {x: 63, y: -5}
+    - name: CrouchBlockIdle0015
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 188
+        width: 139
+        height: 136
+      alignment: 9
+      pivot: {x: 0.5467626, y: 0.99264705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60, y: -5}
+        - {x: -75, y: -41}
+        - {x: -75, y: -135}
+        - {x: 57, y: -135}
+        - {x: 63, y: -127}
+        - {x: 63, y: -5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

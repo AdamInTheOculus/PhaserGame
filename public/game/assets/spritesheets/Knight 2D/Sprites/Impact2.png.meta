@@ -1,0 +1,782 @@
+fileFormatVersion: 2
+guid: e17e027eeeeb9bc489be945e43ad0072
+timeCreated: 1478978151
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 2Impact0000
+    21300002: 2Impact0001
+    21300004: 2Impact0002
+    21300006: 2Impact0003
+    21300008: 2Impact0004
+    21300010: 2Impact0005
+    21300012: 2Impact0006
+    21300014: 2Impact0007
+    21300016: 2Impact0008
+    21300018: 2Impact0009
+    21300020: 2Impact0010
+    21300022: 2Impact0011
+    21300024: 2Impact0012
+    21300026: 2Impact0013
+    21300028: 2Impact0014
+    21300030: 2Impact0015
+    21300032: 2Impact0016
+    21300034: 2Impact0017
+    21300036: 2Impact0018
+    21300038: 2Impact0019
+    21300040: 2Impact0020
+    21300042: 2Impact0021
+    21300044: 2Impact0022
+    21300046: 2Impact0023
+    21300048: 2Impact0024
+    21300050: 2Impact0025
+    21300052: 2Impact0026
+    21300054: 2Impact0027
+    21300056: 2Impact0028
+    21300058: 2Impact0029
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 2Impact0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 830
+        width: 124
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5967742, y: 0.69948184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: -114}
+        - {x: 36, y: -67}
+        - {x: 16, y: -45}
+        - {x: 32, y: -61}
+        - {x: 45, y: -28}
+        - {x: 38, y: 23}
+        - {x: 22, y: 24}
+        - {x: 31, y: 50}
+        - {x: 28, y: 55}
+        - {x: -5, y: 55}
+        - {x: -58, y: 32}
+        - {x: -74, y: -53}
+        - {x: -74, y: -135}
+        - {x: 42, y: -135}
+        - {x: 48, y: -130}
+        - {x: 48, y: -119}
+    - name: 2Impact0001
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 839
+        width: 127
+        height: 184
+      alignment: 9
+      pivot: {x: 0.5748032, y: 0.7336956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: 30}
+        - {x: 34, y: 27}
+        - {x: 24, y: 21}
+        - {x: 22, y: 19}
+        - {x: 30, y: 25}
+        - {x: 39, y: 32}
+        - {x: 43, y: 40}
+        - {x: 42, y: 46}
+        - {x: -14, y: 46}
+        - {x: -62, y: 2}
+        - {x: -63, y: -36}
+        - {x: -56, y: -41}
+        - {x: -50, y: -39}
+        - {x: -73, y: -113}
+        - {x: -73, y: -135}
+        - {x: -58, y: -135}
+        - {x: -56, y: -134}
+        - {x: 48, y: -131}
+        - {x: 48, y: 22}
+    - name: 2Impact0002
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 840
+        width: 129
+        height: 183
+      alignment: 9
+      pivot: {x: 0.56589144, y: 0.73770493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: -39}
+        - {x: 25, y: -52}
+        - {x: 38, y: -49}
+        - {x: 51, y: 18}
+        - {x: 51, y: 38}
+        - {x: 34, y: 46}
+        - {x: -13, y: 46}
+        - {x: -70, y: 15}
+        - {x: -73, y: -6}
+        - {x: -73, y: -135}
+        - {x: 50, y: -135}
+        - {x: 51, y: -131}
+        - {x: 51, y: -123}
+        - {x: 33, y: -65}
+    - name: 2Impact0003
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 843
+        width: 136
+        height: 180
+      alignment: 9
+      pivot: {x: 0.5735294, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: -60}
+        - {x: 40, y: -44}
+        - {x: 56, y: 1}
+        - {x: 56, y: 27}
+        - {x: 46, y: 45}
+        - {x: -74, y: 45}
+        - {x: -74, y: -135}
+        - {x: 25, y: -135}
+        - {x: 47, y: -131}
+        - {x: 49, y: -123}
+        - {x: 32, y: -65}
+        - {x: 2, y: -31}
+    - name: 2Impact0004
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 838
+        width: 141
+        height: 185
+      alignment: 9
+      pivot: {x: 0.5319149, y: 0.7297297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47, y: -135}
+        - {x: 62, y: -90}
+        - {x: 62, y: 44}
+        - {x: -40, y: 44}
+        - {x: -74, y: 11}
+        - {x: -74, y: -135}
+        - {x: -58, y: -135}
+        - {x: -57, y: -134}
+        - {x: -33, y: -87}
+        - {x: 28, y: -135}
+    - name: 2Impact0005
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 840
+        width: 140
+        height: 183
+      alignment: 9
+      pivot: {x: 0.5285714, y: 0.73770493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 65, y: -102}
+        - {x: 25, y: -57}
+        - {x: 6, y: -39}
+        - {x: 44, y: -57}
+        - {x: 65, y: 0}
+        - {x: 65, y: 41}
+        - {x: 62, y: 43}
+        - {x: -36, y: 43}
+        - {x: -74, y: 9}
+        - {x: -74, y: -135}
+        - {x: 65, y: -135}
+    - name: 2Impact0006
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 844
+        width: 140
+        height: 179
+      alignment: 9
+      pivot: {x: 0.5285714, y: 0.75418997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 64, y: -84}
+        - {x: 64, y: 41}
+        - {x: -59, y: 41}
+        - {x: -74, y: -98}
+        - {x: -74, y: -135}
+        - {x: -23, y: -135}
+        - {x: 30, y: -129}
+        - {x: 42, y: -125}
+        - {x: 62, y: -113}
+    - name: 2Impact0007
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 647
+        width: 145
+        height: 181
+      alignment: 9
+      pivot: {x: 0.5241379, y: 0.74585634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 40}
+        - {x: -67, y: 13}
+        - {x: -74, y: -85}
+        - {x: -74, y: -135}
+        - {x: 36, y: -135}
+        - {x: 62, y: -129}
+        - {x: 62, y: 37}
+        - {x: 41, y: 40}
+    - name: 2Impact0008
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 656
+        width: 141
+        height: 172
+      alignment: 9
+      pivot: {x: 0.5531915, y: 0.78488374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 62, y: -71}
+        - {x: 62, y: 37}
+        - {x: -43, y: 37}
+        - {x: -57, y: 5}
+        - {x: -74, y: -114}
+        - {x: -74, y: -135}
+        - {x: 42, y: -135}
+    - name: 2Impact0009
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 656
+        width: 138
+        height: 172
+      alignment: 9
+      pivot: {x: 0.5289855, y: 0.78488374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 36}
+        - {x: -57, y: 12}
+        - {x: -73, y: -52}
+        - {x: -73, y: -135}
+        - {x: 56, y: -135}
+        - {x: 61, y: -34}
+        - {x: 61, y: 33}
+        - {x: 43, y: 36}
+    - name: 2Impact0010
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 659
+        width: 145
+        height: 169
+      alignment: 9
+      pivot: {x: 0.537931, y: 0.79881656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: 16}
+        - {x: 39, y: 34}
+        - {x: -16, y: 34}
+        - {x: -67, y: -3}
+        - {x: -74, y: -91}
+        - {x: -74, y: -135}
+        - {x: 26, y: -135}
+        - {x: 61, y: -130}
+        - {x: 61, y: 14}
+    - name: 2Impact0011
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 662
+        width: 150
+        height: 166
+      alignment: 9
+      pivot: {x: 0.52666664, y: 0.813253}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: 31}
+        - {x: -7, y: 31}
+        - {x: -33, y: 12}
+        - {x: -50, y: -5}
+        - {x: -74, y: -120}
+        - {x: -74, y: -135}
+        - {x: 3, y: -135}
+        - {x: 48, y: -132}
+        - {x: 63, y: -52}
+        - {x: 63, y: 22}
+    - name: 2Impact0012
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 660
+        width: 141
+        height: 168
+      alignment: 9
+      pivot: {x: 0.5177305, y: 0.8035714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39, y: -127}
+        - {x: 37, y: -116}
+        - {x: 32, y: -67}
+        - {x: 42, y: -74}
+        - {x: 62, y: -41}
+        - {x: 65, y: -15}
+        - {x: 65, y: 31}
+        - {x: -47, y: 31}
+        - {x: -73, y: -104}
+        - {x: -73, y: -135}
+        - {x: -54, y: -135}
+        - {x: -39, y: -103}
+        - {x: 9, y: -133}
+        - {x: 36, y: -128}
+    - name: 2Impact0013
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 656
+        width: 143
+        height: 172
+      alignment: 9
+      pivot: {x: 0.54545456, y: 0.78488374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54, y: 31}
+        - {x: -23, y: 31}
+        - {x: -74, y: 11}
+        - {x: -74, y: -135}
+        - {x: -1, y: -135}
+        - {x: 47, y: -131}
+        - {x: 65, y: -18}
+        - {x: 65, y: 5}
+    - name: 2Impact0014
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 475
+        width: 140
+        height: 170
+      alignment: 9
+      pivot: {x: 0.5285714, y: 0.7941176}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 25, y: -61}
+        - {x: 30, y: -65}
+        - {x: 34, y: -76}
+        - {x: 37, y: -76}
+        - {x: 41, y: -70}
+        - {x: 66, y: -6}
+        - {x: 66, y: 12}
+        - {x: 26, y: 31}
+        - {x: -9, y: 31}
+        - {x: -32, y: 13}
+        - {x: -50, y: -12}
+        - {x: -74, y: -113}
+        - {x: -74, y: -135}
+        - {x: -17, y: -135}
+        - {x: 41, y: -128}
+        - {x: 37, y: -116}
+        - {x: 31, y: -70}
+    - name: 2Impact0015
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 476
+        width: 144
+        height: 169
+      alignment: 9
+      pivot: {x: 0.5347222, y: 0.79881656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: -116}
+        - {x: 30, y: -74}
+        - {x: 29, y: -69}
+        - {x: 23, y: -61}
+        - {x: 29, y: -65}
+        - {x: 30, y: -73}
+        - {x: 31, y: -76}
+        - {x: 38, y: -75}
+        - {x: 67, y: -23}
+        - {x: 67, y: 6}
+        - {x: 44, y: 31}
+        - {x: -14, y: 31}
+        - {x: -64, y: -4}
+        - {x: -74, y: -103}
+        - {x: -74, y: -135}
+        - {x: -16, y: -135}
+        - {x: 10, y: -132}
+        - {x: 36, y: -128}
+        - {x: 39, y: -127}
+    - name: 2Impact0016
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 473
+        width: 140
+        height: 172
+      alignment: 9
+      pivot: {x: 0.5214286, y: 0.78488374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: 32}
+        - {x: -13, y: 32}
+        - {x: -60, y: -10}
+        - {x: -73, y: -41}
+        - {x: -73, y: -135}
+        - {x: 39, y: -135}
+        - {x: 41, y: -128}
+        - {x: 67, y: -57}
+        - {x: 67, y: 11}
+    - name: 2Impact0017
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 473
+        width: 147
+        height: 172
+      alignment: 9
+      pivot: {x: 0.49659863, y: 0.78488374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33, y: -53}
+        - {x: 37, y: -26}
+        - {x: 61, y: -11}
+        - {x: 67, y: -1}
+        - {x: 67, y: 4}
+        - {x: 32, y: 33}
+        - {x: -12, y: 33}
+        - {x: -60, y: -9}
+        - {x: -73, y: -105}
+        - {x: -73, y: -135}
+        - {x: -5, y: -135}
+        - {x: 47, y: -131}
+        - {x: 37, y: -116}
+        - {x: 26, y: -110}
+    - name: 2Impact0018
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 474
+        width: 144
+        height: 171
+      alignment: 9
+      pivot: {x: 0.5347222, y: 0.7894737}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: -110}
+        - {x: 64, y: -31}
+        - {x: 64, y: 27}
+        - {x: 43, y: 35}
+        - {x: -13, y: 35}
+        - {x: -57, y: -3}
+        - {x: -74, y: -118}
+        - {x: -74, y: -135}
+        - {x: -52, y: -135}
+        - {x: 37, y: -130}
+        - {x: 40, y: -120}
+        - {x: 36, y: -117}
+    - name: 2Impact0019
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 468
+        width: 145
+        height: 177
+      alignment: 9
+      pivot: {x: 0.53103447, y: 0.7627119}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61, y: 4}
+        - {x: 61, y: 17}
+        - {x: 54, y: 18}
+        - {x: 44, y: 12}
+        - {x: 32, y: 12}
+        - {x: 32, y: 20}
+        - {x: 20, y: 37}
+        - {x: -38, y: 37}
+        - {x: -74, y: -66}
+        - {x: -74, y: -135}
+        - {x: -54, y: -135}
+        - {x: 37, y: -130}
+        - {x: 40, y: -120}
+        - {x: 36, y: -117}
+    - name: 2Impact0020
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 467
+        width: 135
+        height: 178
+      alignment: 9
+      pivot: {x: 0.5407407, y: 0.75842696}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: 39}
+        - {x: -16, y: 39}
+        - {x: -62, y: -8}
+        - {x: -73, y: -90}
+        - {x: -73, y: -135}
+        - {x: 12, y: -135}
+        - {x: 47, y: -131}
+        - {x: 57, y: -23}
+        - {x: 57, y: 28}
+    - name: 2Impact0021
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 290
+        width: 126
+        height: 175
+      alignment: 9
+      pivot: {x: 0.5793651, y: 0.7714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 53, y: 31}
+        - {x: 38, y: 40}
+        - {x: -47, y: 40}
+        - {x: -73, y: -73}
+        - {x: -73, y: -135}
+        - {x: -8, y: -135}
+        - {x: 43, y: -129}
+        - {x: 53, y: -47}
+    - name: 2Impact0022
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 285
+        width: 131
+        height: 180
+      alignment: 9
+      pivot: {x: 0.5648855, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51, y: 36}
+        - {x: 48, y: 36}
+        - {x: 32, y: 42}
+        - {x: -20, y: 42}
+        - {x: -51, y: 30}
+        - {x: -74, y: -72}
+        - {x: -74, y: -135}
+        - {x: -54, y: -135}
+        - {x: 10, y: -133}
+        - {x: 45, y: -130}
+        - {x: 51, y: -42}
+    - name: 2Impact0023
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 287
+        width: 123
+        height: 178
+      alignment: 9
+      pivot: {x: 0.60162604, y: 0.75842696}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: 40}
+        - {x: 36, y: 43}
+        - {x: -20, y: 43}
+        - {x: -62, y: -7}
+        - {x: -74, y: -38}
+        - {x: -74, y: -135}
+        - {x: 48, y: -135}
+        - {x: 48, y: -17}
+        - {x: 43, y: 5}
+        - {x: 37, y: 13}
+        - {x: 48, y: 32}
+    - name: 2Impact0024
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 282
+        width: 121
+        height: 183
+      alignment: 9
+      pivot: {x: 0.61157024, y: 0.73770493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 44}
+        - {x: -48, y: 26}
+        - {x: -74, y: -36}
+        - {x: -74, y: -135}
+        - {x: 44, y: -135}
+        - {x: 44, y: 44}
+    - name: 2Impact0025
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 283
+        width: 129
+        height: 182
+      alignment: 9
+      pivot: {x: 0.5968992, y: 0.7417582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 34, y: 47}
+        - {x: 21, y: 33}
+        - {x: 17, y: 37}
+        - {x: 4, y: 47}
+        - {x: -21, y: 47}
+        - {x: -69, y: -15}
+        - {x: -74, y: -54}
+        - {x: -74, y: -135}
+        - {x: 46, y: -135}
+        - {x: 46, y: 47}
+    - name: 2Impact0026
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 272
+        width: 126
+        height: 193
+      alignment: 9
+      pivot: {x: 0.6031746, y: 0.69948184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: -69}
+        - {x: 29, y: -61}
+        - {x: 27, y: -62}
+        - {x: 20, y: -55}
+        - {x: 20, y: -54}
+        - {x: 13, y: -44}
+        - {x: 23, y: -57}
+        - {x: 25, y: -59}
+        - {x: 28, y: -60}
+        - {x: 48, y: -33}
+        - {x: 48, y: 51}
+        - {x: -13, y: 51}
+        - {x: -65, y: -7}
+        - {x: -74, y: -104}
+        - {x: -74, y: -135}
+        - {x: -51, y: -135}
+        - {x: 46, y: -130}
+        - {x: 48, y: -126}
+        - {x: 48, y: -111}
+    - name: 2Impact0027
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 268
+        width: 130
+        height: 197
+      alignment: 9
+      pivot: {x: 0.5846154, y: 0.6852792}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: -55}
+        - {x: 29, y: -60}
+        - {x: 43, y: -40}
+        - {x: 48, y: 28}
+        - {x: 48, y: 29}
+        - {x: 35, y: 53}
+        - {x: -17, y: 53}
+        - {x: -52, y: 40}
+        - {x: -74, y: -66}
+        - {x: -74, y: -135}
+        - {x: 48, y: -135}
+        - {x: 48, y: -60}
+        - {x: 27, y: -62}
+        - {x: 16, y: -47}
+    - name: 2Impact0028
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 78
+        width: 127
+        height: 188
+      alignment: 9
+      pivot: {x: 0.6062992, y: 0.7180851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27, y: -59}
+        - {x: 35, y: -54}
+        - {x: 42, y: -29}
+        - {x: 40, y: 21}
+        - {x: 22, y: 22}
+        - {x: 21, y: 19}
+        - {x: 21, y: 14}
+        - {x: 19, y: 17}
+        - {x: 15, y: 21}
+        - {x: 33, y: 50}
+        - {x: 33, y: 53}
+        - {x: 4, y: 53}
+        - {x: -21, y: 49}
+        - {x: -66, y: -5}
+        - {x: -74, y: -26}
+        - {x: -74, y: -135}
+        - {x: 48, y: -135}
+        - {x: 48, y: -99}
+        - {x: 35, y: -66}
+        - {x: 16, y: -48}
+        - {x: 16, y: -46}
+    - name: 2Impact0029
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 73
+        width: 126
+        height: 193
+      alignment: 9
+      pivot: {x: 0.6031746, y: 0.69948184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: -54}
+        - {x: 32, y: -60}
+        - {x: 48, y: -45}
+        - {x: 48, y: 35}
+        - {x: 43, y: 55}
+        - {x: -5, y: 55}
+        - {x: -21, y: 47}
+        - {x: -65, y: -3}
+        - {x: -74, y: -108}
+        - {x: -74, y: -135}
+        - {x: -27, y: -135}
+        - {x: 48, y: -131}
+        - {x: 48, y: -100}
+        - {x: 37, y: -66}
+        - {x: 23, y: -55}
+        - {x: 16, y: -45}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

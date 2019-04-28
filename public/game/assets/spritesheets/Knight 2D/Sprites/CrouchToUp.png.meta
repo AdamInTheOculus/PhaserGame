@@ -1,0 +1,470 @@
+fileFormatVersion: 2
+guid: 1175f57b63ada1d419d4a1901c0a9a0f
+timeCreated: 1478972341
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CrouchToUp0000
+    21300002: CrouchToUp0001
+    21300004: CrouchToUp0002
+    21300006: CrouchToUp0003
+    21300008: CrouchToUp0004
+    21300010: CrouchToUp0005
+    21300012: CrouchToUp0006
+    21300014: CrouchToUp0007
+    21300016: CrouchToUp0008
+    21300018: CrouchToUp0009
+    21300020: CrouchToUp0010
+    21300022: CrouchToUp0011
+    21300024: CrouchToUp0012
+    21300026: CrouchToUp0013
+    21300028: CrouchToUp0014
+    21300030: CrouchToUp0015
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CrouchToUp0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 889
+        width: 120
+        height: 134
+      alignment: 9
+      pivot: {x: 0.425, y: 1.0074627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 59, y: -128}
+        - {x: 59, y: -35}
+        - {x: 30, y: -6}
+        - {x: 4, y: -6}
+        - {x: -23, y: -23}
+        - {x: -51, y: -67}
+        - {x: -51, y: -105}
+        - {x: -44, y: -135}
+        - {x: -26, y: -135}
+        - {x: -25, y: -131}
+        - {x: -3, y: -114}
+        - {x: 29, y: -127}
+    - name: CrouchToUp0001
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 884
+        width: 120
+        height: 139
+      alignment: 9
+      pivot: {x: 0.425, y: 0.971223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: -122}
+        - {x: 5, y: -112}
+        - {x: 22, y: -124}
+        - {x: 59, y: -132}
+        - {x: 60, y: -132}
+        - {x: 60, y: -17}
+        - {x: 56, y: -1}
+        - {x: -15, y: -1}
+        - {x: -34, y: -13}
+        - {x: -50, y: -43}
+        - {x: -50, y: -135}
+        - {x: -26, y: -135}
+        - {x: -25, y: -131}
+        - {x: -26, y: -123}
+        - {x: 2, y: -124}
+    - name: CrouchToUp0002
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 877
+        width: 117
+        height: 146
+      alignment: 9
+      pivot: {x: 0.41880342, y: 0.9246575}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 63, y: -118}
+        - {x: 63, y: -27}
+        - {x: 29, y: 1}
+        - {x: 27, y: 3}
+        - {x: -4, y: 3}
+        - {x: -47, y: -52}
+        - {x: -47, y: -130}
+        - {x: -45, y: -135}
+        - {x: -26, y: -135}
+        - {x: -25, y: -131}
+        - {x: 23, y: -129}
+        - {x: 58, y: -126}
+    - name: CrouchToUp0003
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 873
+        width: 116
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4051724, y: 0.9}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: -118}
+        - {x: 27, y: -122}
+        - {x: 30, y: -125}
+        - {x: 58, y: -126}
+        - {x: 60, y: -118}
+        - {x: 52, y: -111}
+        - {x: 67, y: -88}
+        - {x: 67, y: -27}
+        - {x: 61, y: -7}
+        - {x: 26, y: 8}
+        - {x: 11, y: 8}
+        - {x: -16, y: -20}
+        - {x: -44, y: -66}
+        - {x: -44, y: -135}
+        - {x: -26, y: -135}
+        - {x: -24, y: -131}
+        - {x: 25, y: -129}
+        - {x: 28, y: -128}
+    - name: CrouchToUp0004
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 723
+        width: 115
+        height: 148
+      alignment: 9
+      pivot: {x: 0.38260868, y: 0.9121622}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54, y: -75}
+        - {x: 52, y: -68}
+        - {x: 45, y: -63}
+        - {x: 27, y: -58}
+        - {x: 44, y: -54}
+        - {x: 56, y: -75}
+        - {x: 63, y: -84}
+        - {x: 71, y: -69}
+        - {x: 71, y: -15}
+        - {x: 54, y: 12}
+        - {x: 1, y: 12}
+        - {x: -43, y: -51}
+        - {x: -43, y: -132}
+        - {x: -42, y: -135}
+        - {x: -19, y: -135}
+        - {x: 47, y: -127}
+        - {x: 63, y: -125}
+        - {x: 56, y: -107}
+    - name: CrouchToUp0005
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 712
+        width: 123
+        height: 159
+      alignment: 9
+      pivot: {x: 0.3821138, y: 0.8490566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76, y: -65}
+        - {x: 76, y: -8}
+        - {x: 39, y: 5}
+        - {x: 38, y: 1}
+        - {x: 38, y: -1}
+        - {x: 38, y: 10}
+        - {x: 35, y: 17}
+        - {x: 6, y: 17}
+        - {x: -43, y: -49}
+        - {x: -43, y: -135}
+        - {x: 46, y: -135}
+        - {x: 59, y: -134}
+        - {x: 66, y: -123}
+        - {x: 54, y: -63}
+        - {x: 63, y: -73}
+    - name: CrouchToUp0006
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 708
+        width: 126
+        height: 163
+      alignment: 9
+      pivot: {x: 0.37301588, y: 0.82822084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78, y: -98}
+        - {x: 78, y: 1}
+        - {x: 45, y: 12}
+        - {x: 40, y: 10}
+        - {x: 39, y: 7}
+        - {x: 40, y: 2}
+        - {x: 39, y: 3}
+        - {x: 39, y: 14}
+        - {x: 31, y: 20}
+        - {x: 28, y: 22}
+        - {x: -5, y: 22}
+        - {x: -43, y: -33}
+        - {x: -43, y: -135}
+        - {x: -23, y: -135}
+        - {x: -5, y: -110}
+        - {x: 29, y: -132}
+        - {x: 60, y: -129}
+    - name: CrouchToUp0007
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 703
+        width: 129
+        height: 168
+      alignment: 9
+      pivot: {x: 0.37984496, y: 0.8035714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 73, y: -71}
+        - {x: 73, y: -64}
+        - {x: 78, y: -63}
+        - {x: 78, y: 3}
+        - {x: 69, y: 27}
+        - {x: 3, y: 27}
+        - {x: -19, y: 16}
+        - {x: -37, y: -55}
+        - {x: -36, y: -61}
+        - {x: -34, y: -64}
+        - {x: -31, y: -66}
+        - {x: -42, y: -111}
+        - {x: -43, y: -118}
+        - {x: -43, y: -134}
+        - {x: -42, y: -135}
+        - {x: -9, y: -135}
+        - {x: 58, y: -126}
+        - {x: 60, y: -118}
+        - {x: 52, y: -111}
+    - name: CrouchToUp0008
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 528
+        width: 129
+        height: 173
+      alignment: 9
+      pivot: {x: 0.36434108, y: 0.7803468}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 32}
+        - {x: -26, y: 27}
+        - {x: -43, y: -65}
+        - {x: -43, y: -135}
+        - {x: 80, y: -135}
+        - {x: 80, y: 32}
+    - name: CrouchToUp0009
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 523
+        width: 132
+        height: 178
+      alignment: 9
+      pivot: {x: 0.3560606, y: 0.75842696}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: -126}
+        - {x: 81, y: -125}
+        - {x: 84, y: -108}
+        - {x: 84, y: 17}
+        - {x: 69, y: 37}
+        - {x: 6, y: 37}
+        - {x: -35, y: 22}
+        - {x: -43, y: -35}
+        - {x: -43, y: -135}
+        - {x: -25, y: -135}
+        - {x: -2, y: -93}
+        - {x: 3, y: -68}
+    - name: CrouchToUp0010
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 518
+        width: 134
+        height: 183
+      alignment: 9
+      pivot: {x: 0.35074627, y: 0.73770493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 83, y: -113}
+        - {x: 83, y: 24}
+        - {x: 69, y: 42}
+        - {x: -6, y: 42}
+        - {x: -42, y: 28}
+        - {x: -43, y: 15}
+        - {x: -43, y: -135}
+        - {x: -25, y: -135}
+        - {x: -5, y: -95}
+        - {x: 33, y: -130}
+        - {x: 62, y: -126}
+    - name: CrouchToUp0011
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 333
+        width: 123
+        height: 183
+      alignment: 9
+      pivot: {x: 0.34146342, y: 0.73770493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 66, y: -127}
+        - {x: 71, y: -123}
+        - {x: 66, y: -112}
+        - {x: 55, y: -69}
+        - {x: 53, y: -65}
+        - {x: 32, y: -44}
+        - {x: 27, y: -41}
+        - {x: 50, y: -56}
+        - {x: 58, y: -53}
+        - {x: 66, y: -31}
+        - {x: 79, y: 11}
+        - {x: 79, y: 25}
+        - {x: 40, y: 44}
+        - {x: 2, y: 44}
+        - {x: -36, y: -9}
+        - {x: -42, y: -98}
+        - {x: -42, y: -135}
+        - {x: -25, y: -135}
+        - {x: 0, y: -88}
+        - {x: 39, y: -126}
+    - name: CrouchToUp0012
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 331
+        width: 126
+        height: 185
+      alignment: 9
+      pivot: {x: 0.3809524, y: 0.7297297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: -122}
+        - {x: 56, y: -131}
+        - {x: 70, y: -127}
+        - {x: 73, y: -121}
+        - {x: 73, y: 42}
+        - {x: 60, y: 46}
+        - {x: -13, y: 46}
+        - {x: -43, y: -60}
+        - {x: -43, y: -135}
+        - {x: -27, y: -135}
+        - {x: -26, y: -134}
+        - {x: -26, y: -124}
+        - {x: -3, y: -90}
+    - name: CrouchToUp0013
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 331
+        width: 126
+        height: 185
+      alignment: 9
+      pivot: {x: 0.37301588, y: 0.7297297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32, y: -40}
+        - {x: 46, y: -56}
+        - {x: 51, y: -56}
+        - {x: 62, y: -39}
+        - {x: 73, y: 2}
+        - {x: 73, y: 46}
+        - {x: -6, y: 46}
+        - {x: -32, y: -8}
+        - {x: -43, y: -58}
+        - {x: -43, y: -135}
+        - {x: 70, y: -135}
+        - {x: 73, y: -128}
+        - {x: 73, y: -116}
+        - {x: 58, y: -71}
+    - name: CrouchToUp0014
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 320
+        width: 124
+        height: 196
+      alignment: 9
+      pivot: {x: 0.37096775, y: 0.68877554}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33, y: -40}
+        - {x: 54, y: -60}
+        - {x: 73, y: -39}
+        - {x: 73, y: 50}
+        - {x: -27, y: 50}
+        - {x: -43, y: 31}
+        - {x: -43, y: -135}
+        - {x: 64, y: -135}
+        - {x: 73, y: -122}
+        - {x: 73, y: -112}
+        - {x: 60, y: -68}
+    - name: CrouchToUp0015
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 124
+        width: 120
+        height: 194
+      alignment: 9
+      pivot: {x: 0.35, y: 0.6958763}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 73, y: 54}
+        - {x: -1, y: 54}
+        - {x: -38, y: -13}
+        - {x: -42, y: -56}
+        - {x: -42, y: -135}
+        - {x: -14, y: -135}
+        - {x: 55, y: -131}
+        - {x: 73, y: -129}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

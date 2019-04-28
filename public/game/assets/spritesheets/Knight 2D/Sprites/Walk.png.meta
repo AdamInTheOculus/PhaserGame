@@ -1,0 +1,813 @@
+fileFormatVersion: 2
+guid: f4cbda0b9943d63428806642c25566c0
+timeCreated: 1478984391
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Walk0000
+    21300002: Walk0001
+    21300004: Walk0002
+    21300006: Walk0003
+    21300008: Walk0004
+    21300010: Walk0005
+    21300012: Walk0006
+    21300014: Walk0007
+    21300016: Walk0008
+    21300018: Walk0009
+    21300020: Walk0010
+    21300022: Walk0011
+    21300024: Walk0012
+    21300026: Walk0013
+    21300028: Walk0014
+    21300030: Walk0015
+    21300032: Walk0016
+    21300034: Walk0017
+    21300036: Walk0018
+    21300038: Walk0019
+    21300040: Walk0020
+    21300042: Walk0021
+    21300044: Walk0022
+    21300046: Walk0023
+    21300048: Walk0024
+    21300050: Walk0025
+    21300052: Walk0026
+    21300054: Walk0027
+    21300056: Walk0028
+    21300058: Walk0029
+    21300060: Walk0030
+    21300062: Walk0031
+    21300064: Walk0032
+    21300066: Walk0033
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Walk0000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 824
+        width: 103
+        height: 199
+      alignment: 9
+      pivot: {x: 0.3883495, y: 0.6633166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 65}
+        - {x: -37, y: 39}
+        - {x: -37, y: -125}
+        - {x: -29, y: -132}
+        - {x: 15, y: -132}
+        - {x: 20, y: -130}
+        - {x: 59, y: 7}
+        - {x: 59, y: 65}
+    - name: Walk0001
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 821
+        width: 100
+        height: 202
+      alignment: 9
+      pivot: {x: 0.38, y: 0.6633663}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50, y: -13}
+        - {x: 59, y: 26}
+        - {x: 59, y: 66}
+        - {x: -5, y: 66}
+        - {x: -16, y: 65}
+        - {x: -38, y: 10}
+        - {x: -38, y: -101}
+        - {x: -26, y: -133}
+        - {x: 11, y: -133}
+        - {x: 16, y: -126}
+        - {x: 16, y: -65}
+        - {x: 28, y: -48}
+    - name: Walk0002
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 823
+        width: 96
+        height: 200
+      alignment: 9
+      pivot: {x: 0.39583334, y: 0.665}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 58, y: 66}
+        - {x: 15, y: 66}
+        - {x: -15, y: 59}
+        - {x: -38, y: 19}
+        - {x: -38, y: -132}
+        - {x: 7, y: -132}
+        - {x: 22, y: -121}
+        - {x: 52, y: -18}
+        - {x: 58, y: 11}
+    - name: Walk0003
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 824
+        width: 106
+        height: 199
+      alignment: 9
+      pivot: {x: 0.3962264, y: 0.6633166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17, y: -132}
+        - {x: 34, y: -132}
+        - {x: 59, y: 26}
+        - {x: 59, y: 66}
+        - {x: -8, y: 66}
+        - {x: -38, y: 59}
+        - {x: -38, y: -132}
+        - {x: -3, y: -132}
+        - {x: -2, y: -125}
+        - {x: -11, y: -117}
+        - {x: -3, y: -123}
+    - name: Walk0004
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 827
+        width: 103
+        height: 196
+      alignment: 9
+      pivot: {x: 0.39805827, y: 0.6632653}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 58, y: 66}
+        - {x: 13, y: 66}
+        - {x: -13, y: 57}
+        - {x: -41, y: 16}
+        - {x: -41, y: -130}
+        - {x: 45, y: -130}
+        - {x: 38, y: -112}
+        - {x: 53, y: -19}
+        - {x: 58, y: 47}
+    - name: Walk0005
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 827
+        width: 107
+        height: 196
+      alignment: 9
+      pivot: {x: 0.42056075, y: 0.65816325}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 57, y: -84}
+        - {x: 57, y: 66}
+        - {x: 23, y: 66}
+        - {x: -40, y: 47}
+        - {x: -45, y: 15}
+        - {x: -45, y: -129}
+        - {x: -13, y: -129}
+        - {x: -10, y: -121}
+        - {x: 19, y: -127}
+        - {x: 51, y: -127}
+    - name: Walk0006
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 827
+        width: 110
+        height: 196
+      alignment: 9
+      pivot: {x: 0.5, y: 0.65816325}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 66}
+        - {x: -45, y: 10}
+        - {x: -50, y: -7}
+        - {x: -50, y: -129}
+        - {x: 55, y: -129}
+        - {x: 55, y: 66}
+    - name: Walk0007
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 819
+        width: 121
+        height: 204
+      alignment: 9
+      pivot: {x: 0.49586776, y: 0.6519608}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 65}
+        - {x: -54, y: -14}
+        - {x: -54, y: -129}
+        - {x: 34, y: -129}
+        - {x: 56, y: -123}
+        - {x: 56, y: 65}
+    - name: Walk0008
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 821
+        width: 117
+        height: 202
+      alignment: 9
+      pivot: {x: 0.53846157, y: 0.6386139}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41, y: -122}
+        - {x: 50, y: -108}
+        - {x: 54, y: -76}
+        - {x: 54, y: 65}
+        - {x: 14, y: 65}
+        - {x: -18, y: 60}
+        - {x: -39, y: 7}
+        - {x: -39, y: -2}
+        - {x: -31, y: -8}
+        - {x: -37, y: -25}
+        - {x: -58, y: -106}
+        - {x: -58, y: -122}
+        - {x: -44, y: -129}
+        - {x: -27, y: -129}
+        - {x: -25, y: -123}
+        - {x: 12, y: -129}
+        - {x: 18, y: -129}
+    - name: Walk0009
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 613
+        width: 120
+        height: 204
+      alignment: 9
+      pivot: {x: 0.5416667, y: 0.64705884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47, y: -113}
+        - {x: 55, y: -77}
+        - {x: 55, y: 64}
+        - {x: 20, y: 64}
+        - {x: -15, y: 54}
+        - {x: -34, y: 30}
+        - {x: -45, y: -6}
+        - {x: -34, y: -51}
+        - {x: -60, y: -89}
+        - {x: -60, y: -120}
+        - {x: -55, y: -129}
+        - {x: -30, y: -129}
+        - {x: -28, y: -121}
+        - {x: 14, y: -128}
+        - {x: 37, y: -126}
+    - name: Walk0010
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 625
+        width: 126
+        height: 192
+      alignment: 9
+      pivot: {x: 0.50793654, y: 0.671875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: -129}
+        - {x: 29, y: -129}
+        - {x: 54, y: -122}
+        - {x: 57, y: -81}
+        - {x: 57, y: 63}
+        - {x: 15, y: 63}
+        - {x: -46, y: 34}
+        - {x: -61, y: -91}
+        - {x: -61, y: -117}
+        - {x: -51, y: -129}
+        - {x: -28, y: -129}
+        - {x: -2, y: -88}
+        - {x: 0, y: -82}
+        - {x: -1, y: -91}
+    - name: Walk0011
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 626
+        width: 126
+        height: 191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6806283}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: -64}
+        - {x: 8, y: -39}
+        - {x: 23, y: -47}
+        - {x: 45, y: -37}
+        - {x: 58, y: 4}
+        - {x: 58, y: 61}
+        - {x: -19, y: 61}
+        - {x: -61, y: 33}
+        - {x: -61, y: -130}
+        - {x: 21, y: -130}
+        - {x: 29, y: -128}
+        - {x: 35, y: -121}
+        - {x: 29, y: -114}
+        - {x: 25, y: -75}
+    - name: Walk0012
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 627
+        width: 127
+        height: 190
+      alignment: 9
+      pivot: {x: 0.48031497, y: 0.68421054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32, y: -126}
+        - {x: 28, y: -120}
+        - {x: 23, y: -115}
+        - {x: 51, y: -37}
+        - {x: 59, y: 0}
+        - {x: 59, y: 60}
+        - {x: 1, y: 60}
+        - {x: -60, y: 25}
+        - {x: -60, y: -115}
+        - {x: -51, y: -130}
+        - {x: -40, y: -130}
+        - {x: -38, y: -127}
+        - {x: -13, y: -130}
+        - {x: 6, y: -130}
+    - name: Walk0013
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 622
+        width: 117
+        height: 195
+      alignment: 9
+      pivot: {x: 0.4957265, y: 0.6615385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 60}
+        - {x: -45, y: 40}
+        - {x: -53, y: -9}
+        - {x: -54, y: -19}
+        - {x: -54, y: -129}
+        - {x: 32, y: -129}
+        - {x: 59, y: 9}
+        - {x: 59, y: 60}
+    - name: Walk0014
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 626
+        width: 116
+        height: 191
+      alignment: 9
+      pivot: {x: 0.41379312, y: 0.6963351}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33, y: 58}
+        - {x: -48, y: 54}
+        - {x: -48, y: -127}
+        - {x: 33, y: -127}
+        - {x: 48, y: -77}
+        - {x: 61, y: -27}
+        - {x: 61, y: 58}
+    - name: Walk0015
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 633
+        width: 111
+        height: 184
+      alignment: 9
+      pivot: {x: 0.4054054, y: 0.6902174}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61, y: 57}
+        - {x: -8, y: 57}
+        - {x: -43, y: 24}
+        - {x: -43, y: -107}
+        - {x: -33, y: -119}
+        - {x: -23, y: -127}
+        - {x: 12, y: -127}
+        - {x: 17, y: -126}
+        - {x: 15, y: -119}
+        - {x: 47, y: -52}
+        - {x: 61, y: -5}
+    - name: Walk0016
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 634
+        width: 110
+        height: 183
+      alignment: 9
+      pivot: {x: 0.4181818, y: 0.6939891}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 56}
+        - {x: -44, y: 37}
+        - {x: -44, y: -107}
+        - {x: -41, y: -127}
+        - {x: 46, y: -127}
+        - {x: 62, y: -63}
+        - {x: 62, y: 56}
+    - name: Walk0017
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 425
+        width: 108
+        height: 186
+      alignment: 9
+      pivot: {x: 0.4351852, y: 0.67741936}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61, y: 55}
+        - {x: 59, y: 56}
+        - {x: 46, y: 49}
+        - {x: 27, y: 56}
+        - {x: -11, y: 56}
+        - {x: -44, y: 21}
+        - {x: -44, y: -32}
+        - {x: -32, y: -126}
+        - {x: 10, y: -126}
+        - {x: 38, y: -73}
+        - {x: 55, y: -13}
+        - {x: 61, y: 37}
+    - name: Walk0018
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 419
+        width: 114
+        height: 192
+      alignment: 9
+      pivot: {x: 0.40350878, y: 0.6875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 63, y: 33}
+        - {x: 63, y: 56}
+        - {x: -45, y: 56}
+        - {x: -45, y: -123}
+        - {x: -41, y: -130}
+        - {x: 5, y: -130}
+        - {x: 10, y: -128}
+        - {x: 8, y: -121}
+        - {x: 23, y: -76}
+        - {x: 57, y: -12}
+    - name: Walk0019
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 423
+        width: 114
+        height: 188
+      alignment: 9
+      pivot: {x: 0.42982456, y: 0.7074468}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 55}
+        - {x: -45, y: 31}
+        - {x: -45, y: -102}
+        - {x: -38, y: -130}
+        - {x: -19, y: -132}
+        - {x: 15, y: -132}
+        - {x: 20, y: -130}
+        - {x: 30, y: -115}
+        - {x: 63, y: -41}
+        - {x: 63, y: 55}
+    - name: Walk0020
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 419
+        width: 115
+        height: 192
+      alignment: 9
+      pivot: {x: 0.4173913, y: 0.6822917}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 56}
+        - {x: -46, y: 28}
+        - {x: -46, y: -131}
+        - {x: 63, y: -131}
+        - {x: 63, y: 56}
+    - name: Walk0021
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 421
+        width: 112
+        height: 190
+      alignment: 9
+      pivot: {x: 0.45535713, y: 0.6894737}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51, y: -21}
+        - {x: 61, y: 31}
+        - {x: 61, y: 52}
+        - {x: 56, y: 53}
+        - {x: 49, y: 49}
+        - {x: 40, y: 41}
+        - {x: 15, y: 56}
+        - {x: -10, y: 56}
+        - {x: -49, y: 34}
+        - {x: -49, y: -131}
+        - {x: -25, y: -131}
+        - {x: -19, y: -128}
+        - {x: -15, y: -119}
+        - {x: 2, y: -131}
+        - {x: 34, y: -131}
+        - {x: 38, y: -128}
+        - {x: 33, y: -117}
+        - {x: 20, y: -67}
+    - name: Walk0022
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 419
+        width: 121
+        height: 192
+      alignment: 9
+      pivot: {x: 0.446281, y: 0.6875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 55}
+        - {x: -54, y: 28}
+        - {x: -54, y: -131}
+        - {x: 57, y: -131}
+        - {x: 61, y: -82}
+        - {x: 61, y: 55}
+    - name: Walk0023
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 419
+        width: 125
+        height: 192
+      alignment: 9
+      pivot: {x: 0.496, y: 0.703125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 54}
+        - {x: -50, y: 39}
+        - {x: -58, y: -18}
+        - {x: -58, y: -131}
+        - {x: 43, y: -131}
+        - {x: 44, y: -130}
+        - {x: 56, y: -113}
+        - {x: 60, y: -81}
+        - {x: 60, y: 54}
+    - name: Walk0024
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 423
+        width: 124
+        height: 188
+      alignment: 9
+      pivot: {x: 0.5, y: 0.70212764}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 55}
+        - {x: -50, y: 13}
+        - {x: -62, y: -16}
+        - {x: -62, y: -131}
+        - {x: 57, y: -131}
+        - {x: 59, y: -127}
+        - {x: 59, y: 55}
+    - name: Walk0025
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 227
+        width: 131
+        height: 190
+      alignment: 9
+      pivot: {x: 0.53435117, y: 0.7105263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 58, y: 55}
+        - {x: -35, y: 55}
+        - {x: -67, y: -44}
+        - {x: -67, y: -130}
+        - {x: -52, y: -129}
+        - {x: -31, y: -129}
+        - {x: 2, y: -131}
+        - {x: 32, y: -131}
+        - {x: 48, y: -128}
+        - {x: 55, y: -122}
+        - {x: 57, y: -116}
+        - {x: 58, y: -89}
+    - name: Walk0026
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 221
+        width: 133
+        height: 196
+      alignment: 9
+      pivot: {x: 0.5714286, y: 0.6785714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -55, y: 8}
+        - {x: -70, y: -98}
+        - {x: -70, y: -119}
+        - {x: -49, y: -132}
+        - {x: 57, y: -132}
+        - {x: 57, y: 57}
+        - {x: 25, y: 57}
+        - {x: -6, y: 52}
+    - name: Walk0027
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 220
+        width: 132
+        height: 197
+      alignment: 9
+      pivot: {x: 0.5681818, y: 0.6751269}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -71, y: -121}
+        - {x: -58, y: -130}
+        - {x: -47, y: -133}
+        - {x: -45, y: -133}
+        - {x: -18, y: -97}
+        - {x: 8, y: -133}
+        - {x: 57, y: -133}
+        - {x: 57, y: 59}
+        - {x: 8, y: 59}
+        - {x: -71, y: 19}
+    - name: Walk0028
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 224
+        width: 132
+        height: 193
+      alignment: 9
+      pivot: {x: 0.530303, y: 0.69948184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 53, y: -37}
+        - {x: 58, y: 12}
+        - {x: 58, y: 58}
+        - {x: -12, y: 58}
+        - {x: -69, y: 34}
+        - {x: -69, y: -133}
+        - {x: 37, y: -133}
+        - {x: 40, y: -127}
+        - {x: 35, y: -121}
+        - {x: 27, y: -71}
+    - name: Walk0029
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 218
+        width: 123
+        height: 199
+      alignment: 9
+      pivot: {x: 0.52845526, y: 0.6683417}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 60}
+        - {x: -45, y: 44}
+        - {x: -63, y: -68}
+        - {x: -63, y: -110}
+        - {x: -57, y: -128}
+        - {x: -49, y: -128}
+        - {x: -23, y: -133}
+        - {x: 42, y: -133}
+        - {x: 58, y: -3}
+        - {x: 58, y: 60}
+    - name: Walk0030
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 222
+        width: 123
+        height: 195
+      alignment: 9
+      pivot: {x: 0.4878049, y: 0.6820513}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 55, y: 61}
+        - {x: 49, y: 59}
+        - {x: 44, y: 61}
+        - {x: -11, y: 61}
+        - {x: -57, y: 37}
+        - {x: -57, y: -133}
+        - {x: 44, y: -133}
+        - {x: 59, y: -41}
+        - {x: 59, y: 61}
+    - name: Walk0031
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 216
+        width: 115
+        height: 201
+      alignment: 9
+      pivot: {x: 0.4869565, y: 0.6666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 62}
+        - {x: -52, y: 34}
+        - {x: -52, y: -108}
+        - {x: -37, y: -125}
+        - {x: -28, y: -133}
+        - {x: 29, y: -133}
+        - {x: 43, y: -129}
+        - {x: 59, y: 26}
+        - {x: 59, y: 62}
+    - name: Walk0032
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 221
+        width: 109
+        height: 196
+      alignment: 9
+      pivot: {x: 0.43119267, y: 0.6785714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50, y: -60}
+        - {x: 60, y: -25}
+        - {x: 60, y: 63}
+        - {x: -13, y: 63}
+        - {x: -45, y: 22}
+        - {x: -45, y: -113}
+        - {x: -25, y: -127}
+        - {x: -18, y: -123}
+        - {x: -19, y: -116}
+        - {x: -22, y: -106}
+        - {x: -16, y: -114}
+        - {x: -17, y: -130}
+        - {x: -14, y: -133}
+        - {x: 16, y: -133}
+        - {x: 19, y: -124}
+        - {x: 12, y: -120}
+        - {x: 17, y: -78}
+    - name: Walk0033
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 15
+        width: 103
+        height: 199
+      alignment: 9
+      pivot: {x: 0.3883495, y: 0.6633166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 65}
+        - {x: -37, y: 39}
+        - {x: -37, y: -125}
+        - {x: -29, y: -132}
+        - {x: 15, y: -132}
+        - {x: 20, y: -130}
+        - {x: 59, y: 7}
+        - {x: 59, y: 65}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
