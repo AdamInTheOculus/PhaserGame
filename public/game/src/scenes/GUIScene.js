@@ -74,11 +74,11 @@ class GUIScene extends Phaser.Scene {
             if(time >= (spellsArray[0].lastCastTime+spellsArray[0].initCoolDown)){
                 this.spellsInventory[1] = this.add.graphics()
                 this.spellsInventory[1].lineStyle(2, 0xfff000, 1);
-                this.spellsInventory[1].strokeRect(this.sw*0.02, this.sh*0.82, this.sw*0.1, this.sh*0.13);
+                this.spellsInventory[1].strokeRect(this.sw*0.02, this.sh*0.8, this.sw*0.1, this.sh*0.13);
             }else{
                 this.spellsInventory[1] = this.add.graphics()
                 this.spellsInventory[1].lineStyle(2, 0x000, 1);
-                this.spellsInventory[1].strokeRect(this.sw*0.02, this.sh*0.82, this.sw*0.1, this.sh*0.13);
+                this.spellsInventory[1].strokeRect(this.sw*0.02, this.sh*0.8, this.sw*0.1, this.sh*0.13);
             }
         }
 
@@ -86,11 +86,11 @@ class GUIScene extends Phaser.Scene {
             if(time >= (spellsArray[1].lastCastTime+spellsArray[1].initCoolDown)){
                 this.spellsInventory[2] = this.add.graphics()
                 this.spellsInventory[2].lineStyle(2, 0xfff000, 1);
-                this.spellsInventory[2].strokeRect(this.sw*0.02+(this.sw*0.11), this.sh*0.82, this.sw*0.1, this.sh*0.13);
+                this.spellsInventory[2].strokeRect(this.sw*0.02+(this.sw*0.11), this.sh*0.8, this.sw*0.1, this.sh*0.13);
             }else{
                 this.spellsInventory[2] = this.add.graphics()
                 this.spellsInventory[2].lineStyle(2, 0x000, 1);
-                this.spellsInventory[2].strokeRect(this.sw*0.02+(this.sw*0.11), this.sh*0.82, this.sw*0.1, this.sh*0.13);
+                this.spellsInventory[2].strokeRect(this.sw*0.02+(this.sw*0.11), this.sh*0.8, this.sw*0.1, this.sh*0.13);
             }
         }
     }
@@ -103,7 +103,7 @@ class GUIScene extends Phaser.Scene {
     drawStock(spellStock){
         if(this.spellsInventoryText1===undefined){
             if(spellStock.a!=undefined){
-                this.spellsInventoryText1 = this.add.text(this.sw*0.02+(this.sw*0.042), this.sh*0.79, `${spellStock.a}`, {fill: '#000', fontSize: this.sw*0.03});
+                this.spellsInventoryText1 = this.add.text(this.sw*0.02+(this.sw*0.042), this.sh*0.94, `${spellStock.a}`, {fill: '#000', fontSize: this.sw*0.03});
             }
         }else{
             if(spellStock.a>0){
@@ -117,7 +117,7 @@ class GUIScene extends Phaser.Scene {
 
         if(this.spellsInventoryText2===undefined){
             if(spellStock.b!=undefined){
-                this.spellsInventoryText2 = this.add.text(this.sw*0.02+(this.sw*0.1)+(this.sw*0.042), this.sh*0.79, `${spellStock.b}`, {fill: '#000', fontSize: this.sw*0.03});
+                this.spellsInventoryText2 = this.add.text(this.sw*0.02+(this.sw*0.108)+(this.sw*0.042), this.sh*0.94, `${spellStock.b}`, {fill: '#000', fontSize: this.sw*0.03});
             }
         }else{
             if(spellStock.b>0){
@@ -145,13 +145,13 @@ class GUIScene extends Phaser.Scene {
         let stockA = undefined;
         let stockB = undefined;
         if(spellsArray[0]!=undefined){
-            this.spellsInventory[1] = this.add.image(this.sw*0.072, this.sh*0.89, spellsArray[0].icon)
+            this.spellsInventory[1] = this.add.image(this.sw*0.072, this.sh*0.87, spellsArray[0].icon)
             this.spellsInventory[1].displayWidth = this.sw*0.1;
             this.spellsInventory[1].displayHeight = this.sh*0.13;
             stockA = spellsArray[0].stock;
         }
         if(spellsArray[1]!=undefined){
-            this.spellsInventory[2] = this.add.image(this.sw*0.072+(this.sw*0.108), this.sh*0.89, spellsArray[1].icon)
+            this.spellsInventory[2] = this.add.image(this.sw*0.072+(this.sw*0.108), this.sh*0.87, spellsArray[1].icon)
             this.spellsInventory[2].displayWidth = this.sw*0.1;
             this.spellsInventory[2].displayHeight = this.sh*0.13;
             stockB = spellsArray[1].stock;
