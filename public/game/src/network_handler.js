@@ -173,6 +173,28 @@ class NetworkHandler {
     }
 
     /**
+     * @author   JonCatalano
+     * @date     April 27th 2019
+     * @purpose  Send spell cast server information
+     * @params  Index, spritePosition, cursorPosition
+    **/
+    emitSpellCast(data) {
+        this.socket.emit('player_cast_spell', data);
+    }
+
+    /**
+     * @author   JonCatalano
+     * @date     April 27th 2019
+     * @purpose  Receive spell cast server information
+     * @params  Index, spritePosition, cursorPosition
+    **/
+    onPlayerCastSpell(data) {
+        this.socket.on('player_cast_spell', (data) => {
+            this.scene.players[this.socket.id].networkShoot(data.index);
+        });
+    }
+
+    /**
      * @author     thomas-peter (StackOverflow answer)
      * @date       Apritl 27th 2019
      * @purpose    Utility function to calculate size of Javascript object, in bytes.

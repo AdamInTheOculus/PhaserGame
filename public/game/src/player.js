@@ -122,6 +122,7 @@ export default class Player {
                 if(spellsArr[1]!=undefined){
                     if(time >= (spellsArr[1].lastCastTime+spellsArr[1].initCoolDown)){
                         spellsArr[1].lastCastTime = time;
+                        this.scene.networkHandler.emitSpellCast({index: 1, spritePosition: {x: this.sprite.x, y: this.sprite.y}, cursorPosition: this.cursorPosition});
                         this.shoot(1);
                     }
                 }
@@ -201,6 +202,13 @@ export default class Player {
         let spellsArr = Object.values(this.spells);
         if(spellsArr[spellIndex]!=undefined){
             spellsArr[spellIndex].cast(this.scene, spritePosition, cursorPosition);
+        }
+    }
+
+    networkShoot(data){
+        let spellsArr = Object.values(this.spells);
+        if(spellsArr[data.index]!=undefined){
+            spellsArr[data.index].cast(this.scene, data.spritePosition, data.cursorPosition);
         }
     }
 

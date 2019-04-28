@@ -81,6 +81,10 @@ io.on('connection', (socket) => {
         gameManager.getPlayerById(socket.id).size = data.size;
         console.log(gameManager.getPlayerById(socket.id));
     });
+
+    socket.on('player_cast_spell', (data) => {
+        io.emit('player_cast_spell', data);
+    });
 });
 
 
