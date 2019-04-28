@@ -36,6 +36,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         // == Build world with background image, tilemaps, and game objects ==
         // ===================================================================
         let map = this.make.tilemap({key: 'map_1'});
+        this.height = map.height*32;
         let tileset = map.addTilesetImage('tiles', 'game_tiles');
         let tilesetData = this.getTileMetadata(map.tilesets);
         this.add.image(0, 0, 'background').setOrigin(0, 0);
@@ -128,8 +129,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         // ===================================================
         // == Reset player position after falling off world ==
         // ===================================================
-        if(this.player.sprite.y > 1375) {
-
+        if(this.player.sprite.y > this.height) {
             // Shake camera when player reaches out-of-bounds.
             this.cameras.main.shake(1000, 0.02, null, (camera, progress) => {
                 if(progress >= 1) {
