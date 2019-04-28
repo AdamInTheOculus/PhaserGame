@@ -151,7 +151,7 @@ class GUIScene extends Phaser.Scene {
             stockA = spellsArray[0].stock;
         }
         if(spellsArray[1]!=undefined){
-            this.spellsInventory[2] = this.add.image(this.sw*0.072+(this.sw*0.1), this.sh*0.89, spellsArray[1].icon)
+            this.spellsInventory[2] = this.add.image(this.sw*0.072+(this.sw*0.108), this.sh*0.89, spellsArray[1].icon)
             this.spellsInventory[2].displayWidth = this.sw*0.1;
             this.spellsInventory[2].displayHeight = this.sh*0.13;
             stockB = spellsArray[1].stock;

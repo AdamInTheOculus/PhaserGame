@@ -69,7 +69,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         // Set up flight orb triggerables
         this.layers.collectables.forEach(collectable => {
             let type = tilesetData[collectable.gid][0][1].type;
-            let orb = this.groups.collectables.create(collectable.x, collectable.y, 'map_atlas', `${type}_collectable`);
+            let orb = this.groups.collectables.create(collectable.x-(collectable.width/2), collectable.y-(collectable.height/2), 'map_atlas', `${type}_collectable`);
             orb.body.width = collectable.width;
             orb.body.height = collectable.height;
             orb.key = type;
