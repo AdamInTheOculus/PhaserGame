@@ -46,7 +46,6 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
 
         // Decrement Spell Stock
         this.scene.player.spells[this.key].stock -=1;
-        this.scene.guiScene.updateSpellsInventory(this.scene.player.spells)
     }
 
     update(time, delta){

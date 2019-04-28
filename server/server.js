@@ -79,11 +79,14 @@ io.on('connection', (socket) => {
     // ==============================================================================
     socket.on('player_size', (data) => {
         gameManager.getPlayerById(socket.id).size = data.size;
-        console.log(gameManager.getPlayerById(socket.id));
     });
 
+    // ======================================
+    // == Handle when client casts a spell ==
+    // ======================================
     socket.on('player_cast_spell', (data) => {
-        io.emit('player_cast_spell', data);
+        console.log(data);
+        socket.broadcast.emit('player_cast_spell', data); // Send to all clients except sender.
     });
 });
 

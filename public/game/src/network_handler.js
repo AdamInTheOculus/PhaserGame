@@ -22,6 +22,7 @@ class NetworkHandler {
         this.onPlayerConnects();
         this.onPlayerDisconnects();
         this.onServerHeartbeat();
+        this.onPlayerCastSpell();
     }
 
     /**
@@ -176,9 +177,11 @@ class NetworkHandler {
      * @author   JonCatalano
      * @date     April 27th 2019
      * @purpose  Send spell cast server information
-     * @params  Index, spritePosition, cursorPosition
+     * @params   Index, spritePosition, cursorPosition
     **/
     emitSpellCast(data) {
+
+        console.log(data);
         this.socket.emit('player_cast_spell', data);
     }
 
@@ -190,7 +193,7 @@ class NetworkHandler {
     **/
     onPlayerCastSpell(data) {
         this.socket.on('player_cast_spell', (data) => {
-            this.scene.players[this.socket.id].networkShoot(data.index);
+            this.scene.player.networkShoot(data);
         });
     }
 

@@ -99,12 +99,17 @@ export default class Player {
                     if(time >= (spellsArr[0].lastCastTime+spellsArr[0].initCoolDown)){
 
                         // Send data to server that we shot a spell
-                        // this.scene.networkHandler.broadcastSpellCast()
+                        this.scene.networkHandler.emitSpellCast({
+                            index: 0,
+                            spritePosition: {
+                                x: this.sprite.x,
+                                y: this.sprite.y
+                            },
+                            cursorPosition: this.cursorPosition
+                        });
 
                         spellsArr[0].lastCastTime = time;
                         this.shoot(0);
-
-
                     }
                 }
             }
@@ -206,8 +211,15 @@ export default class Player {
     }
 
     networkShoot(data){
+
+        this.spells['ice'] = new Ice_Spell(true);
         let spellsArr = Object.values(this.spells);
+
+        // ==========================================================================
+        // == NOTE: `this.spells` is not initialized until player picks up powerup ==
+        // ==========================================================================
         if(spellsArr[data.index]!=undefined){
+            console.log('About to cast networked shot!');
             spellsArr[data.index].cast(this.scene, data.spritePosition, data.cursorPosition);
         }
     }
@@ -252,8 +264,12 @@ export default class Player {
         switch(spellKey){
             case 'fireball':
                 this.spells[spellKey] = new Fireball_Spell(true);
+                this.scene.guiScene.updateSpellsInventory(this.scene.player.spells);
+                break;
             case 'ice':
                 this.spells[spellKey] = new Ice_Spell(true);
+                this.scene.guiScene.updateSpellsInventory(this.scene.player.spells)
+                break;
         }
     }
 

@@ -51,15 +51,6 @@ export default class Fireball_Spell extends Spell {
         projectile.body.velocity.x =  this.speed*Math.cos(angle);
         projectile.body.velocity.y = this.speed*Math.sin(angle);
 
-        //this.play('potionGreen');
-
-        //this.scene.sound.playAudioSprite('sfx', 'smb_fireball');
-
-        // ====================================================================================================
-        // == TODO: Add collision here. What will occur if the fireball collides with a player/wall/nothing? ==
-        // ====================================================================================================
-
-        // Reminder: You have access to `scene`.
         this.projectiles.push(projectile);
     }
 
