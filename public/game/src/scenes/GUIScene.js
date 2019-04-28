@@ -138,6 +138,9 @@ class GUIScene extends Phaser.Scene {
     **/
     updateSpellsInventory(spellsList, time) {
         let spellsArray = Object.values(spellsList);
+        if(spellsArray.length===0){
+            return;
+        }
         this.drawSpellsInventory(spellsList, time);
         let stockA = undefined;
         let stockB = undefined;

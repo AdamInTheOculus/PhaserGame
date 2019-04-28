@@ -31,7 +31,7 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
         this.body.angularVelocity = -10;
         //this.body.offset.set(config.width/2, config.height/2);
 
-        this.anims.play(config.key, true);
+        this.anims.play(this.key, true);
 
         this.particles = this.scene.add.particles(config.key)
 

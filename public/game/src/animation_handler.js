@@ -44,8 +44,8 @@ class AnimationHandler {
         });
 
         this.scene.anims.create({
-            key: 'ice',
-            frames: this.scene.anims.generateFrameNumbers('ice', { start: 0, end: 19 }),
+            key: 'iceball',
+            frames: this.scene.anims.generateFrameNumbers('iceball', { start: 0, end: 19 }),
             frameRate: 10,
             repeat: -1
         });

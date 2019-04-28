@@ -4,14 +4,12 @@
  * @purpose  Contains client-side data and logic for anything related to a fireball spell.
  **/
 
-import Spell from './spell.js';
 import Projectile from './projectile.js';
 
-export default class Ice_Spell extends Spell {
-    constructor(isAOE) {
-        super(isAOE);
+export default class Ice_Spell {
+    constructor() {
         this.key = 'iceball';
-        this.icon = 'ice_spell_icon';
+        this.icon = 'iceball_spell_icon';
         this.stock = this.initStock = 5;
         this.speed = 500;
         this.damage = 10;

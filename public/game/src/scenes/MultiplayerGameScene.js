@@ -29,7 +29,7 @@ class MultiplayerGameScene extends Phaser.Scene {
             frameWidth: 192, frameHeight: 192
         });
         this.load.image('fireball_spell_icon', 'game/assets/icons/fireball_spell_icon.png');
-        this.load.image('ice_spell_icon', 'game/assets/icons/ice_spell_icon.png');
+        this.load.image('iceball_spell_icon', 'game/assets/icons/ice_spell_icon.png');
     }
 
     create() {
@@ -174,7 +174,6 @@ class MultiplayerGameScene extends Phaser.Scene {
         let key = orb.key;
         orb.particles.destroy();
         orb.destroy(orb.x, orb.y);
-        player.setVelocityY(-500); // Give player flight boost.
 
         if(id === this.player.id) {
             this.player.addExtraJump();

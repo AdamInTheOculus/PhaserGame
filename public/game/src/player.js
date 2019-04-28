@@ -238,8 +238,10 @@ export default class Player {
         switch(spellKey){
             case 'fireball':
                 this.spells[spellKey] = new Fireball_Spell(true);
+                break;
             case 'iceball':
                 this.spells[spellKey] = new Ice_Spell(true);
+                break;
         }
     }
 

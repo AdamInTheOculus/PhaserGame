@@ -23,7 +23,7 @@ export default class AOE extends Phaser.GameObjects.Sprite {
 
         this.body.setSize(width, height);
 
-        this.anims.play(config.key, true);
+        this.anims.play(this.key, true);
 
         this.particles = this.scene.add.particles(config.key)
 
