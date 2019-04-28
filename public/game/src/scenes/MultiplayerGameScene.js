@@ -118,11 +118,10 @@ class MultiplayerGameScene extends Phaser.Scene {
 
         this.player.update(time, this.inputHandler.getState());
 
-        if(time<20000){
-            this.enemies.forEach(enemy => {
-                enemy.update();
-            });
-        }
+
+        this.enemies.forEach(enemy => {
+            enemy.update();
+        });
 
 
 
@@ -211,6 +210,17 @@ class MultiplayerGameScene extends Phaser.Scene {
             alert(`${this.players[id].name} touched the tombstone!`);
         }
 
+        location.reload();
+    }
+
+    /**
+     * @author   JonCatalano
+     * @date     April 28th 2019
+     * @purpose  Logic when a player collides with an enemy
+    **/
+    collideWithEnemy(id, player, enemy) {
+        alert("YOU ARE DEAD :'(")
+        player.body.setVelocityY(-200);
         location.reload();
     }
 
