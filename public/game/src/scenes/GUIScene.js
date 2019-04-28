@@ -106,7 +106,7 @@ class GUIScene extends Phaser.Scene {
                 this.spellsInventoryText1 = this.add.text(this.sw*0.02+(this.sw*0.042), this.sh*0.79, `${spellStock.a}`, {fill: '#000', fontSize: this.sw*0.03});
             }
         }else{
-            if(spellStock.a>=0){
+            if(spellStock.a>0){
                 if(spellStock.a!=undefined){
                     this.spellsInventoryText1.setText(`${spellStock.a}`);
                 }
@@ -120,7 +120,7 @@ class GUIScene extends Phaser.Scene {
                 this.spellsInventoryText2 = this.add.text(this.sw*0.02+(this.sw*0.1)+(this.sw*0.042), this.sh*0.79, `${spellStock.b}`, {fill: '#000', fontSize: this.sw*0.03});
             }
         }else{
-            if(spellStock.b>=0){
+            if(spellStock.b>0){
                 if(spellStock.b!=undefined){
                     this.spellsInventoryText2.setText(`${spellStock.b}`);
                 }
