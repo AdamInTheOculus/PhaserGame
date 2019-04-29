@@ -14,6 +14,7 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
         this.key = config.key;
         this.damage = config.damage;
         this.isAOE = config.isAOE;
+        //this.aoeDmg = config.aoeDmg;
         this.radius = config.radius;
 
         this.scene.physics.world.enable(this);
@@ -44,6 +45,8 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
 
         this.emitter.startFollow(this)
 
+        this.scene.physics.add.collider(this, this.scene.enemies, (obj1, obj2) => { this.applyDamage(obj2); });
+
         // Decrement Spell Stock
         this.scene.player.spells[this.key].stock -=1;
         this.scene.guiScene.updateSpellsInventory(this.scene.player.spells)
@@ -59,6 +62,12 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
         }
     }
 
+    applyDamage(obj){
+        console.log(obj.hp)
+        obj.hp-=this.damage;
+        this.explode();
+    }
+
     explode(){
         if(this.isAOE===true){
             let aoe = new AOE({
@@ -69,10 +78,12 @@ export default class Projectile extends Phaser.GameObjects.Sprite {
                 damage: this.damage,
                 radius: this.radius
             });
-            aoe.body.allowGravity = false;
         }
 
-        this.scene.player.spells[this.key].projectiles.pop();
+        if(this.scene.player.spells[this.key]!=undefined){
+                this.scene.player.spells[this.key].projectiles.pop();
+
+        }
         this.setActive(false);
         this.setVisible(false);﻿
         this.body.destroy();

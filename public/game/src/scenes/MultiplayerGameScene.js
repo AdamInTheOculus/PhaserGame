@@ -108,7 +108,6 @@ class MultiplayerGameScene extends Phaser.Scene {
         // == Bind camera within game boundaries ==
         // ========================================
         this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
-
     }
 
     update(time, delta) {
@@ -219,7 +218,7 @@ class MultiplayerGameScene extends Phaser.Scene {
      * @purpose  Logic when a player collides with an enemy
     **/
     collideWithEnemy(id, player, enemy) {
-        player.damage(enemy.damage);
+        enemy.applyDamage(player);
     }
 
     /**

@@ -36,6 +36,9 @@ export default class AOE extends Phaser.GameObjects.Sprite {
 
         this.emitter.startFollow(this)
 
+        this.scene.physics.add.collider(this, this.scene.layers.ground);
+        this.scene.physics.add.overlap(this, this.scene.enemies, (obj1, obj2) => { this.applyDamage(obj2); });
+
         // This is weird
         let _this = this;
         setTimeout(function(){
@@ -51,8 +54,9 @@ export default class AOE extends Phaser.GameObjects.Sprite {
         }
     }
 
-    applyDamage(){
-
+    applyDamage(obj){
+        obj.hp-=this.damage;
+        console.log(obj.hp)
     }
 
     explode(){

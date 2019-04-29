@@ -11,6 +11,7 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
         this.scene = config.scene;
         this.scene.add.existing(this);
         this.scene.physics.world.enable(this);
+        this.hp = 200;
         this.damage = 5;
 
         this.direction = "left";
@@ -38,6 +39,10 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
     }
 
     update(){
+        if(this.hp<=0){
+            this.kill();
+        }
+
         this.scene.physics.world.collide(this, this.scene.layers.ground, () => {this.checkCollision(this, this.scene.layers.ground)});
 
         //console.log(`UPDATE x: ${this.x}, y: ${this.y}`)
@@ -72,7 +77,14 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
         }
     }
 
-    kill(){
+    applyDamage(player){
+        player.hp-=this.damage;
+    }
 
+    kill(){
+        this.body.setVelocityY(-200);
+        this.setActive(false);
+        this.setVisible(false);﻿
+        this.body.destroy();
     }
 }

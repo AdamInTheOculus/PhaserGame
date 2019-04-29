@@ -16,7 +16,7 @@ export default class Player extends Phaser.GameObjects.Sprite {
         this.scene.physics.world.enable(this);
         this.id = data.id;
         this.name = data.name;
-        this.hp = 200;
+        this.hp = 400;
         this.spawnPoint = data.spawn;
         this.state = null;
 
@@ -26,9 +26,21 @@ export default class Player extends Phaser.GameObjects.Sprite {
 
         this.cursorPosition = {};
         this.spells = {};
+
+        // Grab image from game cache
+        var img = Object.values(this.scene.textures.get(data.key))[2][0].texture.frames[0];
+
+        var width = img.cutWidth;
+        var height = img.cutHeight;
+
+        this.body.setSize(width, height);
     }
 
     update(time, input) {
+        if(this.hp<=0){
+            this.kill();
+        }
+        
         this.time = time;
         let spellsArr = Object.values(this.spells);
 
@@ -255,14 +267,6 @@ export default class Player extends Phaser.GameObjects.Sprite {
     removeSpell(spellKey) {
         delete this.spells[spellKey];
         this.scene.guiScene.removeSpellsInventory()
-    }
-
-    damage(amount){
-        this.hp-=amount;
-        console.log(this.hp)
-        if(this.hp<=0){
-            this.kill();
-        }
     }
 
     kill(){
