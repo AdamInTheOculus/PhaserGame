@@ -181,7 +181,15 @@ class NetworkHandler {
     **/
     emitSpellCast(data) {
 
-        console.log(data);
+        // DEBUG: Create box at cursor position
+        // let rect = new Phaser.Geom.Rectangle(data.cursorPosition.x, data.cursorPosition.y, 50, 50);
+        // let graphics = this.scene.add.graphics({ fillStyle: { color: 0x0000ff } });
+        // graphics.fillRectShape(rect);
+
+        // setTimeout(() => {
+        //     graphics.destroy(this.scene);
+        // }, 5000);
+
         this.socket.emit('player_cast_spell', data);
     }
 
@@ -193,7 +201,17 @@ class NetworkHandler {
     **/
     onPlayerCastSpell(data) {
         this.socket.on('player_cast_spell', (data) => {
-            this.scene.player.networkShoot(data);
+
+            // DEBUG: Create box at cursor position
+            // let rect = new Phaser.Geom.Rectangle(data.cursorPosition.x, data.cursorPosition.y, 50, 50);
+            // let graphics = this.scene.add.graphics({ fillStyle: { color: 0x0000ff } });
+            // graphics.fillRectShape(rect);
+
+            // setTimeout(() => {
+            //     graphics.destroy(this.scene);
+            // }, 5000);
+
+            this.scene.player.shoot(data);
         });
     }
 

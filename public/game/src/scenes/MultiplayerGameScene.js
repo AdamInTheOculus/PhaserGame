@@ -47,6 +47,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.inputHandler = new InputHandler(this.input);
         this.networkHandler = new NetworkHandler(this);
         this.animationsHandler = new AnimationHandler(this);
+        this.graphicsHandler = this.add.graphics();
 
         this.player = undefined;
         this.players = {};

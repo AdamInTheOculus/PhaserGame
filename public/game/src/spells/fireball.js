@@ -47,7 +47,7 @@ export default class Fireball_Spell extends Spell {
         projectile.body.allowGravity = true;
 
         projectile.setPosition(startPosition.x, startPosition.y);
-        let angle = Phaser.Math.Angle.Between(startPosition.x, startPosition.y, projectile.scene.cameras.main.scrollX+pointerPosition.x, projectile.scene.cameras.main.scrollY+pointerPosition.y)
+        let angle = Phaser.Math.Angle.Between(startPosition.x, startPosition.y, pointerPosition.x, pointerPosition.y);
         projectile.body.velocity.x =  this.speed*Math.cos(angle);
         projectile.body.velocity.y = this.speed*Math.sin(angle);
 
