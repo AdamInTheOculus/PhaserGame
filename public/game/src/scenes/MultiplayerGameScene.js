@@ -61,7 +61,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         // Set up flight orb triggerables
         this.layers.collectables.forEach(collectable => {
             let type = tilesetData[collectable.gid][0][1].type;
-            let orb = this.groups.collectables.create(collectable.x-(collectable.width/2), collectable.y-(collectable.height/2), 'map_atlas', `${type}_collectable`);
+            let orb = this.groups.collectables.create(collectable.x+(collectable.width/2), collectable.y-(collectable.height/2), 'map_atlas', `${type}_collectable`);
             orb.body.width = collectable.width;
             orb.body.height = collectable.height;
             orb.key = type;
@@ -92,7 +92,7 @@ class MultiplayerGameScene extends Phaser.Scene {
 
         // Set up endpoint (tombstone) triggerables
         this.layers.endPoints.forEach(endpoint => {
-            let tombstone = this.groups.endPoints.create(endpoint.x, endpoint.y, 'tombstone');
+            let tombstone = this.groups.endPoints.create(endpoint.x+endpoint.width/2, endpoint.y-endpoint.height/2, 'tombstone');
             tombstone.body.width = endpoint.width;
             tombstone.body.height = endpoint.height;
         });
@@ -129,15 +129,15 @@ class MultiplayerGameScene extends Phaser.Scene {
         // ===================================================
         // == Reset player position after falling off world ==
         // ===================================================
-        if(this.player.sprite.y > this.height) {
+        if(this.player.y > this.height) {
             // Shake camera when player reaches out-of-bounds.
             this.cameras.main.shake(1000, 0.02, null, (camera, progress) => {
                 if(progress >= 1) {
                     let spawnPoint = this.getRandomSpawnPoint();
-                    this.player.sprite.setVelocityY(0);
-                    this.player.sprite.setVelocityX(0);
-                    this.player.sprite.x = spawnPoint.x;
-                    this.player.sprite.y = spawnPoint.y;
+                    this.player.setVelocityY(0);
+                    this.player.setVelocityX(0);
+                    this.player.x = spawnPoint.x;
+                    this.player.y = spawnPoint.y;
                 }
             });
         }
@@ -219,9 +219,7 @@ class MultiplayerGameScene extends Phaser.Scene {
      * @purpose  Logic when a player collides with an enemy
     **/
     collideWithEnemy(id, player, enemy) {
-        alert("YOU ARE DEAD :'(")
-        player.body.setVelocityY(-200);
-        location.reload();
+        player.damage(enemy.damage);
     }
 
     /**

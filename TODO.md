@@ -14,6 +14,7 @@
 ## Client Tasks
 
 ### New Features
+ * Create database
  * Ask player for username before joining.
  * ~~Display username above each player.~~
  * Display player list/count in corner.

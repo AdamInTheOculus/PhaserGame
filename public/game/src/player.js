@@ -8,14 +8,16 @@ import { MOVE_LEFT, MOVE_RIGHT, IDLE, JUMP, GAMEPAD, KEYBOARD } from './helpers/
 import Fireball_Spell from './spells/fireball.js'
 import Ice_Spell from './spells/ice.js'
 
-export default class Player {
+export default class Player extends Phaser.GameObjects.Sprite {
     constructor(data) {
+        super(data.scene, data.spawnPoint.x, data.spawnPoint.y, data.key);
+        this.scene = data.scene;
+        this.scene.add.existing(this);
+        this.scene.physics.world.enable(this);
         this.id = data.id;
         this.name = data.name;
         this.hp = 200;
-        this.sprite = data.sprite;
         this.spawnPoint = data.spawn;
-        this.scene = data.scene;
         this.state = null;
 
         this.lastJumpTime = 0;
@@ -44,16 +46,16 @@ export default class Player {
         if(input.gamepad !== undefined) {
 
             if(input.gamepad.leftStick.x > 0.2) {
-                this.sprite.setVelocityX(160);
-                this.sprite.anims.play('right', true);
+                this.body.setVelocityX(160);
+                this.anims.play('right', true);
                 this.state = MOVE_RIGHT
             } else if(input.gamepad.leftStick.x < -0.2) {
-                this.sprite.setVelocityX(-160);
-                this.sprite.anims.play('left', true);
+                this.body.setVelocityX(-160);
+                this.anims.play('left', true);
                 this.state = MOVE_LEFT;
             } else {
-                this.sprite.setVelocityX(0);
-                this.sprite.anims.play('turn');
+                this.body.setVelocityX(0);
+                this.anims.play('turn');
                 this.state = IDLE;
             }
 
@@ -75,17 +77,17 @@ export default class Player {
         // ===========================================
         else {
             if(input.left.isDown) {
-                this.sprite.setVelocityX(-160);
-                this.sprite.anims.play('left', true);
+                this.body.setVelocityX(-160);
+                this.anims.play('left', true);
                 this.state = MOVE_LEFT;
             }
             else if (input.right.isDown) {
-                this.sprite.setVelocityX(160);
-                this.sprite.anims.play('right', true);
+                this.body.setVelocityX(160);
+                this.anims.play('right', true);
                 this.state = MOVE_RIGHT;
             } else if(input.gamepad === undefined) {
-                this.sprite.setVelocityX(0);
-                this.sprite.anims.play('turn');
+                this.body.setVelocityX(0);
+                this.anims.play('turn');
                 this.state = IDLE;
             }
 
@@ -137,10 +139,10 @@ export default class Player {
         // ===========================================
         // == Initial jump when player is on ground ==
         // ===========================================
-        if(this.canJump && this.sprite.body.blocked.down) {
+        if(this.canJump && this.body.blocked.down) {
 
             // Apply jumping force
-            this.sprite.body.setVelocityY(-300);
+            this.body.setVelocityY(-300);
             this.canJump = false;
             this.canDoubleJump = true;
         }
@@ -148,10 +150,10 @@ export default class Player {
         // =============================================
         // == Secondary jump after falling off ground ==
         // =============================================
-        else if(this.canJump && this.sprite.body.blocked.down === false) {
+        else if(this.canJump && this.body.blocked.down === false) {
 
             // Apply jumping force
-            this.sprite.body.setVelocityY(-300);
+            this.body.setVelocityY(-300);
             this.canJump = false;
             this.canDoubleJump = false;
         }
@@ -163,7 +165,7 @@ export default class Player {
             // Prevent double jump from occurring too rapidly. Wait for 100ms between last key press.
             if(this.canDoubleJump && inputHeldTime > (this.lastJumpTime + 100)){
                 this.canDoubleJump = false;
-                this.sprite.body.setVelocityY(-300);
+                this.body.setVelocityY(-300);
             }
         }
     }
@@ -180,7 +182,7 @@ export default class Player {
 
     shoot(spellIndex, inputType){
         let cursorPosition = {};
-        let spritePosition = { x: this.sprite.x, y: this.sprite.y };
+        let spritePosition = { x: this.x, y: this.y };
 
         switch(inputType) {
             case KEYBOARD:
@@ -206,17 +208,17 @@ export default class Player {
     updatePlayerAnimation() {
         switch(this.state) {
             case MOVE_LEFT:
-                this.sprite.anims.play('left', true);
+                this.anims.play('left', true);
                 break;
             case MOVE_RIGHT:
-                this.sprite.anims.play('right', true);
+                this.anims.play('right', true);
                 break;
             case IDLE:
-                this.sprite.anims.play('turn', true);
+                this.anims.play('turn', true);
                 break;
             // case JUMP:  NOTE: No jumping animation implemented yet.
             //     break;
-            default: this.sprite.anims.play('turn', true);
+            default: this.anims.play('turn', true);
         }
     }
 
@@ -253,5 +255,19 @@ export default class Player {
     removeSpell(spellKey) {
         delete this.spells[spellKey];
         this.scene.guiScene.removeSpellsInventory()
+    }
+
+    damage(amount){
+        this.hp-=amount;
+        console.log(this.hp)
+        if(this.hp<=0){
+            this.kill();
+        }
+    }
+
+    kill(){
+        alert("YOU ARE DEAD :'(")
+        this.body.setVelocityY(-200);
+        location.reload();
     }
 }

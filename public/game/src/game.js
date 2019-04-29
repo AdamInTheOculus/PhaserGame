@@ -22,6 +22,12 @@ const config = {
             debug: true
         }
     },
+    scale: {
+        mode: Phaser.DOM.RESIZE,
+        autoCenter: Phaser.DOM.CENTER_BOTH,
+        width: '100%',
+        height: '100%',
+    },
     input: { gamepad: true },
     scene: [
         BootScene,

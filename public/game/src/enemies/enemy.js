@@ -11,6 +11,7 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
         this.scene = config.scene;
         this.scene.add.existing(this);
         this.scene.physics.world.enable(this);
+        this.damage = 5;
 
         this.direction = "left";
 

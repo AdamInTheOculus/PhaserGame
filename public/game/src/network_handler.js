@@ -34,8 +34,8 @@ class NetworkHandler {
                 this.socket.emit('player_update', {
                     id: this.socket.id,
                     position: {
-                        x: this.scene.player.sprite.x,
-                        y: this.scene.player.sprite.y
+                        x: this.scene.player.x,
+                        y: this.scene.player.y
                     },
                     state: this.scene.player.state
                 });
@@ -62,10 +62,10 @@ class NetworkHandler {
             spawnPoint: spawnPoint
         });
 
-        this.scene.physics.add.collider(player.sprite, this.scene.layers.ground, () => { if(player.sprite.body.blocked.down){ player.canJump = true; player.canDoubleJump = false; }});
-        this.scene.physics.add.overlap(player.sprite, this.scene.groups.collectables, (obj1, obj2) => { this.scene.collideWithCollectable(player.id, obj1, obj2); }, null, this);
-        this.scene.physics.add.overlap(player.sprite, this.scene.groups.endPoints, (obj1, obj2) => { this.scene.collideWithTombstone(player.id, obj1, obj2); }, null, this);
-        this.scene.physics.add.overlap(player.sprite, this.scene.enemies, (obj1, obj2) => { this.scene.collideWithEnemy(player.id, obj1, obj2); }, null, this);
+        this.scene.physics.add.collider(player, this.scene.layers.ground, () => { if(player.body.blocked.down){ player.canJump = true; player.canDoubleJump = false; }});
+        this.scene.physics.add.overlap(player, this.scene.groups.collectables, (obj1, obj2) => { this.scene.collideWithCollectable(player.id, obj1, obj2); }, null, this);
+        this.scene.physics.add.overlap(player, this.scene.groups.endPoints, (obj1, obj2) => { this.scene.collideWithTombstone(player.id, obj1, obj2); }, null, this);
+        this.scene.physics.add.overlap(player, this.scene.enemies, (obj1, obj2) => { this.scene.collideWithEnemy(player.id, obj1, obj2); }, null, this);
 
         return player;
     }
@@ -83,7 +83,7 @@ class NetworkHandler {
             // =================================================
             if(this.socket.id === data.player.id) {
                 this.scene.player = this.registerNewPlayer(this.socket.id);
-                this.scene.cameras.main.startFollow(this.scene.player.sprite);
+                this.scene.cameras.main.startFollow(this.scene.player);
                 this.registerPlayerUpdate();
             }
 
@@ -154,8 +154,8 @@ class NetworkHandler {
                 }
 
                 // Update player position from server data.
-                this.scene.players[id].sprite.x = players[id].position.x;
-                this.scene.players[id].sprite.y = players[id].position.y;
+                this.scene.players[id].x = players[id].position.x;
+                this.scene.players[id].y = players[id].position.y;
 
                 // Update player state
                 this.scene.players[id].state = players[id].state;
