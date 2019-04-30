@@ -13,8 +13,8 @@ import GUIScene from './scenes/GUIScene.js';
 
 const config = {
     type: Phaser.AUTO,    // Attempts to load WebGL. If it fails then load Canvas.
-    width: window.innerWidth*window.devicePixelRatio,
-    height: window.innerHeight*window.devicePixelRatio,
+    width: window.innerWidth*0.9,
+    height: window.innerHeight*0.5,
     physics: {
         default: 'arcade',
         arcade: {
@@ -23,10 +23,10 @@ const config = {
         }
     },
     scale: {
-        mode: Phaser.DOM.RESIZE,
+        mode: Phaser.DOM.FIT,
         autoCenter: Phaser.DOM.CENTER_BOTH,
         width: '100%',
-        height: '100%',
+        height: '100%'
     },
     input: { gamepad: true },
     scene: [

@@ -44,6 +44,8 @@ export default class Fireball_Spell {
 
         projectile.body.allowGravity = true;
 
+        projectile.setScale(0.5);
+
         projectile.setPosition(startPosition.x, startPosition.y);
         let angle = Phaser.Math.Angle.Between(startPosition.x, startPosition.y, projectile.scene.cameras.main.scrollX+pointerPosition.x, projectile.scene.cameras.main.scrollY+pointerPosition.y)
         projectile.body.velocity.x =  this.speed*Math.cos(angle);

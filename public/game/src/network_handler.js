@@ -51,14 +51,11 @@ class NetworkHandler {
     registerNewPlayer(playerId) {
 
         let spawnPoint = this.scene.getRandomSpawnPoint();
-        let sprite = this.scene.physics.add.sprite(spawnPoint.x, spawnPoint.y, 'dude');
-        sprite.setGravityY(300);
 
         let player = new Player({
             scene: this.scene,
             id: playerId,
             name: playerId,
-            sprite: sprite,
             spawnPoint: spawnPoint,
             key: 'dude'
         });

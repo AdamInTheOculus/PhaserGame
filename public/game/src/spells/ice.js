@@ -44,6 +44,8 @@ export default class Ice_Spell {
 
         projectile.body.allowGravity = false;
 
+        projectile.setScale(0.33);
+
         projectile.setPosition(startPosition.x, startPosition.y);
         let angle = Phaser.Math.Angle.Between(startPosition.x, startPosition.y, projectile.scene.cameras.main.scrollX+pointerPosition.x, projectile.scene.cameras.main.scrollY+pointerPosition.y)
         projectile.body.velocity.x =  this.speed*Math.cos(angle);
