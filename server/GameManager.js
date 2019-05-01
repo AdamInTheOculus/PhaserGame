@@ -4,6 +4,7 @@
  * @purpose  Contains all data and logic of GameManager class.
 **/
 
+const Player = require('./Player.js');
 const TiledMap = require('./TiledMap.js');
 
 module.exports = class GameManager {
@@ -53,16 +54,13 @@ module.exports = class GameManager {
      * @date     April 13th 2019
      * @purpose  Adds a new player to the players object.
     **/
-    addPlayer(newPlayer) {
-        if(newPlayer === undefined || typeof newPlayer !== 'object') {
+    addPlayer(id) {
+        if(id === undefined || id.length === 0) {
             return;
         }
 
-        if(this.players[newPlayer.id] !== undefined) {
-            throw new Error(`GameManager -- addPlayer -- Player id [${newPlayer.id}] already exists.`);
-        }
-
-        this.players[newPlayer.id] = newPlayer;
+        this.players[id] = new Player(id);
+        console.log(`User [${id}] has connected ...`);
     }
 
     /**
@@ -111,6 +109,7 @@ module.exports = class GameManager {
             return;
         }
 
+        console.log(`User [${id}] has disconnected.`);
         delete this.players[id]; // Deleting an undefined property is fine.
     }
 

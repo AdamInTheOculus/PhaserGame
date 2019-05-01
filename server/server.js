@@ -8,7 +8,7 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io').listen(server);
-const port = (process.env.PORT || 3000);
+const port = (process.env.PORT || 9001);
 
 const GameManager = require('./GameManager.js');
 const gameManager = new GameManager({
@@ -16,8 +16,6 @@ const gameManager = new GameManager({
     mapFile: 'adam-test_base64.json',
     mapLayer: 'Collidable'
 });
-
-const Player = require('./Player.js');
 
 app.use(express.static('public/'));
 
@@ -33,15 +31,11 @@ io.on('connection', (socket) => {
     // =============================================
     // == Handle when new player connects to game ==
     // =============================================
-    let newPlayer = new Player();
-    newPlayer.id = socket.id;
-
-    gameManager.addPlayer(newPlayer);
+    gameManager.addPlayer(socket.id);
     io.emit('player_new', {
-        player: newPlayer,
+        player: gameManager.getPlayerById(socket.id),
         playerList: gameManager.getPlayers()
     });
-    console.log(`User [${newPlayer.id}] has connected ...`);
 
     // ============================================================
     // == Set up periodic server emits to newly connected player ==
@@ -52,18 +46,8 @@ io.on('connection', (socket) => {
     // == Handle when player disconnects from game ==
     // ==============================================
     socket.on('disconnect', () => {
-        console.log(`User [${socket.id}] has disconnected.`);
         gameManager.removePlayer(socket.id);
         io.emit('player_disconnect', socket.id);
-    });
-
-    // ==========================================================
-    // == Handle when a client emits a generic 'event' message ==
-    // ==                                                      ==
-    // == NOTE: 'event' is arbitrary. Review client-side code. ==
-    // ==========================================================
-    socket.on('event', (data) => {
-        console.log(`${new Date()} - ${data.message}`);
     });
 
     // =========================================================
@@ -85,7 +69,6 @@ io.on('connection', (socket) => {
     // == Handle when client casts a spell ==
     // ======================================
     socket.on('player_cast_spell', (data) => {
-        console.log(data);
         socket.broadcast.emit('player_cast_spell', data); // Send to all clients except sender.
     });
 });

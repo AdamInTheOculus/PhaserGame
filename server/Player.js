@@ -5,9 +5,9 @@
 **/
 
 module.exports = class Player {
-    constructor() {
+    constructor(id) {
+        this.id = id;
         this.hp = 100;
-        this.id = 0;
         this.size = { w: 0, h: 0 };
         this.state = new Uint8Array(1);
         this.position = new Float32Array(2);
