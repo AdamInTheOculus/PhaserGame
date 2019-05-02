@@ -111,6 +111,7 @@ class MultiplayerGameScene extends Phaser.Scene {
             return;
         }
 
+        this.inputHandler.update();
         this.player.update(time, this.inputHandler.getState());
 
         // ===================================================

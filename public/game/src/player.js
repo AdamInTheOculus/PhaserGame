@@ -250,6 +250,8 @@ export default class Player {
         if(spellsArr[data.index]!=undefined){
             spellsArr[data.index].cast(this.scene, data.spritePosition, data.cursorPosition);
         }
+
+        console.log(spellsArr[data.index].projectiles.length);
     }
 
     /**

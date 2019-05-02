@@ -10,8 +10,7 @@ class InputHandler {
         this.input = phaserInput;
     }
 
-    getState() {
-
+    update() {
         /**
          * In order for Gamepad input to be properly registered, we must manually update input.
          * This is because of an InputPlugin bug -- not having InputPlugin.update() called automatically every frame.
@@ -21,6 +20,9 @@ class InputHandler {
          * @see     https://github.com/photonstorm/phaser/issues/4414#issuecomment-480515615
         **/
         this.input.update();
+    }
+
+    getState() {
 
         let inputState = {
             key_binding_1: this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ONE),
