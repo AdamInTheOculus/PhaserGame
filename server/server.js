@@ -12,9 +12,8 @@ const port = (process.env.PORT || 9001);
 
 const GameManager = require('./GameManager.js');
 const gameManager = new GameManager({
-    heartbeat: 16.6, // Send data to client 25 times per second. (1000 / 40 === 25)
-    mapFile: 'adam-test_base64.json',
-    mapLayer: 'Collidable'
+    heartbeat: 40, // Send data to client 25 times per second. (1000ms / 40ms === 25)
+    file: 'adam-test.json'
 });
 
 app.use(express.static('public/'));
@@ -28,19 +27,21 @@ app.get('/', (req, res) => {
 // =================================
 io.on('connection', (socket) => {
 
-    // =============================================
-    // == Handle when new player connects to game ==
-    // =============================================
-    gameManager.addPlayer(socket.id);
-    io.emit('player_new', {
-        player: gameManager.getPlayerById(socket.id),
-        playerList: gameManager.getPlayers()
-    });
-
     // ============================================================
     // == Set up periodic server emits to newly connected player ==
     // ============================================================
     gameManager.initializeHeartbeat(socket);
+
+    // =============================================
+    // == Handle when new player connects to game ==
+    // =============================================
+    gameManager.addPlayer(socket.id);
+
+    io.emit('player_new', {
+        player: gameManager.getPlayerById(socket.id),
+        spawnPoint: gameManager.getRandomSpawnPoint(),
+        playerList: gameManager.getPlayers()
+    });
 
     // ==============================================
     // == Handle when player disconnects from game ==

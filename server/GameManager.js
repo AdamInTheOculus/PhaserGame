@@ -12,13 +12,16 @@ module.exports = class GameManager {
     /**
      * @param  config - Config data for the GameManager.
      *         config.heartbeat - Interval rate (in ms) to send data to clients.
-     *         config.mapFile   - Name of file with map data.
-     *         config.mapLayer  - Name of desired layer within conig.mapFile.
+     *         config.file      - Name of file with map data.
     **/
     constructor(config) {
         this.players = {};
+        this.enemies = {};
+        this.pickups = {};
+        this.projectiles = {};
+
         this.heartbeat = config.heartbeat;
-        this.map = new TiledMap(config.mapFile, config.mapLayer);
+        this.map = new TiledMap(config.file);
     }
 
     /**
@@ -41,7 +44,7 @@ module.exports = class GameManager {
     /**
      * @author   AdamInTheOculus
      * @date     April 15th 2019
-     * @purpose  Returns current state of game as dictated by the server.
+     * @purpose  Returns necessary data for specific player from current state of game.
     **/
     getSnapshot() {
         return {
@@ -111,6 +114,35 @@ module.exports = class GameManager {
 
         console.log(`User [${id}] has disconnected.`);
         delete this.players[id]; // Deleting an undefined property is fine.
+    }
+
+    /**
+     * @author   AdamInTheOculus
+     * @date     May 7th 2019
+     * @purpose  Returns a random spawnpoint parseed from Tiled map data.
+    **/
+    getRandomSpawnPoint() {
+        let length = this.map.spawnPoints.objects.length;
+        let spawn = this.map.spawnPoints.objects[this.getRandomInt(0, length)];
+        
+        console.log(`Spawning player at (${spawn.x},${spawn.y}})`);
+
+        return {
+            x: spawn.x,
+            y: spawn.y
+        };
+    }
+
+    /**
+     * @author     AdamInTheOculus
+     * @date       April 7th 2019
+     * @purpose    Returns random integer between [min, max - 1].
+     * @reference  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#Getting_a_random_integer_between_two_values
+    **/
+    getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min; // The maximum is exclusive and the minimum is inclusive
     }
 
 };

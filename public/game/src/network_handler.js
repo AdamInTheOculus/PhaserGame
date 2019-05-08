@@ -10,7 +10,7 @@ class NetworkHandler {
     constructor(scene) {
         this.socket = io();
         this.scene = scene;
-        this.heartbeatInterval = 16.6; // (40ms) Send data to server 25 times per second (1000 / 40 === 25).
+        this.heartbeatInterval = 25; // (40ms) Send data to server 25 times per second (1000 / 40 === 25).
     }
 
     /**
@@ -42,9 +42,8 @@ class NetworkHandler {
      * @date     April 25th 2019
      * @purpose  Creates new player sprite. Used when new player connects to server.
     **/
-    registerNewPlayer(playerId) {
+    registerNewPlayer(playerId, spawnPoint) {
 
-        let spawnPoint = this.scene.getRandomSpawnPoint();
         let sprite = this.scene.physics.add.sprite(spawnPoint.x, spawnPoint.y, 'dude');
         sprite.setGravityY(300);
 
@@ -83,7 +82,7 @@ class NetworkHandler {
             // == Handle when local player connects to server ==
             // =================================================
             if(this.socket.id === data.player.id) {
-                this.scene.player = this.registerNewPlayer(this.socket.id);
+                this.scene.player = this.registerNewPlayer(this.socket.id, data.spawnPoint);
                 this.scene.cameras.main.startFollow(this.scene.player.sprite);
                 this.registerPlayerUpdate();
             }
@@ -104,7 +103,7 @@ class NetworkHandler {
                     return;
                 }
 
-                this.scene.players[id] = this.registerNewPlayer(id);
+                this.scene.players[id] = this.registerNewPlayer(id, data.spawnPoint);
             });
 
             // ================================================

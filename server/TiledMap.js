@@ -9,66 +9,61 @@ const zlib = require('zlib');
 
 module.exports = class TiledMap {
 
-    constructor(filename, layer) {
+    /**
+     * @author   AdamInTheOculus
+     * @date     May 8th 2019
+     * @purpose  Retrieves world/object data from Tiled JSON file.
+     * @note     There MUST be an object layer named SpawnPoints.
+    **/
+    constructor(filename) {
 
-        // ==============================================
-        // == Try to load TiledMap data with filename. ==
-        // ==============================================
-        let data = fs.readFileSync('public/game/assets/maps/' + filename);
-        if(data === undefined || data === null || data.length === 0) {
+        // =================================================
+        // == Attempt to load TiledMap data with filename ==
+        // =================================================
+        let fileData = fs.readFileSync('public/game/assets/maps/' + filename);
+        if(fileData === undefined || fileData === null || fileData.length === 0) {
             throw new Error(`TiledMap -- constructor() -- Failed to load file [${filename}].`);
         }
 
-        // =============================================
-        // == Convert data into JSON and fetch layer. ==
-        // =============================================
-        this.data = JSON.parse(data);
-        let mapLayer = this.getMapLayer(this.data, layer);
+        // ===============================
+        // == Convert file data to JSON ==
+        // ===============================
+        let data = JSON.parse(fileData);
 
-        // ==========================================
-        // == Assign map details to 'this' object. ==
-        // ==========================================
-        this.name = mapLayer.name;
-        this.encoding = (mapLayer.encoding === undefined) ? null : mapLayer.encoding;
-        this.compression = (mapLayer.compression === undefined) ? null : mapLayer.compression;
+        // =========================================
+        // == Get unique tiles and their metadata ==
+        // =========================================
+        this.uniqueTiles = this.getUniqueTileData(data.tilesets);
+        this.tileheight = data.tileheight;
+        this.tilewidth = data.tilewidth;
 
-        // ==========================================================
-        // == Get individual tile data and store in 2D Uint8 array ==
-        // ==========================================================
-        this.layerData = this.getTilesFromLayer(mapLayer);
+        this.world = [];
+        this.objects = [];
+        this.spawnPoints = {};
 
-        // ====================================
-        // == Get each tile and its metadata ==
-        // ====================================
-        this.layerTiles = this.getTileMetadata(this.data.tilesets);
-    }
-
-    /**
-     * @author   AdamInTheOculus
-     * @date     April 26th 2019
-     * @purpose  Helper function that finds specific layer from map data and returns it.
-    **/
-    getMapLayer(map, layer) {
-        
-        // =======================================================================
-        // == Find layer with static map information (currently: 'Collidable'). ==
-        // =======================================================================
-        let tempLayer = {};
-        for(let i=0; i<map.layers.length; i++) {
-            if(map.layers[i].name === layer) {
-                tempLayer = map.layers[i];
-                break;
+        data.layers.forEach((layer, index) => {
+            switch(layer.type) {
+                case 'tilelayer': 
+                    this.world.push(this.parseTileLayer(layer));
+                    break;
+                case 'objectgroup':
+                    if(layer.name === 'SpawnPoints') {
+                        this.spawnPoints = layer;
+                    } else {
+                        this.objects.push(layer); 
+                    }
+                    break;
+                default: 
+                    console.log(`Layer [${layer.name}] of type [${layer.type}] is currently not supported.`);
             }
-        }
+        });
 
-        // =========================================
-        // == Check if layer was correctly found. ==
-        // =========================================
-        if(Object.keys(tempLayer).length === 0) {
-            throw new Error(`TiledMap -- getMapLayer() -- Layer [${layer}] not found.`)
+        // ===============================
+        // == Validate any missing data ==
+        // ===============================
+        if(Object.keys(this.spawnPoints).length === 0) {
+            throw new Error(`TiledMap -- constructor() -- No spawn points found within Tiled layer 'SpawnPoints'.`);
         }
-
-        return tempLayer;
     }
 
     /**
@@ -77,7 +72,7 @@ module.exports = class TiledMap {
      * @purpose        Returns an array of Tiled layer data from a given layer.
      * @param  layer   Layer object. Contains metadata and map data.
     **/
-    getTilesFromLayer(layer) {
+    parseTileLayer(layer) {
 
         let data = null;
         let rawData = layer.data;
@@ -131,7 +126,7 @@ module.exports = class TiledMap {
      * @purpose          Returns an object. Mapped by unique tile ID. Each property contains tile metadata.
      * @param  tilesets  Array containing all tileset objects associated with layer.  
     **/
-    getTileMetadata(tilesets) {
+    getUniqueTileData(tilesets) {
 
         let metadata = {};
 
@@ -172,14 +167,14 @@ module.exports = class TiledMap {
      * @purpose          Returns metadata of one tile, based on given position.
      * @param  position  Object containing (x,y) positions.
     **/
-    getTileAtPosition(position) {
+    getTileAtPosition(position, layer) {
         if(position === undefined) {
             throw new Error('TiledMap - getTileAtPosition - `position` parameter is undefined.');
         }
 
-        let x = Math.floor(position.x / this.data.tilewidth);
-        let y = Math.floor(position.y / this.data.tileheight);
+        let x = Math.floor(position.x / this.tilewidth);
+        let y = Math.floor(position.y / this.tileheight);
 
-        return this.layerTiles[this.layerData[x][y]];
+        return this.uniqueTiles[layer[x][y]];
     }
 };
