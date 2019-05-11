@@ -13,4 +13,14 @@ module.exports = class Player {
         this.position = new Float32Array(2);
         this.velocity = new Float32Array(2);
     }
+
+    moveLeft(delta) {
+        this.state = 1;
+        this.position[0] -= 160.0 * delta; 
+    }
+
+    moveRight(delta) {
+        this.state = 2;
+        this.position[0] += 160.0 * delta;
+    }
 };

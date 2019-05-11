@@ -19,9 +19,53 @@ module.exports = class GameManager {
         this.enemies = {};
         this.pickups = {};
         this.projectiles = {};
-
-        this.heartbeat = config.heartbeat;
+        this.heartbeat = config.heartbeat | 40;
         this.map = new TiledMap(config.file);
+        this.commandQueue = [];
+
+        this.lag = 0;
+        this.previousFrameTime = Date.now();
+    }
+
+    loop() {
+
+        const MS_PER_UPDATE = 15;
+
+        let current = Date.now();
+        let elapsed = current - this.previousFrameTime;
+        this.previousFrameTime = current;
+        this.lag += elapsed;
+
+        while(this.lag >= MS_PER_UPDATE) {
+            this.update(MS_PER_UPDATE);
+            this.lag -= MS_PER_UPDATE;
+        }
+    }
+
+    update(delta) {
+
+        // ================================================
+        // == Execute client commands and update players ==
+        // ================================================
+        while(this.commandQueue.length > 0) {
+            let command = this.commandQueue.shift(); // Remove first element from queue
+
+            switch(command.data) {
+                case 1: console.log(`[${command.id}] Moving left.`); this.players[command.id].moveLeft(delta); break;
+                case 2: console.log(`[${command.id}] Moving right.`); this.players[command.id].moveRight(delta); break;
+                case 3: console.log(`[${command.id}] Jumping.`); break;
+                case 4: console.log(`[${command.id}] Idling.`); break;
+                default: ;
+            }
+        }
+
+        // ========================
+        // == Update projectiles ==
+        // ========================
+
+        // ====================
+        // == Update enemies ==
+        // ====================
     }
 
     /**
@@ -29,13 +73,13 @@ module.exports = class GameManager {
      * @date     April 15th 2019
      * @purpose  Set up heartbeat emits to specific client.
     **/
-    initializeHeartbeat(socket) {
+    setupHeartbeatInterval(socket) {
         if(socket === undefined || socket === null) {
             throw new Error('initializeHeartbeat() failed. `socket` is undefined or null.');
         }
 
         setInterval(() => {
-                socket.emit('heartbeat', this.getSnapshot());
+                socket.emit('heartbeat', this.getGameSnapshot());
             },
             this.heartbeat
         );
@@ -46,10 +90,8 @@ module.exports = class GameManager {
      * @date     April 15th 2019
      * @purpose  Returns necessary data for specific player from current state of game.
     **/
-    getSnapshot() {
-        return {
-            players: this.players
-        };
+    getGameSnapshot() {
+        return this.players;
     }
 
     /**
@@ -135,7 +177,7 @@ module.exports = class GameManager {
 
     /**
      * @author     AdamInTheOculus
-     * @date       April 7th 2019
+     * @date       May 7th 2019
      * @purpose    Returns random integer between [min, max - 1].
      * @reference  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#Getting_a_random_integer_between_two_values
     **/

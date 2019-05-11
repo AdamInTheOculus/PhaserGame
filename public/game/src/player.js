@@ -52,7 +52,7 @@ export default class Player {
             if(input.gamepad.leftStick.x > 0.2) {
                 this.sprite.setVelocityX(160);
                 this.sprite.anims.play('right', true);
-                this.state = MOVE_RIGHT
+                this.state = MOVE_RIGHT;
             } else if(input.gamepad.leftStick.x < -0.2) {
                 this.sprite.setVelocityX(-160);
                 this.sprite.anims.play('left', true);
@@ -81,18 +81,33 @@ export default class Player {
         // ===========================================
         else {
             if(input.left.isDown) {
-                this.sprite.setVelocityX(-160);
-                this.sprite.anims.play('left', true);
-                this.state = MOVE_LEFT;
+                // this.sprite.setVelocityX(-160);
+                // this.sprite.anims.play('left', true);
+
+                if(this.state !== MOVE_LEFT) {
+                    this.state = MOVE_LEFT;
+                    this.scene.networkHandler.emitCommand(this.state);
+                }
+                
             }
             else if (input.right.isDown) {
-                this.sprite.setVelocityX(160);
-                this.sprite.anims.play('right', true);
-                this.state = MOVE_RIGHT;
+                // this.sprite.setVelocityX(160);
+                // this.sprite.anims.play('right', true);
+
+                if(this.state !== MOVE_RIGHT) {
+                    this.state = MOVE_RIGHT;
+                    this.scene.networkHandler.emitCommand(this.state);
+                }
+
             } else if(input.gamepad === undefined) {
-                this.sprite.setVelocityX(0);
-                this.sprite.anims.play('turn');
-                this.state = IDLE;
+
+                // this.sprite.setVelocityX(0);
+                // this.sprite.anims.play('turn');
+
+                if(this.state !== IDLE) {
+                    this.state = IDLE;
+                    this.scene.networkHandler.emitCommand(this.state);
+                }
             }
 
             if(input.jump.isDown) {

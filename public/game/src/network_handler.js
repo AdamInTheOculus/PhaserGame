@@ -47,6 +47,8 @@ class NetworkHandler {
         let sprite = this.scene.physics.add.sprite(spawnPoint.x, spawnPoint.y, 'dude');
         sprite.setGravityY(300);
 
+        console.log(playerId);
+
         let player = new Player({
             scene: this.scene,
             id: playerId,
@@ -146,13 +148,19 @@ class NetworkHandler {
      * @todo     THIS WILL BE RE-WRITTEN ONCE AUTHORITATIVE SERVER IS IMPLEMENTED.
     **/
     onServerHeartbeat() {
-        this.socket.on('player_update', (players) => {
+        this.socket.on('heartbeat', (players) => {
+
+            console.log(this.scene.players);
+            console.log(players);
 
             Object.keys(players).forEach(id => {
 
                 if(this.scene.players[id] === undefined) {
                     return;
                 }
+
+                console.log(players[id].position);
+                console.log(players[id].state);
 
                 // Update player position from server data.
                 this.scene.players[id].sprite.x = players[id].position[0];
@@ -212,6 +220,10 @@ class NetworkHandler {
 
             this.scene.player.shoot(data);
         });
+    }
+
+    emitCommand(state) {
+        this.socket.emit('command', state);
     }
 
     /**
