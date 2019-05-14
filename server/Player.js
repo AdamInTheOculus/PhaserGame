@@ -71,10 +71,12 @@ module.exports = class Player {
 
         let x = Math.floor(pos.x / map.tilewidth);
         let y = Math.floor(pos.y / map.tileheight);
-        let value = map.world[0][y][x];
+        
+        if(map.world[0][y] !== undefined) {
 
-        if(value !== undefined) {
-            if(value === 0) {
+            let value = map.world[0][y][x];
+
+            if(value === 0 || value === undefined) {
                 return false;
             } else {
                 return true;
