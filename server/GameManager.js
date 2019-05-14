@@ -25,11 +25,13 @@ module.exports = class GameManager {
 
         this.lag = 0;
         this.previousFrameTime = Date.now();
+
+        this.gravity = 0.05;
     }
 
     loop() {
 
-        const MS_PER_UPDATE = 15;
+        const MS_PER_UPDATE = 15 / 1000;
 
         let current = Date.now();
         let elapsed = current - this.previousFrameTime;
@@ -48,16 +50,29 @@ module.exports = class GameManager {
         // == Execute client commands and update players ==
         // ================================================
         while(this.commandQueue.length > 0) {
-            let command = this.commandQueue.shift(); // Remove first element from queue
-
-            switch(command.data) {
-                case 1: console.log(`[${command.id}] Moving left.`); this.players[command.id].moveLeft(delta); break;
-                case 2: console.log(`[${command.id}] Moving right.`); this.players[command.id].moveRight(delta); break;
-                case 3: console.log(`[${command.id}] Jumping.`); break;
-                case 4: console.log(`[${command.id}] Idling.`); break;
-                default: ;
-            }
+            let command = this.commandQueue.shift();
+            this.players[command.id].state = command.data;
+            this.players[command.id].update(delta, this.gravity);
+            this.players[command.id].hasUpdated = true;
         }
+
+        Object.keys(this.players).forEach(id => {
+            
+            // Don't update players who were previously updated in command queue.
+            if(this.players[id].hasUpdated) {
+                this.players[id].hasUpdated = false;
+                return;
+            }
+
+            if(this.players[id].willCollide(this.map.world, delta, this.gravity)) {
+                this.players[id].velocity.y = 0;
+                this.players[id].update(delta, 0);
+            } else {
+                this.players[id].update(delta, this.gravity);
+            }
+        });
+
+
 
         // ========================
         // == Update projectiles ==
@@ -104,26 +119,9 @@ module.exports = class GameManager {
             return;
         }
 
-        this.players[id] = new Player(id);
+        this.players[id] = new Player(id, this.getRandomSpawnPoint());
         console.log(`User [${id}] has connected ...`);
-    }
-
-    /**
-     * @author   AdamInTheOculus
-     * @date     April 15th 2019
-     * @purpose  Update player data from server packet. If server validates new position and velocity, the player is updated.
-    **/
-    updatePlayer(id, packet) {
-        if(packet === undefined || typeof packet !== 'object') {
-            return;
-        } else if(this.players[id] === undefined) {
-            return;
-        }
-
-        // TODO: Perform server verification of client player position.
-        this.players[id].position = packet.position;
-        this.players[id].velocity = packet.velocity;
-        this.players[id].state = packet.state;
+        console.log(`Spawning player at (${this.players[id].position.x},${this.players[id].position.y}})`);
     }
 
     /**
@@ -166,8 +164,6 @@ module.exports = class GameManager {
     getRandomSpawnPoint() {
         let length = this.map.spawnPoints.objects.length;
         let spawn = this.map.spawnPoints.objects[this.getRandomInt(0, length)];
-        
-        console.log(`Spawning player at (${spawn.x},${spawn.y}})`);
 
         return {
             x: spawn.x,

@@ -25,36 +25,34 @@ class NetworkHandler {
         this.onPlayerCastSpell();
     }
 
-    /**
-     * @author    AdamInTheOculus
-     * @date      April 25th 2019
-     * @purpose   Creates socket emitter on a timed interval. Sends local player information.
-    **/
-    registerPlayerUpdate() {
-        setInterval( () => {
-                this.socket.emit('player_update', this.scene.player.getCompressedData());
-            },  this.heartbeatInterval
-        );
-    }
+    // /**
+    //  * @author    AdamInTheOculus
+    //  * @date      April 25th 2019
+    //  * @purpose   Creates socket emitter on a timed interval. Sends local player information.
+    // **/
+    // registerPlayerUpdate() {
+    //     setInterval( () => {
+    //             this.socket.emit('player_update', this.scene.player.getCompressedData());
+    //         },  this.heartbeatInterval
+    //     );
+    // }
 
     /**
      * @author   AdamInTheOculus
      * @date     April 25th 2019
      * @purpose  Creates new player sprite. Used when new player connects to server.
     **/
-    registerNewPlayer(playerId, spawnPoint) {
+    registerNewPlayer(networkPlayer) {
 
-        let sprite = this.scene.physics.add.sprite(spawnPoint.x, spawnPoint.y, 'dude');
-        sprite.setGravityY(300);
-
-        console.log(playerId);
+        let sprite = this.scene.physics.add.sprite(networkPlayer.position.x, networkPlayer.position.y, 'dude');
+        // sprite.setGravityY(300);
 
         let player = new Player({
             scene: this.scene,
-            id: playerId,
-            name: playerId,
+            id: networkPlayer.id,
+            name: networkPlayer.id,
             sprite: sprite,
-            spawnPoint: spawnPoint
+            spawnPoint: networkPlayer.position
         });
 
         this.scene.physics.add.collider(player.sprite, this.scene.layers.ground, () => { if(player.sprite.body.blocked.down){ player.canJump = true; player.canDoubleJump = false; }});
@@ -84,9 +82,8 @@ class NetworkHandler {
             // == Handle when local player connects to server ==
             // =================================================
             if(this.socket.id === data.player.id) {
-                this.scene.player = this.registerNewPlayer(this.socket.id, data.spawnPoint);
+                this.scene.player = this.registerNewPlayer(data.player);
                 this.scene.cameras.main.startFollow(this.scene.player.sprite);
-                this.registerPlayerUpdate();
             }
 
             // =================================================
@@ -105,7 +102,7 @@ class NetworkHandler {
                     return;
                 }
 
-                this.scene.players[id] = this.registerNewPlayer(id, data.spawnPoint);
+                this.scene.players[id] = this.registerNewPlayer(data.player);
             });
 
             // ================================================
@@ -150,32 +147,38 @@ class NetworkHandler {
     onServerHeartbeat() {
         this.socket.on('heartbeat', (players) => {
 
-            console.log(this.scene.players);
-            console.log(players);
-
             Object.keys(players).forEach(id => {
+                if(id === this.scene.player.id) {
 
-                if(this.scene.players[id] === undefined) {
+                    // =========================
+                    // == Update local player ==
+                    // =========================
+                    this.scene.player.sprite.x = players[id].position.x;
+                    this.scene.player.sprite.y = players[id].position.y;
+
+                    this.scene.player.state = players[id].state;
+                    this.scene.player.updatePlayerAnimation();
+
+                } else if(this.scene.players[id] === undefined) {
                     return;
-                }
-
-                console.log(players[id].position);
-                console.log(players[id].state);
-
-                // Update player position from server data.
-                this.scene.players[id].sprite.x = players[id].position[0];
-                this.scene.players[id].sprite.y = players[id].position[1];
-
-                // Update player state
-                this.scene.players[id].state = players[id].state[0];
-                this.scene.players[id].updatePlayerAnimation();
-
-                // Display name above player.
-                if(this.scene.players[id].nameUI === undefined) {
-                    this.scene.players[id].nameUI = this.scene.add.text(this.scene.players[id].sprite.x - 75, this.scene.players[id].sprite.y - 40, this.scene.players[id].name, {fill: '#FFF', fontSize: 14});
                 } else {
-                    this.scene.players[id].nameUI.setPosition(this.scene.players[id].sprite.x - 75, this.scene.players[id].sprite.y - 40);
-                }
+
+                    // ==============================
+                    // == Update networked players ==
+                    // ==============================
+                    this.scene.players[id].sprite.x = players[id].position.x;
+                    this.scene.players[id].sprite.y = players[id].position.y;
+
+                    this.scene.players[id].state = players[id].state;
+                    this.scene.players[id].updatePlayerAnimation();
+
+                    // Display name above player.
+                    if(this.scene.players[id].nameUI === undefined) {
+                        this.scene.players[id].nameUI = this.scene.add.text(this.scene.players[id].sprite.x - 75, this.scene.players[id].sprite.y - 40, this.scene.players[id].name, {fill: '#FFF', fontSize: 14});
+                    } else {
+                        this.scene.players[id].nameUI.setPosition(this.scene.players[id].sprite.x - 75, this.scene.players[id].sprite.y - 40);
+                    }
+                }  
             });
         });
     }

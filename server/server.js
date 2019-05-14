@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 setInterval(() => {
         gameManager.loop();
     }, 
-    16.6 // 60 FPS
+    25 // 40 loops per second
 );
 
 // ====================================
@@ -40,7 +40,6 @@ io.on('connection', (socket) => {
     gameManager.addPlayer(socket.id);
     io.emit('player_new', {
         player: gameManager.getPlayerById(socket.id),
-        spawnPoint: gameManager.getRandomSpawnPoint(),
         playerList: gameManager.getPlayers()
     });
 
@@ -50,20 +49,9 @@ io.on('connection', (socket) => {
         io.emit('player_disconnect', socket.id);
     });
 
-    // Handle when client emits player information message
-    socket.on('player_update', (data) => {
-        gameManager.updatePlayer(socket.id, data);
-        io.emit('player_update', gameManager.getPlayers());
-    });
-
     // Handle when client provides player size. This will occur once per player.
     socket.on('player_size', (data) => {
         gameManager.getPlayerById(socket.id).size = data.size;
-    });
-
-    // Handle when client casts a spell
-    socket.on('player_cast_spell', (data) => {
-        socket.broadcast.emit('player_cast_spell', data); // Send to all clients except sender.
     });
 
     // Handle when client sends commmand (any type is accepted)

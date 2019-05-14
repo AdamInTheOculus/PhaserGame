@@ -78,12 +78,12 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.networkHandler.registerSocketListeners();
 
         // Set up flight orb triggerables
-        this.layers.flightOrbs.forEach(flightOrb => {
-            let orb = this.groups.flightOrbs.create(flightOrb.x, flightOrb.y, 'blue_orb');
-            orb.body.width = flightOrb.width;
-            orb.body.height = flightOrb.height;
-            orb.key = 'ice';
-        });
+        // this.layers.flightOrbs.forEach(flightOrb => {
+        //     let orb = this.groups.flightOrbs.create(flightOrb.x, flightOrb.y, 'blue_orb');
+        //     orb.body.width = flightOrb.width;
+        //     orb.body.height = flightOrb.height;
+        //     orb.key = 'ice';
+        // });
 
         // Set up endpoint (tombstone) triggerables
         this.layers.endPoints.forEach(endpoint => {
