@@ -111,8 +111,10 @@ export default class Player {
             }
 
             if(input.jump.isDown) {
-                this.handleJump(input.jump.timeDown);
-                this.lastJumpTime = input.jump.timeDown;
+                if(this.state !== JUMP) {
+                    this.state = JUMP;
+                    this.scene.networkHandler.emitCommand(this.state);
+                }
             }
 
             if(input.fire.isDown) {

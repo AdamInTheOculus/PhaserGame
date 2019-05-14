@@ -14,7 +14,8 @@ module.exports = class Player {
         this.velocity = { x:0, y:0 };
         this.hasUpdated = false;
 
-        this.maxVelocityX = 0.25;
+        this.maxVelocityX = 0.3;
+        this.lastSpawn = {x: spawnpoint.x, y: spawnpoint.y};
     }
 
     update(delta, gravity) {
@@ -22,7 +23,7 @@ module.exports = class Player {
         switch(this.state) {
             case 1: this.moveLeft(delta); break;
             case 2: this.moveRight(delta); break;
-            case 3: break;
+            case 3: this.jump(delta); break;
             case 4: this.stopMoving(delta); break;
             default: ;
         }
@@ -54,7 +55,7 @@ module.exports = class Player {
 
     jump(delta) {
         this.state = 3;
-        // this.velocity.y = -20;
+        this.velocity.y = -0.5;
     }
 
     stopMoving(delta) {
@@ -63,17 +64,23 @@ module.exports = class Player {
     }
 
     willCollide(map, delta, gravity) {
-
-        let newVelocity = {
-            x: this.velocity.x,
-            y: this.velocity.y + (this.velocity.y + gravity * delta)
+        let pos = {
+            x: this.position.x + ((this.velocity.x + gravity * delta) * delta),
+            y: this.position.y + ((this.velocity.y + gravity * delta) * delta)
         };
 
-        let newPosition = {
-            x: this.position.x + (newVelocity.x * delta),
-            y: this.position.y + (newVelocity.y * delta)
-        };
+        let x = Math.floor(pos.x / map.tilewidth);
+        let y = Math.floor(pos.y / map.tileheight);
+        let value = map.world[0][y][x];
 
-        return true;
+        if(value !== undefined) {
+            if(value === 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        return false;
     }
 };

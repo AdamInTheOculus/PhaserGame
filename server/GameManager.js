@@ -26,7 +26,7 @@ module.exports = class GameManager {
         this.lag = 0;
         this.previousFrameTime = Date.now();
 
-        this.gravity = 0.05;
+        this.gravity = 0.0005;
     }
 
     loop() {
@@ -64,15 +64,21 @@ module.exports = class GameManager {
                 return;
             }
 
-            if(this.players[id].willCollide(this.map.world, delta, this.gravity)) {
+            if(this.players[id].willCollide(this.map, delta, this.gravity)) {
                 this.players[id].velocity.y = 0;
                 this.players[id].update(delta, 0);
             } else {
                 this.players[id].update(delta, this.gravity);
             }
+
+            // Reset player position if player falls off world
+            if(this.players[id].position.y > 1375) {
+                this.players[id].position.x = this.players[id].lastSpawn.x;
+                this.players[id].position.y = this.players[id].lastSpawn.y;
+                this.players[id].velocity.x = 0;
+                this.players[id].velocity.y = 0;
+            }
         });
-
-
 
         // ========================
         // == Update projectiles ==
