@@ -37,14 +37,14 @@ module.exports = class TiledMap {
         this.tileheight = data.tileheight;
         this.tilewidth = data.tilewidth;
 
-        this.world = [];
+        this.world = {};
         this.objects = [];
         this.spawnPoints = {};
 
         data.layers.forEach((layer, index) => {
             switch(layer.type) {
                 case 'tilelayer': 
-                    this.world.push(this.parseTileLayer(layer));
+                    this.world[layer.name] = this.parseTileLayer(layer);
                     break;
                 case 'objectgroup':
                     if(layer.name === 'SpawnPoints') {

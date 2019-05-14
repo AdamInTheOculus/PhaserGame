@@ -18,7 +18,7 @@ module.exports = class Player {
         this.lastSpawn = {x: spawnpoint.x, y: spawnpoint.y};
     }
 
-    update(delta, gravity) {
+    update(delta, gravity, map) {
 
         switch(this.state) {
             case 1: this.moveLeft(delta); break;
@@ -28,9 +28,18 @@ module.exports = class Player {
             default: ;
         }
 
-        this.velocity.y += gravity * delta;
-        this.position.x += this.velocity.x * delta;
-        this.position.y += this.velocity.y * delta;
+        // Calculate next predicted position
+        let newX = this.position.x + this.velocity.x * delta;
+        let newY = this.position.y + this.velocity.y * delta;
+
+        // If player will collide, set falling velocity to 0 and do not move player.
+        if(this.willCollide(map, newX, newY)) {
+            this.velocity.y = 0;
+        } else {
+            this.position.x = newX;
+            this.position.y = newY;
+            this.velocity.y += gravity * delta;
+        }
     }
 
     moveLeft(delta) {
@@ -63,26 +72,103 @@ module.exports = class Player {
         this.velocity.x = 0;
     }
 
-    willCollide(map, delta, gravity) {
-        let pos = {
-            x: this.position.x + ((this.velocity.x + gravity * delta) * delta),
-            y: this.position.y + ((this.velocity.y + gravity * delta) * delta)
-        };
+    willCollide(map, x, y) {
 
-        let x = Math.floor(pos.x / map.tilewidth);
-        let y = Math.floor(pos.y / map.tileheight);
+        // Get corner points of player
+        let collisionPoints = this.getCollisionPoints(x, y);
+        let result = false;
+        collisionPoints.forEach(point => {
+
+            point.x = Math.floor(point.x / map.tilewidth);
+            point.y = Math.floor(point.y / map.tileheight);
+
+            if(map.world['Collidable'][point.y] !== undefined) {
+                let value = map.world['Collidable'][point.y][point.x];
+
+                if(value === 0 || value === undefined) {
+                    return;
+                } else {
+                    result = true;
+                    return;
+                }
+            }
+        });
         
-        if(map.world[0][y] !== undefined) {
+        return result;
+    }
 
-            let value = map.world[0][y][x];
+    getCollisionPoints(x, y) {
 
-            if(value === 0 || value === undefined) {
-                return false;
-            } else {
-                return true;
+        let points = [];
+        let halfWidth = this.size.w / 2;
+        let halfHeight = this.size.h / 2;
+
+        /**
+         *
+         *  Below is a representation of the player sprite. The bounding box is a rectangle
+         *  with four points (A, B, C, D). 
+         *
+         *  The player position will ALWAYS be at the center of the bounding box. Therefore,
+         *  any collision detection must be done on at least TWO of the corner points below.
+         *
+         *    A --------- B
+         *     |         |
+         *     |         |
+         *     |         |
+         *     |         |
+         *     |         |
+         *     |         |
+         *    D --------- C
+        **/
+
+        let a = { x: x - halfWidth, y: y - halfHeight };
+        let b = { x: x + halfWidth, y: y - halfHeight };
+        let c = { x: x + halfWidth, y: y + halfHeight };
+        let d = { x: x - halfWidth, y: y + halfHeight };
+
+        // Player is moving right
+        if(this.velocity.x > 0) {
+            points.push(b, c);
+
+            // Right downwards
+            if(this.velocity.y > 0) {
+                points.push(d);
+
+            // Right upwards
+            } else if(this.velocity.y < 0) {
+                points.push(a);
             }
         }
 
-        return false;
+        // Player is moving left
+        else if(this.velocity.x < 0) {
+            points.push(a, d);
+
+            // Left downwards
+            if(this.velocity.y > 0) {
+                points.push(c);
+
+            // Left upwards
+            } else if(this.velocity < 0) {
+                points.push(b);
+            }
+        }
+
+        // Player is moving downwards
+        else if(this.velocity.y > 0) {
+            points.push(c, d);
+        }
+
+        // Player is moving upwards
+        else if(this.velocity.y < 0) {
+            points.push(a, b);
+        }
+
+        // Player not moving
+        else {
+            points.push(c, d);
+        }
+
+        return points;
     }
 };

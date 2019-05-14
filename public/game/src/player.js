@@ -186,6 +186,10 @@ export default class Player {
         }
     }
 
+    getPosition() {
+        return { x:this.sprite.x, y:this.sprite.y };
+    }
+
     /**
      * @author   AdamInTheOculus
      * @date     March 18th 2019

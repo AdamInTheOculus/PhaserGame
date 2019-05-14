@@ -52,7 +52,7 @@ module.exports = class GameManager {
         while(this.commandQueue.length > 0) {
             let command = this.commandQueue.shift();
             this.players[command.id].state = command.data;
-            this.players[command.id].update(delta, this.gravity);
+            this.players[command.id].update(delta, this.gravity, this.map);
             this.players[command.id].hasUpdated = true;
         }
 
@@ -64,12 +64,7 @@ module.exports = class GameManager {
                 return;
             }
 
-            if(this.players[id].willCollide(this.map, delta, this.gravity)) {
-                this.players[id].velocity.y = 0;
-                this.players[id].update(delta, 0);
-            } else {
-                this.players[id].update(delta, this.gravity);
-            }
+            this.players[id].update(delta, this.gravity, this.map);
 
             // Reset player position if player falls off world
             if(this.players[id].position.y > 1375) {

@@ -13,7 +13,7 @@ const port = (process.env.PORT || 9001);
 const GameManager = require('./GameManager.js');
 const gameManager = new GameManager({
     heartbeat: 40, // Update game loop 25 times per second (1000ms / 40ms === 25)
-    file: 'adam-test.json'
+    file: 'test-map-csv.json'
 });
 
 app.use(express.static('public/'));
