@@ -23,10 +23,7 @@ module.exports = class Player {
         this.canJump = true;
         this.canDoubleJump = false;
 
-        this.highestTime = 0;
-
         this.collider = { top:false, bottom:false, left:false, right:false };
-
         this.hasUpdated = false;
     }
 
@@ -128,7 +125,7 @@ module.exports = class Player {
         // == Secondary jump while mid-air ==
         // ==================================
         else {
-            // Prevent double jump from occurring too rapidly. Wait for 100ms between last key press.
+            // Prevent double jump from occurring too rapidly. Wait for some time between last key press.
             if(this.canDoubleJump && this.timeSinceJump > this.jumpTimeDelay){
                 
                 // Apply jumping force

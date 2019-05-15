@@ -164,6 +164,8 @@ class NetworkHandler {
                         this.packetCounter = 0;
                     }
 
+                    this.scene.player.collider = players[id].collider;
+                    this.scene.player.velocity = players[id].velocity;
                     this.scene.player.state = players[id].state;
                     this.scene.player.updatePlayerAnimation();
 

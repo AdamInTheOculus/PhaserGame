@@ -20,6 +20,7 @@ class MultiplayerGameScene extends Phaser.Scene {
             key: 'MultiplayerGameScene'
         });
         this.ids = constants.ids;
+        this.debug = false;
     }
 
     preload() {
@@ -113,6 +114,9 @@ class MultiplayerGameScene extends Phaser.Scene {
 
         this.inputHandler.update();
         this.player.update(time, this.inputHandler.getState());
+
+
+        //this.guiScene.updateCollisionText(this.player.collider);
 
         // ===================================================
         // == Reset player position after falling off world ==

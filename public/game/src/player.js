@@ -17,6 +17,8 @@ export default class Player {
         this.spawnPoint = data.spawn;
         this.scene = data.scene;
         this.state = null;
+        this.velocity = {};
+        this.collider = {};
 
         this.lastJumpTime = 0;
         this.canJump = true;
@@ -291,8 +293,11 @@ export default class Player {
             case IDLE:
                 this.sprite.anims.play('turn', true);
                 break;
-            // case JUMP:  NOTE: No jumping animation implemented yet.
-            //     break;
+            case JUMP:
+                if(this.velocity.x > 0)      this.sprite.anims.play('right');
+                else if(this.velocity.x < 0) this.sprite.anims.play('left');
+                else                         this.sprite.anims.play('turn');
+                break;
             default: this.sprite.anims.play('turn', true);
         }
     }

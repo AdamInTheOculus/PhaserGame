@@ -6,15 +6,18 @@
 
 class GUIScene extends Phaser.Scene {
     constructor() {
-        super({
-            key: 'GUIScene', active: true
-        });
+        super({key: 'GUIScene', active: true});
         this.spellsInventory = [];
+        this.collisionText = []
     }
 
     create(){
       this.sw = this.cameras.main.width;
       this.sh = this.cameras.main.height;
+    }
+
+    toggleDebugMode() {
+        this.debug = !this.debug;
     }
 
     /**
@@ -168,6 +171,25 @@ class GUIScene extends Phaser.Scene {
         } else {
             this.title.setText(`# of players: ${playerCount}`);
         }
+    }
+
+    updateCollisionText(collider) {
+
+        let x = this.sw - (this.sw / 7);
+        let y = this.sh - (this.sh / 10);
+
+        if(this.collisionTextBackground === undefined) {
+            this.collisionTextBackground = this.add.rectangle(x + 50, y - 20, 150, 100, 0x000000, 0.75);
+        }
+
+        Object.keys(collider).forEach((direction, index) => {
+
+            if(this.collisionText[index] === undefined) {
+                this.collisionText.push(this.add.text(x, y - (20 * index), `${direction}: ${collider[direction]}`, {fontFamily: 'Verdana, "Times New Roman", Tahoma, serif', fill: '#fff', fontSize: 15}));
+            } else {
+                this.collisionText[index].setText(`${direction}: ${collider[direction]}`);
+            }
+        });
     }
 
 }
