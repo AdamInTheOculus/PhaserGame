@@ -15,13 +15,15 @@ module.exports = class Player {
         this.lastSpawn = {x: spawnpoint.x, y: spawnpoint.y};
 
         this.maxVelocityX = 0.25;
-        this.jumpVelocity = -0.3;
+        this.jumpVelocity = -0.325;
         this.velocity = { x:0, y:0 };
 
         this.timeSinceJump = 0;
         this.jumpTimeDelay = 250; // 250ms delay between jumps
         this.canJump = true;
         this.canDoubleJump = false;
+
+        this.highestTime = 0;
 
         this.collider = { top:false, bottom:false, left:false, right:false };
 
@@ -128,9 +130,10 @@ module.exports = class Player {
         else {
             // Prevent double jump from occurring too rapidly. Wait for 100ms between last key press.
             if(this.canDoubleJump && this.timeSinceJump > this.jumpTimeDelay){
-
-                this.canDoubleJump = false;
+                
+                // Apply jumping force
                 this.velocity.y = this.jumpVelocity;
+                this.canDoubleJump = false;
             }
         }
     }
@@ -155,12 +158,10 @@ module.exports = class Player {
     isCollidingUp(map, x, y) {
 
         let point = {};
-        let divider = 6;
+        let divider = 8;
         let interval = this.size.w / divider;
 
-
-
-        for(let i=0; i<divider; i++) {
+        for(let i=1; i<divider; i++) {
             point.x = Math.floor(((x - (this.size.w / 2)) + (i * interval)) / map.tilewidth);
             point.y = Math.floor((y - (this.size.h / 2)) / map.tileheight);
 
@@ -177,7 +178,7 @@ module.exports = class Player {
     isCollidingDown(map, x, y) {
 
         let point = {};
-        let divider = 6;
+        let divider = 8;
         let interval = this.size.w / divider;
 
         for(let i=1; i<divider; i++) {
@@ -197,7 +198,7 @@ module.exports = class Player {
     isCollidingLeft(map, x, y) {
 
         let point = {};
-        let divider = 8;
+        let divider = 12;
         let interval = this.size.h / divider;
 
         // Check along left side of player to see if anything collides.
@@ -218,7 +219,7 @@ module.exports = class Player {
     isCollidingRight(map, x, y) {
 
         let point = {};
-        let divider = 8;
+        let divider = 12;
         let interval = this.size.h / divider;
 
         // Check along right side of player to see if anything collides.
