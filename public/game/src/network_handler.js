@@ -11,6 +11,7 @@ class NetworkHandler {
         this.socket = io();
         this.scene = scene;
         this.heartbeatInterval = 25; // (40ms) Send data to server 25 times per second (1000 / 40 === 25).
+        this.packetCounter = 0;
     }
 
     /**
@@ -147,6 +148,8 @@ class NetworkHandler {
     onServerHeartbeat() {
         this.socket.on('heartbeat', (players) => {
 
+            this.packetCounter++;
+
             Object.keys(players).forEach(id => {
                 if(id === this.scene.player.id) {
 
@@ -155,6 +158,11 @@ class NetworkHandler {
                     // =========================
                     this.scene.player.sprite.x = players[id].position.x;
                     this.scene.player.sprite.y = players[id].position.y;
+
+                    if(this.packetCounter > 50) {
+                        console.log(players[id].collider);
+                        this.packetCounter = 0;
+                    }
 
                     this.scene.player.state = players[id].state;
                     this.scene.player.updatePlayerAnimation();

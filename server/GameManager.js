@@ -26,7 +26,7 @@ module.exports = class GameManager {
         this.lag = 0;
         this.previousFrameTime = Date.now();
 
-        this.gravity = 0.0005;
+        this.gravity = 0.00075;
     }
 
     loop() {
