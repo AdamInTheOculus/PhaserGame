@@ -116,7 +116,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.player.update(time, this.inputHandler.getState());
 
 
-        //this.guiScene.updateCollisionText(this.player.collider);
+        this.guiScene.updateCollisionText(this.player.collider);
 
         // ===================================================
         // == Reset player position after falling off world ==

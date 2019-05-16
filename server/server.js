@@ -12,7 +12,7 @@ const port = (process.env.PORT || 9001);
 
 const GameManager = require('./GameManager.js');
 const gameManager = new GameManager({
-    heartbeat: 40, // Update game loop 25 times per second (1000ms / 40ms === 25)
+    heartbeat: 40, // Send snapshot to client 25 times per second (1000ms / 40ms === 25)
     file: 'test-map-csv.json'
 });
 
@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 setInterval(() => {
         gameManager.loop();
     }, 
-    25 // 40 loops per second
+    15 // 66.7 loops per second
 );
 
 // ====================================

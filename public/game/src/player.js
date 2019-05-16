@@ -25,18 +25,18 @@ export default class Player {
         this.canDoubleJump = false;
 
         this.cursorPosition = {};
-        this.spells = {
-            'ice': new Ice_Spell(true),
-            'fireball': new Fireball_Spell(true)
-        };
+        // this.spells = {
+        //     'ice': new Ice_Spell(true),
+        //     'fireball': new Fireball_Spell(true)
+        // };
     }
 
     update(time, input) {
         this.time = time;
-        let spellsArr = Object.values(this.spells);
+        //let spellsArr = Object.values(this.spells);
 
         this.scene.guiScene.updateHealthBar(this.hp)
-        this.scene.guiScene.updateSpellsInventory(this.spells, time)
+        // this.scene.guiScene.updateSpellsInventory(this.spells, time)
 
         this.cursorPosition = {
             x: input.fire.position.x,
@@ -71,11 +71,11 @@ export default class Player {
                 this.lastJumpTime = time;
             }
 
-            // Handle spell cast with X button
-            if(input.gamepad.buttons[13].value && this.coolDown <= 0) {
-                this.shoot(0, GAMEPAD);
-                this.coolDown = this.spells['fireball'].coolDown;
-            }
+            // // Handle spell cast with X button
+            // if(input.gamepad.buttons[13].value && this.coolDown <= 0) {
+            //     this.shoot(0, GAMEPAD);
+            //     this.coolDown = this.spells['fireball'].coolDown;
+            // }
         } // end of gamepad input
 
         // ===========================================
@@ -119,73 +119,73 @@ export default class Player {
                 }
             }
 
-            if(input.fire.isDown) {
-                if(spellsArr[0]!=undefined){
-                    if(time >= (spellsArr[0].lastCastTime+spellsArr[0].initCoolDown)){
+            // if(input.fire.isDown) {
+            //     if(spellsArr[0]!=undefined){
+            //         if(time >= (spellsArr[0].lastCastTime+spellsArr[0].initCoolDown)){
 
-                        let data = {
-                            index: 0,
-                            spritePosition: {
-                                x: this.sprite.x,
-                                y: this.sprite.y
-                            },
-                            cursorPosition: worldPosition
-                        };
+            //             let data = {
+            //                 index: 0,
+            //                 spritePosition: {
+            //                     x: this.sprite.x,
+            //                     y: this.sprite.y
+            //                 },
+            //                 cursorPosition: worldPosition
+            //             };
 
-                        // Send data to server that we shot a spell
-                        this.scene.networkHandler.emitSpellCast(data);
-                        spellsArr[data.index].lastCastTime = time;
-                        this.shoot(data);
-                    }
-                }
-            }
+            //             // Send data to server that we shot a spell
+            //             this.scene.networkHandler.emitSpellCast(data);
+            //             spellsArr[data.index].lastCastTime = time;
+            //             this.shoot(data);
+            //         }
+            //     }
+            // }
 
-            if(input.key_binding_1.isDown) {
-                if(spellsArr[0]!=undefined){
-                    if(time >= (spellsArr[0].lastCastTime+spellsArr[0].initCoolDown)){
+            // if(input.key_binding_1.isDown) {
+            //     if(spellsArr[0]!=undefined){
+            //         if(time >= (spellsArr[0].lastCastTime+spellsArr[0].initCoolDown)){
 
-                        let data = {
-                            index: 0,
-                            spritePosition: {
-                                x: this.sprite.x,
-                                y: this.sprite.y
-                            },
-                            cursorPosition: worldPosition
-                        };
+            //             let data = {
+            //                 index: 0,
+            //                 spritePosition: {
+            //                     x: this.sprite.x,
+            //                     y: this.sprite.y
+            //                 },
+            //                 cursorPosition: worldPosition
+            //             };
 
-                        // Send data to server that we shot a spell
-                        this.scene.networkHandler.emitSpellCast(data);
-                        spellsArr[data.index].lastCastTime = time;
-                        this.shoot(data);
-                    }
-                }
-            }
+            //             // Send data to server that we shot a spell
+            //             this.scene.networkHandler.emitSpellCast(data);
+            //             spellsArr[data.index].lastCastTime = time;
+            //             this.shoot(data);
+            //         }
+            //     }
+            // }
 
-            if(input.key_binding_2.isDown) {
-                if(spellsArr[1]!=undefined){
-                    if(time >= (spellsArr[1].lastCastTime+spellsArr[1].initCoolDown)){
+            // if(input.key_binding_2.isDown) {
+            //     if(spellsArr[1]!=undefined){
+            //         if(time >= (spellsArr[1].lastCastTime+spellsArr[1].initCoolDown)){
                         
-                        let data = {
-                            index: 1,
-                            spritePosition: {
-                                x: this.sprite.x,
-                                y: this.sprite.y
-                            },
-                            cursorPosition: worldPosition
-                        };
+            //             let data = {
+            //                 index: 1,
+            //                 spritePosition: {
+            //                     x: this.sprite.x,
+            //                     y: this.sprite.y
+            //                 },
+            //                 cursorPosition: worldPosition
+            //             };
 
-                        // Send data to server that we shot a spell
-                        this.scene.networkHandler.emitSpellCast(data);
-                        spellsArr[data.index].lastCastTime = time;
-                        this.shoot(data);
-                    }
-                }
-            }
+            //             // Send data to server that we shot a spell
+            //             this.scene.networkHandler.emitSpellCast(data);
+            //             spellsArr[data.index].lastCastTime = time;
+            //             this.shoot(data);
+            //         }
+            //     }
+            // }
         } // end of keyboard/mouse input
 
-        for(let i = 0; i<spellsArr.length;i++){
-            spellsArr[i].update(this);
-        }
+        // for(let i = 0; i<spellsArr.length;i++){
+        //     spellsArr[i].update(this);
+        // }
     }
 
     getPosition() {
