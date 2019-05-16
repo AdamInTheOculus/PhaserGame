@@ -150,7 +150,6 @@ class NetworkHandler {
                     this.scene.player.sprite.y = players[id].position.y;
 
                     if(this.packetCounter > 50) {
-                        console.log(players[id].collider);
                         this.packetCounter = 0;
                     }
 
@@ -233,11 +232,11 @@ class NetworkHandler {
         setInterval(function() {
             startTime = Date.now();
             _this.socket.emit('test');
-        }, 2000);
+        }, 1000);
 
         // Set up listener for ping messages from server.
         this.socket.on('pong', function() {
-            this.latency = (Date.now() - startTime);
+            _this.latency = (Date.now() - startTime);
         });
     }
 

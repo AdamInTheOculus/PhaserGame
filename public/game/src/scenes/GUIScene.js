@@ -199,9 +199,9 @@ class GUIScene extends Phaser.Scene {
         let y = this.sh - (this.sh / 10) - 90;
 
         if(this.latencyText === undefined) {
-            this.latencyText = this.add.text(x, y, `Ping: ${latency}`, {fontFamily: 'Verdana, "Times New Roman", Tahoma, serif', fill: '#fff', fontSize: 15});
+            this.latencyText = this.add.text(x, y, `Ping: ${latency} ms`, {fontFamily: 'Verdana, "Times New Roman", Tahoma, serif', fill: '#fff', fontSize: 15});
         } else {
-            this.latencyText.setText(`Ping: ${latency}`);
+            this.latencyText.setText(`Ping: ${latency} ms`);
         }
     }
 
