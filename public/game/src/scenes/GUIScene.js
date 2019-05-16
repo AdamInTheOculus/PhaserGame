@@ -8,7 +8,8 @@ class GUIScene extends Phaser.Scene {
     constructor() {
         super({key: 'GUIScene', active: true});
         this.spellsInventory = [];
-        this.collisionText = []
+
+        this.collisionText = [];
     }
 
     create(){
@@ -179,7 +180,7 @@ class GUIScene extends Phaser.Scene {
         let y = this.sh - (this.sh / 10);
 
         if(this.collisionTextBackground === undefined) {
-            this.collisionTextBackground = this.add.rectangle(x + 50, y - 20, 150, 100, 0x000000, 0.75);
+            this.collisionTextBackground = this.add.rectangle(x + 50, y - 20, 150, 175, 0x000000, 0.75);
         }
 
         Object.keys(collider).forEach((direction, index) => {
@@ -190,6 +191,18 @@ class GUIScene extends Phaser.Scene {
                 this.collisionText[index].setText(`${direction}: ${collider[direction]}`);
             }
         });
+    }
+
+    showLatency(latency) {
+
+        let x = this.sw - (this.sw / 7);
+        let y = this.sh - (this.sh / 10) - 90;
+
+        if(this.latencyText === undefined) {
+            this.latencyText = this.add.text(x, y, `Ping: ${latency}`, {fontFamily: 'Verdana, "Times New Roman", Tahoma, serif', fill: '#fff', fontSize: 15});
+        } else {
+            this.latencyText.setText(`Ping: ${latency}`);
+        }
     }
 
 }

@@ -12,6 +12,7 @@ class NetworkHandler {
         this.scene = scene;
         this.heartbeatInterval = 25; // (40ms) Send data to server 25 times per second (1000 / 40 === 25).
         this.packetCounter = 0;
+        this.latency = 0;
     }
 
     /**
@@ -24,19 +25,8 @@ class NetworkHandler {
         this.onPlayerDisconnects();
         this.onServerHeartbeat();
         this.onPlayerCastSpell();
+        this.onPingToServer();
     }
-
-    // /**
-    //  * @author    AdamInTheOculus
-    //  * @date      April 25th 2019
-    //  * @purpose   Creates socket emitter on a timed interval. Sends local player information.
-    // **/
-    // registerPlayerUpdate() {
-    //     setInterval( () => {
-    //             this.socket.emit('player_update', this.scene.player.getCompressedData());
-    //         },  this.heartbeatInterval
-    //     );
-    // }
 
     /**
      * @author   AdamInTheOculus
@@ -232,6 +222,22 @@ class NetworkHandler {
             // }, 5000);
 
             this.scene.player.shoot(data);
+        });
+    }
+
+    onPingToServer() {
+        let startTime = 0;
+        let _this = this;
+
+        // Set up periodic ping messages to server.
+        setInterval(function() {
+            startTime = Date.now();
+            _this.socket.emit('test');
+        }, 2000);
+
+        // Set up listener for ping messages from server.
+        this.socket.on('pong', function() {
+            this.latency = (Date.now() - startTime);
         });
     }
 

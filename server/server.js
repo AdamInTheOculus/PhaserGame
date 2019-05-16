@@ -58,6 +58,10 @@ io.on('connection', (socket) => {
     socket.on('command', (data) => {
         gameManager.commandQueue.push({id: socket.id, data: data});
     });
+
+    socket.on('test', () => {
+        socket.emit('pong');
+    });
 });
 
 // =============================================
