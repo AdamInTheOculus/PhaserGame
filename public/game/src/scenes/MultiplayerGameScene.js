@@ -67,7 +67,7 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.layers.ground = map.createStaticLayer(0, tileset, 0, 0);
         this.layers.spawnPoints = map.getObjectLayer('SpawnPoints')['objects'];
         this.layers.endPoints = map.getObjectLayer('EndPoints')['objects'];
-        this.layers.flightOrbs = map.getObjectLayer('FlightOrbs')['objects'];
+        this.layers.flightOrbs = map.getObjectLayer('Collectables')['objects'];
 
         // Set up groups
         this.groups.endPoints = this.physics.add.staticGroup();

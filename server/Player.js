@@ -29,12 +29,7 @@ module.exports = class Player {
 
     update(delta, gravity, map) {
 
-        // Calculate next predicted position
-        let newX = this.position.x + this.velocity.x * delta;
-        let newY = this.position.y + this.velocity.y * delta;
-
-        // Get info of player colliding with world
-        this.collider = this.getWorldCollision(map, newX, newY);
+        this.timeSinceJump += delta;
 
         switch(this.state) {
             case 1: this.moveLeft(delta); break;
@@ -44,7 +39,14 @@ module.exports = class Player {
             default: ;
         }
 
-        this.timeSinceJump += delta;
+        // Calculate next predicted position
+        let newX = this.position.x + this.velocity.x * delta;
+        let newY = this.position.y + this.velocity.y * delta;
+
+        // Get info of player colliding with world
+        this.collider = this.getWorldCollision(map, newX, newY);
+        // this.collider.world = this.getWorldCollision(map, newX, newY);
+        // this.collider.powerups = this.getPowerupCollision(map, newX, newY);
 
         let shouldUpdatePosition = true;
 
@@ -140,17 +142,31 @@ module.exports = class Player {
         this.velocity.x = 0;
     }
 
+    /**
+     * @author   AdamInTheOculus
+     * @date     May 17th 2019
+     * @purpose  Checks if player collided with any collidable world blocks.
+    **/
     getWorldCollision(map, x, y) {
 
         let collider = { 
-            left:   this.isCollidingLeft(map, x, y),
-            right:  this.isCollidingRight(map, x, y),
             top:    this.isCollidingUp(map, x, y),
-            bottom: this.isCollidingDown(map, x, y)
+            right:  this.isCollidingRight(map, x, y),
+            bottom: this.isCollidingDown(map, x, y),
+            left:   this.isCollidingLeft(map, x, y)
         };
 
         return collider;
     }
+
+    /**
+     * @author   AdamInTheOculus
+     * @date     May 17th 2019
+     * @purpose  Checks if player collided with any collidable world blocks.
+    **/
+    getPowerupCollision(map, x, y) {
+
+    };
 
     isCollidingUp(map, x, y) {
 

@@ -151,7 +151,7 @@ module.exports = class TiledMap {
                 // == Add tile object to metadata, mapped by offset tile ID ==
                 // ===========================================================
                 if(metadata[offsetId] === undefined) {
-                    metadata[offsetId] = [tile];
+                    metadata[offsetId] = tile;
                 } else {
                     throw new Error(`TiledMap - getTileMetadata - Duplicate tile ID found [${offsetId}]`);
                 }
@@ -176,5 +176,38 @@ module.exports = class TiledMap {
         let y = Math.floor(position.y / this.tileheight);
 
         return this.uniqueTiles[layer[x][y]];
+    }
+
+    /**
+     * @author     AdamInTheOculus
+     * @date       May 16th 2019
+     * @purpose    Returns array of properties of a specific tile.
+    **/
+    getTilePropertiesByGid(gid) {
+        return this.uniqueTiles[gid].properties;
+    }
+
+    /**
+     * @author    AdamInTheOculus
+     * @date      May 17th 2019
+     * @purpose   Get details of a Tiled object layer by name.
+    **/
+    getObjectLayerByName(name) {
+        if(name === undefined || name.length === 0) {
+            throw new Error('TiledMap - getObjectsByName - `name` is undefined or empty.');
+        }
+        
+        let layer = undefined;
+        this.objects.forEach(object => {
+            if(object.name === name) {
+                layer = object;
+            }
+        });
+
+        if(layer === undefined) {
+            throw new Error(`TiledMap - getObjectsByName - No object layer found with name [${name}]`);
+        }
+
+        return layer.objects;
     }
 };

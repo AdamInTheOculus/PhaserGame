@@ -74,7 +74,7 @@
         {
          "draworder":"topdown",
          "id":4,
-         "name":"FlightOrbs",
+         "name":"Collectables",
          "objects":[
                 {
                  "gid":4,
@@ -180,6 +180,20 @@
                          "name":"collidable",
                          "type":"bool",
                          "value":true
+                        }]
+                }, 
+                {
+                 "id":3,
+                 "properties":[
+                        {
+                         "name":"isInstant",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"FlightOrb"
                         }]
                 }, 
                 {

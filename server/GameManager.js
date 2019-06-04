@@ -16,16 +16,11 @@ module.exports = class GameManager {
     **/
     constructor(config) {
         this.players = {};
-        this.enemies = {};
-        this.pickups = {};
-        this.projectiles = {};
         this.heartbeat = config.heartbeat | 40;
         this.map = new TiledMap(config.file);
         this.commandQueue = [];
-
         this.lag = 0;
         this.previousFrameTime = Date.now();
-
         this.gravity = 0.00075;
     }
 
