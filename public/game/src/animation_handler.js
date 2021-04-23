@@ -1,6 +1,6 @@
 /**
- * @author   JonCatalano
- * @date     April 24th 2019
+ * @author   Adam Sinclair
+ * @date     April 2021
  * @purpose  Contains client-side data and logic for game animations.
  **/
 
@@ -10,11 +10,6 @@ class AnimationHandler {
         this.scene = scene;
     }
 
-    /**
-     * @author   JonCatalano
-     * @date     April 24th 2019
-     * @purpose  Create all animations for the game.
-     **/
     setupAnimations() {
         this.scene.anims.create({
             key: 'left',
@@ -32,20 +27,6 @@ class AnimationHandler {
         this.scene.anims.create({
             key: 'right',
             frames: this.scene.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
-            frameRate: 10,
-            repeat: -1
-        });
-
-        this.scene.anims.create({
-            key: 'fireball',
-            frames: this.scene.anims.generateFrameNumbers('fireball', { start: 0, end: 23 }),
-            frameRate: 20,
-            repeat: -1
-        });
-
-        this.scene.anims.create({
-            key: 'ice',
-            frames: this.scene.anims.generateFrameNumbers('ice', { start: 0, end: 19 }),
             frameRate: 10,
             repeat: -1
         });

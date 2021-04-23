@@ -1,15 +1,14 @@
 /**
- * @author   JonCatalano
- * @date     Thurs Aprl 11th 2019
+ * @author   AdamInTheOculus
+ * @date     April 2021
  * @purpose  Preload game assets
  */
 
 class BootScene extends Phaser.Scene {
-    constructor(test) {
-        super({
-            key: 'BootScene'
-        });
+    constructor() {
+        super({ key: 'BootScene' });
     }
+
     preload() {
       const progress = this.add.graphics();
 
@@ -22,8 +21,6 @@ class BootScene extends Phaser.Scene {
 
       // Register a load complete event to launch the title screen when all files are loaded
       this.load.on('complete', () => {
-          // prepare all animations, defined in a separate file
-          //makeAnimations(this);
           progress.destroy();
           this.scene.start('MenuScene');
       });

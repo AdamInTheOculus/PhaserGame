@@ -1,6 +1,6 @@
 /**
  * @author   AdamInTheOculus
- * @date     April 24th 2019
+ * @date     April 2021
  * @purpose  Contains all constant values across server and client.
  */
 

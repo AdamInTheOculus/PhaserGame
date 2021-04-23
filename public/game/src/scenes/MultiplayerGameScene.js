@@ -4,11 +4,7 @@
  * @purpose  Entry point for Phaser 3 multiplayer game.
  */
 
-import Player from '../player.js';
-import GUIScene from './GUIScene.js';
 import * as constants from '../helpers/constants.js';
-import FireBall from '../spells/fireball.js';
-
 import InputHandler from '../input_handler.js';
 import NetworkHandler from '../network_handler.js';
 import AnimationHandler from '../animation_handler.js';
@@ -33,14 +29,6 @@ class MultiplayerGameScene extends Phaser.Scene {
         // this.load.spritesheet('dude', 'game/assets/spritesheets/dude.png', {            // Load spritesheet for player.
         //     frameWidth: 32, frameHeight: 48
         // });
-        this.load.spritesheet('fireball', 'game/assets/spritesheets/fireball.png', {            // Load spritesheet for player.
-            frameWidth: 134, frameHeight: 134
-        });
-        this.load.spritesheet('ice', 'game/assets/spritesheets/ice.png', {            // Load spritesheet for player.
-            frameWidth: 192, frameHeight: 192
-        });
-        this.load.image('fireball_spell_icon', 'game/assets/icons/fireball_spell_icon.png');
-        this.load.image('ice_spell_icon', 'game/assets/icons/ice_spell_icon.png');
     }
 
     create() {
@@ -77,14 +65,6 @@ class MultiplayerGameScene extends Phaser.Scene {
         this.guiScene = this.scene.get('GUIScene');
 
         this.networkHandler.registerSocketListeners();
-
-        // Set up flight orb triggerables
-        // this.layers.flightOrbs.forEach(flightOrb => {
-        //     let orb = this.groups.flightOrbs.create(flightOrb.x, flightOrb.y, 'blue_orb');
-        //     orb.body.width = flightOrb.width;
-        //     orb.body.height = flightOrb.height;
-        //     orb.key = 'ice';
-        // });
 
         // Set up endpoint (tombstone) triggerables
         this.layers.endPoints.forEach(endpoint => {
@@ -184,9 +164,6 @@ class MultiplayerGameScene extends Phaser.Scene {
 
         if(id === this.player.id) {
             this.player.addExtraJump();
-            this.player.collectSpell(key);
-            this.player.updateSpellStock(key);
-            this.guiScene.updateSpellsInventory(this.player.spells)
         }
     }
 

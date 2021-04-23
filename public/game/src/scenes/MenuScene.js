@@ -1,41 +1,25 @@
-/**
- * @author   JonCatalano
- * @date     Thurs Aprl 11th 2019
- * @purpose  Startup Menu Scene
- */
-
 class MenuScene extends Phaser.Scene {
     constructor() {
         super({
             key: 'MenuScene'
         });
     }
+
     create() {
       this.scene.bringToTop();
-      //this.cameras.main.setBackgroundColor('rgba(255, 0, 0, 0.5)');
-
       this.registry.set('restartScene', false);
 
       //save canvas dimensions
       this.sh = window.innerHeight;
       this.sw = window.innerWidth;
 
-
       this.background = this.add.graphics()
       this.background.fillStyle(0x000, 1);
       this.background.fillRect(0, 0, 1000, 1000);
 
-
-      this.title = this.add.text(this.sw/4, 100, 'Spell Slam 1.0', { fill: '#fff', fontSize: 40 });
-
-      this.single_play_button = this.add.text(this.sw/4, 250, 'Single Player', { fill: '#0f0' })
+      this.multiplay_button = this.add.text(this.sw / 4, 300, 'Play Multiplayer', { fill: '#0f0' })
         .setInteractive()
-        .on('pointerdown', () => this.startSPGame());
-
-      this.multiplay_button = this.add.text(this.sw/4, 300, 'Multiplayer', { fill: '#0f0' })
-        .setInteractive()
-        .on('pointerdown', () => this.startMPGame());
-
+        .on('pointerdown', () => this.scene.start('MultiplayerGameScene'));
     }
 
     update(time, delta) {
@@ -44,20 +28,12 @@ class MenuScene extends Phaser.Scene {
         }
     }
 
-    startSPGame() {
-        this.scene.start('SingleplayerGameScene');
-    }
-
-    startMPGame() {
-        this.scene.start('MultiplayerGameScene');
-    }
-
     restartScene() {
         this.scene.stop('SingleplayerGameScene');
         this.scene.launch('SingleplayerGameScene');
         this.scene.bringToTop();
-
         this.registry.set('restartScene', false);
     }
 }
+
 export default MenuScene;
